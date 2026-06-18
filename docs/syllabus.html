@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Syllabus — Culture as Data</title>
+<meta name="description" content="Ask your own questions about the stories, lyrics, art, and online communities you love.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html">Culture as Data</a>
+    <nav class="nav" aria-label="Primary"><a href="index.html">Home</a><a href="syllabus.html" class="active">Syllabus</a><a href="schedule.html">Schedule</a><a href="resources.html">Resources</a><a href="about.html">About</a></nav>
+  </div>
+</header>
+<main id="main" class="wrap">
+
+<h1>Syllabus</h1>
+<p class="lede">A workshop in computational cultural analysis: using code, statistics, and AI to investigate cultural data at scale. You'll work with real datasets, write code with an AI as your collaborator, and publish an interactive web essay on a question only you would think to ask.</p>
+
+<section>
+  <h2>The shape of the course</h2>
+  <p><strong>Weeks 1–3, Tour.</strong> Shared toy datasets, the first rungs of the ladder (counting, then classification), and all four project methods previewed before anyone commits.</p>
+  <p><strong>Weeks 4–7, Project.</strong> Commit to a corpus and two methods by Week 4, where you also learn to collect data via APIs and careful scraping, then iterate: a short tool beat each week (embeddings in Week 5, deeper application and images in Week 6, the AI as a reader at scale in Week 7) paired with a long project lab. Mid-course one-on-ones run in Weeks 5 and 6.</p>
+  <p><strong>Weeks 8–10, Publish.</strong> Week 8 settles the finding and drafts prose; Week 9 builds the page and you leave with a deployed URL; Week 10 is a public showcase.</p>
+  <p>Plan about three hours per week outside class, less in Weeks 1–3 and 10, more in Weeks 4–9.</p>
+</section>
+
+<section>
+  <h2>Eight things you'll be able to do</h2>
+  <p>The essay is what you show people, but it isn't the point. The point is what you can do afterward, with or without an AI in the room.</p>
+  <ol><li>Read a block of analysis code and say what it does, line by line, without running it.</li><li>Ask a tractable question of a pile of cultural data, specific enough to answer and honest about what it leaves out.</li><li>Name what a method assumes and what it hides.</li><li>Read an embedding map, a classifier's labels, or a character network skeptically, telling a real pattern from a pretty accident.</li><li>Judge what counting, classification, embeddings, and AI annotation each reveal and hide, read an AI's confidence to know which results to trust, and reckon with training data scraped from creative work.</li><li>Write a Data Biography that accounts for where a dataset came from, who is in it, who is not, and what it cannot tell you.</li><li>Judge AI-generated code instead of just running it.</li><li>Read a published study, data essay, or chart and see the choices behind it, then turn the same eye on your own charts before publishing.</li></ol>
+</section>
+
+<section>
+  <h2>How you'll know you're learning</h2>
+  <p>No grades, but real standards. Because an AI can produce work you don't understand, the course checks the thinking directly and often: a weekly competency check with the assistant closed (trace a cell, explain your last result, fix a planted bug); a process portfolio (your "workbench"); an oral walkthrough mid-course and at the showcase; and, in Week 6, a hand-labeling comparison where you label thirty items the AI also labels and study every disagreement. Peer feedback is formative only.</p>
+</section>
+
+<section>
+  <h2>The Data Biography</h2>
+  <p>One of your most important deliverables isn't your essay, it's your Data Biography, written in Week 4 when you commit to a corpus. Borrowed from Heather Krause's framework, it's a frank account of where your data comes from and what it can and cannot tell you: origin, funding and power, method, selection, the people in the data, and limits. Its distilled form becomes the corpus note in your final essay.</p>
+</section>
+
+<section>
+  <h2>Setup</h2>
+  <ul><li>A Google account (for Colab and Google AI Studio).</li><li>A GitHub account (for hosting your final essay).</li><li>An AI assistant. The default is the Gemini API via Google AI Studio: free, no credit card, vision included. Other providers work the same way.</li><li>A laptop that can run a browser. Colab provides the GPU when you need one.</li></ul>
+  <p>No required spend. A $20/month chat subscription is optional and never needed for any part of the course.</p>
+</section>
+
+<section>
+  <h2>Starter corpora</h2>
+  <p>If you don't know what to pick by Week 4, these six are battle-tested, accessible, and small enough to work with quickly.</p>
+  <table><thead><tr><th>Corpus</th><th>Access</th><th>Best for</th></tr></thead><tbody><tr><td><strong>NYT Wedding Announcements 1985–2014</strong></td><td>TheUpshot/nyt_weddings on GitHub</td><td>counting comparisons across time, gender analysis, class signaling</td></tr><tr><td><strong>/r/AmITheAsshole judgments</strong></td><td>Pushshift mirrors on HuggingFace</td><td>AI-as-reader (moral classification), reception analysis</td></tr><tr><td><strong>Eurovision lyrics 1956–2023</strong></td><td>Spijkervet/eurovision-dataset on GitHub</td><td>counting across languages, sentiment, diachronic shift</td></tr><tr><td><strong>TMDb movie posters of one genre</strong></td><td>TMDb API, free</td><td>image embeddings, color analysis, CLIP search</td></tr><tr><td><strong>Met Museum Open Access</strong></td><td>official API, ~500K objects with images</td><td>image embeddings, distant viewing, cataloging-language change</td></tr><tr><td><strong>Bluesky one-hour firehose slice</strong></td><td>Jetstream, no API key, atproto SDK</td><td>any of the four methods, social-media-specific work</td></tr></tbody></table>
+</section>
+
+</main>
+<footer class="site-foot"><div class="wrap">
+  <p>Culture as Data — a 10-week, project-based community course. $0 per student. Built to run on Google Colab's free tier.</p>
+</div></footer>
+</body>
+</html>
