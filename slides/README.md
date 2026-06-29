@@ -21,3 +21,9 @@ reading + homework + AI-closed check.
 These are **drafts** generated from the course data. Refine each against `design/lesson-plans.md`,
 which has the full minute-by-minute flow with the [Lecture]/[Workshop]/[Discussion] tags and the
 per-week mode balance. Add screenshots of the featured study to the Look-at-This slide before teaching.
+
+## PowerPoint versions
+
+Pre-rendered `.pptx` decks live in `slides/pptx/` (open in PowerPoint, Keynote, or Google
+Slides). To regenerate them after editing a Markdown deck, run `bash slides/render_pptx.sh`
+(needs pandoc). The Markdown files stay the source of truth; the `.pptx` files are generated.
