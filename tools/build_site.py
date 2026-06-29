@@ -274,30 +274,32 @@ def build_index():
   <p class="eyebrow">A 10-week project-based course for curious adults</p>
   <h1>{esc(TITLE)}</h1>
   <p class="lede">{esc(TAGLINE)}</p>
-  <p>Investigate cultural data at scale with an AI assistant as your coding partner, and understand how the machine itself works, from counting to language models. By the end you publish an interactive web essay on a question only you would think to ask. No math. No coding required to start. $0 to take part.</p>
+  <p>Investigate cultural data at scale with an AI as your coding partner. You publish a web essay on a question only you would ask. No math, no coding to start, $0 to take part.</p>
   <p class="cta"><a class="button" href="syllabus.html">Read the syllabus</a> <a class="button ghost" href="schedule.html">See the ten weeks</a></p>
 </section>
 
 <section>
-  <h2>What you'll make</h2>
-  <p>Two things, kept separate on purpose. A <strong>reproducible notebook</strong> is the real record of your thinking: code, data, and prose cells someone else could run top to bottom. A <strong>web essay</strong>, built on top of the finished notebook, is how you tell the world what you found: an opening question, two to four visualizations, at least one image-based finding, around 800 to 1,500 words, a corpus note, a show-your-work appendix, and a what-surprised-me closing.</p>
+  <h2>The four tools</h2>
+  {ul([
+    "<strong>Counting</strong>: the honest floor, with no notion of meaning.",
+    "<strong>Classification</strong>: train a transparent reader and see what it learned.",
+    "<strong>Embeddings</strong>: items become positions on a map of meaning. The heart of the course.",
+    "<strong>AI annotation</strong>: a powerful model reads your whole corpus; you decide which labels to trust.",
+  ])}
+  <p>Images count too. You count, classify, and embed pictures the same way as text.</p>
 </section>
 
 <section>
-  <h2>Four tools, each one past the last</h2>
-  <p>You'll learn four ways to turn culture into something a machine can analyze, each expanding what you can do with your own material past the one before.</p>
+  <h2>What you make</h2>
   {ul([
-    "<strong>Counting</strong>: powerful, and the honest floor. It has no notion of meaning.",
-    "<strong>Classification</strong>: train a transparent reader and see exactly what it learned.",
-    "<strong>Embeddings</strong>: the heart of the course. Items become positions on a map of meaning, so similar things cluster and patterns appear counting can't reach.",
-    "<strong>AI annotation</strong>: hand a powerful model your whole corpus, then learn to trust the labels it's sure of and check the rest.",
+    "A reproducible notebook: the record of your analysis, runnable top to bottom.",
+    "A web essay built on it: an opening question, a few charts, an image finding, a corpus note, about 800 to 1,500 words.",
   ])}
-  <p>Images are a co-equal kind of culture, taught through the same four tools: you count, classify, and embed pictures exactly as you do text, so a project on album covers or paintings is as well-supported as one on lyrics.</p>
 </section>
 
 <section>
   <h2>Who it's for</h2>
-  <p>Curious adults outside formal education: librarians, journalists, retired teachers, museum educators, hobbyists. Mixed coding backgrounds, most with little or none. The AI writes code with you so the room can think about culture; it is a tool, not the subject.</p>
+  <p>Curious adults, mixed coding backgrounds, most with little or none. The AI writes code; you think about culture.</p>
 </section>
 """
     write(SITE / "index.html", page("Home", body, depth=0, active="index.html"))
@@ -310,30 +312,31 @@ def build_syllabus():
     )
     body = f"""
 <h1>Syllabus</h1>
-<p class="lede">A workshop in computational cultural analysis: using code, statistics, and AI to investigate cultural data at scale. You'll work with real datasets, write code with an AI as your collaborator, and publish an interactive web essay on a question only you would think to ask.</p>
+<p class="lede">Use code, statistics, and AI to investigate cultural data at scale, and publish a web essay on a question only you would ask.</p>
 
 <section>
   <h2>The shape of the course</h2>
-  <p><strong>Weeks 1–3, Tour.</strong> Shared toy datasets, the first rungs of the ladder (counting, then classification), and all four project methods previewed before anyone commits.</p>
-  <p><strong>Weeks 4–7, Project.</strong> Commit to a corpus and two methods by Week 4, where you also learn to collect data via APIs and careful scraping, then iterate: a short tool beat each week (embeddings in Week 5, deeper application and images in Week 6, the AI as a reader at scale in Week 7) paired with a long project lab. Mid-course one-on-ones run in Weeks 5 and 6.</p>
-  <p><strong>Weeks 8–10, Publish.</strong> Week 8 settles the finding and drafts prose; Week 9 builds the page and you leave with a deployed URL; Week 10 is a public showcase.</p>
-  <p>Plan about three hours per week outside class, less in Weeks 1–3 and 10, more in Weeks 4–9.</p>
+  {ul([
+    "<strong>Weeks 1–3, Tour.</strong> Toy datasets; counting, then classification; all four methods previewed before you commit.",
+    "<strong>Weeks 4–7, Project.</strong> Commit to a corpus and two methods by Week 4. A short tool beat each week (embeddings, images, AI annotation) plus a long project lab. One-on-ones in Weeks 5 and 6.",
+    "<strong>Weeks 8–10, Publish.</strong> Settle the finding, build the page, ship a URL, show it.",
+  ])}
+  <p>Plan about three hours a week outside class.</p>
 </section>
 
 <section>
   <h2>Eight things you'll be able to do</h2>
-  <p>The essay is what you show people, but it isn't the point. The point is what you can do afterward, with or without an AI in the room.</p>
   {comps}
 </section>
 
 <section>
   <h2>How you'll know you're learning</h2>
-  <p>No grades, but real standards. Because an AI can produce work you don't understand, the course checks the thinking directly and often: a weekly competency check with the assistant closed (trace a cell, explain your last result, fix a planted bug); a process portfolio (your "workbench"); an oral walkthrough mid-course and at the showcase; and, in Week 6, a hand-labeling comparison where you label thirty items the AI also labels and study every disagreement. Peer feedback is formative only.</p>
+  <p>No grades, but real standards. Because an AI can produce work you don't understand, the course checks the thinking directly: a weekly check with the assistant closed (trace a cell, explain a result, fix a planted bug), a portfolio, an oral walkthrough, and the Week 6 hand-labeling against the AI's labels. Peer feedback is formative only.</p>
 </section>
 
 <section>
   <h2>The Data Biography</h2>
-  <p>One of your most important deliverables isn't your essay, it's your Data Biography, written in Week 4 when you commit to a corpus. Borrowed from Heather Krause's framework, it's a frank account of where your data comes from and what it can and cannot tell you: origin, funding and power, method, selection, the people in the data, and limits. Its distilled form becomes the corpus note in your final essay.</p>
+  <p>Written in Week 4 when you commit to a corpus (Heather Krause's framework): where your data came from and what it can and cannot tell you. Its distilled form becomes the essay's corpus note.</p>
 </section>
 
 <section>
@@ -349,7 +352,7 @@ def build_syllabus():
 
 <section>
   <h2>Starter corpora</h2>
-  <p>If you don't know what to pick by Week 4, these six are battle-tested, accessible, and small enough to work with quickly.</p>
+  <p>Stuck for a corpus by Week 4? These six are vetted and small enough to move fast.</p>
   <table><thead><tr><th>Corpus</th><th>Access</th><th>Best for</th></tr></thead><tbody>{corpora}</tbody></table>
 </section>
 """
@@ -385,24 +388,24 @@ def build_resources():
 
 <section>
   <h2>The notebooks</h2>
-  <p>The course teaches from a set of Colab notebooks: counting (Week 2), classification (Week 3), the data cookbook (Week 4), embeddings (Week 5), and the AI annotator (Week 7), plus Act-2 completion versions in two difficulty levels and a smoke test you run on day one to confirm a healthy runtime. They live in the <code>notebooks/</code> directory of the course repository and open directly in Google Colab. Start with <code>_smoke_test.ipynb</code>.</p>
+  <p>One Colab notebook per tool (counting, classification, data cookbook, embeddings, annotator), plus Act-2 completion versions and a smoke test. In <code>notebooks/</code>; open in Colab and start with <code>_smoke_test.ipynb</code>.</p>
 </section>
 
 <section>
   <h2>Anchor tools</h2>
-  <p>All free, browser-based, no install. A small kit, reused all term.</p>
+  <p>All free, browser-based, no install.</p>
   <table><thead><tr><th>Tool</th><th>Used in</th></tr></thead><tbody>{tools}</tbody></table>
 </section>
 
 <section>
   <h2>Reading at a glance</h2>
-  <p>One main reading per week (under 2,500 words or one 15-minute video), one optional supplement. Academic papers are abstract-and-figures reads, never full. Bring three questions to each: what did the authors decide, what's the load-bearing assumption, and where's the gap?</p>
+  <p>One main reading a week, one optional supplement; papers are abstract-and-figures, never full. Bring three questions: what did the authors decide, what's the load-bearing assumption, where's the gap?</p>
   <table><thead><tr><th>Week</th><th>Main</th><th>Supplement</th></tr></thead><tbody>{reading}</tbody></table>
 </section>
 
 <section>
   <h2>When you get stuck</h2>
-  <p>Two kits travel with the course. The <strong>common-errors cheat sheet</strong> covers the handful of errors a non-coder actually hits in Colab, each with the exact phrase to paste back to your AI. The <strong>pivot kit</strong> is a bank of pre-vetted corpus-and-question pairs you can adopt if your project stalls. Both live in the <code>kits/</code> directory of the repository.</p>
+  <p>Two kits in <code>kits/</code>: a <strong>common-errors cheat sheet</strong> (the errors a non-coder hits in Colab, with the phrase to paste back to the AI) and a <strong>pivot kit</strong> of vetted corpus-and-question pairs for when a project stalls.</p>
 </section>
 """
     write(SITE / "resources.html", page("Resources", body, depth=0, active="resources.html"))
@@ -412,15 +415,15 @@ def build_about():
 <h1>About</h1>
 <section>
   <h2>Who it's for</h2>
-  <p>Curious adults outside formal education, with mixed coding backgrounds and most with little or none. Humanities and social-science interest is assumed; a CS degree is not. The course is project-based, not a survey.</p>
+  <p>Curious adults, mixed coding backgrounds, most with little or none. Project-based, not a survey.</p>
 </section>
 <section>
   <h2>Cost</h2>
-  <p>The course runs at $0 per student by default. The only paid path is an optional API key, and the free Gemini tier covers everything the course asks for. The ceiling is a single $20 month of a chat subscription if a student wants one, and even that is never required.</p>
+  <p>$0 by default. The free Gemini tier covers it; a $20/month chat subscription is optional and never required.</p>
 </section>
 <section>
   <h2>The AI as a tool, not an oracle</h2>
-  <p>The AI writes code with you, classifies items with you, and helps you build a web page. It is treated as an instrument with known failure modes: the illusion of competence, the quiet shrinking of a question to fit what the tool does easily, insecure generated code, and unreliability on non-English text. Each session includes a short stretch with the assistant closed, because learners who never work without an AI can't later reproduce their own work.</p>
+  <p>The AI writes code and helps you build, but it has known failure modes: false confidence, shrinking your question to fit the tool, insecure code, weak non-English. Each session has a stretch with it closed, so you leave able to reproduce your own work.</p>
 </section>
 <section>
   <h2>The showcase</h2>
