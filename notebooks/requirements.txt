@@ -1,23 +1,23 @@
-# Culture as Data — notebook dependencies
+# Culture as Data, notebook dependencies
 # ----------------------------------------
 # STRATEGY (see BUILD-PLAN.md §4b): pin ONLY the "extra" packages Colab does not ship,
 # or ships at an incompatible version. Do NOT add pandas / numpy / scikit-learn /
-# matplotlib / Pillow / requests here — Colab ships those, version-current, and
+# matplotlib / Pillow / requests here, Colab ships those, version-current, and
 # reinstalling them is how you CREATE numpy/torch ABI conflicts.
 #
 # Install in Colab with:
 #     %pip install -q -r requirements.txt -c constraints.txt
 #
 # The pins below are a first cut. They MUST be re-frozen from a successful Colab run
-# (`pip freeze`) and stamped in notebooks/README.md — never trusted from memory.
+# (`pip freeze`) and stamped in notebooks/README.md, never trusted from memory.
 
-# Week 5 — embeddings (text) and CLIP image embeddings. The compat hot spot.
+# Week 5, embeddings (text) and CLIP image embeddings. The compat hot spot.
 sentence-transformers==3.0.1
 
-# Week 7 — the LLM-as-annotator pipeline (Gemini free tier; vision included).
+# Week 7, the LLM-as-annotator pipeline (Gemini free tier; vision included).
 google-generativeai==0.8.3
 
-# Week 4 — the polite-scrape half of the data cookbook.
+# Week 4, the polite-scrape half of the data cookbook.
 beautifulsoup4==4.12.3
 
 # Optional, Week 5 dimensionality reduction. scikit-learn's PCA + t-SNE (Colab-preinstalled)

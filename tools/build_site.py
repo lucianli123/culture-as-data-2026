@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-build_site.py — regenerate the Culture as Data course site (BUILD-PLAN §2).
+build_site.py, regenerate the Culture as Data course site (BUILD-PLAN §2).
 
 Plain HTML + one CSS file, no framework, no server build step. The page text is curated
 from the four design docs (overview / syllabus / lesson-plans / planning-doc) and held as
@@ -51,11 +51,11 @@ STARTER_CORPORA = [
 ]
 
 ANCHOR_TOOLS = [
-    ("OpenAI Tokenizer / Tiktokenizer", "https://platform.openai.com/tokenizer", "Week 2 — what counts as a word"),
-    ("Google Teachable Machine", "https://teachablemachine.withgoogle.com/", "Week 3 — train a classifier in minutes"),
-    ("Hugging Face", "https://huggingface.co/", "Weeks 5–8 — the public hub where open models live"),
-    ("TensorFlow Embedding Projector", "https://projector.tensorflow.org/", "Week 5 — plots text and images"),
-    ("CLIP image-search demo (optional)", "https://huggingface.co/spaces", "Week 6 — search images by typing words"),
+    ("OpenAI Tokenizer / Tiktokenizer", "https://platform.openai.com/tokenizer", "Week 2, what counts as a word"),
+    ("Google Teachable Machine", "https://teachablemachine.withgoogle.com/", "Week 3. Train a classifier in minutes"),
+    ("Hugging Face", "https://huggingface.co/", "Weeks 5–8, the public hub where open models live"),
+    ("TensorFlow Embedding Projector", "https://projector.tensorflow.org/", "Week 5, plots text and images"),
+    ("CLIP image-search demo (optional)", "https://huggingface.co/spaces", "Week 6, search images by typing words"),
 ]
 
 READING_LIST = [
@@ -75,8 +75,8 @@ READING_LIST = [
 WEEKS = [
  dict(n=1, title="Your First Investigation", tool="Culture as data itself (the ladder starts next week)",
    promise="By the break you'll have loaded a real dataset, asked it a question, and produced your first chart. A complete investigation, end to end, on day one.",
-   admire="The Pudding, \"Pockets\" (2018) — women's jeans pockets are measurably smaller, and one chart lands the argument.",
-   interrogate="80 pairs from a handful of brands: is that \"women's pockets,\" or a slice? And look at the chart itself, not just the data — what does it put front and center?",
+   admire="The Pudding, \"Pockets\" (2018), women's jeans pockets are measurably smaller, and one chart lands the argument.",
+   interrogate="80 pairs from a handful of brands: is that \"women's pockets,\" or a slice? And look at the chart itself, not just the data, what does it put front and center?",
    flow=[("0:00","Setting the room: the social rules, demonstrated by the instructor breaking one and being corrected. Today's live coding includes real mistakes on purpose."),
          ("0:12","Look at This, then Question It: Pockets."),
          ("0:17","Pre-train the vocabulary (no code): corpus, method, model, embedding, in plain language with pictures. The course map and the deliverable."),
@@ -88,7 +88,7 @@ WEEKS = [
    sketch="One question from your life answerable with text or image data; three sentences.",
    check="Trace it: one written sentence predicting what your cell does before you run it. (Competency 1.)",
    comps="1, 8"),
- dict(n=2, title="Counting Is Already a Model", tool="Counting — and every count hides a choice",
+ dict(n=2, title="Counting Is Already a Model", tool="Counting, and every count hides a choice",
    promise="Put a famous PNAS paper on trial, build a word-counter by hand, watch the same sentence get counted three ways, and count an image too.",
    admire="The Bollen/Schmidt trial: a hockey stick of societal distress, found by counting.",
    interrogate="The rising words are fiction-words, and Google scanned more fiction after 2000. The rebuttal and the move to steal: the authors removed the entire fiction corpus and re-ran it, and the pattern largely held. The answer to \"your corpus is biased\" is a test, not an argument.",
@@ -106,10 +106,10 @@ WEEKS = [
    sketch="Count something in a text you love; one chart; one sentence naming a choice you made.",
    check="Explain it: why two tokenizers split a sentence differently, and what your stemming choice changed. (Competencies 3, 5.)",
    comps="3, 5, 8"),
- dict(n=3, title="Classification: Counting with Weights", tool="Classification — train a reader and read what it learned",
+ dict(n=3, title="Classification: Counting with Weights", tool="Classification. Train a reader and read what it learned",
    promise="Teach a machine a bias in ten minutes, build a classifier and read its mind, and preview the full methods menu before next week's commitment.",
-   admire="Lincoln Mullen, America's Public Bible (2023) — a classifier that finds biblical quotations across millions of newspaper pages.",
-   interrogate="What counts as a quotation — a four-word echo, a loose paraphrase? — is a definition the scholar chose, and it shapes every result. The model reads the same messy digitized text your own project will.",
+   admire="Lincoln Mullen, America's Public Bible (2023), a classifier that finds biblical quotations across millions of newspaper pages.",
+   interrogate="What counts as a quotation, a four-word echo, a loose paraphrase?, is a definition the scholar chose, and it shapes every result. The model reads the same messy digitized text your own project will.",
    flow=[("0:00","Warm-up + Look at This: Mullen's America's Public Bible."),
          ("0:10","Teachable Machine, instructor demo: a two-class image model trained live, then the reveal that it learned from only orange cats and brown dogs. The room predicts what a black cat will do, then sees it."),
          ("0:22","Counting with weights, the lab: each word casts a weighted vote; a logistic regression adds them up. Train it on a pop corpus, then read the signed coefficients, its mind on the table."),
@@ -125,23 +125,23 @@ WEEKS = [
    comps="2, 4, 5"),
  dict(n=4, title="Pick a Corpus. Pick Two Methods. Commit.", tool="The project (no new mechanism this week)",
    promise="Leave with a pitched project, two chosen methods, your Data Biography drafted, and the skill that makes \"bring your own corpus\" real: getting data off the web.",
-   admire="A Pudding \"How We Made…\" process post — the messy middle, where every polished piece had a moment its maker thought it wouldn't work.",
+   admire="A Pudding \"How We Made…\" process post, the messy middle, where every polished piece had a moment its maker thought it wouldn't work.",
    interrogate="Listen across the pitches for questions too vague to answer, corpora that don't exist as accessible data, methods chosen for vibes, and the quiet scaling-down of ambition.",
    flow=[("0:00","Warm-up + Look at This: the process post."),
          ("0:08","Pitches, three-minute hard cap each: your corpus (existence proof shown), your two methods, what would count as a finding."),
          ("0:48","Break"),
          ("0:58","The data conversation: the licensing one-pager (CC0 museums and public-domain books go anywhere; academic-only sets analyze-don't-redistribute; lyrics and review text metadata-only; AO3 and other community-opposed archives a small attributed sample at most, never a shared dataset; live firehoses we discuss, don't scrape; pirated full-text books from shadow libraries like LibGen never, the line the field's $1.5B settlement was about), and the Data Biography introduced."),
-         ("1:10","Getting the data — APIs and scraping, demoed live with the AI writing the code. API first (the Met or Art Institute, no key); scraping second, with the robots.txt / ToS / rate-limit / anti-republish check."),
+         ("1:10","Getting the data, APIs and scraping, demoed live with the AI writing the code. API first (the Met or Art Institute, no key); scraping second, with the robots.txt / ToS / rate-limit / anti-republish check."),
          ("1:30","Collect-and-build lab: point the cookbook notebook at your corpus, reshape it, and save it to your Drive project folder so it's there next week (when the Week 1 Drive mount pays off), and fork the publishing template. Your project repo is born today."),
          ("1:55","Commit, with the pivot kit named as insurance. A null result honestly shown is a complete project. Check-out.")],
    reading="Heather Krause, \"Data Biographies: Getting to Know Your Data\" (We All Count).",
    sketch="Write the Data Biography (~400 words) for your corpus, and actually collect it with the cookbook notebook so you reach Week 5 with real data in hand.",
    check="Explain it: your question aloud, what it omits, and where your data actually comes from. (Competencies 2, 6.)",
    comps="2, 6"),
- dict(n=5, title="Embeddings: A Map of Meaning", tool="Embeddings — the heart of the course, the leap past counting",
+ dict(n=5, title="Embeddings: A Map of Meaning", tool="Embeddings, the heart of the course, the leap past counting",
    promise="Watch your own corpus, text or images, sort itself by meaning, see the finding counting couldn't give you, and learn the same trick is how \"For You\" feeds place you.",
    admire="A debate, two readings of one fact: embeddings encode the associations in a corpus.",
-   interrogate="To Caliskan et al. (2017) that's a warning — a model trained on human text launders human prejudice. To Soni, Klein & Eisenstein (2021) the same mirror is a method — embeddings on abolitionist newspapers reveal which papers led the movement's language. The room decides: when is reading a corpus's associations a discovery, and when is it laundering bias?",
+   interrogate="To Caliskan et al. (2017) that's a warning, a model trained on human text launders human prejudice. To Soni, Klein & Eisenstein (2021) the same mirror is a method, embeddings on abolitionist newspapers reveal which papers led the movement's language. The room decides: when is reading a corpus's associations a discovery, and when is it laundering bias?",
    flow=[("0:00","Warm-up + Look at This, room names the choice first: the embeddings debate."),
          ("0:10","The beyond-counting moment: put Week 2 beside today. There you counted adjectives near she vs. he; now embed those descriptions and watch them cluster. Same question, two tools, the second visibly richer. Name the idea: an item becomes a vector, position learned from the company it keeps."),
          ("0:25","Embed your own corpus, text or images. Image projects embed their pictures and watch them group by untagged style. The embedding model is an open one from Hugging Face, the hub where open models live (the same place Week 8's period models come from). And here charts stop being neutral: switch PCA to t-SNE and the same data rearranges. A visualization is an argument with decisions baked in."),
@@ -154,7 +154,7 @@ WEEKS = [
    comps="4, 5"),
  dict(n=6, title="Deepen the Project: Images, and Where the AI Fails", tool="Apply the tools harder; image projects' deepest day; calibrate the AI on your data",
    promise="Push your project past first findings, give image projects their deepest day, and find exactly where the AI's reading of your data goes wrong.",
-   admire="Arnold, Tilton & Berke, \"Visual Style in Two Network-Era Sitcoms\" (2019) — computer vision on every shot of Bewitched and I Dream of Jeannie, reading how the camera frames each lead.",
+   admire="Arnold, Tilton & Berke, \"Visual Style in Two Network-Era Sitcoms\" (2019), computer vision on every shot of Bewitched and I Dream of Jeannie, reading how the camera frames each lead.",
    interrogate="What counts as a \"character-centered shot\" is an operational definition, and a different one tells a different story; two shows is a slice, not \"television.\"",
    flow=[("0:00","Warm-up + Look at This, a pair: a contemporary visual study leads, then the sitcom camerawork as the rigor case to interrogate."),
          ("0:07","Images on the same map, for real: embed an image set live and watch it cluster by visual style nobody tagged. The beyond-counting contrast at its sharpest."),
@@ -167,10 +167,10 @@ WEEKS = [
    sketch="One disagreement between your labels and the AI's where you were right, and why. (Image projects: swap the image set or cluster count and screenshot how the grouping shifts.)",
    check="Fix it: the planted bug. (Competencies 1, 7.)",
    comps="1, 4, 7"),
- dict(n=7, title="The AI as a Reader, at Scale", tool="LLM-as-annotator — the most common operation in the field",
+ dict(n=7, title="The AI as a Reader, at Scale", tool="LLM-as-annotator, the most common operation in the field",
    promise="Use the AI to read your whole corpus at once, learn to trust the labels it's sure of and catch the ones it isn't, and reckon with whose judgment you're renting.",
    admire="Gilardi, Alizadeh & Kubli (2023): ChatGPT outperformed crowd workers on several text-labeling tasks, cheaper, faster, more consistent.",
-   interrogate="The prompt is the codebook; agreement with humans isn't ground truth; and the model fails silently, confident wrong answers a human's disagreement would have caught. Its \"judgment\" is a compression of scraped creative work — whose reading are you renting?",
+   interrogate="The prompt is the codebook; agreement with humans isn't ground truth; and the model fails silently, confident wrong answers a human's disagreement would have caught. Its \"judgment\" is a compression of scraped creative work, whose reading are you renting?",
    flow=[("0:00","Warm-up + Look at This, room names the choice first: the AI as a cheaper coder, and where it fails silently."),
          ("0:10","The annotator move, on your corpus: write a labeling prompt for your categories, run it on a slice, read the labels back. Tighten the definition and watch the labels shift, the prompt is your codebook."),
          ("0:35","Confidence, and when to trust it: ask the model not just what but how sure. Sort by confidence, trust the sure labels, hand-check the unsure ones, which is exactly which 30 to pull for Week 6."),
@@ -184,7 +184,7 @@ WEEKS = [
  dict(n=8, title="Models as Time Capsules + Settle the Finding", tool="What a trained model is: a compression of its corpus",
    promise="Meet models that live entirely inside one historical period, learn what a famous model has secretly memorized, kill your own finding to see what survives, and leave with a prose draft.",
    admire="TimeCapsuleLLM, a small GPT trained from scratch on nothing but 1800s London publications, and \"Speak, Memory\" (Bamman's lab), which probes which books GPT-4 has effectively memorized.",
-   interrogate="A period model speaks only for the period's published, surviving, digitized voices. And memorization isn't reading: models score higher on memorized books, so an LLM that seems to read your corpus may be partly reciting it — a validity problem, not just an ethics one.",
+   interrogate="A period model speaks only for the period's published, surviving, digitized voices. And memorization isn't reading: models score higher on memorized books, so an LLM that seems to read your corpus may be partly reciting it, a validity problem, not just an ethics one.",
    flow=[("0:00","Warm-up + Look at This: TimeCapsuleLLM and \"Speak, Memory,\" screenshots ready. (These period models, and supplements like MonadGPT and MacBERTh, live on Hugging Face, where you can download and run open models, or fine-tune your own.)"),
          ("0:07","Kill it, then keep what survives, one continuous arc on your own results: shuffle the labels and re-run; split the corpus in half; ask \"compared to what?\". Then compress whatever survived into one headline sentence."),
          ("0:52","Break"),
@@ -195,7 +195,7 @@ WEEKS = [
    sketch="Expand to 600–1,000 words. Write your \"show your work\" appendix: what you cut, what surprised you, what the AI got wrong, and which robustness checks your finding survived.",
    check="Explain it: your headline finding, and what it does not show. (Competencies 3, 4.)",
    comps="3, 4, 5"),
- dict(n=9, title="Build the Page", tool="Publishing — Quarto to GitHub Pages, static by default",
+ dict(n=9, title="Build the Page", tool="Publishing, Quarto to GitHub Pages, static by default",
    promise="Leave today with a deployed draft of your web essay at a public URL.",
    admire="Three published essays side by side: a Pudding piece, an Observable notebook, a Quarto site. The same goal, three defensible-but-different sets of choices.",
    interrogate="There's no single right way, only choices you can defend. Yours will be choices too.",
@@ -237,7 +237,7 @@ def page(title: str, body: str, depth: int = 0, active: str = "") -> str:
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{esc(title)} — {esc(TITLE)}</title>
+<title>{esc(title)}, {esc(TITLE)}</title>
 <meta name="description" content="{esc(TAGLINE)}">
 <link rel="stylesheet" href="{base}assets/style.css">
 </head>
@@ -464,7 +464,7 @@ def build_weeks():
 """
         write(WEEKS_DIR / f"week-{w['n']:02d}.html", page(f"Week {w['n']}: {w['title']}", body, depth=1))
 
-CSS = """/* Culture as Data — one stylesheet. System fonts, high contrast, reads with JS off. */
+CSS = """/* Culture as Data, one stylesheet. System fonts, high contrast, reads with JS off. */
 :root{
   --ink:#1a1a1a; --muted:#5a5a52; --bg:#fbfaf7; --card:#fff; --line:#e3e0d8;
   --accent:#7a3b2e; --accent-soft:#f0e9e2; --max:46rem;
@@ -526,7 +526,7 @@ def build_assets():
 def build_buildnote():
     note = """# How the site is generated
 
-This site is produced by `../../tools/build_site.py` — a small Python script with no
+This site is produced by `../../tools/build_site.py`, a small Python script with no
 dependencies beyond the standard library. The page content is curated from the four design
 docs (`overview.md`, `syllabus.md`, `lesson-plans.md`, `planning-doc.md`) and held as
 structured data inside the script, so the site and the docs stay in step: when a doc changes,
@@ -534,7 +534,7 @@ update the matching data in `build_site.py` and re-run
 
     python tools/build_site.py
 
-It emits plain HTML plus one CSS file. There is **no server build step** — deploy by pushing
+It emits plain HTML plus one CSS file. There is **no server build step**, deploy by pushing
 `site/` to a `gh-pages` branch or serving it from `/docs`. Every page reads fully with
 JavaScript disabled.
 
@@ -553,7 +553,7 @@ def main():
     build_resources()
     build_about()
     build_weeks()
-    print("Site built — docs/ ready for GitHub Pages.")
+    print("Site built, docs/ ready for GitHub Pages.")
 
 
 if __name__ == "__main__":

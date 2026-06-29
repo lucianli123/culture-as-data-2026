@@ -1,16 +1,16 @@
-# Culture as Data — hard pins (pip constraints file)
+# Culture as Data, hard pins (pip constraints file)
 # ---------------------------------------------------
 # A pip constraints file caps the few transitive dependencies that, left free, drift
 # past the versions tested against Colab's image and break at import time (the numpy
 # fault line in particular). Install with:
 #     %pip install -q -r requirements.txt -c constraints.txt
 #
-# A constraint does NOT install a package — it only bounds the version IF something
+# A constraint does NOT install a package. It only bounds the version IF something
 # pulls it in. So leaving torch/numpy here is safe: if Colab already satisfies them,
 # nothing is reinstalled; if a fresh container needs them, these are the tested ceilings.
 #
 # Re-freeze these from a successful Colab `pip freeze` and update the date below.
-# tested-as-of: PLACEHOLDER — replace with the date of the first green Colab smoke test.
+# tested-as-of: PLACEHOLDER, replace with the date of the first green Colab smoke test.
 
 # The numpy line: sentence-transformers / torch stacks are happiest on numpy<2 ABI as of
 # the tested image. If a future Colab moves to numpy 2.x across the board, re-freeze.

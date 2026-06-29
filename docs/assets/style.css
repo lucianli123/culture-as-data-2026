@@ -1,4 +1,4 @@
-/* Culture as Data — one stylesheet. System fonts, high contrast, reads with JS off. */
+/* Culture as Data, one stylesheet. System fonts, high contrast, reads with JS off. */
 :root{
   --ink:#1a1a1a; --muted:#5a5a52; --bg:#fbfaf7; --card:#fff; --line:#e3e0d8;
   --accent:#7a3b2e; --accent-soft:#f0e9e2; --max:46rem;

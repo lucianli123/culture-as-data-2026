@@ -1,4 +1,4 @@
-# Common Errors Cheat Sheet — the unblocking kit
+# Common Errors Cheat Sheet, the unblocking kit
 
 You will hit errors. That is normal, and recovering calmly is part of the lesson. The AI wrote
 the code; the AI can fix it. Before anything, run the **self-rescue protocol**:
@@ -71,5 +71,5 @@ finishes."
 
 ---
 
-*Keep this open in a tab during every lab. The move is never to panic — it's to read the last
+*Keep this open in a tab during every lab. The move is never to panic. It's to read the last
 line, paste it back, and keep moving.*

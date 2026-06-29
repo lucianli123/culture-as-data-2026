@@ -1,8 +1,8 @@
 # Culture as Data
 
 A 10-week, project-based community course that teaches curious adults to investigate cultural
-data at scale with an AI assistant as a coding partner — counting, classification, embeddings,
-and AI annotation — ending in a published web essay. This repository is the **buildable
+data at scale with an AI assistant as a coding partner. Counting, classification, embeddings,
+and AI annotation, ending in a published web essay. This repository is the **buildable
 artifact** for the course: the static course **site** and the Colab **notebooks** the course
 teaches from.
 
@@ -49,7 +49,7 @@ culture-as-data/
 
 1. Open [Google Colab](https://colab.research.google.com/) and sign in with a Google account.
 2. `File → Open notebook → GitHub` (or `Upload`), and pick a `weekNN_*.ipynb` file.
-3. Run the **first code cell** — it installs the pinned extra packages with
+3. Run the **first code cell**. It installs the pinned extra packages with
    `%pip install -q -r requirements.txt -c constraints.txt`. (When opening a single notebook
    without the repo, each notebook also carries an explicit pinned `%pip install` fallback.)
 4. Run the **imports cell**. If anything fails, see `kits/common-errors-cheatsheet.md`.
@@ -68,7 +68,7 @@ culture-as-data/
 
 **Runtime expectations.** Everything is built for the **Colab free tier** (intermittent T4 GPU,
 ~12 GB RAM, no persistent storage). Week 5 (embeddings + CLIP) is the only notebook that wants
-a GPU; it falls back to CPU on a tiny corpus. Cost target is **$0 per student** — the only paid
+a GPU; it falls back to CPU on a tiny corpus. Cost target is **$0 per student**, the only paid
 path is an optional API key, and the Gemini free tier covers the course.
 
 ## Re-running the compatibility harness (when Colab changes)
@@ -78,13 +78,13 @@ as of" date and the Python / numpy / torch versions it passed against. When that
 re-run the harness:
 
 ```bash
-# Layer 1 — does the pinned set even resolve? (seconds, no execution)
+# Layer 1, does the pinned set even resolve? (seconds, no execution)
 python tools/check_compat.py
 
-# Layer 2 — do all notebooks run top-to-bottom in a Colab-like image?
+# Layer 2. Do all notebooks run top-to-bottom in a Colab-like image?
 bash tools/run_notebooks.sh
 
-# Layer 3 — the student-facing safety net: open notebooks/_smoke_test.ipynb in real Colab
+# Layer 3, the student-facing safety net: open notebooks/_smoke_test.ipynb in real Colab
 #           and read the all-green report. Its printed output IS the "tested as of" record.
 ```
 
@@ -101,7 +101,7 @@ python tools/build_site.py      # regenerates everything under docs/
 ```
 
 See the header comment in `tools/build_site.py` for the rationale and how to edit content. Deploy by pushing the
-`docs/` directory to a `gh-pages` branch or serving it from `/docs` (the default this repo is set up for) on GitHub Pages — there is
+`docs/` directory to a `gh-pages` branch or serving it from `/docs` (the default this repo is set up for) on GitHub Pages. There is
 no build step on the server; it's plain HTML + one CSS file and reads fully with JavaScript off.
 
 ## Design notes / choices flagged for review

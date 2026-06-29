@@ -1,6 +1,6 @@
-# Pivot Kit — fallback corpus + question bank
+# Pivot Kit, fallback corpus + question bank
 
-If your project stalls — a corpus that won't cooperate, a question with no findable answer —
+If your project stalls, a corpus that won't cooperate, a question with no findable answer, 
 that is expected, not failure. Adopt one of these pre-vetted pairs in Week 5 and still finish.
 Each is **(PK)**: a corpus plus a question known to yield a finding in the time available,
 pop-weighted, spanning text and image, tagged with which of the four tools it suits. A null
@@ -12,7 +12,7 @@ The four tools: **counting** (W2) · **classification** (W3) · **embeddings** (
 
 ---
 
-**(PK) 1 — Eurovision lyrics, 1956–2023** · *text*
+**(PK) 1, Eurovision lyrics, 1956–2023** · *text*
 *Access:* `Spijkervet/eurovision-dataset` on GitHub (CSV, no key).
 *Question:* Do winning entries use more love/unity vocabulary than non-winners, and has that
 shifted by decade?
@@ -20,14 +20,14 @@ shifted by decade?
 *Why it's safe:* Clean licensed dataset, reachable in one cell, the question is answerable at
 this scale, and language shift across decades gives a visible result.
 
-**(PK) 2 — /r/AmItheAsshole judgments** · *text*
+**(PK) 2, /r/AmItheAsshole judgments** · *text*
 *Access:* Pushshift mirror on HuggingFace (historical dump; live API is closed).
 *Question:* Which words most predict a "You're the Asshole" verdict versus "Not the Asshole"?
 *Tool:* classification (read the signed weights) → AI annotation to re-judge a slice.
 *Why it's safe:* Pre-labeled at scale, a ~1,000-row slice trains a classifier in seconds, and
 the signed-weight reveal is reliably fun and legible. Aggregate only; don't quote individuals.
 
-**(PK) 3 — TMDb movie posters of one genre** · *image*
+**(PK) 3, TMDb movie posters of one genre** · *image*
 *Access:* TMDb API, free key.
 *Question:* Do horror posters cluster by color/visual style in a way the genre tag alone
 doesn't capture?
@@ -35,31 +35,31 @@ doesn't capture?
 *Why it's safe:* Images are reachable via a documented API, a few hundred posters embed on a
 CPU/T4 in minutes, and "covers cluster by untagged style" is the sharpest beyond-counting beat.
 
-**(PK) 4 — Met Museum Open Access objects** · *image + text*
-*Access:* official Met API (~500K objects with images, CC0 — go anywhere).
+**(PK) 4, Met Museum Open Access objects** · *image + text*
+*Access:* official Met API (~500K objects with images, CC0, go anywhere).
 *Question:* How has the cataloging language for one department (e.g. "Costume") changed across
-acquisition decades — and do the objects' images cluster the same way the labels do?
+acquisition decades, and do the objects' images cluster the same way the labels do?
 *Tool:* counting (catalog text) + image embeddings; the "count the labels, then let the images
 sort themselves" contrast.
 *Why it's safe:* CC0, zero licensing risk, a flagship API, and both a text and image path.
 
-**(PK) 5 — NYT Wedding Announcements, 1985–2014** · *text*
+**(PK) 5, NYT Wedding Announcements, 1985–2014** · *text*
 *Access:* `TheUpshot/nyt_weddings` on GitHub (CSV).
-*Question:* What adjectives sit near "she" versus "he" in the announcements — and do they
+*Question:* What adjectives sit near "she" versus "he" in the announcements, and do they
 cluster differently when embedded?
 *Tool:* counting (W2) → embeddings (W5); the course's signature before/after.
 *Why it's safe:* Small provided CSV, the gendered-adjective question is the canonical
 count-then-embed demo, and it reliably produces a finding.
 
-**(PK) 6 — Pop-lyrics slice for one artist vs. a baseline** · *text*
-*Access:* a provided lyrics slice (metadata/analysis only — don't republish full lyrics).
-*Question:* What is one artist's "signature vocabulary" — the words they use far more than a big
-pop baseline — and does it change across albums/eras?
+**(PK) 6, Pop-lyrics slice for one artist vs. a baseline** · *text*
+*Access:* a provided lyrics slice (metadata/analysis only. Don't republish full lyrics).
+*Question:* What is one artist's "signature vocabulary", the words they use far more than a big
+pop baseline, and does it change across albums/eras?
 *Tool:* counting / distinctive vocabulary (W2) → embeddings to cluster songs by mood/era.
 *Why it's safe:* The signature-word fingerprint is a guaranteed delight beat, the slice is small,
 and aggregate word counts avoid the lyrics-licensing problem.
 
-**(PK) 7 — Bluesky one-hour firehose slice** · *text*
+**(PK) 7, Bluesky one-hour firehose slice** · *text*
 *Access:* Jetstream, no API key; `atproto` Python SDK.
 *Question:* Around one hashtag or topic, what distinct sub-conversations appear when posts are
 embedded and clustered?
@@ -67,7 +67,7 @@ embedded and clustered?
 *Why it's safe:* No key, a one-hour pull is plenty of data, and clustering yields visible
 structure. Public-but-not-public: aggregate, anonymize, don't quote non-public individuals.
 
-**(PK) 8 — RuPaul's Drag Race contestant data + photos** · *image + text*
+**(PK) 8, RuPaul's Drag Race contestant data + photos** · *image + text*
 *Access:* `dragracer` R package / public episode data; contestant promo images.
 *Question:* Do contestants' promo-look images cluster by season/era, and does the edit's
 language (confessional text) predict placement?
@@ -99,6 +99,6 @@ clear "does the data show what fans assume?" question.
 
 ---
 
-*The pivot kit isn't a fallback-of-shame — it's insurance. The Week 5–6 one-on-ones are where
+*The pivot kit isn't a fallback-of-shame. It's insurance. The Week 5–6 one-on-ones are where
 we reach for it if an idea wobbles. The three escape routes: narrow the question, swap the
 corpus (keep the question), or swap the question (keep the corpus).*
