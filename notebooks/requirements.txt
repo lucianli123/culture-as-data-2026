@@ -20,6 +20,10 @@ google-generativeai==0.8.3
 # Week 4, the polite-scrape half of the data cookbook.
 beautifulsoup4==4.12.3
 
+# Week 4 load-a-file route (Hugging Face datasets; Google Drive/large-file downloads).
+datasets==2.21.0
+gdown==5.2.0
+
 # Optional, Week 5 dimensionality reduction. scikit-learn's PCA + t-SNE (Colab-preinstalled)
 # cover the core lesson, so umap is opt-in. Uncomment only if a project needs it; it can
 # drag numba/llvmlite pins that fight Colab's numpy.

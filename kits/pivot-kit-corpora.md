@@ -99,6 +99,34 @@ clear "does the data show what fans assume?" question.
 
 ---
 
+### Expanded datasets (the wider applicant pool)
+
+**(PK) 12 — Pantheon famous-people dataset** ⭐ · *text/structured*
+*Access:* pantheon.world, a CSV of 11,000+ globally famous figures scored by fame. Loads with `read_csv`.
+*Question:* How does a culture decide who is "famous", and how does that skew by era, place, and field?
+*Tool:* counting/comparison (W2); embeddings (W5) on the bios.
+*Why it's safe:* A real spreadsheet, no key, a clear status-and-prestige question.
+
+**(PK) 13 — Music over time (Billboard Hot 100 + audio features)** ⭐ · *structured*
+*Access:* a Billboard + audio-features **CSV** on Kaggle (flat, `read_csv`). *Spotify's audio API was deprecated Nov 2024, so do not call Spotify live;* the Million Song Dataset (millionsongdataset.com) has richer features but arrives as packed files the AI must unpack first.
+*Question:* Did hit music get more homogeneous (tempo, energy, valence) over the decades?
+*Tool:* counting/trends (W2); classification (W3) by decade.
+*Why it's safe:* The CSV route needs no audio handling and no key; the question is answerable at scale.
+
+**(PK) 14 — Met / MoMA Open Access (CC0 spreadsheet)** ⭐ · *image + text*
+*Access:* the Met or MoMA CC0 collection **CSV** (loads with `read_csv`); images via the object IDs.
+*Question:* Who gets collected, and how has the cataloging language changed across acquisition decades?
+*Tool:* counting (catalog text) + image embeddings (W5/W6).
+*Why it's safe:* CC0, zero licensing risk, both a text and image path, and a real spreadsheet to start from.
+
+**(PK) 15 — LinCE code-switching corpora** · *text*
+*Access:* Hugging Face `datasets` (one line: `load_dataset(...)`), word-level language tags.
+*Question:* Where and how do bilingual speakers switch languages, and what does the switch mark?
+*Tool:* counting/classification on the language tags (W2/W3).
+*Why it's safe:* One-line load (the cookbook teaches it), labeled per word, a clear tagging-and-counting project.
+
+---
+
 *The pivot kit isn't a fallback-of-shame. It's insurance. The Week 5–6 one-on-ones are where
 we reach for it if an idea wobbles. The three escape routes: narrow the question, swap the
 corpus (keep the question), or swap the question (keep the corpus).*

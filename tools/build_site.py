@@ -42,12 +42,16 @@ COMPETENCIES = [
 ]
 
 STARTER_CORPORA = [
-    ("NYT Wedding Announcements 1985–2014", "TheUpshot/nyt_weddings on GitHub", "counting comparisons across time, gender analysis, class signaling"),
-    ("/r/AmITheAsshole judgments", "Pushshift mirrors on HuggingFace", "AI-as-reader (moral classification), reception analysis"),
+    ("NYT Wedding Announcements 1985–2014 ⭐", "TheUpshot/nyt_weddings, a CSV", "counting across time, gender, class signaling"),
+    ("Pantheon famous people ⭐", "pantheon.world, a CSV of 11,000+ figures", "how a culture decides who matters; status and prestige"),
+    ("Billboard Hot 100 + audio features ⭐", "Kaggle CSV (Spotify's audio API closed in 2024)", "did hit music get more homogeneous over time?"),
+    ("Met / MoMA Open Access ⭐", "CC0 spreadsheet, ~500K objects with images", "image embeddings, who gets collected, cataloging language"),
+    ("/r/AmITheAsshole judgments", "Pushshift mirror on HuggingFace", "AI-as-reader (moral classification), reception analysis"),
     ("Eurovision lyrics 1956–2023", "Spijkervet/eurovision-dataset on GitHub", "counting across languages, sentiment, diachronic shift"),
-    ("TMDb movie posters of one genre", "TMDb API, free", "image embeddings, color analysis, CLIP search"),
-    ("Met Museum Open Access", "official API, ~500K objects with images", "image embeddings, distant viewing, cataloging-language change"),
-    ("Bluesky one-hour firehose slice", "Jetstream, no API key, atproto SDK", "any of the four methods, social-media-specific work"),
+    ("TMDb movie posters of one genre", "TMDb API, free key", "image embeddings, color analysis, CLIP search"),
+    ("Bluesky one-hour firehose slice", "Jetstream, no API key, atproto SDK", "any of the four methods, social-media work"),
+    ("LinCE code-switching corpora", "Hugging Face datasets, one-line load", "how bilinguals switch languages; mixed-language identity"),
+    ("CLICS colexifications", "clics.clld.org, browse in-browser", "do languages carve up meaning the same way? (networks)"),
 ]
 
 ANCHOR_TOOLS = [
@@ -362,6 +366,11 @@ def build_syllabus():
 </section>
 
 <section>
+  <h2>How a session runs</h2>
+  <p>Each core session balances three modes in roughly equal thirds: a short lecture and live-coded demo of the week's tool, hands-on workshop time on your own data, and a real discussion, interrogating a study, debating an interpretation, or critiquing each other's work in progress.</p>
+</section>
+
+<section>
   <h2>Eight things you'll be able to do</h2>
   {comps}
 </section>
@@ -389,7 +398,7 @@ def build_syllabus():
 
 <section>
   <h2>Starter corpora</h2>
-  <p>Stuck for a corpus by Week 4? These six are vetted and small enough to move fast.</p>
+  <p>Stuck for a corpus by Week 4? These are vetted and small enough to move fast. A star (⭐) means it opens straight in Colab with one line, the lowest-effort place to start if code feels new.</p>
   <table><thead><tr><th>Corpus</th><th>Access</th><th>Best for</th></tr></thead><tbody>{corpora}</tbody></table>
 </section>
 """
