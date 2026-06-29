@@ -27,3 +27,8 @@ beautifulsoup4==4.12.3
 
 # Optional, Week 5 interactive scatter. matplotlib (Colab-preinstalled) covers the lesson.
 # plotly==5.24.1
+
+# --- Optional: cool-methods starters (install per-notebook, NOT part of the core course) ---
+# networkx        # character-networks notebook (usually already on Colab)
+# vaderSentiment  # sentiment-arcs notebook
+# datasets>=2.19  # ModernBERT fine-tune (the finetune notebook upgrades transformers to >=4.48)

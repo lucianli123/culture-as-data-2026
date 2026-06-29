@@ -77,6 +77,28 @@ clear "does the data show what fans assume?" question.
 
 ---
 
+### Born-digital fiction (for narrative projects)
+
+**(PK) 9 - r/HFY sci-fi stories (born-digital fiction)** - *text*
+*Access:* Reddit r/HFY via a Pushshift mirror / the born-digital fiction dump (aggregate, attributed).
+*Question:* What is the "cause of victory" or cause of death across these stories, and does it shift by year?
+*Tool:* AI annotation (W7) for narrative extraction, then counting/embeddings on the labels.
+*Why it's safe:* A large, reachable born-digital corpus with a clear narrative question the annotator showcases; aggregate analysis, attribute the community, don't republish whole stories.
+
+**(PK) 10 - r/nosleep horror (born-digital fiction)** - *text*
+*Access:* Reddit r/nosleep via a Pushshift mirror (aggregate, attributed; small sample).
+*Question:* Which horror subgenre is each story, and which subgenres rise and fall over time?
+*Tool:* AI annotation (W7) to label subgenre; embeddings (W5) to find clusters the tags miss.
+*Why it's safe:* Reachable, the subgenre question is answerable at scale, and the annotator's silent-failure lesson lands hard on ambiguous horror. Aggregate only.
+
+**(PK) 11 - Public-domain genre fiction (Project Gutenberg) or Royal Road serials** - *text*
+*Access:* Project Gutenberg (public domain, go anywhere) or a small, polite sample of Royal Road serials.
+*Question:* What is the emotional arc of these stories, and do genres share a characteristic shape?
+*Tool:* sentiment arcs (cool-methods) + character networks (cool-methods).
+*Why it's safe:* Gutenberg is public domain with zero risk; Royal Road only as a small attributed sample. Both give long narratives the arc and network methods need.
+
+---
+
 *The pivot kit isn't a fallback-of-shame — it's insurance. The Week 5–6 one-on-ones are where
 we reach for it if an idea wobbles. The three escape routes: narrow the question, swap the
 corpus (keep the question), or swap the question (keep the corpus).*

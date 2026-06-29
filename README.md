@@ -15,6 +15,7 @@ source of truth. This repo turns them into things you can open, run, and deploy.
 ```
 culture-as-data/
 ├── README.md                  ← you are here
+├── design/                      ← the four design docs (source of truth) + BUILD-PLAN
 ├── docs/                      ← the static course site (deploy to GitHub Pages)
 │   ├── index.html  syllabus.html  schedule.html  resources.html  about.html
 │   ├── weeks/week-01.html … week-10.html
@@ -34,7 +35,7 @@ culture-as-data/
 │   ├── week07_annotator.ipynb          (fully worked)
 │   ├── week07_annotator_GUIDED.ipynb
 │   ├── week07_annotator_SKELETON.ipynb
-│   └── cool-methods/          ← optional starter notebooks
+│   └── cool-methods/          ← optional: character_networks, sentiment_arcs, finetune_modernbert
 ├── kits/
 │   ├── common-errors-cheatsheet.md     ← the unblocking kit
 │   └── pivot-kit-corpora.md            ← fallback corpus + question bank
@@ -52,6 +53,14 @@ culture-as-data/
    `%pip install -q -r requirements.txt -c constraints.txt`. (When opening a single notebook
    without the repo, each notebook also carries an explicit pinned `%pip install` fallback.)
 4. Run the **imports cell**. If anything fails, see `kits/common-errors-cheatsheet.md`.
+
+   The first code cell **mounts Google Drive** into one project folder, so your corpus,
+   embeddings, labels, and charts survive a Colab reset. Save artifacts there, never to
+   `/content` (which is wiped on disconnect).
+
+   The first code cell **mounts Google Drive** into one project folder, so your corpus,
+   embeddings, labels, and charts survive a Colab reset. Save every artifact there, never to
+   `/content` (which is wiped on disconnect).
 5. For Week 7 you'll need a free **Gemini API key** from
    [Google AI Studio](https://aistudio.google.com/). Paste it into Colab Secrets as
    `GEMINI_API_KEY` (never hard-code it). The notebook runs end-to-end without a key using a
