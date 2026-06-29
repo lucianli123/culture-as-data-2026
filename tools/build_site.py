@@ -59,16 +59,16 @@ ANCHOR_TOOLS = [
 ]
 
 READING_LIST = [
-    ("1", "Bollen et al. (PNAS 2021) abstract + the hockey-stick figure, plus the one-page Schmidt/Piantadosi/Mahowald critique", "Robin Sloan, \"Writing with the machine\""),
-    ("2", "Wolfram, \"What Is ChatGPT Doing…\" opening sections only", "Zipf's law, the straight line in every text"),
-    ("3", "Browse America's Public Bible (americaspublicbible.org), intro + a verse", "Underwood on GPT-4 and fictional time; Juola's Rowling unmasking"),
-    ("4", "Krause, \"Data Biographies: Getting to Know Your Data\" (We All Count)", "Freelon, \"Post-API Age\""),
-    ("5", "Alammar, \"The Illustrated Word2Vec\" + the Soni/Klein vs. Caliskan debate pair", "Garg et al. (PNAS 2018); Anderson et al. (Spotify, 2020)"),
-    ("6", "Gilardi et al. (2023) abstract, the AI as a cheaper coder", "The Reagan/Swafford smoothing fight"),
-    ("7", "NYT v. OpenAI complaint summary, or a Books3 explainer, read against your Week 4 licensing conversation", "Gilardi et al. (2023), full"),
-    ("8", "None required", "MonadGPT and MacBERTh model pages, two more time capsules"),
-    ("9", "None", "A Pudding \"how we made it\" post"),
-    ("10", "None", "The de Belamy authorship story; Ridler's Mosaic Virus; Anadol's Unsupervised and its critics"),
+ ("1", "<a href='https://www.pnas.org/doi/10.1073/pnas.2102061118'>Bollen et al., the cognitive-distortions hockey stick (PNAS 2021)</a>, with the <a href='https://www.pnas.org/doi/10.1073/pnas.2115010118'>Schmidt et al. critique</a>", "<a href='https://www.robinsloan.com/notes/writing-with-the-machine/'>Robin Sloan, Writing with the machine</a>"),
+ ("2", "<a href='https://writings.stephenwolfram.com/2023/02/what-is-chatgpt-doing-and-why-does-it-work/'>Wolfram, What Is ChatGPT Doing</a> (opening sections only)", "<a href='https://en.wikipedia.org/wiki/Zipf%27s_law'>Zipf's law</a>, the straight line in every text"),
+ ("3", "<a href='https://americaspublicbible.org/'>Mullen, America's Public Bible</a> (intro + a verse)", "<a href='https://tedunderwood.com/2023/03/19/using-gpt-4-to-measure-the-passage-of-time-in-fiction/'>Underwood on GPT-4 and fictional time</a>; <a href='https://www.scientificamerican.com/article/how-a-computer-program-helped-show-jk-rowling-write-a-cuckoos-calling/'>Juola's Rowling unmasking</a>"),
+ ("4", "<a href='https://gijn.org/stories/data-biographies-getting-to-know-your-data/'>Krause, Data Biographies</a> (We All Count)", "<a href='https://dfreelon.org/publications/2018_Computational_research_in_the_postAPI_age.pdf'>Freelon, Post-API Age</a>"),
+ ("5", "<a href='https://jalammar.github.io/illustrated-word2vec/'>Alammar, The Illustrated Word2Vec</a>, plus the debate: <a href='https://www.publicbooks.org/how-words-lead-to-justice/'>Soni/Klein, How Words Lead to Justice</a> vs. <a href='https://arxiv.org/abs/1608.07187'>Caliskan et al. (2017)</a>", "<a href='https://www.pnas.org/doi/10.1073/pnas.1720347115'>Garg et al. (PNAS 2018)</a>; <a href='https://research.atspotify.com/algorithmic-effects-on-the-diversity-of-consumption-on-spotify/'>Anderson et al., Spotify diversity</a>"),
+ ("6", "<a href='https://www.pnas.org/doi/10.1073/pnas.2305016120'>Gilardi et al. (2023)</a>, the AI as a cheaper coder", "<a href='https://link.springer.com/article/10.1140/epjds/s13688-016-0093-1'>Reagan et al., Six Basic Shapes</a> (the smoothing fight); <a href='https://selfiecity.net/'>Manovich, Selfiecity</a>"),
+ ("7", "<a href='https://www.npr.org/2025/03/26/nx-s1-5288157/new-york-times-openai-copyright-case-goes-forward'>NYT v. OpenAI</a>, read against your Week 4 licensing conversation", "<a href='https://www.pnas.org/doi/10.1073/pnas.2305016120'>Gilardi et al., full</a>; <a href='https://arxiv.org/abs/2410.12029'>Bamman et al., LLM classification in cultural analytics (CHR 2024)</a>"),
+ ("8", "None required", "<a href='https://github.com/haykgrigo3/TimeCapsuleLLM'>TimeCapsuleLLM</a> and <a href='https://aclanthology.org/2023.emnlp-main.453/'>Speak, Memory</a>; period models <a href='https://huggingface.co/Pclanglais/MonadGPT'>MonadGPT</a> and <a href='https://huggingface.co/emanjavacas/MacBERTh'>MacBERTh</a>"),
+ ("9", "None", "<a href='https://pudding.cool/process/pivot-continue-down/'>A Pudding process post</a>"),
+ ("10", "None", "<a href='https://en.wikipedia.org/wiki/Edmond_de_Belamy'>Edmond de Belamy</a>; <a href='https://annaridler.com/works/myriad-tulips'>Ridler's Mosaic Virus</a>; <a href='https://www.moma.org/calendar/exhibitions/5535'>Anadol's Unsupervised</a>"),
 ]
 
 # Weekly data, curated from lesson-plans.md ---------------------------------
@@ -240,6 +240,7 @@ def page(title: str, body: str, depth: int = 0, active: str = "") -> str:
 <title>{esc(title)}, {esc(TITLE)}</title>
 <meta name="description" content="{esc(TAGLINE)}">
 <link rel="stylesheet" href="{base}assets/style.css">
+<link rel="icon" href="{base}assets/favicon.svg">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -268,6 +269,40 @@ def ol(items): return "<ol>" + "".join(f"<li>{i}</li>" for i in items) + "</ol>"
 def ul(items): return "<ul>" + "".join(f"<li>{i}</li>" for i in items) + "</ul>"
 
 # Pages ---------------------------------------------------------------------
+FAVICON_SVG = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#7a3b2e"/><circle cx="11" cy="12" r="3" fill="#f0e9e2"/><circle cx="20" cy="10" r="3" fill="#b9852f"/><circle cx="22" cy="21" r="3" fill="#3f6f5f"/><circle cx="12" cy="22" r="3" fill="#f0e9e2"/></svg>'
+
+def svg_hero():
+    import random
+    rnd = random.Random(7)
+    hues = ["#7a3b2e", "#3f6f5f", "#b9852f"]
+    centers = [(190,150),(430,105),(560,195)]
+    labels = [("lyrics",120,150),("recipes",405,80),("letters",560,225)]
+    dots=[]
+    for (cx,cy),hue in zip(centers,hues):
+        for _ in range(16):
+            x=cx+rnd.gauss(0,34); y=cy+rnd.gauss(0,24)
+            r=rnd.uniform(3,6.5)
+            dots.append(f'<circle cx="{x:.0f}" cy="{y:.0f}" r="{r:.0f}" fill="{hue}" opacity="0.78"/>')
+    labs="".join(f'<text x="{x}" y="{y}" font-size="13" fill="#5a5a52" font-style="italic">{t}</text>' for t,x,y in labels)
+    return ('<svg class="figure" viewBox="0 0 720 280" role="img" '
+            'aria-label="A scatter map of meaning, where items cluster by what they are about.">'
+            '<rect x="1" y="1" width="718" height="278" rx="14" fill="#faf8f4" stroke="#e3e0d8"/>'
+            + "".join(dots) + labs +
+            '<text x="22" y="264" font-size="12" fill="#8a8a82">a map of meaning: similar things land near each other</text>'
+            '</svg>')
+
+def svg_ladder():
+    steps=[("Counting",70),("Classification",110),("Embeddings",150),("AI annotation",188)]
+    bars=[]; x=40
+    for i,(name,h) in enumerate(steps):
+        y=210-h; op=0.40+0.18*i
+        bars.append(f'<rect x="{x}" y="{y}" width="120" height="{h}" rx="8" fill="#7a3b2e" opacity="{op:.2f}"/>')
+        bars.append(f'<text x="{x+60}" y="230" font-size="12.5" fill="#1a1a1a" text-anchor="middle">{name}</text>')
+        x+=165
+    return ('<svg class="figure" viewBox="0 0 720 248" role="img" '
+            'aria-label="Four ascending steps: counting, classification, embeddings, AI annotation.">'
+            + "".join(bars) + '</svg>')
+
 def build_index():
     body = f"""
 <section class="hero">
@@ -276,6 +311,7 @@ def build_index():
   <p class="lede">{esc(TAGLINE)}</p>
   <p>Investigate cultural data at scale with an AI as your coding partner. You publish a web essay on a question only you would ask. No math, no coding to start, $0 to take part.</p>
   <p class="cta"><a class="button" href="syllabus.html">Read the syllabus</a> <a class="button ghost" href="schedule.html">See the ten weeks</a></p>
+  {svg_hero()}
 </section>
 
 <section>
@@ -286,6 +322,7 @@ def build_index():
     "<strong>Embeddings</strong>: items become positions on a map of meaning. The heart of the course.",
     "<strong>AI annotation</strong>: a powerful model reads your whole corpus; you decide which labels to trust.",
   ])}
+  {svg_ladder()}
   <p>Images count too. You count, classify, and embed pictures the same way as text.</p>
 </section>
 
@@ -380,7 +417,7 @@ def build_resources():
         for name, url, note in ANCHOR_TOOLS
     )
     reading = "".join(
-        f"<tr><td>{esc(wk)}</td><td>{esc(main)}</td><td>{esc(supp)}</td></tr>"
+        f"<tr><td>{esc(wk)}</td><td>{main}</td><td>{supp}</td></tr>"
         for wk, main, supp in READING_LIST
     )
     body = f"""
@@ -401,6 +438,28 @@ def build_resources():
   <h2>Reading at a glance</h2>
   <p>One main reading a week, one optional supplement; papers are abstract-and-figures, never full. Bring three questions: what did the authors decide, what's the load-bearing assumption, where's the gap?</p>
   <table><thead><tr><th>Week</th><th>Main</th><th>Supplement</th></tr></thead><tbody>{reading}</tbody></table>
+</section>
+
+<section>
+  <h2>See the featured studies yourself</h2>
+  <p>The work each week opens with. Linked, not embedded, so credit and context stay with the source.</p>
+  {ul([
+    "<a href='https://pudding.cool/2018/08/pockets/'>The Pudding, Women's Pockets Are Inferior</a> (Week 1)",
+    "<a href='https://americaspublicbible.org/'>Mullen, America's Public Bible</a> (Week 3)",
+    "<a href='https://selfiecity.net/'>Manovich, Selfiecity</a> (Week 6)",
+    "<a href='https://www.moma.org/calendar/exhibitions/5535'>Anadol, Unsupervised at MoMA</a> (Week 10)",
+  ])}
+</section>
+
+<section>
+  <h2>Supplemental reading (deeper cuts, never required)</h2>
+  {ul([
+    "<a href='https://data-feminism.mitpress.mit.edu/'>D'Ignazio & Klein, Data Feminism</a> (open access)",
+    "<a href='https://www.bitbybitbook.com/'>Salganik, Bit by Bit</a>, ethical social research (open access)",
+    "<a href='https://excavating.ai/'>Crawford & Paglen, Excavating AI</a>",
+    "<a href='https://dl.acm.org/doi/10.1145/3442188.3445922'>Bender et al., On the Dangers of Stochastic Parrots</a>",
+    "<a href='https://github.com/bamman-group/gpt4-books'>Speak, Memory: code and data</a> for probing what a model memorized",
+  ])}
 </section>
 
 <section>
@@ -516,6 +575,7 @@ th{font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;color:var(--mu
 ol,ul{padding-left:1.3rem}
 li{margin:.35em 0}
 code{background:var(--accent-soft);padding:.08em .35em;border-radius:4px;font-size:.9em}
+.figure{width:100%;height:auto;display:block;margin:1.2rem 0}
 /* footer */
 .site-foot{border-top:1px solid var(--line);margin-top:3rem;color:var(--muted);font-size:.88rem}
 .site-foot .wrap{padding-top:1.2rem;padding-bottom:2rem}
@@ -524,6 +584,7 @@ code{background:var(--accent-soft);padding:.08em .35em;border-radius:4px;font-si
 
 def build_assets():
     write(SITE / "assets" / "style.css", CSS)
+    write(SITE / "assets" / "favicon.svg", FAVICON_SVG)
     write(SITE / ".nojekyll", "")
 
 def build_buildnote():
