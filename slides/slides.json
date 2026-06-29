@@ -1,1 +1,560 @@
-[{"n": 1, "title": "Your First Investigation", "promise": "By the break you'll have loaded a real dataset, asked it a question, and produced your first chart. A complete investigation, end to end, on day one.", "tool": "Culture as data itself (the ladder starts next week)", "comps": "1, 8", "admire": "The Pudding, \"Pockets\" (2018), women's jeans pockets are measurably smaller, and one chart lands the argument.", "interrogate": "80 pairs from a handful of brands: is that \"women's pockets,\" or a slice? And look at the chart itself, not just the data, what does it put front and center?", "flow": [{"t": "0:00", "a": "Setting the room: the social rules, demonstrated by the instructor breaking one and being corrected. Today's live coding includes real mistakes on purpose."}, {"t": "0:12", "a": "Look at This, then Question It: Pockets."}, {"t": "0:17", "a": "Pre-train the vocabulary (no code): corpus, method, model, embedding, in plain language with pictures. The course map and the deliverable."}, {"t": "0:32", "a": "Lab 1 (worked, participatory): copy the notebook to Drive and mount Drive into the runtime (this is how your corpus and results survive Colab wiping the session, everything saving to one project folder), put a Gemini key in Colab Secrets, load NYT wedding data, make a first chart. Hand out the common-errors cheat sheet. Then solo with a partner: draft three questions, pick one, have the AI write the code, run it, chart it. Write one sentence predicting your cell before you run it."}, {"t": "1:10", "a": "Break"}, {"t": "1:20", "a": "Lab 2 (worked): ~200 Met Museum objects with thumbnails. Plot the collection by century; notice what the catalog does not record."}, {"t": "1:50", "a": "Teaser of the ladder ahead; the standing rituals named. First check-out."}], "reading": "Bollen et al., the cognitive-distortions hockey stick (PNAS 2021), with the Schmidt et al. critique", "supplement": "Robin Sloan, Writing with the machine", "sketch": "One question from your life answerable with text or image data; three sentences.", "check": "Trace it: one written sentence predicting what your cell does before you run it. (Competency 1.)"}, {"n": 2, "title": "Counting Is Already a Model", "promise": "Put a famous PNAS paper on trial, build a word-counter by hand, watch the same sentence get counted three ways, and count an image too.", "tool": "Counting, and every count hides a choice", "comps": "3, 5, 8", "admire": "The Bollen/Schmidt trial: a hockey stick of societal distress, found by counting.", "interrogate": "The rising words are fiction-words, and Google scanned more fiction after 2000. The rebuttal and the move to steal: the authors removed the entire fiction corpus and re-ran it, and the pattern largely held. The answer to \"your corpus is biased\" is a test, not an argument.", "flow": [{"t": "0:00", "a": "Warm-up retrieval."}, {"t": "0:05", "a": "The trial: claim, objection, re-run-without-fiction rebuttal, \"interpret with care.\" One named choice is the chart: the hockey-stick shape depends on its y-axis and smoothing."}, {"t": "0:25", "a": "Delight beat: an artist's signature vocabulary, the words they use far more than a pop baseline. No caveats."}, {"t": "0:30", "a": "Hand-built bag-of-words: two authors, highlighters, argue about merging run/running. Counting requires defining."}, {"t": "0:55", "a": "What counts as a word? Paste a sentence into two tokenizer playgrounds and watch it shatter differently. Models see tokens, not words."}, {"t": "1:05", "a": "Break"}, {"t": "1:15", "a": "tf-idf: the AI scales your hand count; stop-words dominate, which motivates \"common here, rare overall.\""}, {"t": "1:30", "a": "Cross-corpus counting: the same counter on a lyrics slice, a subreddit, and a novel. The corpus choice changes what \"common\" means."}, {"t": "1:45", "a": "Counting images: average color, a brightness histogram, a \"darkest album cover\" ranking. What you choose to count is the same kind of decision as stop-words."}, {"t": "1:50", "a": "Gemini-free check and check-out."}], "reading": "Wolfram, What Is ChatGPT Doing (opening sections only)", "supplement": "Zipf's law, the straight line in every text", "sketch": "Count something in a text you love; one chart; one sentence naming a choice you made.", "check": "Explain it: why two tokenizers split a sentence differently, and what your stemming choice changed. (Competencies 3, 5.)"}, {"n": 3, "title": "Classification: Counting with Weights", "promise": "Teach a machine a bias in ten minutes, build a classifier and read its mind, and preview the full methods menu before next week's commitment.", "tool": "Classification. Train a reader and read what it learned", "comps": "2, 4, 5", "admire": "Lincoln Mullen, America's Public Bible (2023), a classifier that finds biblical quotations across millions of newspaper pages.", "interrogate": "What counts as a quotation, a four-word echo, a loose paraphrase?, is a definition the scholar chose, and it shapes every result. The model reads the same messy digitized text your own project will.", "flow": [{"t": "0:00", "a": "Warm-up + Look at This: Mullen's America's Public Bible."}, {"t": "0:10", "a": "Teachable Machine, instructor demo: a two-class image model trained live, then the reveal that it learned from only orange cats and brown dogs. The room predicts what a black cat will do, then sees it."}, {"t": "0:22", "a": "Counting with weights, the lab: each word casts a weighted vote; a logistic regression adds them up. Train it on a pop corpus, then read the signed coefficients, its mind on the table."}, {"t": "0:52", "a": "Delight beat: the words that most predict \"breakup song\" or \"this reviewer hated it.\""}, {"t": "0:57", "a": "One-line bridge: that classifier is a neuron; stack many for a neural net, which is what's inside the Week 7 model. A quick TensorFlow Playground glance."}, {"t": "1:00", "a": "Break"}, {"t": "1:10", "a": "Methods menu preview, so Week 4's choice is informed: counting, classification, embeddings (Week 5), and optional approaches (character networks for fiction; sentiment arcs for story projects, Jockers's Syuzhet reproducible in Python, whose own smoothing controversy is the built-in lesson to doubt the shape; CLIP image search for visual projects; and, for the technically comfortable, fine-tuning a small open model, ModernBERT, on your own labels)."}, {"t": "1:25", "a": "Pitch prep: what makes a tractable question, and the corpus-existence rule."}, {"t": "1:45", "a": "Gemini-free check and check-out."}], "reading": "Mullen, America's Public Bible (intro + a verse)", "supplement": "Underwood on GPT-4 and fictional time; Juola's Rowling unmasking", "sketch": "Train a quick logistic regression on a labeled set; screenshot its five most positive and negative words.", "check": "Explain it: read your classifier's top weights aloud, and name one input where it would fail and why. (Competencies 4, 5.)"}, {"n": 4, "title": "Pick a Corpus. Pick Two Methods. Commit.", "promise": "Leave with a pitched project, two chosen methods, your Data Biography drafted, and the skill that makes \"bring your own corpus\" real: getting data off the web.", "tool": "The project (no new mechanism this week)", "comps": "2, 6", "admire": "A Pudding \"How We Made\u2026\" process post, the messy middle, where every polished piece had a moment its maker thought it wouldn't work.", "interrogate": "Listen across the pitches for questions too vague to answer, corpora that don't exist as accessible data, methods chosen for vibes, and the quiet scaling-down of ambition.", "flow": [{"t": "0:00", "a": "Warm-up + Look at This: the process post."}, {"t": "0:08", "a": "Pitches, three-minute hard cap each: your corpus (existence proof shown), your two methods, what would count as a finding."}, {"t": "0:48", "a": "Break"}, {"t": "0:58", "a": "The data conversation: the licensing one-pager (CC0 museums and public-domain books go anywhere; academic-only sets analyze-don't-redistribute; lyrics and review text metadata-only; AO3 and other community-opposed archives a small attributed sample at most, never a shared dataset; live firehoses we discuss, don't scrape; pirated full-text books from shadow libraries like LibGen never, the line the field's $1.5B settlement was about), and the Data Biography introduced."}, {"t": "1:10", "a": "Getting the data, APIs and scraping, demoed live with the AI writing the code. API first (the Met or Art Institute, no key); scraping second, with the robots.txt / ToS / rate-limit / anti-republish check."}, {"t": "1:30", "a": "Collect-and-build lab: point the cookbook notebook at your corpus, reshape it, and save it to your Drive project folder so it's there next week (when the Week 1 Drive mount pays off), and fork the publishing template. Your project repo is born today."}, {"t": "1:55", "a": "Commit, with the pivot kit named as insurance. A null result honestly shown is a complete project. Check-out."}], "reading": "Krause, Data Biographies (We All Count)", "supplement": "Freelon, Post-API Age", "sketch": "Write your Data Biography (~400 words) and actually collect your corpus with the cookbook.", "check": "Explain it: your question aloud, what it omits, and where your data actually comes from. (Competencies 2, 6.)"}, {"n": 5, "title": "Embeddings: A Map of Meaning", "promise": "Watch your own corpus, text or images, sort itself by meaning, see the finding counting couldn't give you, and learn the same trick is how \"For You\" feeds place you.", "tool": "Embeddings, the heart of the course, the leap past counting", "comps": "4, 5", "admire": "A debate, two readings of one fact: embeddings encode the associations in a corpus.", "interrogate": "To Caliskan et al. (2017) that's a warning, a model trained on human text launders human prejudice. To Soni, Klein & Eisenstein (2021) the same mirror is a method, embeddings on abolitionist newspapers reveal which papers led the movement's language. The room decides: when is reading a corpus's associations a discovery, and when is it laundering bias?", "flow": [{"t": "0:00", "a": "Warm-up + Look at This, room names the choice first: the embeddings debate."}, {"t": "0:10", "a": "The beyond-counting moment: put Week 2 beside today. There you counted adjectives near she vs. he; now embed those descriptions and watch them cluster. Same question, two tools, the second visibly richer. Name the idea: an item becomes a vector, position learned from the company it keeps."}, {"t": "0:25", "a": "Embed your own corpus, text or images. Image projects embed their pictures and watch them group by untagged style. The embedding model is an open one from Hugging Face, the hub where open models live (the same place Week 8's period models come from). And here charts stop being neutral: switch PCA to t-SNE and the same data rearranges. A visualization is an argument with decisions baked in."}, {"t": "0:55", "a": "Break"}, {"t": "1:05", "a": "Project lab: push your embeddings, hunt the surprise cluster. A five-minute recommenders aside: \"For You\" is this same map plus your history. One-on-ones begin at the side."}, {"t": "1:50", "a": "Gemini-free check and check-out."}], "reading": "Alammar, The Illustrated Word2Vec, plus the debate: Soni/Klein, How Words Lead to Justice vs. Caliskan et al. (2017)", "supplement": "Garg et al. (PNAS 2018); Anderson et al., Spotify diversity", "sketch": "Toggle PCA vs. t-SNE and screenshot how the map changes; name one cluster you believe and one you don't.", "check": "Explain it: on your map, name one cluster you believe is real and one that's probably a projection artifact, and how you'd tell. (Competency 4.)"}, {"n": 6, "title": "Deepen the Project: Images, and Where the AI Fails", "promise": "Push your project past first findings, give image projects their deepest day, and find exactly where the AI's reading of your data goes wrong.", "tool": "Apply the tools harder; image projects' deepest day; calibrate the AI on your data", "comps": "1, 4, 7", "admire": "Arnold, Tilton & Berke, \"Visual Style in Two Network-Era Sitcoms\" (2019), computer vision on every shot of Bewitched and I Dream of Jeannie, reading how the camera frames each lead.", "interrogate": "What counts as a \"character-centered shot\" is an operational definition, and a different one tells a different story; two shows is a slice, not \"television.\"", "flow": [{"t": "0:00", "a": "Warm-up + Look at This, a pair: a contemporary visual study leads, then the sitcom camerawork as the rigor case to interrogate."}, {"t": "0:07", "a": "Images on the same map, for real: embed an image set live and watch it cluster by visual style nobody tagged. The beyond-counting contrast at its sharpest."}, {"t": "0:25", "a": "Project lab: apply your method harder on your own data. Instructor floats; one-on-ones at the side."}, {"t": "1:05", "a": "Break"}, {"t": "1:15", "a": "The hand-labeling set-piece (Gemini-free): label 30 items from your corpus by hand; the AI labels the same 30; study every disagreement. Nobody skips this."}, {"t": "1:40", "a": "Fix-it check: a planted bug in the data pipeline, found AI-closed."}, {"t": "1:48", "a": "Check-out."}], "reading": "Gilardi et al. (2023), the AI as a cheaper coder", "supplement": "Reagan et al., Six Basic Shapes (the smoothing fight); Manovich, Selfiecity", "sketch": "One disagreement between your labels and the AI's where you were right, and why.", "check": "Fix it: the planted bug. (Competencies 1, 7.)"}, {"n": 7, "title": "The AI as a Reader, at Scale", "promise": "Use the AI to read your whole corpus at once, learn to trust the labels it's sure of and catch the ones it isn't, and reckon with whose judgment you're renting.", "tool": "LLM-as-annotator, the most common operation in the field", "comps": "2, 4, 5", "admire": "Gilardi, Alizadeh & Kubli (2023): ChatGPT outperformed crowd workers on several text-labeling tasks, cheaper, faster, more consistent.", "interrogate": "The prompt is the codebook; agreement with humans isn't ground truth; and the model fails silently, confident wrong answers a human's disagreement would have caught. Its \"judgment\" is a compression of scraped creative work, whose reading are you renting?", "flow": [{"t": "0:00", "a": "Warm-up + Look at This, room names the choice first: the AI as a cheaper coder, and where it fails silently."}, {"t": "0:10", "a": "The annotator move, on your corpus: write a labeling prompt for your categories, run it on a slice, read the labels back. Tighten the definition and watch the labels shift, the prompt is your codebook."}, {"t": "0:35", "a": "Confidence, and when to trust it: ask the model not just what but how sure. Sort by confidence, trust the sure labels, hand-check the unsure ones, which is exactly which 30 to pull for Week 6."}, {"t": "0:50", "a": "Break"}, {"t": "1:00", "a": "Accuracy check, then project workshop: run your prompt against a small hand-labeled gold set. Where does the AI disagree, and is it wrong or are you? Then build time on your corpus. Go further (optional, technically comfortable): instead of the closed API model, run an open model from Hugging Face, or fine-tune your own small classifier (ModernBERT) on the labels you just made, the third reader you own."}, {"t": "1:50", "a": "Gemini-free check and check-out."}], "reading": "NYT v. OpenAI, read against your Week 4 licensing conversation", "supplement": "Gilardi et al., full; Bamman et al., LLM classification in cultural analytics (CHR 2024)", "sketch": "Show one label the AI got confidently wrong and one it nailed; say how you knew.", "check": "Explain it: what is your labeling prompt deciding on your behalf, and how would you check whether to trust a given label? (Competencies 2, 5.)"}, {"n": 8, "title": "Models as Time Capsules + Settle the Finding", "promise": "Meet models that live entirely inside one historical period, learn what a famous model has secretly memorized, kill your own finding to see what survives, and leave with a prose draft.", "tool": "What a trained model is: a compression of its corpus", "comps": "3, 4, 5", "admire": "TimeCapsuleLLM, a small GPT trained from scratch on nothing but 1800s London publications, and \"Speak, Memory\" (Bamman's lab), which probes which books GPT-4 has effectively memorized.", "interrogate": "A period model speaks only for the period's published, surviving, digitized voices. And memorization isn't reading: models score higher on memorized books, so an LLM that seems to read your corpus may be partly reciting it, a validity problem, not just an ethics one.", "flow": [{"t": "0:00", "a": "Warm-up + Look at This: TimeCapsuleLLM and \"Speak, Memory,\" screenshots ready. (These period models, and supplements like MonadGPT and MacBERTh, live on Hugging Face, where you can download and run open models, or fine-tune your own.)"}, {"t": "0:07", "a": "Kill it, then keep what survives, one continuous arc on your own results: shuffle the labels and re-run; split the corpus in half; ask \"compared to what?\". Then compress whatever survived into one headline sentence."}, {"t": "0:52", "a": "Break"}, {"t": "1:02", "a": "Gemini-free writing block: write your one-sentence interpretation yourself."}, {"t": "1:22", "a": "Writing workshop: opening question, what you found, what it does not show, the choices you made. Distill the Data Biography into the corpus note."}, {"t": "1:50", "a": "Check and check-out."}], "reading": "None required", "supplement": "TimeCapsuleLLM and Speak, Memory; period models MonadGPT and MacBERTh", "sketch": "Expand to 600 to 1,000 words; write your show-your-work appendix and which checks survived.", "check": "Explain it: your headline finding, and what it does not show. (Competencies 3, 4.)"}, {"n": 9, "title": "Build the Page", "promise": "Leave today with a deployed draft of your web essay at a public URL.", "tool": "Publishing, Quarto to GitHub Pages, static by default", "comps": "1, 7, 8", "admire": "Three published essays side by side: a Pudding piece, an Observable notebook, a Quarto site. The same goal, three defensible-but-different sets of choices.", "interrogate": "There's no single right way, only choices you can defend. Yours will be choices too.", "flow": [{"t": "0:00", "a": "Look at This: the three essays, common structure, divergent choices."}, {"t": "0:15", "a": "Structured critique (Critical Response Process) in trios: statements of meaning, maker's questions, neutral questions, permissioned opinions."}, {"t": "0:50", "a": "Break"}, {"t": "1:00", "a": "Interrogate your own chart, the making-side mirror of Week 6's hand-labeling. Does the y-axis start at zero? Is the eye pulled toward a pattern the data won't support? Fix one thing."}, {"t": "1:15", "a": "Build lab: open the template you forked in Week 4; paste outline, charts, code; render; deploy. Static by default; JS opt-ins hit the code-review checkpoint."}, {"t": "1:50", "a": "Phone test in pairs. Check-out."}], "reading": "None", "supplement": "A Pudding process post", "sketch": "Title your essay; write the headline finding in one sentence.", "check": "Fix it: a planted bug in publishing/layout code (or in opted-in JS). (Competencies 1, 7.)"}, {"n": 10, "title": "The Showcase", "promise": "A 90-minute public event followed by a reception. Snacks. Music. Friends and family invited. Printed program with everyone's titles and URLs.", "tool": "A public celebration; the two capstone assessments", "comps": "all eight", "admire": "The closing triptych, neural networks meet the art world: Edmond de Belamy (the market), Anna Ridler's Mosaic Virus (the labor), Refik Anadol's Unsupervised at MoMA (the museum).", "interrogate": "When a machine reads a culture's archive, what is it showing us, and who decided what went in? You started Week 1 loading a museum's data; you end watching a museum's data become the art.", "flow": [{"t": "0:00", "a": "Welcome. This is a show, not a defense. The closing Look at This."}, {"t": "0:10", "a": "Presentations, 4\u20135 min each: corpus, headline finding, one surprise. Live URL projected."}, {"t": "1:30", "a": "Reception. Laptops at every seat with everyone's URLs loaded."}], "reading": "None", "supplement": "Edmond de Belamy; Ridler's Mosaic Virus; Anadol's Unsupervised", "sketch": "Within a week after: a private one-page reflection.", "check": "The oral walkthrough (the capstone): how you got your headline result, what it does not show, and how the tools actually work. Plus the workbench intro. (All eight competencies.)"}]
+[
+ {
+  "n": 1,
+  "title": "Your First Investigation",
+  "promise": "By the break you'll have loaded a real dataset, asked it a question, and produced your first chart. A complete investigation, end to end, on day one.",
+  "tool": "Culture as data itself (the ladder starts next week)",
+  "comps": "1, 8",
+  "admire": "The Pudding, \"Pockets\" (2018), women's jeans pockets are measurably smaller, and one chart lands the argument.",
+  "interrogate": "80 pairs from a handful of brands: is that \"women's pockets,\" or a slice? And look at the chart itself, not just the data, what does it put front and center?",
+  "flow": [
+   {
+    "t": "0:00",
+    "a": "Setting the room: the social rules, demonstrated by the instructor breaking one and being corrected. Today's live coding includes real mistakes on purpose."
+   },
+   {
+    "t": "0:12",
+    "a": "Look at This, then Question It: Pockets."
+   },
+   {
+    "t": "0:17",
+    "a": "Pre-train the vocabulary (no code): corpus, method, model, embedding, in plain language with pictures. The course map and the deliverable."
+   },
+   {
+    "t": "0:32",
+    "a": "Lab 1 (worked, participatory): copy the notebook to Drive and mount Drive into the runtime (this is how your corpus and results survive Colab wiping the session, everything saving to one project folder), put a Gemini key in Colab Secrets, load NYT wedding data, make a first chart. Hand out the common-errors cheat sheet. Then solo with a partner: draft three questions, pick one, have the AI write the code, run it, chart it. Write one sentence predicting your cell before you run it."
+   },
+   {
+    "t": "1:10",
+    "a": "Break"
+   },
+   {
+    "t": "1:20",
+    "a": "Lab 2 (worked): ~200 Met Museum objects with thumbnails. Plot the collection by century; notice what the catalog does not record."
+   },
+   {
+    "t": "1:50",
+    "a": "Teaser of the ladder ahead; the standing rituals named. First check-out."
+   }
+  ],
+  "reading": "Bollen et al., the cognitive-distortions hockey stick (PNAS 2021), with the Schmidt et al. critique",
+  "supplement": "Robin Sloan, Writing with the machine",
+  "sketch": "One question from your life answerable with text or image data; three sentences.",
+  "check": "Trace it: one written sentence predicting what your cell does before you run it. (Competency 1.)",
+  "threads": [
+   {
+    "name": "Read work critically",
+    "note": "Pockets is great and its choices are arguable. We admire and interrogate at once, the habit the whole course turns on."
+   },
+   {
+    "name": "Make something real",
+    "note": "A complete investigation by the first break, before any theory."
+   },
+   {
+    "name": "Beyond counting (preview)",
+    "note": "You load and chart real culture today; the ladder past counting starts next week."
+   }
+  ]
+ },
+ {
+  "n": 2,
+  "title": "Counting Is Already a Model",
+  "promise": "Put a famous PNAS paper on trial, build a word-counter by hand, watch the same sentence get counted three ways, and count an image too.",
+  "tool": "Counting, and every count hides a choice",
+  "comps": "3, 5, 8",
+  "admire": "The Bollen/Schmidt trial: a hockey stick of societal distress, found by counting.",
+  "interrogate": "The rising words are fiction-words, and Google scanned more fiction after 2000. The rebuttal and the move to steal: the authors removed the entire fiction corpus and re-ran it, and the pattern largely held. The answer to \"your corpus is biased\" is a test, not an argument.",
+  "flow": [
+   {
+    "t": "0:00",
+    "a": "Warm-up retrieval."
+   },
+   {
+    "t": "0:05",
+    "a": "The trial: claim, objection, re-run-without-fiction rebuttal, \"interpret with care.\" One named choice is the chart: the hockey-stick shape depends on its y-axis and smoothing."
+   },
+   {
+    "t": "0:25",
+    "a": "Delight beat: an artist's signature vocabulary, the words they use far more than a pop baseline. No caveats."
+   },
+   {
+    "t": "0:30",
+    "a": "Hand-built bag-of-words: two authors, highlighters, argue about merging run/running. Counting requires defining."
+   },
+   {
+    "t": "0:55",
+    "a": "What counts as a word? Paste a sentence into two tokenizer playgrounds and watch it shatter differently. Models see tokens, not words."
+   },
+   {
+    "t": "1:05",
+    "a": "Break"
+   },
+   {
+    "t": "1:15",
+    "a": "tf-idf: the AI scales your hand count; stop-words dominate, which motivates \"common here, rare overall.\""
+   },
+   {
+    "t": "1:30",
+    "a": "Cross-corpus counting: the same counter on a lyrics slice, a subreddit, and a novel. The corpus choice changes what \"common\" means."
+   },
+   {
+    "t": "1:45",
+    "a": "Counting images: average color, a brightness histogram, a \"darkest album cover\" ranking. What you choose to count is the same kind of decision as stop-words."
+   },
+   {
+    "t": "1:50",
+    "a": "Gemini-free check and check-out."
+   }
+  ],
+  "reading": "Wolfram, What Is ChatGPT Doing (opening sections only)",
+  "supplement": "Zipf's law, the straight line in every text",
+  "sketch": "Count something in a text you love; one chart; one sentence naming a choice you made.",
+  "check": "Explain it: why two tokenizers split a sentence differently, and what your stemming choice changed. (Competencies 3, 5.)",
+  "threads": [
+   {
+    "name": "Beyond counting",
+    "note": "Counting is the honest floor, with no notion of meaning. This sets up the Week 5 payoff."
+   },
+   {
+    "name": "Every count is a choice",
+    "note": "Tokens, stemming, the corpus, the chart's axis, each hides a decision you made."
+   },
+   {
+    "name": "Images are culture too",
+    "note": "Count a painting's color and brightness, the same skill as words."
+   }
+  ]
+ },
+ {
+  "n": 3,
+  "title": "Classification: Counting with Weights",
+  "promise": "Teach a machine a bias in ten minutes, build a classifier and read its mind, and preview the full methods menu before next week's commitment.",
+  "tool": "Classification. Train a reader and read what it learned",
+  "comps": "2, 4, 5",
+  "admire": "Lincoln Mullen, America's Public Bible (2023), a classifier that finds biblical quotations across millions of newspaper pages.",
+  "interrogate": "What counts as a quotation, a four-word echo, a loose paraphrase?, is a definition the scholar chose, and it shapes every result. The model reads the same messy digitized text your own project will.",
+  "flow": [
+   {
+    "t": "0:00",
+    "a": "Warm-up + Look at This: Mullen's America's Public Bible."
+   },
+   {
+    "t": "0:10",
+    "a": "Teachable Machine, instructor demo: a two-class image model trained live, then the reveal that it learned from only orange cats and brown dogs. The room predicts what a black cat will do, then sees it."
+   },
+   {
+    "t": "0:22",
+    "a": "Counting with weights, the lab: each word casts a weighted vote; a logistic regression adds them up. Train it on a pop corpus, then read the signed coefficients, its mind on the table."
+   },
+   {
+    "t": "0:52",
+    "a": "Delight beat: the words that most predict \"breakup song\" or \"this reviewer hated it.\""
+   },
+   {
+    "t": "0:57",
+    "a": "One-line bridge: that classifier is a neuron; stack many for a neural net, which is what's inside the Week 7 model. A quick TensorFlow Playground glance."
+   },
+   {
+    "t": "1:00",
+    "a": "Break"
+   },
+   {
+    "t": "1:10",
+    "a": "Methods menu preview, so Week 4's choice is informed: counting, classification, embeddings (Week 5), and optional approaches (character networks for fiction; sentiment arcs for story projects, Jockers's Syuzhet reproducible in Python, whose own smoothing controversy is the built-in lesson to doubt the shape; CLIP image search for visual projects; and, for the technically comfortable, fine-tuning a small open model, ModernBERT, on your own labels)."
+   },
+   {
+    "t": "1:25",
+    "a": "Pitch prep: what makes a tractable question, and the corpus-existence rule."
+   },
+   {
+    "t": "1:45",
+    "a": "Gemini-free check and check-out."
+   }
+  ],
+  "reading": "Mullen, America's Public Bible (intro + a verse)",
+  "supplement": "Underwood on GPT-4 and fictional time; Juola's Rowling unmasking",
+  "sketch": "Train a quick logistic regression on a labeled set; screenshot its five most positive and negative words.",
+  "check": "Explain it: read your classifier's top weights aloud, and name one input where it would fail and why. (Competencies 4, 5.)",
+  "threads": [
+   {
+    "name": "The reader you can see",
+    "note": "The transparent classifier: read its signed weights, its mind on the table. Week 7 brings the opaque one."
+   },
+   {
+    "name": "You taught it the bias",
+    "note": "The Teachable Machine reveal, a training set teaches a machine its prejudice."
+   },
+   {
+    "name": "Every choice is a choice",
+    "note": "What counts as a label, and which words you hand it, decide what it learns."
+   }
+  ]
+ },
+ {
+  "n": 4,
+  "title": "Pick a Corpus. Pick Two Methods. Commit.",
+  "promise": "Leave with a pitched project, two chosen methods, your Data Biography drafted, and the skill that makes \"bring your own corpus\" real: getting data off the web.",
+  "tool": "The project (no new mechanism this week)",
+  "comps": "2, 6",
+  "admire": "A Pudding \"How We Made\u2026\" process post, the messy middle, where every polished piece had a moment its maker thought it wouldn't work.",
+  "interrogate": "Listen across the pitches for questions too vague to answer, corpora that don't exist as accessible data, methods chosen for vibes, and the quiet scaling-down of ambition.",
+  "flow": [
+   {
+    "t": "0:00",
+    "a": "Warm-up + Look at This: the process post."
+   },
+   {
+    "t": "0:08",
+    "a": "Pitches, three-minute hard cap each: your corpus (existence proof shown), your two methods, what would count as a finding."
+   },
+   {
+    "t": "0:48",
+    "a": "Break"
+   },
+   {
+    "t": "0:58",
+    "a": "The data conversation: the licensing one-pager (CC0 museums and public-domain books go anywhere; academic-only sets analyze-don't-redistribute; lyrics and review text metadata-only; AO3 and other community-opposed archives a small attributed sample at most, never a shared dataset; live firehoses we discuss, don't scrape; pirated full-text books from shadow libraries like LibGen never, the line the field's $1.5B settlement was about), and the Data Biography introduced."
+   },
+   {
+    "t": "1:10",
+    "a": "Getting the data, APIs and scraping, demoed live with the AI writing the code. API first (the Met or Art Institute, no key); scraping second, with the robots.txt / ToS / rate-limit / anti-republish check."
+   },
+   {
+    "t": "1:30",
+    "a": "Collect-and-build lab: point the cookbook notebook at your corpus, reshape it, and save it to your Drive project folder so it's there next week (when the Week 1 Drive mount pays off), and fork the publishing template. Your project repo is born today."
+   },
+   {
+    "t": "1:55",
+    "a": "Commit, with the pivot kit named as insurance. A null result honestly shown is a complete project. Check-out."
+   }
+  ],
+  "reading": "Krause, Data Biographies (We All Count)",
+  "supplement": "Freelon, Post-API Age",
+  "sketch": "Write your Data Biography (~400 words) and actually collect your corpus with the cookbook.",
+  "check": "Explain it: your question aloud, what it omits, and where your data actually comes from. (Competencies 2, 6.)",
+  "threads": [
+   {
+    "name": "Whose data",
+    "note": "The Data Biography: where it came from, who is missing, what it cannot say."
+   },
+   {
+    "name": "The licensing line",
+    "note": "CC0, to scrape-with-care, to never (LibGen). Judgment, not a rulebook."
+   },
+   {
+    "name": "Make something real",
+    "note": "You leave with a real corpus in hand and a project repo born."
+   }
+  ]
+ },
+ {
+  "n": 5,
+  "title": "Embeddings: A Map of Meaning",
+  "promise": "Watch your own corpus, text or images, sort itself by meaning, see the finding counting couldn't give you, and learn the same trick is how \"For You\" feeds place you.",
+  "tool": "Embeddings, the heart of the course, the leap past counting",
+  "comps": "4, 5",
+  "admire": "A debate, two readings of one fact: embeddings encode the associations in a corpus.",
+  "interrogate": "To Caliskan et al. (2017) that's a warning, a model trained on human text launders human prejudice. To Soni, Klein & Eisenstein (2021) the same mirror is a method, embeddings on abolitionist newspapers reveal which papers led the movement's language. The room decides: when is reading a corpus's associations a discovery, and when is it laundering bias?",
+  "flow": [
+   {
+    "t": "0:00",
+    "a": "Warm-up + Look at This, room names the choice first: the embeddings debate."
+   },
+   {
+    "t": "0:10",
+    "a": "The beyond-counting moment: put Week 2 beside today. There you counted adjectives near she vs. he; now embed those descriptions and watch them cluster. Same question, two tools, the second visibly richer. Name the idea: an item becomes a vector, position learned from the company it keeps."
+   },
+   {
+    "t": "0:25",
+    "a": "Embed your own corpus, text or images. Image projects embed their pictures and watch them group by untagged style. The embedding model is an open one from Hugging Face, the hub where open models live (the same place Week 8's period models come from). And here charts stop being neutral: switch PCA to t-SNE and the same data rearranges. A visualization is an argument with decisions baked in."
+   },
+   {
+    "t": "0:55",
+    "a": "Break"
+   },
+   {
+    "t": "1:05",
+    "a": "Project lab: push your embeddings, hunt the surprise cluster. A five-minute recommenders aside: \"For You\" is this same map plus your history. One-on-ones begin at the side."
+   },
+   {
+    "t": "1:50",
+    "a": "Gemini-free check and check-out."
+   }
+  ],
+  "reading": "Alammar, The Illustrated Word2Vec, plus the debate: Soni/Klein, How Words Lead to Justice vs. Caliskan et al. (2017)",
+  "supplement": "Garg et al. (PNAS 2018); Anderson et al., Spotify diversity",
+  "sketch": "Toggle PCA vs. t-SNE and screenshot how the map changes; name one cluster you believe and one you don't.",
+  "check": "Explain it: on your map, name one cluster you believe is real and one that's probably a projection artifact, and how you'd tell. (Competency 4.)",
+  "threads": [
+   {
+    "name": "Beyond counting (the payoff)",
+    "note": "The same she/he question from Week 2, now embedded, clusters counting could not see."
+   },
+   {
+    "name": "Every chart is a choice",
+    "note": "PCA vs t-SNE rearranges the same data; the picture made a decision."
+   },
+   {
+    "name": "Whose data",
+    "note": "Embeddings mirror the corpus, discovery (Soni/Klein) or laundered bias (Caliskan)?"
+   }
+  ]
+ },
+ {
+  "n": 6,
+  "title": "Deepen the Project: Images, and Where the AI Fails",
+  "promise": "Push your project past first findings, give image projects their deepest day, and find exactly where the AI's reading of your data goes wrong.",
+  "tool": "Apply the tools harder; image projects' deepest day; calibrate the AI on your data",
+  "comps": "1, 4, 7",
+  "admire": "Arnold, Tilton & Berke, \"Visual Style in Two Network-Era Sitcoms\" (2019), computer vision on every shot of Bewitched and I Dream of Jeannie, reading how the camera frames each lead.",
+  "interrogate": "What counts as a \"character-centered shot\" is an operational definition, and a different one tells a different story; two shows is a slice, not \"television.\"",
+  "flow": [
+   {
+    "t": "0:00",
+    "a": "Warm-up + Look at This, a pair: a contemporary visual study leads, then the sitcom camerawork as the rigor case to interrogate."
+   },
+   {
+    "t": "0:07",
+    "a": "Images on the same map, for real: embed an image set live and watch it cluster by visual style nobody tagged. The beyond-counting contrast at its sharpest."
+   },
+   {
+    "t": "0:25",
+    "a": "Project lab: apply your method harder on your own data. Instructor floats; one-on-ones at the side."
+   },
+   {
+    "t": "1:05",
+    "a": "Break"
+   },
+   {
+    "t": "1:15",
+    "a": "The hand-labeling set-piece (Gemini-free): label 30 items from your corpus by hand; the AI labels the same 30; study every disagreement. Nobody skips this."
+   },
+   {
+    "t": "1:40",
+    "a": "Fix-it check: a planted bug in the data pipeline, found AI-closed."
+   },
+   {
+    "t": "1:48",
+    "a": "Check-out."
+   }
+  ],
+  "reading": "Gilardi et al. (2023), the AI as a cheaper coder",
+  "supplement": "Reagan et al., Six Basic Shapes (the smoothing fight); Manovich, Selfiecity",
+  "sketch": "One disagreement between your labels and the AI's where you were right, and why.",
+  "check": "Fix it: the planted bug. (Competencies 1, 7.)",
+  "threads": [
+   {
+    "name": "Images are culture too",
+    "note": "Their deepest day: pictures cluster by a visual style nobody tagged."
+   },
+   {
+    "name": "Where the AI fails on your data",
+    "note": "Hand-label 30 the AI also labels; study every disagreement."
+   },
+   {
+    "name": "The two readers (calibration)",
+    "note": "This hand-check is the bridge between the cheap reader and the powerful one."
+   }
+  ]
+ },
+ {
+  "n": 7,
+  "title": "The AI as a Reader, at Scale",
+  "promise": "Use the AI to read your whole corpus at once, learn to trust the labels it's sure of and catch the ones it isn't, and reckon with whose judgment you're renting.",
+  "tool": "LLM-as-annotator, the most common operation in the field",
+  "comps": "2, 4, 5",
+  "admire": "Gilardi, Alizadeh & Kubli (2023): ChatGPT outperformed crowd workers on several text-labeling tasks, cheaper, faster, more consistent.",
+  "interrogate": "The prompt is the codebook; agreement with humans isn't ground truth; and the model fails silently, confident wrong answers a human's disagreement would have caught. Its \"judgment\" is a compression of scraped creative work, whose reading are you renting?",
+  "flow": [
+   {
+    "t": "0:00",
+    "a": "Warm-up + Look at This, room names the choice first: the AI as a cheaper coder, and where it fails silently."
+   },
+   {
+    "t": "0:10",
+    "a": "The annotator move, on your corpus: write a labeling prompt for your categories, run it on a slice, read the labels back. Tighten the definition and watch the labels shift, the prompt is your codebook."
+   },
+   {
+    "t": "0:35",
+    "a": "Confidence, and when to trust it: ask the model not just what but how sure. Sort by confidence, trust the sure labels, hand-check the unsure ones, which is exactly which 30 to pull for Week 6."
+   },
+   {
+    "t": "0:50",
+    "a": "Break"
+   },
+   {
+    "t": "1:00",
+    "a": "Accuracy check, then project workshop: run your prompt against a small hand-labeled gold set. Where does the AI disagree, and is it wrong or are you? Then build time on your corpus. Go further (optional, technically comfortable): instead of the closed API model, run an open model from Hugging Face, or fine-tune your own small classifier (ModernBERT) on the labels you just made, the third reader you own."
+   },
+   {
+    "t": "1:50",
+    "a": "Gemini-free check and check-out."
+   }
+  ],
+  "reading": "NYT v. OpenAI, read against your Week 4 licensing conversation",
+  "supplement": "Gilardi et al., full; Bamman et al., LLM classification in cultural analytics (CHR 2024)",
+  "sketch": "Show one label the AI got confidently wrong and one it nailed; say how you knew.",
+  "check": "Explain it: what is your labeling prompt deciding on your behalf, and how would you check whether to trust a given label? (Competencies 2, 5.)",
+  "threads": [
+   {
+    "name": "The reader you can't see",
+    "note": "The powerful, opaque annotator: trust the labels it is sure of, check the rest."
+   },
+   {
+    "name": "Whose judgment are you renting",
+    "note": "Its reading was learned from creative work scraped largely without permission."
+   },
+   {
+    "name": "The third reader (go further)",
+    "note": "Fine-tune a model you own, transparent, powerful, now yours."
+   }
+  ]
+ },
+ {
+  "n": 8,
+  "title": "Models as Time Capsules + Settle the Finding",
+  "promise": "Meet models that live entirely inside one historical period, learn what a famous model has secretly memorized, kill your own finding to see what survives, and leave with a prose draft.",
+  "tool": "What a trained model is: a compression of its corpus",
+  "comps": "3, 4, 5",
+  "admire": "TimeCapsuleLLM, a small GPT trained from scratch on nothing but 1800s London publications, and \"Speak, Memory\" (Bamman's lab), which probes which books GPT-4 has effectively memorized.",
+  "interrogate": "A period model speaks only for the period's published, surviving, digitized voices. And memorization isn't reading: models score higher on memorized books, so an LLM that seems to read your corpus may be partly reciting it, a validity problem, not just an ethics one.",
+  "flow": [
+   {
+    "t": "0:00",
+    "a": "Warm-up + Look at This: TimeCapsuleLLM and \"Speak, Memory,\" screenshots ready. (These period models, and supplements like MonadGPT and MacBERTh, live on Hugging Face, where you can download and run open models, or fine-tune your own.)"
+   },
+   {
+    "t": "0:07",
+    "a": "Kill it, then keep what survives, one continuous arc on your own results: shuffle the labels and re-run; split the corpus in half; ask \"compared to what?\". Then compress whatever survived into one headline sentence."
+   },
+   {
+    "t": "0:52",
+    "a": "Break"
+   },
+   {
+    "t": "1:02",
+    "a": "Gemini-free writing block: write your one-sentence interpretation yourself."
+   },
+   {
+    "t": "1:22",
+    "a": "Writing workshop: opening question, what you found, what it does not show, the choices you made. Distill the Data Biography into the corpus note."
+   },
+   {
+    "t": "1:50",
+    "a": "Check and check-out."
+   }
+  ],
+  "reading": "None required",
+  "supplement": "TimeCapsuleLLM and Speak, Memory; period models MonadGPT and MacBERTh",
+  "sketch": "Expand to 600 to 1,000 words; write your show-your-work appendix and which checks survived.",
+  "check": "Explain it: your headline finding, and what it does not show. (Competencies 3, 4.)",
+  "threads": [
+   {
+    "name": "Whose data, at full scale",
+    "note": "A model is its corpus: bound the corpus and you bound the mind."
+   },
+   {
+    "name": "Memorization isn't reading",
+    "note": "A model may recite your corpus rather than read it, a validity problem, not just ethics."
+   },
+   {
+    "name": "Kill it, then keep it",
+    "note": "The Week 2 trial move, now turned on your own finding."
+   }
+  ]
+ },
+ {
+  "n": 9,
+  "title": "Build the Page",
+  "promise": "Leave today with a deployed draft of your web essay at a public URL.",
+  "tool": "Publishing, Quarto to GitHub Pages, static by default",
+  "comps": "1, 7, 8",
+  "admire": "Three published essays side by side: a Pudding piece, an Observable notebook, a Quarto site. The same goal, three defensible-but-different sets of choices.",
+  "interrogate": "There's no single right way, only choices you can defend. Yours will be choices too.",
+  "flow": [
+   {
+    "t": "0:00",
+    "a": "Look at This: the three essays, common structure, divergent choices."
+   },
+   {
+    "t": "0:15",
+    "a": "Structured critique (Critical Response Process) in trios: statements of meaning, maker's questions, neutral questions, permissioned opinions."
+   },
+   {
+    "t": "0:50",
+    "a": "Break"
+   },
+   {
+    "t": "1:00",
+    "a": "Interrogate your own chart, the making-side mirror of Week 6's hand-labeling. Does the y-axis start at zero? Is the eye pulled toward a pattern the data won't support? Fix one thing."
+   },
+   {
+    "t": "1:15",
+    "a": "Build lab: open the template you forked in Week 4; paste outline, charts, code; render; deploy. Static by default; JS opt-ins hit the code-review checkpoint."
+   },
+   {
+    "t": "1:50",
+    "a": "Phone test in pairs. Check-out."
+   }
+  ],
+  "reading": "None",
+  "supplement": "A Pudding process post",
+  "sketch": "Title your essay; write the headline finding in one sentence.",
+  "check": "Fix it: a planted bug in publishing/layout code (or in opted-in JS). (Competencies 1, 7.)",
+  "threads": [
+   {
+    "name": "Interrogate your own chart",
+    "note": "Ten weeks on other people's charts; now the ten minutes on yours."
+   },
+   {
+    "name": "No single right way",
+    "note": "Three published essays, three defensible sets of choices."
+   },
+   {
+    "name": "Make something real",
+    "note": "You leave with a deployed URL."
+   }
+  ]
+ },
+ {
+  "n": 10,
+  "title": "The Showcase",
+  "promise": "A 90-minute public event followed by a reception. Snacks. Music. Friends and family invited. Printed program with everyone's titles and URLs.",
+  "tool": "A public celebration; the two capstone assessments",
+  "comps": "all eight",
+  "admire": "The closing triptych, neural networks meet the art world: Edmond de Belamy (the market), Anna Ridler's Mosaic Virus (the labor), Refik Anadol's Unsupervised at MoMA (the museum).",
+  "interrogate": "When a machine reads a culture's archive, what is it showing us, and who decided what went in? You started Week 1 loading a museum's data; you end watching a museum's data become the art.",
+  "flow": [
+   {
+    "t": "0:00",
+    "a": "Welcome. This is a show, not a defense. The closing Look at This."
+   },
+   {
+    "t": "0:10",
+    "a": "Presentations, 4\u20135 min each: corpus, headline finding, one surprise. Live URL projected."
+   },
+   {
+    "t": "1:30",
+    "a": "Reception. Laptops at every seat with everyone's URLs loaded."
+   }
+  ],
+  "reading": "None",
+  "supplement": "Edmond de Belamy; Ridler's Mosaic Virus; Anadol's Unsupervised",
+  "sketch": "Within a week after: a private one-page reflection.",
+  "check": "The oral walkthrough (the capstone): how you got your headline result, what it does not show, and how the tools actually work. Plus the workbench intro. (All eight competencies.)",
+  "threads": [
+   {
+    "name": "Whose data, whose authorship",
+    "note": "The art triptych, de Belamy to Ridler to Anadol: who decided what went in?"
+   },
+   {
+    "name": "Understand, not commission",
+    "note": "The oral walkthrough an AI cannot do for you."
+   },
+   {
+    "name": "All threads converge",
+    "note": "You started loading a museum's data; you end watching it become the art."
+   }
+  ]
+ }
+]

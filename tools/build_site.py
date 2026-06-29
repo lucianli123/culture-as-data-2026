@@ -494,6 +494,19 @@ def build_about():
   <p>The AI writes code and helps you build, but it has known failure modes: false confidence, shrinking your question to fit the tool, insecure code, weak non-English. Each session has a stretch with it closed, so you leave able to reproduce your own work.</p>
 </section>
 <section>
+  <h2>The through-lines</h2>
+  <p>A few threads run through every week, and each session advances at least one:</p>
+  {ul([
+    "<strong>Beyond counting.</strong> Each tool reaches past the last; the signature move is re-asking a counting question by meaning.",
+    "<strong>Every method and chart is a choice.</strong> We admire finished work and interrogate it, then turn the same eye on our own.",
+    "<strong>The readers you can and can't see.</strong> The transparent classifier (Week 3), the powerful annotator (Week 7), and the model you fine-tune and own.",
+    "<strong>Whose data, whose judgment.</strong> The Data Biography, the licensing line, and the scraped creative work the models learned from.",
+    "<strong>The AI as an instrument, not an oracle.</strong> Known failure modes, and a stretch each session with the assistant closed.",
+    "<strong>Images are co-equal culture.</strong> You count, classify, and embed pictures the same way as text.",
+  ])}
+</section>
+
+<section>
   <h2>The showcase</h2>
   <p>By Week 10 you'll have a URL you can send to your group chat. The page will load. There will be a chart. There will be an image. There will be an argument. Strangers will read it.</p>
 </section>
