@@ -253,7 +253,7 @@ def page(title: str, body: str, depth: int = 0, active: str = "") -> str:
 {body}
 </main>
 <footer class="site-foot"><div class="wrap">
-  <p>{esc(TITLE)} — a 10-week, project-based community course. $0 per student. Built to run on Google Colab's free tier.</p>
+  <p>{esc(TITLE)}: a 10-week, project-based community course. $0 per student. Built to run on Google Colab's free tier.</p>
 </div></footer>
 </body>
 </html>
@@ -287,10 +287,10 @@ def build_index():
   <h2>Four tools, each one past the last</h2>
   <p>You'll learn four ways to turn culture into something a machine can analyze, each expanding what you can do with your own material past the one before.</p>
   {ul([
-    "<strong>Counting</strong> — powerful, and the honest floor: it has no notion of meaning.",
-    "<strong>Classification</strong> — train a transparent reader and see exactly what it learned.",
-    "<strong>Embeddings</strong> — the heart of the course: items become positions on a map of meaning, so similar things cluster and patterns appear counting can't reach.",
-    "<strong>AI annotation</strong> — hand a powerful model your whole corpus, then learn to trust the labels it's sure of and check the rest.",
+    "<strong>Counting</strong>: powerful, and the honest floor. It has no notion of meaning.",
+    "<strong>Classification</strong>: train a transparent reader and see exactly what it learned.",
+    "<strong>Embeddings</strong>: the heart of the course. Items become positions on a map of meaning, so similar things cluster and patterns appear counting can't reach.",
+    "<strong>AI annotation</strong>: hand a powerful model your whole corpus, then learn to trust the labels it's sure of and check the rest.",
   ])}
   <p>Images are a co-equal kind of culture, taught through the same four tools: you count, classify, and embed pictures exactly as you do text, so a project on album covers or paintings is as well-supported as one on lyrics.</p>
 </section>
