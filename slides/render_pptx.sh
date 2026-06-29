@@ -1,10 +1,8 @@
 #!/usr/bin/env bash
-# Re-render every weekly Markdown deck to PowerPoint (.pptx) into slides/pptx/.
-# Requires pandoc (https://pandoc.org). Run from the repo root: bash slides/render_pptx.sh
+# Build the styled weekly PowerPoint decks into slides/pptx/.
+#   1. refresh slides.json from the site data   2. render with pptxgenjs
+# Requires: python3, node, and `npm install pptxgenjs` (once).
 set -euo pipefail
-cd "$(dirname "$0")"
-mkdir -p pptx
-for md in week-*.md; do
-  pandoc "$md" -o "pptx/${md%.md}.pptx" --slide-level=2
-  echo "rendered pptx/${md%.md}.pptx"
-done
+cd "$(dirname "$0")/.."
+python3 slides/export_slides.py
+( cd slides && node styled_pptx.js )
