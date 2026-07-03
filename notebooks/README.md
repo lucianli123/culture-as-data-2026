@@ -23,7 +23,7 @@ healthy; a red one points you at the exact cheat-sheet entry.
 |---|---|---|---|
 | `week02_counting.ipynb` | 1 | fully worked | counting / tf-idf / pixel counts |
 | `week03_classification.ipynb` | 1 | fully worked | logistic regression + signed weights |
-| `week04_data_cookbook.ipynb` | 2 | fully worked | API pull + polite scrape |
+| `week04_data_cookbook.ipynb` | 2 | fully worked | file load + API pull + polite scrape |
 | `week05_embeddings.ipynb` | 2 | fully worked | text + CLIP image embeddings |
 | `week05_embeddings_GUIDED.ipynb` | 2 | completion (fuller guidance) | embeddings |
 | `week05_embeddings_SKELETON.ipynb` | 2 | completion (skeleton) | embeddings |
