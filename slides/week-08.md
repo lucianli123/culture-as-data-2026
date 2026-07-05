@@ -37,5 +37,5 @@ A period model speaks only for the period's published, surviving, digitized voic
 
 - **Reading:** None required
 - **Supplement:** [TimeCapsuleLLM](https://github.com/haykgrigo3/TimeCapsuleLLM) and [Speak, Memory](https://aclanthology.org/2023.emnlp-main.453/); period models [MonadGPT](https://huggingface.co/Pclanglais/MonadGPT) and [MacBERTh](https://huggingface.co/emanjavacas/MacBERTh)
-- **Sketch:** Expand to 600 to 1,000 words; write your show-your-work appendix and which robustness checks survived.
+- **Sketch:** Expand to 600 to 1,000 words; write your show-your-work appendix and which checks survived.
 - **Check (AI closed):** Explain it: your headline finding, and what it does not show. (Competencies 3, 4.)

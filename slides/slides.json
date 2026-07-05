@@ -5,8 +5,8 @@
   "promise": "By the break you'll have loaded a real dataset, asked it a question, and produced your first chart. A complete investigation, end to end, on day one.",
   "tool": "Culture as data itself (the ladder starts next week)",
   "comps": "1, 8",
-  "admire": "The Pudding, \"Pockets\" (2018), women's jeans pockets are measurably smaller, and one chart lands the argument.",
-  "interrogate": "80 pairs from a handful of brands: is that \"women's pockets,\" or a slice? And look at the chart itself, not just the data, what does it put front and center?",
+  "admire": "The Pudding, \"She Giggles, He Gallops\" (2017): across ~2,000 film screenplays, the stage-direction verbs split by gender, women snuggle and giggle, men gallop and stride, and the interactive makes it impossible to unsee.",
+  "interrogate": "~2,000 screenplays skewed toward what got produced and digitized: is that \"film,\" or a slice? Whose choice is a gendered verb, the writer's, the character's, the genre's? Counting shows the split, not the cause. And read the visualization's choices, not just the data.",
   "flow": [
    {
     "t": "0:00",
@@ -14,7 +14,7 @@
    },
    {
     "t": "0:12",
-    "a": "Look at This, then Question It: Pockets."
+    "a": "Look at This, then Question It: She Giggles, He Gallops."
    },
    {
     "t": "0:17",
@@ -30,7 +30,7 @@
    },
    {
     "t": "1:20",
-    "a": "Lab 2 (worked): ~200 Met Museum objects with thumbnails. Plot the collection by century; notice what the catalog does not record."
+    "a": "Lab 2 (worked), count an image corpus at the pixel level: ~200 Met thumbnails (or a stack of album covers). A picture is numbers, so the AI computes each image's average color and brightness and ranks the corpus darkest to brightest. What you choose to count of a picture is a choice too, and image projects start here."
    },
    {
     "t": "1:50",
@@ -44,22 +44,22 @@
   "threads": [
    {
     "name": "Read work critically",
-    "note": "Pockets is great and its choices are arguable. We admire and interrogate at once, the habit the whole course turns on."
+    "note": "She Giggles, He Gallops is great and its choices are arguable. We admire and interrogate at once, the habit the whole course turns on."
    },
    {
     "name": "Make something real",
     "note": "A complete investigation by the first break, before any theory."
    },
    {
-    "name": "Beyond counting (preview)",
-    "note": "You load and chart real culture today; the ladder past counting starts next week."
+    "name": "Images are culture too",
+    "note": "A picture is numbers: you counted pixels on day one, and images ride along as a co-equal corpus all ten weeks."
    }
   ]
  },
  {
   "n": 2,
   "title": "Counting Is Already a Model",
-  "promise": "Put a famous PNAS paper on trial, build a word-counter by hand, watch the same sentence get counted three ways, and count an image too.",
+  "promise": "Put a famous PNAS paper on trial, build a word-counter by hand, watch the same sentence get counted three ways, and find an artist's signature vocabulary with nothing but counting.",
   "tool": "Counting, and every count hides a choice",
   "comps": "3, 5, 8",
   "admire": "The Bollen/Schmidt trial: a hockey stick of societal distress, found by counting.",
@@ -98,10 +98,6 @@
     "a": "Cross-corpus counting: the same counter on a lyrics slice, a subreddit, and a novel. The corpus choice changes what \"common\" means."
    },
    {
-    "t": "1:45",
-    "a": "Counting images: average color, a brightness histogram, a \"darkest album cover\" ranking. What you choose to count is the same kind of decision as stop-words."
-   },
-   {
     "t": "1:50",
     "a": "Gemini-free check and check-out."
    }
@@ -120,8 +116,8 @@
     "note": "Tokens, stemming, the corpus, the chart's axis, each hides a decision you made."
    },
    {
-    "name": "Images are culture too",
-    "note": "Count a painting's color and brightness, the same skill as words."
+    "name": "The corpus is a choice",
+    "note": "The same counter on lyrics, a subreddit, and a novel gives three different \"commons.\""
    }
   ]
  },
@@ -131,12 +127,12 @@
   "promise": "Teach a machine a bias in ten minutes, build a classifier and read its mind, and preview the full methods menu before next week's commitment.",
   "tool": "Classification. Train a reader and read what it learned",
   "comps": "2, 4, 5",
-  "admire": "Lincoln Mullen, America's Public Bible (2023), a classifier that finds biblical quotations across millions of newspaper pages.",
-  "interrogate": "What counts as a quotation, a four-word echo, a loose paraphrase?, is a definition the scholar chose, and it shapes every result. The model reads the same messy digitized text your own project will.",
+  "admire": "Ted Underwood's genre prediction (Distant Horizons, 2019): a logistic regression, the exact tool of today's lab, trained to recognize detective fiction and science fiction across a century of novels.",
+  "interrogate": "What counts as science fiction is a choice built into the training labels. And the model's most famous error, misreading Pynchon's The Crying of Lot 49, a detective-fiction spoof, shows genre boundaries are real but fuzzy. A classifier's mistakes teach as much as its successes; yours will too.",
   "flow": [
    {
     "t": "0:00",
-    "a": "Warm-up + Look at This: Mullen's America's Public Bible."
+    "a": "Warm-up + Look at This: Underwood's genre prediction."
    },
    {
     "t": "0:10",
@@ -253,8 +249,8 @@
   "promise": "Watch your own corpus, text or images, sort itself by meaning, see the finding counting couldn't give you, and learn the same trick is how \"For You\" feeds place you.",
   "tool": "Embeddings, the heart of the course, the leap past counting",
   "comps": "4, 5",
-  "admire": "A debate, two readings of one fact: embeddings encode the associations in a corpus.",
-  "interrogate": "To Caliskan et al. (2017) that's a warning, a model trained on human text launders human prejudice. To Soni, Klein & Eisenstein (2021) the same mirror is a method, embeddings on abolitionist newspapers reveal which papers led the movement's language. The room decides: when is reading a corpus's associations a discovery, and when is it laundering bias?",
+  "admire": "A debate, two readings of one discovery: embedding space contains directions.",
+  "interrogate": "Kozlowski, Taddy & Evans (2019) find a rich\u2013poor axis in embedding space and read it as the cultural structure of social class, measurable across a century. Bolukbasi et al. (2016) find the same kind of direction, a gender axis pairing men with \"programmer\" and women with \"homemaker,\" and read it as prejudice to remove. Identical technique, opposite verdicts. The room decides: when is a dimension found in a corpus a discovery about culture, and when is it the corpus's own bias read back?",
   "flow": [
    {
     "t": "0:00",
@@ -262,7 +258,7 @@
    },
    {
     "t": "0:10",
-    "a": "The beyond-counting moment: put Week 2 beside today. There you counted adjectives near she vs. he; now embed those descriptions and watch them cluster. Same question, two tools, the second visibly richer. Name the idea: an item becomes a vector, position learned from the company it keeps."
+    "a": "The beyond-counting moment: put Week 2 beside today. There you counted the words around an axis you care about; now embed them and watch them cluster. Run it on something the room enjoys, a beloved artist's songs sorted by mood and era, and groupings appear that counting couldn't see. Same question, two tools, the second visibly richer. Name the idea: an item becomes a vector, position learned from the company it keeps."
    },
    {
     "t": "0:25",
@@ -281,14 +277,14 @@
     "a": "Gemini-free check and check-out."
    }
   ],
-  "reading": "Alammar, The Illustrated Word2Vec, plus the debate: Soni/Klein, How Words Lead to Justice vs. Caliskan et al. (2017)",
-  "supplement": "Garg et al. (PNAS 2018); Anderson et al., Spotify diversity",
+  "reading": "Alammar, The Illustrated Word2Vec, plus the debate: Kozlowski/Taddy/Evans, The Geometry of Culture (ASR 2019) vs. Bolukbasi et al. (2016)",
+  "supplement": "The second pairing: Caliskan et al. (2017) vs. Soni/Klein, How Words Lead to Justice; Anderson et al., Spotify diversity",
   "sketch": "Toggle PCA vs. t-SNE and screenshot how the map changes; name one cluster you believe and one you don't.",
   "check": "Explain it: on your map, name one cluster you believe is real and one that's probably a projection artifact, and how you'd tell. (Competency 4.)",
   "threads": [
    {
     "name": "Beyond counting (the payoff)",
-    "note": "The same she/he question from Week 2, now embedded, clusters counting could not see."
+    "note": "The same counting question from Week 2, now embedded: clusters counting could not see."
    },
    {
     "name": "Every chart is a choice",
@@ -296,7 +292,7 @@
    },
    {
     "name": "Whose data",
-    "note": "Embeddings mirror the corpus, discovery (Soni/Klein) or laundered bias (Caliskan)?"
+    "note": "A direction found in the corpus: cultural discovery (Kozlowski) or encoded prejudice (Bolukbasi)?"
    }
   ]
  },

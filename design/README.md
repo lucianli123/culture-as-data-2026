@@ -2,7 +2,7 @@
 
 This folder is the complete, self-contained specification for **Culture as Data**, a 10-week, 2-hour-per-session community course that teaches curious adults (no coding prerequisite) to investigate cultural data — lyrics, art, fan fiction, Reddit, images — at scale, with an AI assistant writing the code as plumbing rather than as the subject.
 
-The course **design is finished and authoritative.** What is *not* yet built — and what this project exists to produce — is the set of **Colab notebooks** the course teaches from and a rebuilt static **course site**.
+The course **design is finished and authoritative.** The buildable artifacts it specifies — the **Colab notebooks** and the static **course site** — are now built and live in this repository (`notebooks/`, `docs/`, `slides/`); this folder remains the spec they are checked against (`tools/check_sync.py` fails CI when the generators drift from these docs).
 
 ---
 

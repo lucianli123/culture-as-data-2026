@@ -56,7 +56,7 @@ Full worked notebooks. Participatory live coding. Exposure and a hook, not maste
 | 0:17 | **Pre-train the vocabulary** (no code): corpus, method, model, embedding — plain language, pictures. Course map; deliverable (notebook + web page). |
 | 0:32 | **Lab 1 (worked, participatory):** copy the notebook to Drive and **mount Drive into the runtime** (this *is* setup — and it's how your corpus and results survive Colab wiping the session; everything saves to one project folder in your Drive), Gemini key into Colab Secrets, load wedding data from URL. Instructor narrates, plants one real bug, and recovers it *out loud using the unblocking kit* — read the last line of the error, paste it back to the AI with "this errored, fix it and tell me what went wrong," try twice, then ask a human. **Hand out the one-page "common errors" cheat sheet here**; the AI *will* hand them a traceback, and the move is to not panic. First chart. Then solo: with a partner, draft three questions this data could answer, pick one, have the assistant write the code, run it, chart it. **The Week 1 check lives here:** before running your solo cell, write one sentence saying what it will do. (Trace it; C1.) |
 | 1:10 | Break |
-| 1:20 | **Lab 2 (worked):** ~200 Met museum objects with thumbnails. Plot the collection by century; browse what a museum's data looks like — and notice what the catalog *doesn't* record. (That noticing seeds Week 4's Data Biography.) |
+| 1:20 | **Lab 2 (worked) — count an image corpus at the pixel level:** ~200 Met thumbnails (or a stack of album covers). A picture is numbers — red/green/blue per pixel — so the AI computes each image's average color and brightness, ranks the corpus darkest to brightest, and charts it. *What you choose to count* of a picture (hue, brightness, saturation) is a decision, the same kind words will demand next week. Browse the catalog as you go and notice what it *doesn't* record (that noticing seeds Week 4's Data Biography). Image projects start here and run all the way through. |
 | 1:50 | One-slide teaser of the ladder ahead; the standing rituals named. Check-out. |
 
 **Reading (cliffhanger):** the Bollen/Schmidt fight, abstract-and-figure only — Bollen et al. 2021 (PNAS), the "hockey stick" of cognitive distortions counted in Google Books; then the one-page Schmidt/Piantadosi/Mahowald critique: the surge may be an artifact of *which books Google scanned*. Bring the three questions (what did they decide / load-bearing assumption / where's the gap). *Trial next week — including how the authors fought back.* (Population-level mental-health topic; keep the touch light.)
@@ -73,8 +73,8 @@ Full worked notebooks. Participatory live coding. Exposure and a hook, not maste
 
 **Tool one — counting.** Every count hides a choice (tokens, stemming, the corpus itself).
 **Competencies:** 3, 5; 8 via the trial.
-**Promise:** put a famous PNAS paper on trial, build a word-counter by hand, watch the same sentence get counted three ways — and count an image, too, since pictures are data the same way words are.
-**Mode balance:** ~⅓ discussion (the trial, expanded into a real debate + what-to-trust), ~⅓ workshop (hand-built counting + cross-corpus on your own slices), ~⅓ lecture/demo (tokenizers, tf-idf, pixels).
+**Promise:** put a famous PNAS paper on trial, build a word-counter by hand, and watch the same sentence get counted three ways — the deep dive into the tool you first touched, on pixels and wedding announcements alike, on day one. (The one counting week: images got their pixel-counting taste in Week 1.)
+**Mode balance:** ~⅓ discussion (the trial, expanded into a real debate + what-to-trust), ~⅓ workshop (hand-built counting + cross-corpus on your own slices), ~⅓ lecture/demo (tokenizers, tf-idf).
 
 **The set-piece — the Bollen/Schmidt trial.** (1) The claim: a hockey stick of societal distress, found by *counting*. (2) The objection: the rising words are fiction-words, and Google scanned more fiction after 2000 — the "surge in distress" might be a surge in novels. (3) The rebuttal, and the move to steal: Bollen et al. didn't argue — they **removed the entire fiction corpus and re-ran it**, and the pattern largely held. The answer to "your corpus is biased" is *test it and show the result.* Land Schmidt's line: the books are "a treasure trove when interpreted with care."
 
@@ -89,8 +89,8 @@ Full worked notebooks. Participatory live coding. Exposure and a hook, not maste
 | 0:33 | **[Delight] The fingerprint (5 min, no caveats):** before we complicate counting, enjoy what it already does. The AI pulls the words one artist uses far more than everyone else — the signature vocabulary of a Taylor Swift or a Kendrick Lamar album against a big pop baseline. No interrogation yet; just "counting alone already shows you a voice." Don't qualify it — that's the point. |
 | 0:38 | **[Workshop] Hand-built bag-of-words (22 min):** two authors, highlighters, tally the top words. Argue about merging run/running, casing, stop-words. The arguments *are* the lesson: counting requires defining. |
 | 1:00 | Break |
-| 1:10 | **[Lecture] Counting mechanics (25 min):** *what counts as a word* — paste a sentence into two tokenizer playgrounds and watch it shatter into different chips (models see tokens, not words; connect to the stemming argument). Then *tf-idf* — the AI scales your count, stop-words dominate, motivating "common here, rare overall" (Zipf's line is the take-home supplement). Then fold in **counting images** below. |
-| 1:35 | **[Workshop] Cross-corpus counting (15 min):** run the same counter on a pop-lyrics slice, a subreddit, and a novel — the corpus the room lives in. Same code, three corpora; the *corpus choice* changes what "common" means. (Doubles as the corpus sampler before Week 4.) Pixels too: the AI computes a painting's average color and brightness, a "darkest album cover" ranking — counting is the same skill on images, and image projects start here. |
+| 1:10 | **[Lecture] Counting mechanics (25 min):** *what counts as a word* — paste a sentence into two tokenizer playgrounds and watch it shatter into different chips (models see tokens, not words; connect to the stemming argument). Then *tf-idf* — the AI scales your count, stop-words dominate, motivating "common here, rare overall" (Zipf's line is the take-home supplement). |
+| 1:35 | **[Workshop] Cross-corpus counting (15 min):** run the same counter on a pop-lyrics slice, a subreddit, and a novel — the corpus the room lives in. Same code, three corpora; the *corpus choice* changes what "common" means. (Doubles as the corpus sampler before Week 4.) |
 | 1:50 | **Gemini-free check + check-out.** |
 
 **Reading:** Stephen Wolfram, "What Is ChatGPT Doing…" — the opening sections only, where even text generation turns out to be built from counting. *Proof that the humble tool you start with underlies the fanciest ones.*
@@ -328,15 +328,15 @@ The toolchain has been familiar since the Week 4 fork. The analysis is the evide
 |---|---|---|---|
 | 1 | Counting / data journalism | *She Giggles, He Gallops* (The Pudding) | Sample scope (~2,000 screenplays); whose choice is the verb? |
 | 1→2 | Counting | Bollen et al. 2021 (PNAS) | Schmidt/Piantadosi/Mahowald critique → **Bollen's re-run-without-fiction rebuttal** |
-| 3 | Classification | Mullen, *America's Public Bible* (2023) | What counts as a quotation is a definition; the model reads the same messy OCR you will |
+| 3 | Classification | Underwood, genre prediction (*Distant Horizons*, 2019) | What counts as science fiction is in the training labels; the Pynchon misread shows the boundary is real but fuzzy (Mullen, *America's Public Bible*, is the prepared swap and stays the model deliverable) |
 | 3 | Networks (optional method) | Beveridge & Shan, "Network of Thrones" | A "tie" is a 15-word window; change it, change the protagonist |
-| 5 | Embeddings (+ optional networks) | Soni, Klein & Eisenstein, "Abolitionist Networks" (2021) | "Leading a word" is operationalized; embeddings mirror what survived; ties are a choice |
+| 5 | Embeddings | Kozlowski, "Geometry of Culture" (2019) vs. Bolukbasi (2016) | A found dimension: discovery about culture, or ideology read back? (Caliskan vs. Soni/Klein is the swap pairing; Soni/Klein also shows the optional networks method) |
 | 5 | Recommenders (spotlight) | Anderson et al. 2020, Spotify diversity study | "Diversity" is a defined metric; satisfaction is a correlation |
 | 6 | Images as data | Manovich, *Selfiecity* / *On Broadway* | Sampling ("selfies in five cities") becomes a claim about a whole city |
 | 6 (supp.) | Sentiment / smoothing | Reagan et al., "Six Basic Shapes" | **Jockers *Syuzhet* → Swafford → Schmidt** (the smoothing fight) |
 | 7 | The AI as a reader | Gilardi et al. (ChatGPT vs. crowd workers) | The prompt is the codebook; it fails silently; whose training data is the standard? |
 | 8 | Period models / memorization | TimeCapsuleLLM + "Speak, Memory" (Bamman lab) | A period model speaks for who got published; name-cloze measures memorization, not reading |
-| 2–6 | **Images, as a co-equal corpus** | counting pixels (W2) → classifier on images (W3) → image embeddings (W5) → image projects deepened (W6) | The same four tools, applied to pictures — a full project path, not a separate track; CLIP image search is the one optional add |
+| 2–6 | **Images, as a co-equal corpus** | counting pixels (W1) → classifier on images (W3) → image embeddings (W5) → image projects deepened (W6) | The same four tools, applied to pictures — a full project path, not a separate track; CLIP image search is the one optional add |
 | 10 | AI art (send-off) | de Belamy → Ridler → Anadol (market, labor, museum) | Who is the author; whose labor is the data; who decided what went in |
 
 *(Deeper cuts for the curious: Michel et al. culturomics vs. Pechenick's corpus-contamination critique; Juola's Rowling unmasking and its distractor-set caveat; the Netflix Prize and the Narayanan–Shmatikov de-anonymization; Gonen & Goldberg's "Lipstick on a Pig"; Anthropic's "Mapping the Mind" / Golden Gate Claude; Nan Z. Da vs. the Critical Inquiry forum as the field-level fight.)*
@@ -345,8 +345,8 @@ The toolchain has been familiar since the Week 4 fork. The analysis is the evide
 
 | Week | Primary data / tools | Notes |
 |---|---|---|
-| 1 | Wedding CSV · Met objects | All provided; CC0; zero risk. |
-| 2 | Author passages · tokenizer playgrounds · Gutenberg · Met · Reddit slice · a few images (paintings/album covers) | The cross-corpus counter doubles as the corpus sampler; the pixel-counting beat needs 3–4 images on hand. |
+| 1 | Wedding CSV · Met thumbnails (the day-one image corpus for pixel counting) | All provided; CC0; zero risk. |
+| 2 | Author passages · tokenizer playgrounds · Gutenberg · Reddit slice | The cross-corpus counter doubles as the corpus sampler. |
 | 3 | Teachable Machine · pre-labeled text dataset (~1,000 rows) | Bias reveal needs a planted skew; the LR lab needs the labeled set. |
 | 4 | Bring-your-own from the starter library · a live API (Met/AIC) · the data-collection cookbook · the publishing template | The one licensing conversation; the APIs-then-scraping demo; existence proofs due; project repos born today. |
 | 5 | Project corpora · Embedding Projector | Pre-test the embed-your-corpus notebook on every starter corpus; the projection toggle is the homework. |

@@ -32,8 +32,10 @@ run_local() {
   jupyter nbconvert --to notebook --execute \
     --ExecutePreprocessor.timeout=900 \
     --output-dir "$OUT_DIR" \
-    "$NB_DIR"/_smoke_test.ipynb "$NB_DIR"/week*.ipynb
+    "$NB_DIR"/_smoke_test.ipynb $(ls "$NB_DIR"/week*.ipynb | grep -vE "_GUIDED|_SKELETON")
   echo "All notebooks executed with zero cell errors. Output in $OUT_DIR"
+  # GUIDED/SKELETON variants are completion problems: their blank cells error by
+  # design until a student fills them, so they are excluded from headless execution.
 }
 
 run_docker() {
@@ -48,7 +50,7 @@ run_docker() {
       jupyter nbconvert --to notebook --execute \
         --ExecutePreprocessor.timeout=900 \
         --output-dir notebooks/_executed \
-        notebooks/_smoke_test.ipynb notebooks/week*.ipynb
+        notebooks/_smoke_test.ipynb $(ls notebooks/week*.ipynb | grep -vE "_GUIDED|_SKELETON")
     '
   echo "All notebooks executed in the Colab base image with zero cell errors."
 }

@@ -12,3 +12,7 @@ Thumbs.db
 # Notebook-run artifacts (PROJECT_DIR fallback outside Colab)
 notebooks/culture-as-data-project/
 culture-as-data-project/
+
+# node (pptx rendering)
+node_modules/
+slides/package-lock.json

@@ -193,7 +193,7 @@ Each session includes one ~20-minute stretch with the assistant closed — you w
 | 0:17 | **Pre-training the vocabulary.** Before any code: corpus, method, model, embedding — plain ideas, with pictures. The course map, and the sentence you'll hear all term: *it's still just counting and weighting.* |
 | 0:32 | **Lab 1 — follow-along, then on your own.** First, setup that pays off all term: copy the notebook to Drive and **mount Drive** (this is how your work survives a session reset — everything saves to one project folder), and drop your key into Colab Secrets. Then load NYT wedding announcements, follow the live-coded walkthrough, and take your solo turn: with a partner, draft three questions this data could answer, pick one, have the assistant write the code, run it, chart it. Before you run your cell, write one sentence predicting what it does — that's this week's check. |
 | 1:10 | Break |
-| 1:20 | **Lab 2 — looking with images.** Load 200 Met Museum objects with thumbnails, plot the collection by century, and browse what a museum's data looks like — including what the catalog *doesn't* record. |
+| 1:20 | **Lab 2 — counting images, pixel by pixel.** Load ~200 Met Museum thumbnails: a picture is numbers, so compute each image's average color and brightness and rank the corpus darkest to brightest. Browse what the catalog does — and *doesn't* — record. Image projects start here. |
 | 1:50 | Wrap. First check-out. |
 
 **Reading:** a real scientific fight, in two short pieces (abstract and figure only). Bollen et al. (2021, PNAS) used nothing but word-counting in Google Books to claim human thinking has grown measurably more distorted since the 1980s — the "hockey stick." Then the one-page critique by Schmidt, Piantadosi & Mahowald: the surge might be an artifact of *which books Google scanned*. Bring the three questions from the *Reading* section. We hold the trial next week — and see how the original authors fought back. (One of the choices on trial is the chart itself: the hockey-stick shape leans on its y-axis and smoothing, and a different axis flattens the drama.)
@@ -216,7 +216,6 @@ Each session includes one ~20-minute stretch with the assistant closed — you w
 | 1:05 | Break |
 | 1:15 | **tf-idf.** The AI scales your hand count; stop-words dominate, which motivates tf-idf: "common here, rare overall." (Zipf's law — the eerie straight line hiding in every text — is this week's five-minute supplement to try at home.) |
 | 1:30 | **Cross-corpus counting.** Same counter, three corpora — start with the one you live in: a pop-lyrics slice, a subreddit, then a novel. Watch the corpus choice change what "common" means. (And first, for fun: the words one artist uses far more than anyone else — a signature vocabulary, counting alone showing you a voice.) |
-| 1:45 | **Counting images.** Pictures are data too: the AI computes a painting's average color and brightness, and a "darkest album cover" ranking. Counting is the same skill on images — and *what you choose to count* (hue, brightness, saturation) is the same kind of decision as stop-words. Image projects start here and run all the way through. |
 | 1:50 | Gemini-free check-in. Check-out. |
 
 **Reading:** Stephen Wolfram, "What Is ChatGPT Doing…" — the opening sections only, where even text generation turns out to be built from counting. Proof that the humblest tool underlies the fanciest ones.
@@ -436,7 +435,7 @@ If none of these spark interest, talk to the instructor — there are dozens mor
 | 2 | Wolfram, "What Is ChatGPT Doing…" — opening sections only (generation built up from counting) | Zipf's law, the eerie straight line in every text (5-minute demo) |
 | 3 | Browse *America's Public Bible* (americaspublicbible.org) — intro + a verse or two | Underwood, "Using GPT-4 to measure the passage of time in fiction"; Juola's Rowling unmasking |
 | 4 | Krause, "Data Biographies: Getting to Know Your Data" (We All Count) | Freelon, "Post-API Age" |
-| 5 | Alammar, "The Illustrated Word2Vec" + the debate pair: Soni/Klein/Eisenstein via *Public Books* ("How Words Lead to Justice") **vs.** Caliskan et al. (2017), abstract | Garg et al. (PNAS 2018), figures; Anderson et al. (Spotify, 2020) on algorithmic diversity |
+| 5 | Alammar, "The Illustrated Word2Vec" + the debate pair: Kozlowski/Taddy/Evans, "The Geometry of Culture" (ASR 2019), abstract + figures **vs.** Bolukbasi et al. (2016), abstract | The second pairing: Caliskan et al. (2017) vs. Soni/Klein/Eisenstein ("How Words Lead to Justice"); Anderson et al. (Spotify, 2020) on algorithmic diversity |
 | 6 | Gilardi et al. (2023), abstract — the AI as a cheaper coder | The Reagan/Swafford smoothing fight (sentiment projects) |
 | 7 | NYT v. OpenAI complaint summary, or a Books3 / pirated-books explainer — read against your own Week 4 licensing conversation | Gilardi et al. (2023), full |
 | 8 | None required | MonadGPT and MacBERTh model pages — two more time capsules |

@@ -12,11 +12,11 @@ format: revealjs
 
 ## Look at This
 
-Lincoln Mullen, America's Public Bible (2023), a classifier that finds biblical quotations across millions of newspaper pages.
+Ted Underwood's genre prediction (Distant Horizons, 2019): a logistic regression, the exact tool of today's lab, trained to recognize detective fiction and science fiction across a century of novels.
 
 ## Question It
 
-What counts as a quotation, a four-word echo, a loose paraphrase?, is a definition the scholar chose, and it shapes every result. The model reads the same messy digitized text your own project will.
+What counts as science fiction is a choice built into the training labels. And the model's most famous error, misreading Pynchon's The Crying of Lot 49, a detective-fiction spoof, shows genre boundaries are real but fuzzy. A classifier's mistakes teach as much as its successes; yours will too.
 
 ## Three modes today (about a third each)
 
@@ -26,7 +26,7 @@ What counts as a quotation, a four-word echo, a loose paraphrase?, is a definiti
 
 ## The session
 
-- **0:00**  Warm-up + Look at This: Mullen's America's Public Bible.
+- **0:00**  Warm-up + Look at This: Underwood's genre prediction.
 - **0:10**  Teachable Machine, instructor demo: a two-class image model trained live, then the reveal that it learned from only orange cats and brown dogs. The room predicts what a black cat will do, then sees it.
 - **0:22**  Counting with weights, the lab: each word casts a weighted vote; a logistic regression adds them up. Train it on a pop corpus, then read the signed coefficients, its mind on the table.
 - **0:52**  Delight beat: the words that most predict "breakup song" or "this reviewer hated it."
@@ -40,5 +40,5 @@ What counts as a quotation, a four-word echo, a loose paraphrase?, is a definiti
 
 - **Reading:** [Mullen, America's Public Bible](https://americaspublicbible.org/) (intro + a verse)
 - **Supplement:** [Underwood on GPT-4 and fictional time](https://tedunderwood.com/2023/03/19/using-gpt-4-to-measure-the-passage-of-time-in-fiction/); [Juola's Rowling unmasking](https://www.scientificamerican.com/article/how-a-computer-program-helped-show-jk-rowling-write-a-cuckoos-calling/)
-- **Sketch:** Train a quick logistic regression on a labeled set; screenshot its five most positive and negative words. Bring a corpus existence proof to Week 4.
+- **Sketch:** Train a quick logistic regression on a labeled set; screenshot its five most positive and negative words.
 - **Check (AI closed):** Explain it: read your classifier's top weights aloud, and name one input where it would fail and why. (Competencies 4, 5.)

@@ -12,11 +12,11 @@ format: revealjs
 
 ## Look at This
 
-The Pudding, "Pockets" (2018), women's jeans pockets are measurably smaller, and one chart lands the argument.
+The Pudding, "She Giggles, He Gallops" (2017): across ~2,000 film screenplays, the stage-direction verbs split by gender, women snuggle and giggle, men gallop and stride, and the interactive makes it impossible to unsee.
 
 ## Question It
 
-80 pairs from a handful of brands: is that "women's pockets," or a slice? And look at the chart itself, not just the data, what does it put front and center?
+~2,000 screenplays skewed toward what got produced and digitized: is that "film," or a slice? Whose choice is a gendered verb, the writer's, the character's, the genre's? Counting shows the split, not the cause. And read the visualization's choices, not just the data.
 
 ## Three modes today (about a third each)
 
@@ -27,11 +27,11 @@ The Pudding, "Pockets" (2018), women's jeans pockets are measurably smaller, and
 ## The session
 
 - **0:00**  Setting the room: the social rules, demonstrated by the instructor breaking one and being corrected. Today's live coding includes real mistakes on purpose.
-- **0:12**  Look at This, then Question It: Pockets.
+- **0:12**  Look at This, then Question It: She Giggles, He Gallops.
 - **0:17**  Pre-train the vocabulary (no code): corpus, method, model, embedding, in plain language with pictures. The course map and the deliverable.
 - **0:32**  Lab 1 (worked, participatory): copy the notebook to Drive and mount Drive into the runtime (this is how your corpus and results survive Colab wiping the session, everything saving to one project folder), put a Gemini key in Colab Secrets, load NYT wedding data, make a first chart. Hand out the common-errors cheat sheet. Then solo with a partner: draft three questions, pick one, have the AI write the code, run it, chart it. Write one sentence predicting your cell before you run it.
 - **1:10**  Break
-- **1:20**  Lab 2 (worked): ~200 Met Museum objects with thumbnails. Plot the collection by century; notice what the catalog does not record.
+- **1:20**  Lab 2 (worked), count an image corpus at the pixel level: ~200 Met thumbnails (or a stack of album covers). A picture is numbers, so the AI computes each image's average color and brightness and ranks the corpus darkest to brightest. What you choose to count of a picture is a choice too, and image projects start here.
 - **1:50**  Teaser of the ladder ahead; the standing rituals named. First check-out.
 
 ## Reading & homework

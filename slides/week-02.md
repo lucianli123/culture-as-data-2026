@@ -6,7 +6,7 @@ format: revealjs
 
 # Week 2 · Counting Is Already a Model
 
-> Put a famous PNAS paper on trial, build a word-counter by hand, watch the same sentence get counted three ways, and count an image too.
+> Put a famous PNAS paper on trial, build a word-counter by hand, watch the same sentence get counted three ways, and find an artist's signature vocabulary with nothing but counting.
 
 *Tool / method: Counting, and every count hides a choice · Competencies: 3, 5, 8*
 
@@ -34,7 +34,6 @@ The rising words are fiction-words, and Google scanned more fiction after 2000. 
 - **1:05**  Break
 - **1:15**  tf-idf: the AI scales your hand count; stop-words dominate, which motivates "common here, rare overall."
 - **1:30**  Cross-corpus counting: the same counter on a lyrics slice, a subreddit, and a novel. The corpus choice changes what "common" means.
-- **1:45**  Counting images: average color, a brightness histogram, a "darkest album cover" ranking. What you choose to count is the same kind of decision as stop-words.
 - **1:50**  Gemini-free check and check-out.
 
 ## Reading & homework

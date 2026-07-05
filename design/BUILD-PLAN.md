@@ -20,7 +20,7 @@ A self-contained implementation brief for **Claude Cowork**. Two deliverables: (
   - `lesson-plans.md` — the instructor teach-from doc: minute-by-minute weekly flows, featured studies, datasets, checks. Use for the weekly pages **and** as the per-notebook behavioral spec (what each lab does, in sequence).
   - `planning-doc.md` — the instructor companion: the *why* behind every choice (numbered Principles), the assessment framework, the provider research, the corpus library, the unblocking kit, the pivot-kit. Use for the kits (§3) and whenever a build decision needs its rationale.
   - This `BUILD-PLAN.md` is the index over those four: it tells you what buildable artifacts to produce from them. Read the four docs first; they win on any conflict with this file's summaries.
-- **Notebook pedagogy:** Act 1 (W1–3) ships **fully-worked** notebooks. Act 2 (W4–7) ships **completion problems** in two parallel versions — *fuller-guidance* and *skeleton*. This is the expertise-reversal mechanism; it is required, not optional.
+- **Notebook pedagogy:** Act 1 (W1–3) ships **fully-worked** notebooks. In Act 2, the mechanism-teaching notebooks (W5 embeddings, W7 annotator) additionally ship as **completion problems** in two parallel versions — *fuller-guidance* and *skeleton* (W4's cookbook stays fully worked: it's reference material, not a mechanism to practice). This is the expertise-reversal mechanism; it is required, not optional.
 - **House style:** prose explanations in Markdown cells before each code cell; no em-dashes in any student-facing marketing copy on the site (body prose elsewhere is fine); "lyrics" not "songs"; pop-culture examples wherever a corpus is needed (see the pop-culture ratio in `planning-doc.md` Principle 15).
 
 ---
@@ -40,12 +40,12 @@ culture-as-data/
 │   ├── assets/
 │   │   ├── style.css
 │   │   └── (images, favicon)
-│   └── _build/                    # generated-from-markdown notes (see §2)
 ├── notebooks/
 │   ├── README.md                  # how to open in Colab, the runtime expectations
 │   ├── requirements.txt           # PINNED versions (see §4)
 │   ├── constraints.txt            # optional: hard pins for the compat-test harness
 │   ├── _smoke_test.ipynb          # runs every notebook's imports + a tiny op (see §4)
+│   ├── week01_first_investigation.ipynb   # fully worked (Drive-mount ritual + wedding data + pixel-counting an image corpus)
 │   ├── week02_counting.ipynb              # fully worked
 │   ├── week03_classification.ipynb        # fully worked
 │   ├── week04_data_cookbook.ipynb         # fully worked (load-a-file + API pull + polite scrape)
