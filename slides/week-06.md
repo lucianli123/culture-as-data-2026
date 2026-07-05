@@ -18,6 +18,26 @@ Arnold, Tilton & Berke, "Visual Style in Two Network-Era Sitcoms" (2019), comput
 
 What counts as a "character-centered shot" is an operational definition, and a different one tells a different story; two shows is a slice, not "television."
 
+## The featured pair, in particulars
+
+- Arnold, Tilton & Berke (2019): computer vision on every shot of Bewitched and I Dream of Jeannie, measuring how the camera frames each lead.
+- "Character-centered shot" is an operational definition. Change the definition, change the story.
+- Two network sitcoms is a slice, not "television."
+- Turn the same eye on your project: what did YOU operationalize this week, and what would a different definition show?
+
+## Images on the same map
+
+- CLIP embeds pictures into a shared space with words: your album covers, paintings, posters become vectors.
+- Watch an image set cluster by visual style nobody tagged: the beyond-counting contrast at its sharpest.
+- Week 1 ranked pixels by brightness; today style emerges unasked. Same corpus, two rungs of the ladder.
+
+## The hand-labeling set-piece (nobody skips it)
+
+- Label 30 items from your own corpus, by hand, no AI.
+- The AI labels the same 30. Study every disagreement: is it wrong, or are you?
+- This is calibration: learning exactly where the machine's reading of YOUR data breaks.
+- Deliberately Gemini-free. This beat is the one thing code cannot teach.
+
 ## Three modes today (about a third each)
 
 - **Lecture / demo:** Apply the tools harder; image projects' deepest day; calibrate the AI on your data

@@ -18,6 +18,34 @@ A Pudding "How We Made…" process post, the messy middle, where every polished 
 
 Listen across the pitches for questions too vague to answer, corpora that don't exist as accessible data, methods chosen for vibes, and the quiet scaling-down of ambition.
 
+## A pitch that survives contact
+
+- Three minutes, hard cap: your corpus (existence proof on screen), your two methods, and what would count as a finding.
+- "Explore themes in music" is not answerable. "Did Billboard #1 lyrics narrow in vocabulary 1990-2020?" is.
+- A null result, honestly shown, is a complete project: "I expected X, the data doesn't show it, here's how I know."
+- The pivot kit exists because corpora fail. Adopting a fallback pair is normal, not defeat.
+
+## The licensing line, in one slide
+
+- CC0 museum data and public-domain books: use freely, republish freely.
+- Academic corpora: analyze, don't redistribute. Lyrics and review text: metadata and counts only.
+- AO3 and other community-opposed archives: a small attributed sample at most, never a shared dataset.
+- Shadow-library books: never. That line is what the field's $1.5B settlement was about.
+
+## Three routes to a corpus
+
+- Route 1, the common case: a prepared file. pd.read_csv(url), gdown for Drive links, load_dataset() for Hugging Face.
+- Route 2, the polite front door: an API. The Met's endpoint returns JSON, no key required.
+- Route 3, the back door: scrape, carefully. Read robots.txt and the ToS, go slow, take only what you need, never republish.
+- Whatever the route: save the result to your Drive project folder today. Week 5 depends on it.
+
+## The Data Biography (~400 words, due Week 5)
+
+- Where did this data come from, and who made it?
+- Who is in it, and who is missing from it?
+- What can it not tell you, no matter how cleverly you count?
+- Its distilled form becomes your essay's corpus note in Week 8. Write it once, use it twice.
+
 ## Three modes today (about a third each)
 
 - **Lecture / demo:** The project (no new mechanism this week)

@@ -52,6 +52,22 @@ function build(w){
   s.addShape("ellipse",{x:M,y:2.7,w:0.28,h:0.28,fill:{color:GOLD},line:{type:"none"}});
   s.addText(w.interrogate,{x:M+0.5,y:2.5,w:11.2,h:4.0,fontFace:SANS,fontSize:20,color:INK,valign:"top",lineSpacingMultiple:1.2,autoFit:true});
 
+  // 3b. Content slides (the substance of the session)
+  (w.content||[]).forEach((cs,ci)=>{
+    s=pres.addSlide(); s.background={color:WHITE};
+    const accent=HUES[ci%3];
+    s.addShape("rect",{x:0,y:0,w:0.18,h:7.5,fill:{color:accent},line:{type:"none"}});
+    s.addText("WEEK "+w.n+" · THE MATERIAL",{x:M,y:0.7,w:11,h:0.35,fontFace:SANS,fontSize:12,bold:true,color:accent,charSpacing:3});
+    s.addText(cs.h,{x:M,y:1.1,w:11.9,h:1.0,fontFace:SERIF,fontSize:30,bold:true,color:INK,valign:"top",autoFit:true});
+    const np=cs.points.length, top=2.45, avail=6.9-top, rh=Math.min(1.15,avail/np);
+    const fsz=np>4?15:16.5;
+    cs.points.forEach((p,i)=>{
+      const y=top+i*rh;
+      s.addShape("ellipse",{x:M,y:y+0.1,w:0.22,h:0.22,fill:{color:HUES[i%3]},line:{type:"none"}});
+      s.addText(p,{x:M+0.5,y,w:11.6,h:rh,fontFace:SANS,fontSize:fsz,color:INK,valign:"top",lineSpacingMultiple:1.12,autoFit:true});
+    });
+  });
+
   // 4. Three modes
   s=pres.addSlide(); s.background={color:WHITE};
   s.addText("Three modes today",{x:M,y:0.8,w:11,h:0.8,fontFace:SERIF,fontSize:30,bold:true,color:INK});
@@ -100,7 +116,7 @@ function build(w){
     const y=2.25+i*1.6, c=HUES[i%3];
     s.addShape("roundRect",{x:M,y:y,w:0.5,h:0.5,fill:{color:c},line:{type:"none"},rectRadius:0.08});
     s.addText(String(i+1),{x:M,y:y,w:0.5,h:0.5,fontFace:SERIF,fontSize:20,bold:true,color:WHITE,align:"center",valign:"middle"});
-    s.addText(t.name,{x:M+0.8,y:y-0.04,w:11.3,h:0.45,fontFace:SERIF,fontSize:19,bold:true,color:c});
+     s.addText(t.name,{x:M+0.8,y:y-0.04,w:11.3,h:0.45,fontFace:SERIF,fontSize:19,bold:true,color:c});
     s.addText(t.note,{x:M+0.8,y:y+0.42,w:11.3,h:1.0,fontFace:SANS,fontSize:14.5,color:INK,valign:"top",lineSpacingMultiple:1.12,autoFit:true});
   });
 

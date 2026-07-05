@@ -18,6 +18,26 @@ TimeCapsuleLLM, a small GPT trained from scratch on nothing but 1800s London pub
 
 A period model speaks only for the period's published, surviving, digitized voices. And memorization isn't reading: models score higher on memorized books, so an LLM that seems to read your corpus may be partly reciting it, a validity problem, not just an ethics one.
 
+## Kill it, then keep it
+
+- The Bollen move, turned on your own finding: remove the slice that worries you most and re-run.
+- Survives? Say so, with the check shown. Dies? You just learned what your finding was made of.
+- Minimum bar: ONE robustness check, the one that most threatens your result.
+- "I expected X, the data doesn't show it, here's how I know" is a complete, publishable result.
+
+## Memorization isn't reading
+
+- Speak, Memory (Chang et al., 2023): name-cloze tests show GPT-4 has memorized many novels; it fills in "___ Bennet" without reading anything.
+- A model may be reciting your corpus rather than analyzing it: a validity problem, not only an ethics one.
+- TimeCapsuleLLM: train only on 1800s London text and the model speaks its era. A corpus bounds a mind.
+- Ask of every model you used: what was in its training data, and does that undercut MY claim?
+
+## The show-your-work appendix
+
+- Your method choices, your moments of doubt, what you cut, what the AI got wrong.
+- Name where a reader could reasonably disagree with you, before they do.
+- The honesty you demanded of published work all term, turned on yourself. (Data Feminism's practice, run quietly all course.)
+
 ## Three modes today (about a third each)
 
 - **Lecture / demo:** What a trained model is: a compression of its corpus

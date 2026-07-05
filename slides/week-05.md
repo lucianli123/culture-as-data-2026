@@ -18,6 +18,33 @@ A debate, two readings of one discovery: embedding space contains directions.
 
 Kozlowski, Taddy & Evans (2019) find a rich–poor axis in embedding space and read it as the cultural structure of social class, measurable across a century. Bolukbasi et al. (2016) find the same kind of direction, a gender axis pairing men with "programmer" and women with "homemaker," and read it as prejudice to remove. Identical technique, opposite verdicts. The room decides: when is a dimension found in a corpus a discovery about culture, and when is it the corpus's own bias read back?
 
+## The problem counting cannot solve
+
+- To a counter, "happy" and "joyful" are unrelated strings. Zero overlap.
+- An embedding turns each item into a vector, a few hundred numbers, positioned by the company the item keeps.
+- Near in that space means similar in learned context: happy and joyful end up neighbors because they appear in the same company.
+- Neighbors are context-mates, NOT dictionary synonyms. Kill that misconception today, out loud.
+
+## The debate: discovery, or bias read back?
+
+- Kozlowski, Taddy & Evans (2019): a rich-poor direction in embedding space tracks the cultural structure of class across a century. Culture made measurable.
+- Bolukbasi et al. (2016): the same kind of direction pairs man:programmer :: woman:homemaker. Prejudice the model absorbed, to be removed.
+- Identical technique. Opposite verdicts.
+- The room settles it: what makes a found dimension a discovery vs. the corpus's own bias, the data, the purpose, or what you do with the result?
+
+## The chart is a choice
+
+- PCA and t-SNE flatten the same vectors two ways: clusters tighten, distances shift, a grouping you trusted can dissolve.
+- "Near" means probably similar. Exact distances on the flattened map mean little.
+- A visualization is an argument with decisions baked in: projection, axes, what's dropped.
+- Tonight's toggle: PCA vs. t-SNE on your own map. Name one cluster you believe and one you don't.
+
+## The recommender aside (five minutes, boxed)
+
+- "For You" is this same map plus your history: you are a point in taste-space, the feed is your nearest neighbors.
+- Spotify's own researchers found algorithmic listening less diverse than organic listening (Anderson et al., 2020).
+- You built the machinery of the feed today. That is the whole aside.
+
 ## Three modes today (about a third each)
 
 - **Lecture / demo:** Embeddings, the heart of the course, the leap past counting

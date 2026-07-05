@@ -18,6 +18,26 @@ Gilardi, Alizadeh & Kubli (2023): ChatGPT outperformed crowd workers on several 
 
 The prompt is the codebook; agreement with humans isn't ground truth; and the model fails silently, confident wrong answers a human's disagreement would have caught. Its "judgment" is a compression of scraped creative work, whose reading are you renting?
 
+## The powerful, opaque reader
+
+- Gilardi et al. (2023): ChatGPT out-labeled paid crowd workers on political-text tasks at roughly a twentieth of the cost.
+- Your prompt IS the codebook: categories, definitions, edge-case rules. Write it like one.
+- Change one line of the codebook and the same machine becomes a different reader.
+- It fails silently. Confident-and-wrong looks identical to confident-and-right from the outside.
+
+## Trust, by confidence
+
+- Ask for a confidence number with every label. Sort ascending. Hand-check the bottom.
+- Gold set first: label ~30 items yourself before the machine sees them. Agreement against gold is your accuracy floor.
+- Disagreements are data: sometimes the model is wrong, sometimes your codebook was vague.
+- Whose reading are you renting? A model trained largely on scraped creative work. Week 8 takes that up.
+
+## Three readers, one course
+
+- Week 3, the transparent reader: a logistic regression whose weights you can read.
+- Week 7, the powerful reader: an API model you audit by confidence and gold set.
+- Go-further, the reader you own: fine-tune ModernBERT on your own labels. Free to run, and it is yours.
+
 ## Three modes today (about a third each)
 
 - **Lecture / demo:** LLM-as-annotator, the most common operation in the field

@@ -26,6 +26,7 @@ NAV = [
     ("index.html", "Home"),
     ("syllabus.html", "Syllabus"),
     ("schedule.html", "Schedule"),
+    ("notebooks.html", "Notebooks"),
     ("resources.html", "Resources"),
     ("about.html", "About"),
 ]
@@ -61,6 +62,35 @@ ANCHOR_TOOLS = [
     ("TensorFlow Embedding Projector", "https://projector.tensorflow.org/", "Week 5, plots text and images"),
     ("CLIP image-search demo (optional)", "https://huggingface.co/spaces", "Week 6, search images by typing words"),
 ]
+
+
+# Notebooks: Colab/GitHub links surfaced on the site --------------------------------
+GH_REPO = "https://github.com/lucianli123/culture-as-data-2026"
+COLAB = "https://colab.research.google.com/github/lucianli123/culture-as-data-2026/blob/main/"
+
+NOTEBOOKS = [
+    ("notebooks/week01_first_investigation.ipynb", 1, "Your first investigation", "Load the wedding data, make your first chart, learn the unblocking drill, count words and pixels."),
+    ("notebooks/week02_counting.ipynb", 2, "Counting", "Bag-of-words by hand-logic, tf-idf, keyness (the She Giggles, He Gallops method), and the shuffle test."),
+    ("notebooks/week03_classification.ipynb", 3, "Classification", "Train a logistic regression and read its signed weights, the model's mind on the table."),
+    ("notebooks/week04_data_cookbook.ipynb", 4, "The data cookbook", "Three routes to a corpus: load a file, call an API, scrape politely. Saves your corpus to Drive."),
+    ("notebooks/week05_embeddings.ipynb", 5, "Embeddings", "Embed your own corpus (text or images), hunt the surprise cluster, toggle PCA vs. t-SNE."),
+    ("notebooks/week07_annotator.ipynb", 7, "The AI as annotator", "Gemini labels your corpus at scale; you audit it by confidence and a hand-labeled gold set."),
+]
+NOTEBOOK_VARIANTS = {
+    5: [("GUIDED", "notebooks/week05_embeddings_GUIDED.ipynb"), ("SKELETON", "notebooks/week05_embeddings_SKELETON.ipynb")],
+    7: [("GUIDED", "notebooks/week07_annotator_GUIDED.ipynb"), ("SKELETON", "notebooks/week07_annotator_SKELETON.ipynb")],
+}
+COOL_METHODS = [
+    ("notebooks/cool-methods/character_networks.ipynb", "Character networks", "Who shares a scene with whom: a network from any fiction corpus."),
+    ("notebooks/cool-methods/sentiment_arcs.ipynb", "Sentiment arcs", "The Syuzhet move in Python, smoothing controversy included."),
+    ("notebooks/cool-methods/stylometry_starter.ipynb", "Stylometry", "Authorship by function words, the Rowling-unmasking method."),
+    ("notebooks/cool-methods/finetune_modernbert.ipynb", "Fine-tune ModernBERT", "Train a classifier you own on the labels from Week 7."),
+]
+
+def nb_buttons(path, primary=True):
+    cls = "button" if primary else "button ghost"
+    return (f"<a class='{cls}' href='{COLAB}{path}'>Open in Colab</a> "
+            f"<a class='button ghost' href='{GH_REPO}/blob/main/{path}'>View on GitHub</a>")
 
 READING_LIST = [
  ("1", "<a href='https://www.pnas.org/doi/10.1073/pnas.2102061118'>Bollen et al., the cognitive-distortions hockey stick (PNAS 2021)</a>, with the <a href='https://www.pnas.org/doi/10.1073/pnas.2115010118'>Schmidt et al. critique</a>", "<a href='https://www.robinsloan.com/notes/writing-with-the-machine/'>Robin Sloan, Writing with the machine</a>"),
@@ -119,6 +149,184 @@ SLIDES_THREADS={
 10:[("Whose data, whose authorship","The art triptych, de Belamy to Ridler to Anadol: who decided what went in?"),
    ("Understand, not commission","The oral walkthrough an AI cannot do for you."),
    ("All threads converge","You started loading a museum's data; you end watching it become the art.")],
+}
+
+# Content slides (the substance of each deck): heading + concrete bullets. Rendered
+# between "Question It" and "Three modes" in both the .md and .pptx decks. ----------
+SLIDES_CONTENT={
+1:[("Culture is already data",
+   ["Spotify counts your listening; the For You feed is a model reading culture at scale; you are on the receiving end every day.",
+    "In ten weeks you run the same kind of reading yourself, on culture you choose.",
+    "Today's corpus: every NYT wedding announcement 1985-2014 (~500 rows): who married whom, and whether the bride kept her name.",
+    "The deliverable, shown now: a published web essay on top of a notebook anyone can run."]),
+  ("Four words, used all term",
+   ["Corpus: the pile you study. 500 announcements, 2,000 screenplays, 10,000 album covers.",
+    "Method: the counting or weighting you run on the corpus.",
+    "Model: any simplification that turns culture into numbers. A word count is already one.",
+    "Embedding: a few hundred numbers that place an item on a map of meaning. Week 5."]),
+  ("The Drive ritual (every week, no exceptions)",
+   ["Colab wipes its machine when you idle. Your mounted Drive folder is what survives.",
+    "Copy the notebook to Drive, mount Drive, save everything to the one project folder.",
+    "Your Week-4 corpus has to be alive in Week 5. This ritual is how.",
+    "Gemini key goes in Colab Secrets. Never pasted into code."]),
+  ("When code errors (it will, today, on purpose)",
+   ["Read the LAST line of the traceback first. It names the problem.",
+    "Paste it to the AI: \"this errored, fix it and tell me what went wrong.\"",
+    "Try twice. Then ask a human. That order.",
+    "Keep the cheat sheet out. Nobody memorizes error messages; everybody reads them."]),
+  ("Counting, three shapes",
+   ["Rows: what share of brides kept their name, year by year. One groupby, one chart.",
+    "Words: the top words of a lyric are \"the, and, you\" until you remove stop-words. That removal is your first modeling choice.",
+    "Pixels: rank 200 Met thumbnails darkest to brightest from average luminance.",
+    "Same move three times, and a decision hiding in each."])],
+2:[("The trial: Bollen et al. v. Schmidt",
+   ["The claim (PNAS 2021): phrases of distorted thinking (\"I am a failure,\" \"everyone hates me\") surge in Google Books after 2000. A hockey stick.",
+    "The objection: Google scanned more fiction after 2000. Maybe the surge is novels, not distress.",
+    "The rebuttal: the authors deleted the entire fiction corpus and re-ran the analysis. The pattern largely held.",
+    "The move to steal: answer \"your corpus is biased\" with a test, not an argument."]),
+  ("What counts as a word?",
+   ["Two tokenizers shatter the same sentence differently: \"don't\" becomes one chip, two, or three.",
+    "Models never see words. They see tokens, and the split is a design decision.",
+    "Your hand-count argument about run/running is the same decision, made with highlighters.",
+    "tf-idf: down-weight what is common everywhere. \"Common here, rare overall\" is what characterizes a text."]),
+  ("Keyness: distinctively hers",
+   ["For every word: how much likelier is it in corpus A than corpus B? A log-odds ratio, smoothed so rare words don't explode.",
+    "Strongly positive = distinctively A. Strongly negative = distinctively B. The middle is shared language.",
+    "She Giggles, He Gallops IS this method: verbs after \"she\" vs. \"he\" in 2,000 screenplays. Women snuggle, giggle, squeal; men gallop, strap, shoot.",
+    "The corpus pair is a choice: this artist against pop, this subreddit against a novel. Different pair, different \"distinctive.\""]),
+  ("The shuffle test: is the gap real?",
+   ["The question chance asks: could randomly dealt labels produce a gap this big?",
+    "Shuffle the labels, recount, 1,000 times. Mark where the real gap lands in that pile.",
+    "Chance rarely matches it: a finding. Chance matches it often: a coincidence.",
+    "It says \"probably not chance.\" It never says \"big enough to matter.\" Effect size is your argument to make."])],
+3:[("Underwood's classifier, in particulars",
+   ["A logistic regression, the exact tool of today's lab, trained on a century of novels to recognize detective fiction and science fiction.",
+    "Its most famous error is the lesson: it misreads Pynchon's The Crying of Lot 49, a novel critics call a detective-fiction spoof.",
+    "Genre boundaries are real but fuzzy, and the classifier's mistake is what shows it.",
+    "Ask of every classifier, including yours: where does it fail, and what does the failure teach?"]),
+  ("A classifier is counting with weights",
+   ["Every word casts a vote, for or against. The model adds the votes.",
+    "Training means learning the weights from labeled examples. Nothing more mystical than that.",
+    "Read the signed weights: the most positive and most negative words are the model's mind on the table.",
+    "Spam filters have worked exactly this way for twenty years."]),
+  ("You taught it that",
+   ["Teachable Machine, live: a cat/dog model trained only on orange cats and brown dogs.",
+    "The room predicts what a black cat will do. Then watches it happen.",
+    "Bias is not a ghost in the machine. It is the training set, and you assembled it.",
+    "One line to carry out: today's classifier is one neuron; stack many and you have Week 7's model."]),
+  ("The methods menu (before you commit)",
+   ["Counting and keyness: differences and trends. Classification: sort and label at scale. Embeddings (W5): a map of meaning. Annotation (W7): the AI reads for you.",
+    "Optional add-ons where they fit: character networks, sentiment arcs, CLIP image search, a fine-tuned ModernBERT.",
+    "The corpus-existence rule: bring a screenshot of 50 loadable rows of your data to Week 4. No proof, no pitch."])],
+4:[("A pitch that survives contact",
+   ["Three minutes, hard cap: your corpus (existence proof on screen), your two methods, and what would count as a finding.",
+    "\"Explore themes in music\" is not answerable. \"Did Billboard #1 lyrics narrow in vocabulary 1990-2020?\" is.",
+    "A null result, honestly shown, is a complete project: \"I expected X, the data doesn't show it, here's how I know.\"",
+    "The pivot kit exists because corpora fail. Adopting a fallback pair is normal, not defeat."]),
+  ("The licensing line, in one slide",
+   ["CC0 museum data and public-domain books: use freely, republish freely.",
+    "Academic corpora: analyze, don't redistribute. Lyrics and review text: metadata and counts only.",
+    "AO3 and other community-opposed archives: a small attributed sample at most, never a shared dataset.",
+    "Shadow-library books: never. That line is what the field's $1.5B settlement was about."]),
+  ("Three routes to a corpus",
+   ["Route 1, the common case: a prepared file. pd.read_csv(url), gdown for Drive links, load_dataset() for Hugging Face.",
+    "Route 2, the polite front door: an API. The Met's endpoint returns JSON, no key required.",
+    "Route 3, the back door: scrape, carefully. Read robots.txt and the ToS, go slow, take only what you need, never republish.",
+    "Whatever the route: save the result to your Drive project folder today. Week 5 depends on it."]),
+  ("The Data Biography (~400 words, due Week 5)",
+   ["Where did this data come from, and who made it?",
+    "Who is in it, and who is missing from it?",
+    "What can it not tell you, no matter how cleverly you count?",
+    "Its distilled form becomes your essay's corpus note in Week 8. Write it once, use it twice."])],
+5:[("The problem counting cannot solve",
+   ["To a counter, \"happy\" and \"joyful\" are unrelated strings. Zero overlap.",
+    "An embedding turns each item into a vector, a few hundred numbers, positioned by the company the item keeps.",
+    "Near in that space means similar in learned context: happy and joyful end up neighbors because they appear in the same company.",
+    "Neighbors are context-mates, NOT dictionary synonyms. Kill that misconception today, out loud."]),
+  ("The debate: discovery, or bias read back?",
+   ["Kozlowski, Taddy & Evans (2019): a rich-poor direction in embedding space tracks the cultural structure of class across a century. Culture made measurable.",
+    "Bolukbasi et al. (2016): the same kind of direction pairs man:programmer :: woman:homemaker. Prejudice the model absorbed, to be removed.",
+    "Identical technique. Opposite verdicts.",
+    "The room settles it: what makes a found dimension a discovery vs. the corpus's own bias, the data, the purpose, or what you do with the result?"]),
+  ("The chart is a choice",
+   ["PCA and t-SNE flatten the same vectors two ways: clusters tighten, distances shift, a grouping you trusted can dissolve.",
+    "\"Near\" means probably similar. Exact distances on the flattened map mean little.",
+    "A visualization is an argument with decisions baked in: projection, axes, what's dropped.",
+    "Tonight's toggle: PCA vs. t-SNE on your own map. Name one cluster you believe and one you don't."]),
+  ("The recommender aside (five minutes, boxed)",
+   ["\"For You\" is this same map plus your history: you are a point in taste-space, the feed is your nearest neighbors.",
+    "Spotify's own researchers found algorithmic listening less diverse than organic listening (Anderson et al., 2020).",
+    "You built the machinery of the feed today. That is the whole aside."])],
+6:[("The featured pair, in particulars",
+   ["Arnold, Tilton & Berke (2019): computer vision on every shot of Bewitched and I Dream of Jeannie, measuring how the camera frames each lead.",
+    "\"Character-centered shot\" is an operational definition. Change the definition, change the story.",
+    "Two network sitcoms is a slice, not \"television.\"",
+    "Turn the same eye on your project: what did YOU operationalize this week, and what would a different definition show?"]),
+  ("Images on the same map",
+   ["CLIP embeds pictures into a shared space with words: your album covers, paintings, posters become vectors.",
+    "Watch an image set cluster by visual style nobody tagged: the beyond-counting contrast at its sharpest.",
+    "Week 1 ranked pixels by brightness; today style emerges unasked. Same corpus, two rungs of the ladder."]),
+  ("The hand-labeling set-piece (nobody skips it)",
+   ["Label 30 items from your own corpus, by hand, no AI.",
+    "The AI labels the same 30. Study every disagreement: is it wrong, or are you?",
+    "This is calibration: learning exactly where the machine's reading of YOUR data breaks.",
+    "Deliberately Gemini-free. This beat is the one thing code cannot teach."])],
+7:[("The powerful, opaque reader",
+   ["Gilardi et al. (2023): ChatGPT out-labeled paid crowd workers on political-text tasks at roughly a twentieth of the cost.",
+    "Your prompt IS the codebook: categories, definitions, edge-case rules. Write it like one.",
+    "Change one line of the codebook and the same machine becomes a different reader.",
+    "It fails silently. Confident-and-wrong looks identical to confident-and-right from the outside."]),
+  ("Trust, by confidence",
+   ["Ask for a confidence number with every label. Sort ascending. Hand-check the bottom.",
+    "Gold set first: label ~30 items yourself before the machine sees them. Agreement against gold is your accuracy floor.",
+    "Disagreements are data: sometimes the model is wrong, sometimes your codebook was vague.",
+    "Whose reading are you renting? A model trained largely on scraped creative work. Week 8 takes that up."]),
+  ("Three readers, one course",
+   ["Week 3, the transparent reader: a logistic regression whose weights you can read.",
+    "Week 7, the powerful reader: an API model you audit by confidence and gold set.",
+    "Go-further, the reader you own: fine-tune ModernBERT on your own labels. Free to run, and it is yours."])],
+8:[("Kill it, then keep it",
+   ["The Bollen move, turned on your own finding: remove the slice that worries you most and re-run.",
+    "Survives? Say so, with the check shown. Dies? You just learned what your finding was made of.",
+    "Minimum bar: ONE robustness check, the one that most threatens your result.",
+    "\"I expected X, the data doesn't show it, here's how I know\" is a complete, publishable result."]),
+  ("Memorization isn't reading",
+   ["Speak, Memory (Chang et al., 2023): name-cloze tests show GPT-4 has memorized many novels; it fills in \"___ Bennet\" without reading anything.",
+    "A model may be reciting your corpus rather than analyzing it: a validity problem, not only an ethics one.",
+    "TimeCapsuleLLM: train only on 1800s London text and the model speaks its era. A corpus bounds a mind.",
+    "Ask of every model you used: what was in its training data, and does that undercut MY claim?"]),
+  ("The show-your-work appendix",
+   ["Your method choices, your moments of doubt, what you cut, what the AI got wrong.",
+    "Name where a reader could reasonably disagree with you, before they do.",
+    "The honesty you demanded of published work all term, turned on yourself. (Data Feminism's practice, run quietly all course.)"])],
+9:[("Interrogate your own chart",
+   ["Does the y-axis start at zero, or is the plotting default manufacturing your trend?",
+    "Is the eye pulled toward a pattern the data won't support?",
+    "What does this chart hide that a different one would show?",
+    "Ten weeks interrogating other people's charts. These ten minutes are for yours. Fix one thing."]),
+  ("No single right way",
+   ["Three published essays, same goal, three defensible sets of choices: a Pudding piece, an Observable notebook, a Quarto site.",
+    "A structure that works: hook, corpus note, finding, how-it-could-be-wrong, appendix.",
+    "Write the headline finding in one sentence before you write anything else. If you can't, the essay isn't ready."]),
+  ("Ship it",
+   ["Mullen's test, the course standard: \"I must be able to run it.\" The notebook works for someone who is not you.",
+    "A deployed URL leaves this room today.",
+    "The essay shows the thinking. The notebook proves it happened."])],
+10:[("The walkthrough, AI closed",
+   ["Present the essay, then walk the room through your notebook, aloud, cell by cell.",
+    "The oral walkthrough is the one deliverable an AI cannot produce for you.",
+    "Expect three questions: what did you choose, what would you distrust, what would you do next?"]),
+  ("The send-off triptych",
+   ["Edmond de Belamy, the AI portrait that sold for $432,500: who is the author?",
+    "Anna Ridler's Mosaic Virus: she photographed 10,000 tulips herself to build the training set: whose labor is the data?",
+    "Anadol's Unsupervised at MoMA: the museum's own collection becomes the art: who decided what went in?",
+    "You spent Week 1 loading a museum's catalog. You end watching a catalog become the art."]),
+  ("What you can do now",
+   ["Read a block of analysis code and say what it does, line by line.",
+    "Ask a tractable question of cultural data and name what it leaves out.",
+    "Run counting, classification, embeddings, and annotation, and say what each reveals and hides.",
+    "Shuffle-test a gap. Interrogate a chart, including your own.",
+    "The portfolio proves it: notebook, Data Biography, essay, walkthrough."])],
 }
 
 # Weekly data, curated from lesson-plans.md ---------------------------------
@@ -360,7 +568,7 @@ def build_index():
   <h1>{esc(TITLE)}</h1>
   <p class="lede">{esc(TAGLINE)}</p>
   <p>Investigate cultural data at scale with an AI as your coding partner. You publish a web essay on a question only you would ask. No math, no coding to start, $0 to take part.</p>
-  <p class="cta"><a class="button" href="syllabus.html">Read the syllabus</a> <a class="button ghost" href="schedule.html">See the ten weeks</a></p>
+  <p class="cta"><a class="button" href="syllabus.html">Read the syllabus</a> <a class="button" href="notebooks.html">Open the notebooks</a> <a class="button ghost" href="schedule.html">See the ten weeks</a></p>
   {svg_hero()}
 </section>
 
@@ -563,6 +771,18 @@ def build_about():
 def build_weeks():
     for i, w in enumerate(WEEKS):
         flow_rows = "".join(f'<tr><td class="time">{esc(t)}</td><td>{esc(a)}</td></tr>' for t, a in w["flow"])
+        nbs = [n for n in NOTEBOOKS if n[1] == w["n"]]
+        nb_block = ""
+        if nbs:
+            path, _, name, _ = nbs[0]
+            variants = "".join(f" &nbsp;<a href='{COLAB}{vp}'>{vl} version</a>" for vl, vp in NOTEBOOK_VARIANTS.get(w["n"], []))
+            nb_block = ("<section class='callout notebook-callout'><h2>This week's notebook</h2>"
+                        f"<p class='cta'>{nb_buttons(path)}</p>"
+                        + (f"<p class='meta'>Completion-problem versions:{variants}</p>" if variants else "")
+                        + "</section>")
+        elif w["n"] == 6:
+            nb_block = ("<section class='callout notebook-callout'><h2>This week's notebook</h2>"
+                        "<p>Week 6 deepens the project with the <a href='../notebooks.html'>Week 5 embeddings notebook</a>, its image path (CLIP) is this week's tool. The hand-labeling set-piece is deliberately code-free.</p></section>")
         prev_link = f'<a href="week-{w["n"]-1:02d}.html">&larr; Week {w["n"]-1}</a>' if i > 0 else "<span></span>"
         next_link = f'<a href="week-{w["n"]+1:02d}.html">Week {w["n"]+1} &rarr;</a>' if i < len(WEEKS)-1 else "<span></span>"
         body = f"""
@@ -572,6 +792,7 @@ def build_weeks():
   <h1>{esc(w['title'])}</h1>
   <p class="lede">{esc(w['promise'])}</p>
   <p class="meta"><strong>Tool / method:</strong> {esc(w['tool'])} &nbsp;·&nbsp; <strong>Competencies:</strong> {esc(w['comps'])}</p>
+{nb_block}
 
   <section class="callout">
     <h2>Look at This, then Question It</h2>
@@ -678,11 +899,53 @@ content here ports cleanly to `.qmd`.)
 """
     write(SITE / "_build" / "README.md", note)
 
+
+def build_notebooks():
+    rows = "".join(
+        f"<tr><td class='time'>Week {wk}</td><td><strong>{esc(name)}</strong><br>{esc(desc)}<br>"
+        + nb_buttons(path)
+        + "".join(f" &nbsp;<a href='{COLAB}{vp}'>{vl}</a>" for vl, vp in NOTEBOOK_VARIANTS.get(wk, []))
+        + "</td></tr>"
+        for path, wk, name, desc in NOTEBOOKS)
+    cool = "".join(
+        f"<li><strong>{esc(name)}</strong>, {esc(desc)} <a href='{COLAB}{path}'>Open in Colab</a></li>"
+        for path, name, desc in COOL_METHODS)
+    body = f"""
+<article>
+  <h1>The notebooks</h1>
+  <p class="lede">The labs the course teaches from. Every one runs on Colab's free tier, costs $0, and works without any API key. Click a button and you're in.</p>
+  <p class="cta"><a class="button" href="{COLAB}notebooks/_smoke_test.ipynb">Run the smoke test first</a> <a class="button ghost" href="{GH_REPO}/tree/main/notebooks">All notebooks on GitHub</a></p>
+
+  <section>
+    <h2>Before your first session</h2>
+    {ul([
+      "Open the smoke test above and run it top to bottom: a green report means your runtime is healthy.",
+      "Each notebook's first cells mount your Google Drive (so work survives a Colab reset) and install the few pinned packages Colab doesn't ship.",
+      "Week 7 wants a free Gemini API key in Colab Secrets; without one it runs end-to-end on a recorded response.",
+      "Weeks 5 and 7 also come in GUIDED (fuller scaffolding) and SKELETON (more blanks) versions, pick the one that matches your comfort.",
+    ])}
+  </section>
+
+  <section>
+    <h2>The weekly labs</h2>
+    <table class="flow"><thead><tr><th>Week</th><th>Notebook</th></tr></thead><tbody>{rows}</tbody></table>
+  </section>
+
+  <section>
+    <h2>Cool methods (optional starters)</h2>
+    <ul>{cool}</ul>
+  </section>
+</article>
+"""
+    write(SITE / "notebooks.html", page("Notebooks", body, depth=0, active="notebooks.html"))
+
+
 def main():
     build_assets()
     build_index()
     build_syllabus()
     build_schedule()
+    build_notebooks()
     build_resources()
     build_about()
     build_weeks()

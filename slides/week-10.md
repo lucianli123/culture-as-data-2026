@@ -18,6 +18,27 @@ The closing triptych, neural networks meet the art world: Edmond de Belamy (the 
 
 When a machine reads a culture's archive, what is it showing us, and who decided what went in? You started Week 1 loading a museum's data; you end watching a museum's data become the art.
 
+## The walkthrough, AI closed
+
+- Present the essay, then walk the room through your notebook, aloud, cell by cell.
+- The oral walkthrough is the one deliverable an AI cannot produce for you.
+- Expect three questions: what did you choose, what would you distrust, what would you do next?
+
+## The send-off triptych
+
+- Edmond de Belamy, the AI portrait that sold for $432,500: who is the author?
+- Anna Ridler's Mosaic Virus: she photographed 10,000 tulips herself to build the training set: whose labor is the data?
+- Anadol's Unsupervised at MoMA: the museum's own collection becomes the art: who decided what went in?
+- You spent Week 1 loading a museum's catalog. You end watching a catalog become the art.
+
+## What you can do now
+
+- Read a block of analysis code and say what it does, line by line.
+- Ask a tractable question of cultural data and name what it leaves out.
+- Run counting, classification, embeddings, and annotation, and say what each reveals and hides.
+- Shuffle-test a gap. Interrogate a chart, including your own.
+- The portfolio proves it: notebook, Data Biography, essay, walkthrough.
+
 ## Three modes today (about a third each)
 
 - **Lecture / demo:** A public celebration; the two capstone assessments

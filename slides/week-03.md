@@ -18,6 +18,33 @@ Ted Underwood's genre prediction (Distant Horizons, 2019): a logistic regression
 
 What counts as science fiction is a choice built into the training labels. And the model's most famous error, misreading Pynchon's The Crying of Lot 49, a detective-fiction spoof, shows genre boundaries are real but fuzzy. A classifier's mistakes teach as much as its successes; yours will too.
 
+## Underwood's classifier, in particulars
+
+- A logistic regression, the exact tool of today's lab, trained on a century of novels to recognize detective fiction and science fiction.
+- Its most famous error is the lesson: it misreads Pynchon's The Crying of Lot 49, a novel critics call a detective-fiction spoof.
+- Genre boundaries are real but fuzzy, and the classifier's mistake is what shows it.
+- Ask of every classifier, including yours: where does it fail, and what does the failure teach?
+
+## A classifier is counting with weights
+
+- Every word casts a vote, for or against. The model adds the votes.
+- Training means learning the weights from labeled examples. Nothing more mystical than that.
+- Read the signed weights: the most positive and most negative words are the model's mind on the table.
+- Spam filters have worked exactly this way for twenty years.
+
+## You taught it that
+
+- Teachable Machine, live: a cat/dog model trained only on orange cats and brown dogs.
+- The room predicts what a black cat will do. Then watches it happen.
+- Bias is not a ghost in the machine. It is the training set, and you assembled it.
+- One line to carry out: today's classifier is one neuron; stack many and you have Week 7's model.
+
+## The methods menu (before you commit)
+
+- Counting and keyness: differences and trends. Classification: sort and label at scale. Embeddings (W5): a map of meaning. Annotation (W7): the AI reads for you.
+- Optional add-ons where they fit: character networks, sentiment arcs, CLIP image search, a fine-tuned ModernBERT.
+- The corpus-existence rule: bring a screenshot of 50 loadable rows of your data to Week 4. No proof, no pitch.
+
 ## Three modes today (about a third each)
 
 - **Lecture / demo:** Classification. Train a reader and read what it learned

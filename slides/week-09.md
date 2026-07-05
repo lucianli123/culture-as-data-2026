@@ -18,6 +18,25 @@ Three published essays side by side: a Pudding piece, an Observable notebook, a 
 
 There's no single right way, only choices you can defend. Yours will be choices too.
 
+## Interrogate your own chart
+
+- Does the y-axis start at zero, or is the plotting default manufacturing your trend?
+- Is the eye pulled toward a pattern the data won't support?
+- What does this chart hide that a different one would show?
+- Ten weeks interrogating other people's charts. These ten minutes are for yours. Fix one thing.
+
+## No single right way
+
+- Three published essays, same goal, three defensible sets of choices: a Pudding piece, an Observable notebook, a Quarto site.
+- A structure that works: hook, corpus note, finding, how-it-could-be-wrong, appendix.
+- Write the headline finding in one sentence before you write anything else. If you can't, the essay isn't ready.
+
+## Ship it
+
+- Mullen's test, the course standard: "I must be able to run it." The notebook works for someone who is not you.
+- A deployed URL leaves this room today.
+- The essay shows the thinking. The notebook proves it happened.
+
 ## Three modes today (about a third each)
 
 - **Lecture / demo:** Publishing, Quarto to GitHub Pages, static by default

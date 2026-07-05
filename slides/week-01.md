@@ -18,6 +18,41 @@ The Pudding, "She Giggles, He Gallops" (2017): across ~2,000 film screenplays, t
 
 ~2,000 screenplays skewed toward what got produced and digitized: is that "film," or a slice? Whose choice is a gendered verb, the writer's, the character's, the genre's? Counting shows the split, not the cause. And read the visualization's choices, not just the data.
 
+## Culture is already data
+
+- Spotify counts your listening; the For You feed is a model reading culture at scale; you are on the receiving end every day.
+- In ten weeks you run the same kind of reading yourself, on culture you choose.
+- Today's corpus: every NYT wedding announcement 1985-2014 (~500 rows): who married whom, and whether the bride kept her name.
+- The deliverable, shown now: a published web essay on top of a notebook anyone can run.
+
+## Four words, used all term
+
+- Corpus: the pile you study. 500 announcements, 2,000 screenplays, 10,000 album covers.
+- Method: the counting or weighting you run on the corpus.
+- Model: any simplification that turns culture into numbers. A word count is already one.
+- Embedding: a few hundred numbers that place an item on a map of meaning. Week 5.
+
+## The Drive ritual (every week, no exceptions)
+
+- Colab wipes its machine when you idle. Your mounted Drive folder is what survives.
+- Copy the notebook to Drive, mount Drive, save everything to the one project folder.
+- Your Week-4 corpus has to be alive in Week 5. This ritual is how.
+- Gemini key goes in Colab Secrets. Never pasted into code.
+
+## When code errors (it will, today, on purpose)
+
+- Read the LAST line of the traceback first. It names the problem.
+- Paste it to the AI: "this errored, fix it and tell me what went wrong."
+- Try twice. Then ask a human. That order.
+- Keep the cheat sheet out. Nobody memorizes error messages; everybody reads them.
+
+## Counting, three shapes
+
+- Rows: what share of brides kept their name, year by year. One groupby, one chart.
+- Words: the top words of a lyric are "the, and, you" until you remove stop-words. That removal is your first modeling choice.
+- Pixels: rank 200 Met thumbnails darkest to brightest from average luminance.
+- Same move three times, and a decision hiding in each.
+
 ## Three modes today (about a third each)
 
 - **Lecture / demo:** Counting, met on day one: rows, words, pixels

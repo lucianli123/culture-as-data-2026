@@ -18,6 +18,34 @@ The Bollen/Schmidt trial: a hockey stick of societal distress, found by counting
 
 The rising words are fiction-words, and Google scanned more fiction after 2000. The rebuttal and the move to steal: the authors removed the entire fiction corpus and re-ran it, and the pattern largely held. The answer to "your corpus is biased" is a test, not an argument.
 
+## The trial: Bollen et al. v. Schmidt
+
+- The claim (PNAS 2021): phrases of distorted thinking ("I am a failure," "everyone hates me") surge in Google Books after 2000. A hockey stick.
+- The objection: Google scanned more fiction after 2000. Maybe the surge is novels, not distress.
+- The rebuttal: the authors deleted the entire fiction corpus and re-ran the analysis. The pattern largely held.
+- The move to steal: answer "your corpus is biased" with a test, not an argument.
+
+## What counts as a word?
+
+- Two tokenizers shatter the same sentence differently: "don't" becomes one chip, two, or three.
+- Models never see words. They see tokens, and the split is a design decision.
+- Your hand-count argument about run/running is the same decision, made with highlighters.
+- tf-idf: down-weight what is common everywhere. "Common here, rare overall" is what characterizes a text.
+
+## Keyness: distinctively hers
+
+- For every word: how much likelier is it in corpus A than corpus B? A log-odds ratio, smoothed so rare words don't explode.
+- Strongly positive = distinctively A. Strongly negative = distinctively B. The middle is shared language.
+- She Giggles, He Gallops IS this method: verbs after "she" vs. "he" in 2,000 screenplays. Women snuggle, giggle, squeal; men gallop, strap, shoot.
+- The corpus pair is a choice: this artist against pop, this subreddit against a novel. Different pair, different "distinctive."
+
+## The shuffle test: is the gap real?
+
+- The question chance asks: could randomly dealt labels produce a gap this big?
+- Shuffle the labels, recount, 1,000 times. Mark where the real gap lands in that pile.
+- Chance rarely matches it: a finding. Chance matches it often: a coincidence.
+- It says "probably not chance." It never says "big enough to matter." Effect size is your argument to make.
+
 ## Three modes today (about a third each)
 
 - **Lecture / demo:** Advanced counting: baselines, keyness, and the shuffle test
