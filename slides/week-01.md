@@ -8,7 +8,7 @@ format: revealjs
 
 > By the break you'll have loaded a real dataset, asked it a question, and produced your first chart. By the end you'll have counted culture in all three shapes it comes in: rows, words, and pixels.
 
-*Tool / method: Counting, met on day one: rows, words, pixels · Competencies: 1, 8*
+*Tool / method: Counting: rows, words, pixels · Competencies: 1, 8*
 
 ## Look at This
 
@@ -55,7 +55,7 @@ The Pudding, "She Giggles, He Gallops" (2017): across ~2,000 film screenplays, t
 
 ## Three modes today (about a third each)
 
-- **Lecture / demo:** Counting, met on day one: rows, words, pixels
+- **Lecture / demo:** Counting: rows, words, pixels
 - **Workshop:** build hands-on on your own data
 - **Discussion:** the study above, interrogate it, debate it, or critique each other's work
 

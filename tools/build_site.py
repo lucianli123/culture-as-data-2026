@@ -26,7 +26,7 @@ NAV = [
     ("index.html", "Home"),
     ("syllabus.html", "Syllabus"),
     ("schedule.html", "Schedule"),
-    ("notebooks.html", "Notebooks"),
+    ("notebooks.html", "Materials"),
     ("resources.html", "Resources"),
     ("about.html", "About"),
 ]
@@ -69,7 +69,7 @@ GH_REPO = "https://github.com/lucianli123/culture-as-data-2026"
 COLAB = "https://colab.research.google.com/github/lucianli123/culture-as-data-2026/blob/main/"
 
 NOTEBOOKS = [
-    ("notebooks/week01_first_investigation.ipynb", 1, "Your first investigation", "Load the wedding data, make your first chart, learn the unblocking drill, count words and pixels."),
+    ("notebooks/week01_first_investigation.ipynb", 1, "Your first investigation", "Load the wedding data, make your first chart, learn to read an error and recover, count words and pixels."),
     ("notebooks/week02_counting.ipynb", 2, "Counting", "Bag-of-words by hand-logic, tf-idf, keyness (the She Giggles, He Gallops method), and the shuffle test."),
     ("notebooks/week03_classification.ipynb", 3, "Classification", "Train a logistic regression and read its signed weights, the model's mind on the table."),
     ("notebooks/week04_data_cookbook.ipynb", 4, "The data cookbook", "Three routes to a corpus: load a file, call an API, scrape politely. Saves your corpus to Drive."),
@@ -206,7 +206,7 @@ SLIDES_CONTENT={
     "Ask of every classifier, including yours: where does it fail, and what does the failure teach?"]),
   ("A classifier is counting with weights",
    ["Every word casts a vote, for or against. The model adds the votes.",
-    "Training means learning the weights from labeled examples. Nothing more mystical than that.",
+    "Training means learning the weights from labeled examples.",
     "Read the signed weights: the most positive and most negative words are the model's mind on the table.",
     "Spam filters have worked exactly this way for twenty years."]),
   ("You taught it that",
@@ -256,7 +256,7 @@ SLIDES_CONTENT={
   ("The recommender aside (five minutes, boxed)",
    ["\"For You\" is this same map plus your history: you are a point in taste-space, the feed is your nearest neighbors.",
     "Spotify's own researchers found algorithmic listening less diverse than organic listening (Anderson et al., 2020).",
-    "You built the machinery of the feed today. That is the whole aside."])],
+    "You built the same machinery today."])],
 6:[("The featured pair, in particulars",
    ["Arnold, Tilton & Berke (2019): computer vision on every shot of Bewitched and I Dream of Jeannie, measuring how the camera frames each lead.",
     "\"Character-centered shot\" is an operational definition. Change the definition, change the story.",
@@ -331,7 +331,7 @@ SLIDES_CONTENT={
 
 # Weekly data, curated from lesson-plans.md ---------------------------------
 WEEKS = [
- dict(n=1, title="Your First Investigation", tool="Counting, met on day one: rows, words, pixels",
+ dict(n=1, title="Your First Investigation", tool="Counting: rows, words, pixels",
    promise="By the break you'll have loaded a real dataset, asked it a question, and produced your first chart. By the end you'll have counted culture in all three shapes it comes in: rows, words, and pixels.",
    admire="The Pudding, \"She Giggles, He Gallops\" (2017): across ~2,000 film screenplays, the stage-direction verbs split by gender, women snuggle and giggle, men gallop and stride, and the interactive makes it impossible to unsee.",
    interrogate="~2,000 screenplays skewed toward what got produced and digitized: is that \"film,\" or a slice? Whose choice is a gendered verb, the writer's, the character's, the genre's? Counting shows the split, not the cause. And read the visualization's choices, not just the data.",
@@ -352,7 +352,7 @@ WEEKS = [
    interrogate="The rising words are fiction-words, and Google scanned more fiction after 2000. The rebuttal and the move to steal: the authors removed the entire fiction corpus and re-ran it, and the pattern largely held. The answer to \"your corpus is biased\" is a test, not an argument.",
    flow=[("0:00","Warm-up retrieval."),
          ("0:05","The trial: claim, objection, re-run-without-fiction rebuttal, \"interpret with care.\" One named choice is the chart: the hockey-stick shape depends on its y-axis and smoothing."),
-         ("0:25","Delight beat: an artist's signature vocabulary, the words they use far more than a pop baseline. No caveats."),
+         ("0:25","For fun, before any complications: the words one artist uses far more than everyone else, their signature vocabulary against a pop baseline."),
          ("0:30","Hand-built bag-of-words: two authors, highlighters, argue about merging run/running. Counting requires defining."),
          ("0:55","What counts as a word? Paste a sentence into two tokenizer playgrounds and watch it shatter differently. Models see tokens, not words."),
          ("1:05","Break"),
@@ -371,7 +371,7 @@ WEEKS = [
    flow=[("0:00","Warm-up + Look at This: Underwood's genre prediction."),
          ("0:10","Teachable Machine, instructor demo: a two-class image model trained live, then the reveal that it learned from only orange cats and brown dogs. The room predicts what a black cat will do, then sees it."),
          ("0:22","Counting with weights, the lab: each word casts a weighted vote; a logistic regression adds them up. Train it on a pop corpus, then read the signed coefficients, its mind on the table."),
-         ("0:52","Delight beat: the words that most predict \"breakup song\" or \"this reviewer hated it.\""),
+         ("0:52","For fun: the words that most predict \"breakup song\" or \"this reviewer hated it.\""),
          ("0:57","One-line bridge: that classifier is a neuron; stack many for a neural net, which is what's inside the Week 7 model. A quick TensorFlow Playground glance."),
          ("1:00","Break"),
          ("1:10","Methods menu preview, so Week 4's choice is informed: counting, classification, embeddings (Week 5), and optional approaches (character networks for fiction; sentiment arcs for story projects, Jockers's Syuzhet reproducible in Python, whose own smoothing controversy is the built-in lesson to doubt the shape; CLIP image search for visual projects; and, for the technically comfortable, fine-tuning a small open model, ModernBERT, on your own labels)."),
@@ -570,6 +570,18 @@ def build_index():
   <p>Investigate cultural data at scale with an AI as your coding partner. You publish a web essay on a question only you would ask. No math, no coding to start, $0 to take part.</p>
   <p class="cta"><a class="button" href="syllabus.html">Read the syllabus</a> <a class="button" href="notebooks.html">Open the notebooks</a> <a class="button ghost" href="schedule.html">See the ten weeks</a></p>
   {svg_hero()}
+</section>
+
+<section>
+  <h2>Findings that started as counts</h2>
+  <p>Everything below came from someone counting culture. By Week 10 you'll have done the same on a corpus you chose.</p>
+  {ul([
+    "In the stage directions of 2,000 film screenplays, women are written to <em>snuggle</em>, <em>giggle</em>, and <em>sob</em>; men to <em>strap</em>, <em>gallop</em>, and <em>kill</em>. And 85% of the screenwriters were men. (<a href='https://pudding.cool/2017/08/screen-direction/'>The Pudding, 2017</a>)",
+    "Phrases of distorted thinking, like &quot;I am a failure,&quot; rose sharply in millions of Google Books after 2000, to the highest levels in more than a century, and the fight over whether that's real is Week 2's opening debate. (<a href='https://www.pnas.org/doi/10.1073/pnas.2102061118'>Bollen et al., PNAS 2021</a>)",
+    "A model trained to recognize science fiction misfiled Pynchon's <em>The Crying of Lot 49</em>, and the mistake taught scholars more about genre than the correct answers did. (<a href='https://doi.org/10.22148/16.005'>Underwood, 2016</a>)",
+    "ChatGPT labeled political tweets more accurately than trained crowd workers, at under a third of a cent per label, roughly twenty times cheaper. (<a href='https://www.pnas.org/doi/10.1073/pnas.2305016120'>Gilardi et al., PNAS 2023</a>)",
+    "An AI-generated portrait, <em>Edmond de Belamy</em>, sold at Christie's for $432,500. Who made it is Week 10's closing argument. (<a href='https://en.wikipedia.org/wiki/Edmond_de_Belamy'>2018</a>)",
+  ])}
 </section>
 
 <section>
@@ -772,17 +784,20 @@ def build_weeks():
     for i, w in enumerate(WEEKS):
         flow_rows = "".join(f'<tr><td class="time">{esc(t)}</td><td>{esc(a)}</td></tr>' for t, a in w["flow"])
         nbs = [n for n in NOTEBOOKS if n[1] == w["n"]]
-        nb_block = ""
+        deck = (f"<a class='button ghost' href='{GH_REPO}/raw/main/slides/pptx/week-{w['n']:02d}.pptx'>Slides (.pptx)</a> "
+                f"<a class='button ghost' href='{GH_REPO}/blob/main/slides/week-{w['n']:02d}.md'>Slide outline</a>")
         if nbs:
             path, _, name, _ = nbs[0]
             variants = "".join(f" &nbsp;<a href='{COLAB}{vp}'>{vl} version</a>" for vl, vp in NOTEBOOK_VARIANTS.get(w["n"], []))
-            nb_block = ("<section class='callout notebook-callout'><h2>This week's notebook</h2>"
-                        f"<p class='cta'>{nb_buttons(path)}</p>"
+            nb_block = ("<section class='callout notebook-callout'><h2>This week's materials</h2>"
+                        f"<p class='cta'>{nb_buttons(path)} {deck}</p>"
                         + (f"<p class='meta'>Completion-problem versions:{variants}</p>" if variants else "")
                         + "</section>")
-        elif w["n"] == 6:
-            nb_block = ("<section class='callout notebook-callout'><h2>This week's notebook</h2>"
-                        "<p>Week 6 deepens the project with the <a href='../notebooks.html'>Week 5 embeddings notebook</a>, its image path (CLIP) is this week's tool. The hand-labeling set-piece is deliberately code-free.</p></section>")
+        else:
+            extra = (" Week 6 deepens the project with the <a href='../notebooks.html'>Week 5 embeddings notebook</a>; "
+                     "its image path (CLIP) is this week's tool. The hand-labeling exercise is deliberately code-free.") if w["n"] == 6 else ""
+            nb_block = ("<section class='callout notebook-callout'><h2>This week's materials</h2>"
+                        f"<p class='cta'>{deck}</p><p class='meta'>No new notebook this week.{extra}</p></section>")
         prev_link = f'<a href="week-{w["n"]-1:02d}.html">&larr; Week {w["n"]-1}</a>' if i > 0 else "<span></span>"
         next_link = f'<a href="week-{w["n"]+1:02d}.html">Week {w["n"]+1} &rarr;</a>' if i < len(WEEKS)-1 else "<span></span>"
         body = f"""
@@ -907,13 +922,18 @@ def build_notebooks():
         + "".join(f" &nbsp;<a href='{COLAB}{vp}'>{vl}</a>" for vl, vp in NOTEBOOK_VARIANTS.get(wk, []))
         + "</td></tr>"
         for path, wk, name, desc in NOTEBOOKS)
+    deck_rows = "".join(
+        f"<tr><td class='time'>Week {w['n']}</td><td>{esc(w['title'])} &nbsp; "
+        f"<a href='{GH_REPO}/raw/main/slides/pptx/week-{w['n']:02d}.pptx'>Download .pptx</a> &nbsp; "
+        f"<a href='{GH_REPO}/blob/main/slides/week-{w['n']:02d}.md'>Outline</a></td></tr>"
+        for w in WEEKS)
     cool = "".join(
         f"<li><strong>{esc(name)}</strong>, {esc(desc)} <a href='{COLAB}{path}'>Open in Colab</a></li>"
         for path, name, desc in COOL_METHODS)
     body = f"""
 <article>
-  <h1>The notebooks</h1>
-  <p class="lede">The labs the course teaches from. Every one runs on Colab's free tier, costs $0, and works without any API key. Click a button and you're in.</p>
+  <h1>Notebooks &amp; slides</h1>
+  <p class="lede">The labs the course teaches from. Every one runs on Colab's free tier, costs $0, and works without any API key.</p>
   <p class="cta"><a class="button" href="{COLAB}notebooks/_smoke_test.ipynb">Run the smoke test first</a> <a class="button ghost" href="{GH_REPO}/tree/main/notebooks">All notebooks on GitHub</a></p>
 
   <section>
@@ -934,6 +954,12 @@ def build_notebooks():
   <section>
     <h2>Cool methods (optional starters)</h2>
     <ul>{cool}</ul>
+  </section>
+
+  <section>
+    <h2>The slide decks</h2>
+    <p>One deck per week, matching the weekly pages: the featured study, the key points, the session plan, and the homework. The .pptx opens in PowerPoint, Keynote, or Google Slides; the outline is plain Markdown.</p>
+    <table class="flow"><thead><tr><th>Week</th><th>Deck</th></tr></thead><tbody>{deck_rows}</tbody></table>
   </section>
 </article>
 """

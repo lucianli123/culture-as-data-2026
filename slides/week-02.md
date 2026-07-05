@@ -56,7 +56,7 @@ The rising words are fiction-words, and Google scanned more fiction after 2000. 
 
 - **0:00**  Warm-up retrieval.
 - **0:05**  The trial: claim, objection, re-run-without-fiction rebuttal, "interpret with care." One named choice is the chart: the hockey-stick shape depends on its y-axis and smoothing.
-- **0:25**  Delight beat: an artist's signature vocabulary, the words they use far more than a pop baseline. No caveats.
+- **0:25**  For fun, before any complications: the words one artist uses far more than everyone else, their signature vocabulary against a pop baseline.
 - **0:30**  Hand-built bag-of-words: two authors, highlighters, argue about merging run/running. Counting requires defining.
 - **0:55**  What counts as a word? Paste a sentence into two tokenizer playgrounds and watch it shatter differently. Models see tokens, not words.
 - **1:05**  Break

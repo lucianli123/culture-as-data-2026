@@ -57,7 +57,7 @@ function build(w){
     s=pres.addSlide(); s.background={color:WHITE};
     const accent=HUES[ci%3];
     s.addShape("rect",{x:0,y:0,w:0.18,h:7.5,fill:{color:accent},line:{type:"none"}});
-    s.addText("WEEK "+w.n+" · THE MATERIAL",{x:M,y:0.7,w:11,h:0.35,fontFace:SANS,fontSize:12,bold:true,color:accent,charSpacing:3});
+    s.addText("WEEK "+w.n+" · KEY POINTS",{x:M,y:0.7,w:11,h:0.35,fontFace:SANS,fontSize:12,bold:true,color:accent,charSpacing:3});
     s.addText(cs.h,{x:M,y:1.1,w:11.9,h:1.0,fontFace:SERIF,fontSize:30,bold:true,color:INK,valign:"top",autoFit:true});
     const np=cs.points.length, top=2.45, avail=6.9-top, rh=Math.min(1.15,avail/np);
     const fsz=np>4?15:16.5;

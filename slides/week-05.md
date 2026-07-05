@@ -43,7 +43,7 @@ Kozlowski, Taddy & Evans (2019) find a rich–poor axis in embedding space and r
 
 - "For You" is this same map plus your history: you are a point in taste-space, the feed is your nearest neighbors.
 - Spotify's own researchers found algorithmic listening less diverse than organic listening (Anderson et al., 2020).
-- You built the machinery of the feed today. That is the whole aside.
+- You built the same machinery today.
 
 ## Three modes today (about a third each)
 

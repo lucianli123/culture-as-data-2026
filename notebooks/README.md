@@ -21,7 +21,7 @@ healthy; a red one points you at the exact cheat-sheet entry.
 
 | Notebook | Act | Form | Tool |
 |---|---|---|---|
-| `week01_first_investigation.ipynb` | 1 | fully worked | load a CSV / first chart / word + pixel counting / the unblocking drill |
+| `week01_first_investigation.ipynb` | 1 | fully worked | load a CSV / first chart / word + pixel counting / error recovery |
 | `week02_counting.ipynb` | 1 | fully worked | counting / tf-idf / keyness / shuffle test |
 | `week03_classification.ipynb` | 1 | fully worked | logistic regression + signed weights |
 | `week04_data_cookbook.ipynb` | 2 | fully worked | file load + API pull + polite scrape |

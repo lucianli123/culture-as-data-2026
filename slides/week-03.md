@@ -28,7 +28,7 @@ What counts as science fiction is a choice built into the training labels. And t
 ## A classifier is counting with weights
 
 - Every word casts a vote, for or against. The model adds the votes.
-- Training means learning the weights from labeled examples. Nothing more mystical than that.
+- Training means learning the weights from labeled examples.
 - Read the signed weights: the most positive and most negative words are the model's mind on the table.
 - Spam filters have worked exactly this way for twenty years.
 
@@ -56,7 +56,7 @@ What counts as science fiction is a choice built into the training labels. And t
 - **0:00**  Warm-up + Look at This: Underwood's genre prediction.
 - **0:10**  Teachable Machine, instructor demo: a two-class image model trained live, then the reveal that it learned from only orange cats and brown dogs. The room predicts what a black cat will do, then sees it.
 - **0:22**  Counting with weights, the lab: each word casts a weighted vote; a logistic regression adds them up. Train it on a pop corpus, then read the signed coefficients, its mind on the table.
-- **0:52**  Delight beat: the words that most predict "breakup song" or "this reviewer hated it."
+- **0:52**  For fun: the words that most predict "breakup song" or "this reviewer hated it."
 - **0:57**  One-line bridge: that classifier is a neuron; stack many for a neural net, which is what's inside the Week 7 model. A quick TensorFlow Playground glance.
 - **1:00**  Break
 - **1:10**  Methods menu preview, so Week 4's choice is informed: counting, classification, embeddings (Week 5), and optional approaches (character networks for fiction; sentiment arcs for story projects, Jockers's Syuzhet reproducible in Python, whose own smoothing controversy is the built-in lesson to doubt the shape; CLIP image search for visual projects; and, for the technically comfortable, fine-tuning a small open model, ModernBERT, on your own labels).

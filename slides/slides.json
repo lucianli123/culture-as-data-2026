@@ -3,7 +3,7 @@
   "n": 1,
   "title": "Your First Investigation",
   "promise": "By the break you'll have loaded a real dataset, asked it a question, and produced your first chart. By the end you'll have counted culture in all three shapes it comes in: rows, words, and pixels.",
-  "tool": "Counting, met on day one: rows, words, pixels",
+  "tool": "Counting: rows, words, pixels",
   "comps": "1, 8",
   "admire": "The Pudding, \"She Giggles, He Gallops\" (2017): across ~2,000 film screenplays, the stage-direction verbs split by gender, women snuggle and giggle, men gallop and stride, and the interactive makes it impossible to unsee.",
   "interrogate": "~2,000 screenplays skewed toward what got produced and digitized: is that \"film,\" or a slice? Whose choice is a gendered verb, the writer's, the character's, the genre's? Counting shows the split, not the cause. And read the visualization's choices, not just the data.",
@@ -160,7 +160,7 @@
    },
    {
     "t": "0:25",
-    "a": "Delight beat: an artist's signature vocabulary, the words they use far more than a pop baseline. No caveats."
+    "a": "For fun, before any complications: the words one artist uses far more than everyone else, their signature vocabulary against a pop baseline."
    },
    {
     "t": "0:30",
@@ -232,7 +232,7 @@
     "h": "A classifier is counting with weights",
     "points": [
      "Every word casts a vote, for or against. The model adds the votes.",
-     "Training means learning the weights from labeled examples. Nothing more mystical than that.",
+     "Training means learning the weights from labeled examples.",
      "Read the signed weights: the most positive and most negative words are the model's mind on the table.",
      "Spam filters have worked exactly this way for twenty years."
     ]
@@ -270,7 +270,7 @@
    },
    {
     "t": "0:52",
-    "a": "Delight beat: the words that most predict \"breakup song\" or \"this reviewer hated it.\""
+    "a": "For fun: the words that most predict \"breakup song\" or \"this reviewer hated it.\""
    },
    {
     "t": "0:57",
@@ -448,7 +448,7 @@
     "points": [
      "\"For You\" is this same map plus your history: you are a point in taste-space, the feed is your nearest neighbors.",
      "Spotify's own researchers found algorithmic listening less diverse than organic listening (Anderson et al., 2020).",
-     "You built the machinery of the feed today. That is the whole aside."
+     "You built the same machinery today."
     ]
    }
   ],
