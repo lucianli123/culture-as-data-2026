@@ -182,7 +182,7 @@ Each session includes one ~20-minute stretch with the assistant closed — you w
 
 ## Week 1 — Your First Investigation
 
-**Promise:** By the break you'll have loaded a real dataset, asked it a question, and produced your first chart. A complete investigation, end to end, on day one.
+**Promise:** By the break you'll have loaded a real dataset, asked it a question, and produced your first chart — and by the end you'll have counted culture in all three shapes it comes in: rows, words, and pixels.
 
 **Look at This, then Question It:** The Pudding, *She Giggles, He Gallops* (2017) — across ~2,000 film screenplays, the verbs in stage directions split by gender: women are written to "giggle" and "snuggle," men to "gallop" and "stride." The first interrogation of the term: ~2,000 screenplays skewed toward what got produced and digitized — is that "film," or a slice? And whose choice is a gendered verb — the writer's, the character's, the genre's? Counting shows the split, not the cause. Read the *visualization's* choices too, not just the data. The piece is great and the choices are arguable; both are true. That's how we'll read all term, the numbers and the pictures.
 
@@ -193,7 +193,7 @@ Each session includes one ~20-minute stretch with the assistant closed — you w
 | 0:17 | **Pre-training the vocabulary.** Before any code: corpus, method, model, embedding — plain ideas, with pictures. The course map, and the sentence you'll hear all term: *it's still just counting and weighting.* |
 | 0:32 | **Lab 1 — follow-along, then on your own.** First, setup that pays off all term: copy the notebook to Drive and **mount Drive** (this is how your work survives a session reset — everything saves to one project folder), and drop your key into Colab Secrets. Then load NYT wedding announcements, follow the live-coded walkthrough, and take your solo turn: with a partner, draft three questions this data could answer, pick one, have the assistant write the code, run it, chart it. Before you run your cell, write one sentence predicting what it does — that's this week's check. |
 | 1:10 | Break |
-| 1:20 | **Lab 2 — counting images, pixel by pixel.** Load ~200 Met Museum thumbnails: a picture is numbers, so compute each image's average color and brightness and rank the corpus darkest to brightest. Browse what the catalog does — and *doesn't* — record. Image projects start here. |
+| 1:20 | **Lab 2 — count words, then pixels.** First a text: the top words of a small lyrics slice, watching stop-words drown the list until you remove them (your first counting *choice*). Then ~200 Met Museum thumbnails: a picture is numbers, so compute each image's average color and brightness and rank the corpus darkest to brightest. Same skill, both shapes of culture. Browse what the catalog does — and *doesn't* — record. Image projects start here. |
 | 1:50 | Wrap. First check-out. |
 
 **Reading:** a real scientific fight, in two short pieces (abstract and figure only). Bollen et al. (2021, PNAS) used nothing but word-counting in Google Books to claim human thinking has grown measurably more distorted since the 1980s — the "hockey stick." Then the one-page critique by Schmidt, Piantadosi & Mahowald: the surge might be an artifact of *which books Google scanned*. Bring the three questions from the *Reading* section. We hold the trial next week — and see how the original authors fought back. (One of the choices on trial is the chart itself: the hockey-stick shape leans on its y-axis and smoothing, and a different axis flattens the drama.)
@@ -203,7 +203,7 @@ Each session includes one ~20-minute stretch with the assistant closed — you w
 
 ## Week 2 — Counting Is Already a Model
 
-**Promise:** Put a famous PNAS paper on trial, build a word-counter by hand, and watch the same sentence get counted three different ways.
+**Promise:** Put a famous PNAS paper on trial, build a word-counter by hand, find the words that make a voice distinctive — the method behind Week 1's featured study — and learn the one statistics move this course needs: the shuffle test for whether a difference is real.
 
 **The set-piece — the trial.** The claim: a hockey stick of societal distress, found by counting. The objection: the rising words are fiction-words, and Google scanned more fiction after 2000. The rebuttal — and the move you'll steal for your own work: the authors *removed the entire fiction corpus and re-ran the analysis*, and the pattern largely held. The answer to "your corpus is biased" isn't an argument; it's a test. The books, as the critic himself put it, are a treasure trove *when interpreted with care.*
 
@@ -215,11 +215,12 @@ Each session includes one ~20-minute stretch with the assistant closed — you w
 | 0:50 | **What counts as a word?** Paste the same sentence into two tokenizer playgrounds and watch it shatter differently into colored chips. Models never see words — they see tokens, and *which* tokens is a design choice, the same one you just argued about with run/running. |
 | 1:05 | Break |
 | 1:15 | **tf-idf.** The AI scales your hand count; stop-words dominate, which motivates tf-idf: "common here, rare overall." (Zipf's law — the eerie straight line hiding in every text — is this week's five-minute supplement to try at home.) |
-| 1:30 | **Cross-corpus counting.** Same counter, three corpora — start with the one you live in: a pop-lyrics slice, a subreddit, then a novel. Watch the corpus choice change what "common" means. (And first, for fun: the words one artist uses far more than anyone else — a signature vocabulary, counting alone showing you a voice.) |
+| 1:30 | **Keyness — the *She Giggles, He Gallops* move.** From "common here" to "distinctively hers": a log-odds ratio between two corpora finds the words one voice uses far more than a baseline — and it's exactly the method behind Week 1's featured piece. Run it on an artist against pop, on a lyrics slice against a subreddit against a novel: the corpus *pair* is a choice too. |
+| 1:42 | **Is the difference real? The shuffle test.** Statistics with zero formulas: shuffle the labels, recount, a thousand times. If chance alone often makes a gap as big as yours, don't trust it. If it almost never does, you have a finding — though real-but-tiny is still tiny. The same move as the trial's re-run-without-fiction: robustness is a test you run. |
 | 1:50 | Gemini-free check-in. Check-out. |
 
 **Reading:** Stephen Wolfram, "What Is ChatGPT Doing…" — the opening sections only, where even text generation turns out to be built from counting. Proof that the humblest tool underlies the fanciest ones.
-**Sketch:** Count something in a text you love; one chart; one sentence naming a choice you made.
+**Sketch:** Count something in a text you love; one chart; one sentence naming a choice you made. If your count compares two things, shuffle-test the gap.
 
 ---
 

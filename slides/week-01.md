@@ -6,9 +6,9 @@ format: revealjs
 
 # Week 1 · Your First Investigation
 
-> By the break you'll have loaded a real dataset, asked it a question, and produced your first chart. A complete investigation, end to end, on day one.
+> By the break you'll have loaded a real dataset, asked it a question, and produced your first chart. By the end you'll have counted culture in all three shapes it comes in: rows, words, and pixels.
 
-*Tool / method: Culture as data itself (the ladder starts next week) · Competencies: 1, 8*
+*Tool / method: Counting, met on day one: rows, words, pixels · Competencies: 1, 8*
 
 ## Look at This
 
@@ -20,7 +20,7 @@ The Pudding, "She Giggles, He Gallops" (2017): across ~2,000 film screenplays, t
 
 ## Three modes today (about a third each)
 
-- **Lecture / demo:** Culture as data itself (the ladder starts next week)
+- **Lecture / demo:** Counting, met on day one: rows, words, pixels
 - **Workshop:** build hands-on on your own data
 - **Discussion:** the study above, interrogate it, debate it, or critique each other's work
 
@@ -31,7 +31,7 @@ The Pudding, "She Giggles, He Gallops" (2017): across ~2,000 film screenplays, t
 - **0:17**  Pre-train the vocabulary (no code): corpus, method, model, embedding, in plain language with pictures. The course map and the deliverable.
 - **0:32**  Lab 1 (worked, participatory): copy the notebook to Drive and mount Drive into the runtime (this is how your corpus and results survive Colab wiping the session, everything saving to one project folder), put a Gemini key in Colab Secrets, load NYT wedding data, make a first chart. Hand out the common-errors cheat sheet. Then solo with a partner: draft three questions, pick one, have the AI write the code, run it, chart it. Write one sentence predicting your cell before you run it.
 - **1:10**  Break
-- **1:20**  Lab 2 (worked), count an image corpus at the pixel level: ~200 Met thumbnails (or a stack of album covers). A picture is numbers, so the AI computes each image's average color and brightness and ranks the corpus darkest to brightest. What you choose to count of a picture is a choice too, and image projects start here.
+- **1:20**  Lab 2 (worked), count words, then pixels: first the top words of a small lyrics slice (stop-words drown the list until you remove them, your first counting choice), then an image corpus, ~200 Met thumbnails ranked darkest to brightest by average brightness. Text and pictures, counted with the same move; image projects start here.
 - **1:50**  Teaser of the ladder ahead; the standing rituals named. First check-out.
 
 ## Reading & homework

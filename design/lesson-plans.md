@@ -41,13 +41,13 @@ Full worked notebooks. Participatory live coding. Exposure and a hook, not maste
 
 ## Week 1 — Your First Investigation
 
-**Focus:** culture-as-data itself — no tool yet; the four tools start next week.
+**Focus:** culture as data, through the first tool met on day one: counting — rows, words, pixels.
 **Competencies seeded:** 1 (read code), 8 (read work critically).
-**Promise:** by the break you've loaded real cultural data, asked it a question, and made a chart. A complete investigation, end to end, on day one.
+**Promise:** by the break you've loaded real cultural data, asked it a question, and made a chart — and by the end you've counted culture in all three shapes it comes in: rows, words, and pixels.
 
 **Featured study — *She Giggles, He Gallops* (The Pudding, 2017).** Across ~2,000 film screenplays, the *verbs* in stage directions split sharply by gender — women are written to "snuggle," "giggle," and "squeal"; men to "gallop," "stride," and "shoot." Counting the verbs attached to "she" versus "he" lands the pattern, and the interactive makes it impossible to unsee. **Interrogate:** ~2,000 screenplays skew toward what got produced and digitized — is that "film," or Hollywood's slice? And whose choice is a gendered verb — the screenwriter's, the character's, or the genre's? Counting shows the split, not the cause. And read the *visualization's* choices, not just the data: how it groups and ranks the verbs, what it foregrounds, what a different cut would surface — a chart is an argument with choices baked in, the same as a count. The icon of the form, and the cleanest "counting is already a model": every step (which verbs, near which pronoun, in which scripts) is a decision. That's how we read all term — the numbers *and* the choices behind them.
 
-**Data:** NYT Wedding Announcements (~500 rows, provided CSV); ~200 Met Museum objects with thumbnails (CC0).
+**Data:** NYT Wedding Announcements (~500 rows, provided CSV); a small pop-lyrics slice (provided); ~200 Met Museum objects with thumbnails (CC0).
 
 | Time | Activity |
 |---|---|
@@ -56,7 +56,7 @@ Full worked notebooks. Participatory live coding. Exposure and a hook, not maste
 | 0:17 | **Pre-train the vocabulary** (no code): corpus, method, model, embedding — plain language, pictures. Course map; deliverable (notebook + web page). |
 | 0:32 | **Lab 1 (worked, participatory):** copy the notebook to Drive and **mount Drive into the runtime** (this *is* setup — and it's how your corpus and results survive Colab wiping the session; everything saves to one project folder in your Drive), Gemini key into Colab Secrets, load wedding data from URL. Instructor narrates, plants one real bug, and recovers it *out loud using the unblocking kit* — read the last line of the error, paste it back to the AI with "this errored, fix it and tell me what went wrong," try twice, then ask a human. **Hand out the one-page "common errors" cheat sheet here**; the AI *will* hand them a traceback, and the move is to not panic. First chart. Then solo: with a partner, draft three questions this data could answer, pick one, have the assistant write the code, run it, chart it. **The Week 1 check lives here:** before running your solo cell, write one sentence saying what it will do. (Trace it; C1.) |
 | 1:10 | Break |
-| 1:20 | **Lab 2 (worked) — count an image corpus at the pixel level:** ~200 Met thumbnails (or a stack of album covers). A picture is numbers — red/green/blue per pixel — so the AI computes each image's average color and brightness, ranks the corpus darkest to brightest, and charts it. *What you choose to count* of a picture (hue, brightness, saturation) is a decision, the same kind words will demand next week. Browse the catalog as you go and notice what it *doesn't* record (that noticing seeds Week 4's Data Biography). Image projects start here and run all the way through. |
+| 1:20 | **Lab 2 (worked) — count words, then pixels, the same move twice.** First a text: top words of a small lyrics slice — watch stop-words drown the list, remove them, and notice you just made a *choice*. Then an image corpus: ~200 Met thumbnails (or album covers). A picture is numbers — red/green/blue per pixel — so the AI computes each image's average color and brightness and ranks the corpus darkest to brightest. Text and pictures, counted with the same skill; *what you choose to count* is a decision in both. Browse the catalog as you go and notice what it *doesn't* record (seeds Week 4's Data Biography). Image projects start here and run all the way through. |
 | 1:50 | One-slide teaser of the ladder ahead; the standing rituals named. Check-out. |
 
 **Reading (cliffhanger):** the Bollen/Schmidt fight, abstract-and-figure only — Bollen et al. 2021 (PNAS), the "hockey stick" of cognitive distortions counted in Google Books; then the one-page Schmidt/Piantadosi/Mahowald critique: the surge may be an artifact of *which books Google scanned*. Bring the three questions (what did they decide / load-bearing assumption / where's the gap). *Trial next week — including how the authors fought back.* (Population-level mental-health topic; keep the touch light.)
@@ -71,10 +71,10 @@ Full worked notebooks. Participatory live coding. Exposure and a hook, not maste
 
 ## Week 2 — Counting Is Already a Model
 
-**Tool one — counting.** Every count hides a choice (tokens, stemming, the corpus itself).
+**Tool one, deepened — counting against a baseline.** Distinctive words (keyness) and the shuffle test for whether a difference is real. Every count still hides a choice (tokens, stemming, the corpus itself).
 **Competencies:** 3, 5; 8 via the trial.
-**Promise:** put a famous PNAS paper on trial, build a word-counter by hand, and watch the same sentence get counted three ways — the deep dive into the tool you first touched, on pixels and wedding announcements alike, on day one. (The one counting week: images got their pixel-counting taste in Week 1.)
-**Mode balance:** ~⅓ discussion (the trial, expanded into a real debate + what-to-trust), ~⅓ workshop (hand-built counting + cross-corpus on your own slices), ~⅓ lecture/demo (tokenizers, tf-idf).
+**Promise:** put a famous PNAS paper on trial, build a word-counter by hand, find the words that make a voice *distinctive* (and discover Week 1's featured study was exactly that method) — and learn the one statistics move this course needs: the shuffle test, which tells you whether a difference is real or just chance. (The one counting week: Week 1 gave counting's first taste on words and pixels; this is the deep dive.)
+**Mode balance:** ~⅓ discussion (the trial, expanded into a real debate + what-to-trust), ~⅓ workshop (hand-built counting + keyness + the shuffle test), ~⅓ lecture/demo (tokenizers, tf-idf, the is-it-real idea).
 
 **The set-piece — the Bollen/Schmidt trial.** (1) The claim: a hockey stick of societal distress, found by *counting*. (2) The objection: the rising words are fiction-words, and Google scanned more fiction after 2000 — the "surge in distress" might be a surge in novels. (3) The rebuttal, and the move to steal: Bollen et al. didn't argue — they **removed the entire fiction corpus and re-ran it**, and the pattern largely held. The answer to "your corpus is biased" is *test it and show the result.* Land Schmidt's line: the books are "a treasure trove when interpreted with care."
 
@@ -89,13 +89,14 @@ Full worked notebooks. Participatory live coding. Exposure and a hook, not maste
 | 0:33 | **[Delight] The fingerprint (5 min, no caveats):** before we complicate counting, enjoy what it already does. The AI pulls the words one artist uses far more than everyone else — the signature vocabulary of a Taylor Swift or a Kendrick Lamar album against a big pop baseline. No interrogation yet; just "counting alone already shows you a voice." Don't qualify it — that's the point. |
 | 0:38 | **[Workshop] Hand-built bag-of-words (22 min):** two authors, highlighters, tally the top words. Argue about merging run/running, casing, stop-words. The arguments *are* the lesson: counting requires defining. |
 | 1:00 | Break |
-| 1:10 | **[Lecture] Counting mechanics (25 min):** *what counts as a word* — paste a sentence into two tokenizer playgrounds and watch it shatter into different chips (models see tokens, not words; connect to the stemming argument). Then *tf-idf* — the AI scales your count, stop-words dominate, motivating "common here, rare overall" (Zipf's line is the take-home supplement). |
-| 1:35 | **[Workshop] Cross-corpus counting (15 min):** run the same counter on a pop-lyrics slice, a subreddit, and a novel — the corpus the room lives in. Same code, three corpora; the *corpus choice* changes what "common" means. (Doubles as the corpus sampler before Week 4.) |
-| 1:50 | **Gemini-free check + check-out.** |
+| 1:10 | **[Lecture] Counting mechanics (20 min):** *what counts as a word* — paste a sentence into two tokenizer playgrounds and watch it shatter into different chips (models see tokens, not words; connect to the stemming argument). Then *tf-idf* — the AI scales your count, stop-words dominate, motivating "common here, rare overall" (Zipf's line is the take-home supplement). |
+| 1:30 | **[Workshop] Keyness — the *She Giggles, He Gallops* move (12 min):** from "common here, rare overall" to "distinctively *hers*": a log-odds ratio between two corpora surfaces the words one voice uses far more than a baseline. **The reveal:** Week 1's featured piece is exactly this arithmetic, run on 2,000 screenplays — you now own the method behind the study you admired. Run it on the delight-beat artist against the pop baseline; run it on a lyrics slice vs. a subreddit vs. a novel — the corpus *pair* is a choice, and this doubles as the corpus sampler before Week 4. |
+| 1:42 | **[Workshop] Is the difference real? The shuffle test (10 min):** light statistics with zero formulas. Shuffle the labels, recount, repeat a thousand times: if chance alone often produces a gap as big as yours, don't trust it; if it almost never does, you have something. One sentence on effect size — real-but-tiny is still tiny. This is the same move as Bollen's re-run-without-fiction: robustness is a *test you run*, not an argument you have — and it returns as Week 8's robustness arc. |
+| 1:52 | **Gemini-free check + check-out.** |
 
 **Reading:** Stephen Wolfram, "What Is ChatGPT Doing…" — the opening sections only, where even text generation turns out to be built from counting. *Proof that the humble tool you start with underlies the fanciest ones.*
-**Sketch:** count something in a text you love; one chart; one sentence naming a choice you made.
-**Check (explain it):** two tokenizers split the same sentence differently — explain why, and what your stemming decision changed in the hand count. *(C3, C5.)*
+**Sketch:** count something in a text you love; one chart; one sentence naming a choice you made. If your count compares two things, shuffle-test the gap.
+**Check (explain it):** two tokenizers split the same sentence differently — explain why; and say in one sentence what your shuffle test can and cannot rule out. *(C3, C5.)*
 
 ---
 

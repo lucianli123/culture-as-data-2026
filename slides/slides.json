@@ -2,8 +2,8 @@
  {
   "n": 1,
   "title": "Your First Investigation",
-  "promise": "By the break you'll have loaded a real dataset, asked it a question, and produced your first chart. A complete investigation, end to end, on day one.",
-  "tool": "Culture as data itself (the ladder starts next week)",
+  "promise": "By the break you'll have loaded a real dataset, asked it a question, and produced your first chart. By the end you'll have counted culture in all three shapes it comes in: rows, words, and pixels.",
+  "tool": "Counting, met on day one: rows, words, pixels",
   "comps": "1, 8",
   "admire": "The Pudding, \"She Giggles, He Gallops\" (2017): across ~2,000 film screenplays, the stage-direction verbs split by gender, women snuggle and giggle, men gallop and stride, and the interactive makes it impossible to unsee.",
   "interrogate": "~2,000 screenplays skewed toward what got produced and digitized: is that \"film,\" or a slice? Whose choice is a gendered verb, the writer's, the character's, the genre's? Counting shows the split, not the cause. And read the visualization's choices, not just the data.",
@@ -30,7 +30,7 @@
    },
    {
     "t": "1:20",
-    "a": "Lab 2 (worked), count an image corpus at the pixel level: ~200 Met thumbnails (or a stack of album covers). A picture is numbers, so the AI computes each image's average color and brightness and ranks the corpus darkest to brightest. What you choose to count of a picture is a choice too, and image projects start here."
+    "a": "Lab 2 (worked), count words, then pixels: first the top words of a small lyrics slice (stop-words drown the list until you remove them, your first counting choice), then an image corpus, ~200 Met thumbnails ranked darkest to brightest by average brightness. Text and pictures, counted with the same move; image projects start here."
    },
    {
     "t": "1:50",
@@ -59,8 +59,8 @@
  {
   "n": 2,
   "title": "Counting Is Already a Model",
-  "promise": "Put a famous PNAS paper on trial, build a word-counter by hand, watch the same sentence get counted three ways, and find an artist's signature vocabulary with nothing but counting.",
-  "tool": "Counting, and every count hides a choice",
+  "promise": "Put a famous PNAS paper on trial, find the words that make a voice distinctive (the method behind Week 1's featured study), and learn the one statistics move the course needs: the shuffle test for whether a difference is real.",
+  "tool": "Advanced counting: baselines, keyness, and the shuffle test",
   "comps": "3, 5, 8",
   "admire": "The Bollen/Schmidt trial: a hockey stick of societal distress, found by counting.",
   "interrogate": "The rising words are fiction-words, and Google scanned more fiction after 2000. The rebuttal and the move to steal: the authors removed the entire fiction corpus and re-ran it, and the pattern largely held. The answer to \"your corpus is biased\" is a test, not an argument.",
@@ -95,7 +95,11 @@
    },
    {
     "t": "1:30",
-    "a": "Cross-corpus counting: the same counter on a lyrics slice, a subreddit, and a novel. The corpus choice changes what \"common\" means."
+    "a": "Keyness, the She Giggles, He Gallops move: a log-odds ratio between two corpora finds the words one voice uses far more than a baseline, exactly the method behind Week 1's featured piece. The corpus pair is a choice too: artist vs. pop, lyrics vs. subreddit vs. novel."
+   },
+   {
+    "t": "1:42",
+    "a": "Is the difference real? The shuffle test: shuffle the labels, recount, a thousand times. If chance alone often makes a gap this big, don't trust it; if it almost never does, you have a finding. Real-but-tiny is still tiny."
    },
    {
     "t": "1:50",
@@ -104,7 +108,7 @@
   ],
   "reading": "Wolfram, What Is ChatGPT Doing (opening sections only)",
   "supplement": "Zipf's law, the straight line in every text",
-  "sketch": "Count something in a text you love; one chart; one sentence naming a choice you made.",
+  "sketch": "Count something in a text you love; one chart; one sentence naming a choice. Comparing two things? Shuffle-test it.",
   "check": "Explain it: why two tokenizers split a sentence differently, and what your stemming choice changed. (Competencies 3, 5.)",
   "threads": [
    {
@@ -116,8 +120,8 @@
     "note": "Tokens, stemming, the corpus, the chart's axis, each hides a decision you made."
    },
    {
-    "name": "The corpus is a choice",
-    "note": "The same counter on lyrics, a subreddit, and a novel gives three different \"commons.\""
+    "name": "Is the difference real?",
+    "note": "Shuffle the labels and count again, a thousand times; if chance often beats your gap, don't trust it."
    }
   ]
  },

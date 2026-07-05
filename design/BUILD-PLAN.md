@@ -45,7 +45,7 @@ culture-as-data/
 │   ├── requirements.txt           # PINNED versions (see §4)
 │   ├── constraints.txt            # optional: hard pins for the compat-test harness
 │   ├── _smoke_test.ipynb          # runs every notebook's imports + a tiny op (see §4)
-│   ├── week01_first_investigation.ipynb   # fully worked (Drive-mount ritual + wedding data + pixel-counting an image corpus)
+│   ├── week01_first_investigation.ipynb   # fully worked (Drive-mount ritual + wedding data + word & pixel counting)
 │   ├── week02_counting.ipynb              # fully worked
 │   ├── week03_classification.ipynb        # fully worked
 │   ├── week04_data_cookbook.ipynb         # fully worked (load-a-file + API pull + polite scrape)
@@ -102,7 +102,7 @@ Pin nothing about the *content* of the four design docs here — link to them. T
 
 ### 4a. What each notebook does (specs in the design docs; summarized here)
 
-- **`week02_counting.ipynb`** — load a small pop-lyrics slice + a subreddit slice + a public-domain novel; build word frequencies and tf-idf with the AI's help; the "counting images" beat (average color + brightness histogram of a few album covers). Pure stdlib + `pandas` + `scikit-learn` (tf-idf) + `Pillow`/`numpy` (pixels) + `matplotlib`.
+- **`week02_counting.ipynb`** — load a small pop-lyrics slice + a subreddit slice + a public-domain novel; build word frequencies and tf-idf with the AI's help; keyness (log-odds distinctive words — the *She Giggles, He Gallops* method) and the shuffle test (permutation check that a counted difference beats chance). Pure stdlib + `pandas` + `scikit-learn` (tf-idf) + `numpy` + `matplotlib`. (Pixel counting lives in week01.)
 - **`week03_classification.ipynb`** — load a ~1,000-row pre-labeled pop corpus (lyrics-by-mood or AITA YTA/NTA or reviews pos/neg); train a `LogisticRegression`; **print the signed coefficients** (the lesson); the "most predictive words for a fun corpus" delight beat. `scikit-learn` + `pandas` + `matplotlib`.
 - **`week04_data_cookbook.ipynb`** — **three acquisition routes**, worked, in order of how often students need them: **(1) load a prepared file** — `pd.read_csv(url)` for a direct link, `gdown`/`wget` into Drive, `datasets.load_dataset()` for HuggingFace, `unzip` for archives (this is how most starter corpora arrive and the route a beginner most needs — one applicant explicitly couldn't get a GitHub file into a notebook); **(2) an API pull** (Met or Art Institute of Chicago, no key); **(3) a small polite scrape** (`requests` + `beautifulsoup4`) with an inline `robots.txt`/ToS/rate-limit/anti-republish checklist. Also the corpus-existence-proof tool. `requests` + `beautifulsoup4` + `pandas` + `datasets` + `gdown`.
 - **`week05_embeddings.ipynb`** (+ GUIDED + SKELETON) — embed a text corpus with `sentence-transformers`; reduce with PCA then t-SNE/UMAP and plot; hunt the surprise cluster; the parallel image path embeds album covers (CLIP image embeddings via `sentence-transformers`' CLIP or `open_clip`). **This is the heaviest notebook and the compatibility hot spot** (see 4c). `sentence-transformers` + `scikit-learn` (PCA/TSNE) + optionally `umap-learn` + `matplotlib`/`plotly`.
