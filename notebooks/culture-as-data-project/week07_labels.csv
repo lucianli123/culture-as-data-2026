@@ -1,6 +1,0 @@
-label,confidence,text,gold
-positive,0.98,"an absolute triumph, I cried twice and laughed more",positive
-mixed,0.55,technically fine but I felt nothing the whole time,mixed
-negative,0.95,"a boring slog, I checked my phone constantly",negative
-mixed,0.6,"gorgeous to look at, hollow underneath",mixed
-positive,0.99,"best thing I have seen all year, full stop",positive

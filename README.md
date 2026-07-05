@@ -6,9 +6,8 @@ and AI annotation, ending in a published web essay. This repository is the **bui
 artifact** for the course: the static course **site** and the Colab **notebooks** the course
 teaches from.
 
-The course design lives in four markdown documents (kept one directory up, in the project
-root): `overview.md`, `syllabus.md`, `lesson-plans.md`, and `planning-doc.md`. Those are the
-source of truth. This repo turns them into things you can open, run, and deploy.
+The course design lives in four markdown documents in `design/`: `overview.md`,
+`syllabus.md`, `lesson-plans.md`, and `planning-doc.md`. Those are the source of truth. This repo turns them into things you can open, run, and deploy.
 
 ## What's here
 

@@ -8,3 +8,7 @@ notebooks/_executed/
 # OS
 .DS_Store
 Thumbs.db
+
+# Notebook-run artifacts (PROJECT_DIR fallback outside Colab)
+notebooks/culture-as-data-project/
+culture-as-data-project/
