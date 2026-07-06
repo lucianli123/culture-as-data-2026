@@ -59,6 +59,8 @@ Full worked notebooks. Participatory live coding. Exposure and a hook, not maste
 | 1:20 | **Lab 2 (worked) — count words, then pixels, the same move twice.** First a text: top words of a small lyrics slice — watch stop-words drown the list, remove them, and notice you just made a *choice*. Then an image corpus: ~200 Met thumbnails (or album covers). A picture is numbers — red/green/blue per pixel — so the AI computes each image's average color and brightness and ranks the corpus darkest to brightest. Text and pictures, counted with the same skill; *what you choose to count* is a decision in both. Browse the catalog as you go and notice what it *doesn't* record (seeds Week 4's Data Biography). Image projects start here and run all the way through. |
 | 1:50 | One-slide teaser of the ladder ahead; the standing rituals named. Check-out. |
 
+**Pacing.** This is the most front-loaded session of the term (room-setting, vocabulary, two labs, the error drill). The named flex is the *word-count half of Lab 2*: it compresses to five minutes or folds into Lab 1's solo turn — Week 2 goes deep on words anyway. The pixel half is protected; it is images' only Week 1 beat.
+
 **Reading (cliffhanger):** the Bollen/Schmidt fight, abstract-and-figure only — Bollen et al. 2021 (PNAS), the "hockey stick" of cognitive distortions counted in Google Books; then the one-page Schmidt/Piantadosi/Mahowald critique: the surge may be an artifact of *which books Google scanned*. Bring the three questions (what did they decide / load-bearing assumption / where's the gap). *Trial next week — including how the authors fought back.* (Population-level mental-health topic; keep the touch light.)
 **Sketch:** one question from your life answerable with text or image data; three sentences.
 **Check (trace it):** folded into Lab 1's solo turn — one written sentence predicting what your cell does before you run it. *(C1.)*
@@ -93,6 +95,8 @@ Full worked notebooks. Participatory live coding. Exposure and a hook, not maste
 | 1:30 | **[Workshop] Keyness — the *She Giggles, He Gallops* move (12 min):** from "common here, rare overall" to "distinctively *hers*": a log-odds ratio between two corpora surfaces the words one voice uses far more than a baseline. **The reveal:** Week 1's featured piece is exactly this arithmetic, run on 2,000 screenplays — you now own the method behind the study you admired. Run it on the delight-beat artist against the pop baseline; run it on a lyrics slice vs. a subreddit vs. a novel — the corpus *pair* is a choice, and this doubles as the corpus sampler before Week 4. |
 | 1:42 | **[Workshop] Is the difference real? The shuffle test (10 min):** light statistics with zero formulas. Shuffle the labels, recount, repeat a thousand times: if chance alone often produces a gap as big as yours, don't trust it; if it almost never does, you have something. One sentence on effect size — real-but-tiny is still tiny. This is the same move as Bollen's re-run-without-fiction: robustness is a *test you run*, not an argument you have — and it returns as Week 8's robustness arc. |
 | 1:52 | **Gemini-free check + check-out.** |
+
+**Pacing.** Six content beats and no slack — the tightest technical session of the term. If it runs short: the 0:33 demonstration folds into the keyness block (which repeats it properly), and the shuffle count is not load-bearing — 200 shuffles demonstrates the idea as well as 1,000. The trial and the hand-built bag-of-words do not shrink.
 
 **Reading:** Stephen Wolfram, "What Is ChatGPT Doing…" — the opening sections only, where even text generation turns out to be built from counting. *Proof that the humble tool you start with underlies the fanciest ones.*
 **Sketch:** count something in a text you love; one chart; one sentence naming a choice you made. If your count compares two things, shuffle-test the gap.
@@ -155,6 +159,8 @@ Notebooks become **completion problems** in fuller-guidance and skeleton version
 | 1:10 | **Getting the data — three routes (20 min):** where does a corpus *come from*? Demoed live, the AI writing the code. **(1) Download a prepared file — the common case, taught first.** Most corpora (Pantheon, the Met/MoMA CSVs, the Billboard CSV, a HuggingFace dataset, a Reddit dump) are *already made*; the skill is getting the file into Colab and open: `pd.read_csv(url)` for a direct link, `gdown`/`wget` to pull a file into your Drive folder, `load_dataset(...)` for HuggingFace, `unzip` for an archive. This is the route a beginner most needs — and "I can find a file on GitHub but don't know how to use it" stops being a wall. **(2) API (the polite front door):** hit an endpoint students met — the Met or Art Institute, no key — and watch the AI turn a documented URL into a table; name what an endpoint, a key, and rate-limiting are. **(3) Scrape (the back door, used with care):** no file and no API — a small BeautifulSoup scrape, plus the four-line check: read `robots.txt` and terms, scrape slowly, take only what you need, never re-publish copyrighted text. The licensing one-pager tells you which route is even allowed. |
 | 1:30 | **Collect-and-build lab (25 min):** point the cookbook notebook at *your* corpus — pull it via API or load the file you've got — reshape it with the AI, and **save it to your Drive project folder so it's there next week** (the cookbook writes it out for you — this is the moment the Week-1 Drive mount pays off). **Fork the publishing template** here too: your project repo is born with your project. The AI wrangles; you judge whether what came back is what you wanted. |
 | 1:55 | **Commit — with a safety net named.** Point the room to the **pivot kit**: a bank of pre-tested fallback corpus-and-question pairs (each known to yield a finding in the time we have), and the reframe that matters — *a null result, honestly shown, is a complete project.* "I expected X, the data doesn't show it, here's how I know" is a real essay. The kit isn't a fallback-of-shame; it's insurance, and the Week 5–6 one-on-ones are where we'll use it if your idea wobbles. Check-out. |
+
+**Pacing.** Forty minutes of pitches holds about eleven at the 3-minute cap with transitions. Above twelve students, cap pitches at two minutes or pitch in pairs; do not let the pitch block eat the collect-and-build lab, which is where Week 5's data comes from.
 
 **Reading:** Heather Krause, "Data Biographies" (We All Count).
 **Sketch:** write **the Data Biography** (~400 words) for your chosen corpus — and *actually collect it* using the cookbook notebook (the API or scrape you saw in class), so you arrive at Week 5 with real data in hand. If collection fails or the corpus turns out thin, that's exactly what the pivot kit is for — adopt a fallback pair rather than arriving empty. The Data Biography is the one full pass; its distilled form becomes your essay's corpus note in Week 8.
@@ -297,6 +303,8 @@ The toolchain has been familiar since the Week 4 fork. The analysis is the evide
 | 1:15 | **Build lab (35 min):** open the template you forked in Week 4; paste outline, charts, code; render; deploy to Pages. Static by default; JS opt-ins hit the **code-review checkpoint** — read the AI's JavaScript before you ship it. |
 | 1:50 | Phone test in pairs; check-out. |
 
+**Pacing.** If deployment problems absorb the room, the structured critique compresses from 35 to 20 minutes. A deployed URL is the point of the session; the critique can continue asynchronously.
+
 **Reading:** none. **Sketch:** title the essay; headline finding in one sentence.
 **Check (fix it):** a planted bug in publishing/layout code (or in opted-in JS). *(C1, C7.)*
 
@@ -314,6 +322,8 @@ The toolchain has been familiar since the Week 4 fork. The analysis is the evide
 | 0:00 | Welcome. A show, not an exam. The closing Look at This. |
 | 0:10 | Presentations — 4–5 min each: corpus, headline finding, one surprise, live URL. |
 | 1:30 | Reception; everyone's URLs loaded for browsing. |
+
+**Pacing.** Eighty minutes holds about fourteen presentations at 4–5 minutes with transitions. Above fourteen, trim to three minutes plus one question, or run two parallel rooms for the first half and reconvene for the reception.
 
 **The two capstone moments:**
 - **The oral walkthrough** — walk one person through how you got the headline result, what it does *not* show, and (new) **how the tools that got you there actually work.** The AI-resistant capstone; the natural home of competencies 5 and 8.
