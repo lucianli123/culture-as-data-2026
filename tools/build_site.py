@@ -974,6 +974,7 @@ def build_notebooks():
     <h2>Before your first session</h2>
     {ul([
       "Open the smoke test above and run it top to bottom: a green report means your runtime is healthy.",
+      f"Never coded at all? An optional twenty-minute <a href='{COLAB}notebooks/python_warmup.ipynb'>Python warm-up</a> covers names, lists, and a first table, predict-then-run. The course never quizzes syntax; this is only for those who want it.",
       "Each notebook's first cells mount your Google Drive (so work survives a Colab reset) and install the few pinned packages Colab doesn't ship.",
       "Week 7 wants a free Gemini API key in Colab Secrets; without one it runs end-to-end on a recorded response.",
       "Weeks 5 and 7 also come in GUIDED (fuller scaffolding) and SKELETON (more blanks) versions; choose the one that matches your experience.",

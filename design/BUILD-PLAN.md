@@ -45,6 +45,7 @@ culture-as-data/
 │   ├── requirements.txt           # PINNED versions (see §4)
 │   ├── constraints.txt            # optional: hard pins for the compat-test harness
 │   ├── _smoke_test.ipynb          # runs every notebook's imports + a tiny op (see §4)
+│   ├── python_warmup.ipynb                # optional 20-min predict-then-run basics (never required)
 │   ├── week01_first_investigation.ipynb   # fully worked (Drive-mount ritual + wedding data + word & pixel counting)
 │   ├── week02_counting.ipynb              # fully worked
 │   ├── week03_classification.ipynb        # fully worked
