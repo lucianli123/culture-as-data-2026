@@ -59,6 +59,7 @@ culture-as-data/
 │   └── social-media-starters/     # Reddit (archives + PRAW + fiction loader), Bluesky, Mastodon, Gutenberg, scraper template
 ├── kits/
 │   ├── common-errors-cheatsheet.md        # the unblocking kit (see §3)
+│   ├── reading-a-code-cell.md             # the W1 code-reading primer (five patterns)
 │   ├── licensing-one-pager.md             # the Week-4 data-licensing rubric
 │   ├── critical-response-process.md       # the Week-9 critique protocol
 │   ├── competency-checks.md               # per-week trace/fix/explain bank

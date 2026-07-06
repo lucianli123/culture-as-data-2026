@@ -21,6 +21,20 @@ data conversation; keep it beside you whenever you collect.
 3. Take only what the question needs.
 4. Never republish copyrighted text; publish your counts and findings instead.
 
+## The people in your data
+
+Licensing is about what you may take; this is about who gets exposed. For social-media
+and fan-work corpora (the Data Biography's "People" prompt, made operational):
+
+- **Paraphrase or aggregate; avoid verbatim quotes.** A quoted post is searchable, and
+  search de-anonymizes: your essay can make its author findable years later.
+- **No usernames in anything you publish**, even when the post was public.
+- **Deleted content stays deleted.** If the author removed it, your archive copy is not
+  yours to publish.
+- **Distress-adjacent communities get extra distance** (support forums, mental-health
+  subreddits): aggregate findings only, and reread prompt 5 of the Data Biography —
+  *if they saw your essay, what would they want changed?*
+
 ## Two rules that resolve most cases
 
 - **Analyze locally, publish findings, link to sources.** Your essay needs your charts and

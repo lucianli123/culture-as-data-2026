@@ -1000,6 +1000,7 @@ def build_notebooks():
     <h2>Handouts and the publishing template</h2>
     {ul([
       f"<a href='{GH_REPO}/blob/main/kits/common-errors-cheatsheet.md'>Common-errors cheat sheet</a>: what to do when a cell fails, handed out in Week 1.",
+      f"<a href='{GH_REPO}/blob/main/kits/reading-a-code-cell.md'>How to read a code cell</a>: the five patterns behind nearly every cell in the course, handed out beside it.",
       f"<a href='{GH_REPO}/blob/main/kits/licensing-one-pager.md'>Licensing one-pager</a>: which route to a corpus is allowed, used in Week 4's data conversation.",
       f"<a href='{GH_REPO}/blob/main/kits/pivot-kit-corpora.md'>Pivot kit</a>: pre-tested fallback corpus-and-question pairs, insurance for stalled projects.",
       f"<a href='{GH_REPO}/blob/main/kits/critical-response-process.md'>Critical Response Process one-pager</a>: the Week 9 critique protocol, meaning before questions, questions before opinions.",
