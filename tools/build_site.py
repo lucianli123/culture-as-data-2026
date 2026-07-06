@@ -556,8 +556,8 @@ def svg_hero():
             + grid
             + f'<polyline points="{poly}" fill="none" stroke="#7a3b2e" stroke-width="2.5"/>'
             + dots + xlabels +
-            '<text x="22" y="264" font-size="12" fill="#8a8a82">Brides keeping their name, '
-            'in 5,562 NYT wedding announcements (The Upshot). You make this chart in Week 1, hour one.</text>'
+            '<text x="22" y="264" font-size="12" fill="#8a8a82">Share of brides who kept their name, '
+            'from 5,562 New York Times wedding announcements, 1985&#8211;2014 (data: The Upshot)</text>'
             '</svg>')
 
 def svg_verbs():
@@ -578,8 +578,8 @@ def svg_verbs():
             '<text x="390" y="52" font-size="13" fill="#5a5a52">after &#8220;he&#8221;&#8230;</text>'
             '<line x1="360" y1="40" x2="360" y2="200" stroke="#e3e0d8" stroke-width="1.5"/>'
             + "".join(rows) +
-            '<text x="22" y="232" font-size="12" fill="#8a8a82">The most gender-skewed verbs in the stage '
-            'directions of 2,000 screenplays (The Pudding, 2017). Week 2 teaches the method behind it.</text>'
+            '<text x="22" y="232" font-size="12" fill="#8a8a82">Verbs most skewed toward &#8220;she&#8221; and &#8220;he&#8221; '
+            'in the stage directions of 2,000 film scripts (The Pudding, 2017)</text>'
             '</svg>')
 
 def build_index():
@@ -595,13 +595,14 @@ def build_index():
 
 <section>
   <h2>Findings that started as counts</h2>
-  <p>Everything below came from someone counting culture. By Week 10 you'll have done the same on a corpus you chose.</p>
+  <p>Each of these began with someone counting culture. By the end of the course you'll have made a finding of your own the same way.</p>
   {ul([
-    "In the stage directions of 2,000 film screenplays, women are written to <em>snuggle</em>, <em>giggle</em>, and <em>sob</em>; men to <em>strap</em>, <em>gallop</em>, and <em>kill</em>. And 85% of the screenwriters were men. (<a href='https://pudding.cool/2017/08/screen-direction/'>The Pudding, 2017</a>)",
-    "Phrases of distorted thinking, like &quot;I am a failure,&quot; rose sharply in millions of Google Books after 2000, to the highest levels in more than a century, and the fight over whether that's real is Week 2's opening debate. (<a href='https://www.pnas.org/doi/10.1073/pnas.2102061118'>Bollen et al., PNAS 2021</a>)",
-    "A model trained to recognize science fiction misfiled Pynchon's <em>The Crying of Lot 49</em>, and the mistake taught scholars more about genre than the correct answers did. (<a href='https://doi.org/10.22148/16.005'>Underwood, 2016</a>)",
-    "ChatGPT labeled political tweets more accurately than trained crowd workers, at under a third of a cent per label, roughly twenty times cheaper. (<a href='https://www.pnas.org/doi/10.1073/pnas.2305016120'>Gilardi et al., PNAS 2023</a>)",
-    "An AI-generated portrait, <em>Edmond de Belamy</em>, sold at Christie's for $432,500. Who made it is Week 10's closing argument. (<a href='https://en.wikipedia.org/wiki/Edmond_de_Belamy'>2018</a>)",
+    "In the stage directions of 2,000 film scripts, women snuggle, giggle, and sob; men strap, gallop, and kill. 85% of the screenwriters were men. (<a href='https://pudding.cool/2017/08/screen-direction/'>The Pudding, 2017</a>)",
+    "Measured across 17,000 Hot 100 songs, the biggest revolution in American pop wasn't the Beatles in 1964. It was hip-hop in 1991. (<a href='https://doi.org/10.1098/rsos.150081'>Mauch et al., 2015</a>)",
+    "Counting small words like <em>the</em> and <em>of</em> unmasked &quot;Robert Galbraith&quot; as J.K. Rowling within days of <em>The Cuckoo's Calling</em> reaching shelves. (<a href='https://www.scientificamerican.com/article/how-a-computer-program-helped-show-jk-rowling-write-a-cuckoos-calling/'>Juola, 2013</a>)",
+    "A model trained on Google News completes &quot;man is to computer programmer as woman is to&hellip;&quot; with &quot;homemaker.&quot; That result launched the field of AI bias research. (<a href='https://arxiv.org/abs/1607.06520'>Bolukbasi et al., 2016</a>)",
+    "Ask GPT-4 to fill in the blanked-out character names of a famous novel and it often can, nearly perfectly. It isn't reading; it memorized the book. (<a href='https://aclanthology.org/2023.emnlp-main.453/'>Chang et al., 2023</a>)",
+    "An AI-generated portrait sold at Christie's for $432,500. The training data was other people's paintings. (<a href='https://en.wikipedia.org/wiki/Edmond_de_Belamy'><em>Edmond de Belamy</em>, 2018</a>)",
   ])}
 </section>
 
