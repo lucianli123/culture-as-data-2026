@@ -6,7 +6,7 @@ format: revealjs
 
 # Week 8 · Models as Time Capsules + Settle the Finding
 
-> Meet models that live entirely inside one historical period, learn what a famous model has secretly memorized, kill your own finding to see what survives, and leave with a prose draft.
+> Meet models that live entirely inside one historical period, learn what a famous model has secretly memorized, stress-test your own finding to see what survives, and leave with a prose draft.
 
 *Tool / method: What a trained model is: a compression of its corpus · Competencies: 3, 4, 5*
 
@@ -18,10 +18,10 @@ TimeCapsuleLLM, a small GPT trained from scratch on nothing but 1800s London pub
 
 A period model speaks only for the period's published, surviving, digitized voices. And memorization isn't reading: models score higher on memorized books, so an LLM that seems to read your corpus may be partly reciting it, a validity problem, not just an ethics one.
 
-## Kill it, then keep it
+## Stress-test the finding
 
-- The Bollen move, turned on your own finding: remove the slice that worries you most and re-run.
-- Survives? Say so, with the check shown. Dies? You just learned what your finding was made of.
+- Bollen's method, applied to your own finding: remove the slice that most concerns you and re-run.
+- If the pattern survives, report it with the check shown. If it does not, you have learned what the finding depended on.
 - Minimum bar: ONE robustness check, the one that most threatens your result.
 - "I expected X, the data doesn't show it, here's how I know" is a complete, publishable result.
 
@@ -29,7 +29,7 @@ A period model speaks only for the period's published, surviving, digitized voic
 
 - Speak, Memory (Chang et al., 2023): name-cloze tests show GPT-4 has memorized many novels; it fills in "___ Bennet" without reading anything.
 - A model may be reciting your corpus rather than analyzing it: a validity problem, not only an ethics one.
-- TimeCapsuleLLM: train only on 1800s London text and the model speaks its era. A corpus bounds a mind.
+- TimeCapsuleLLM: train only on 1800s London text and the model speaks its era. A model is bounded by its corpus.
 - Ask of every model you used: what was in its training data, and does that undercut MY claim?
 
 ## The show-your-work appendix
@@ -47,7 +47,7 @@ A period model speaks only for the period's published, surviving, digitized voic
 ## The session
 
 - **0:00**  Warm-up + Look at This: TimeCapsuleLLM and "Speak, Memory," screenshots ready. (These period models, and supplements like MonadGPT and MacBERTh, live on Hugging Face, where you can download and run open models, or fine-tune your own.)
-- **0:07**  Kill it, then keep what survives, one continuous arc on your own results: shuffle the labels and re-run; split the corpus in half; ask "compared to what?". Then compress whatever survived into one headline sentence.
+- **0:07**  Stress-test the finding, one continuous arc on your own results: shuffle the labels and re-run; split the corpus in half; ask "compared to what?". Then compress whatever survived into one headline sentence.
 - **0:52**  Break
 - **1:02**  Gemini-free writing block: write your one-sentence interpretation yourself.
 - **1:22**  Writing workshop: opening question, what you found, what it does not show, the choices you made. Distill the Data Biography into the corpus note.

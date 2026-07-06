@@ -6,7 +6,7 @@ format: revealjs
 
 # Week 3 · Classification: Counting with Weights
 
-> Teach a machine a bias in ten minutes, build a classifier and read its mind, and preview the full methods menu before next week's commitment.
+> Teach a machine a bias in ten minutes, build a classifier and read the weights it learned, and preview the full menu of methods before next week's commitment.
 
 *Tool / method: Classification. Train a reader and read what it learned · Competencies: 2, 4, 5*
 
@@ -18,7 +18,7 @@ Ted Underwood's genre prediction (Distant Horizons, 2019): a logistic regression
 
 What counts as science fiction is a choice built into the training labels. And the model's most famous error, misreading Pynchon's The Crying of Lot 49, a detective-fiction spoof, shows genre boundaries are real but fuzzy. A classifier's mistakes teach as much as its successes; yours will too.
 
-## Underwood's classifier, in particulars
+## Underwood's classifier, in detail
 
 - A logistic regression, the exact tool of today's lab, trained on a century of novels to recognize detective fiction and science fiction.
 - Its most famous error is the lesson: it misreads Pynchon's The Crying of Lot 49, a novel critics call a detective-fiction spoof.
@@ -32,12 +32,12 @@ What counts as science fiction is a choice built into the training labels. And t
 - Read the signed weights: the most positive and most negative words are the model's mind on the table.
 - Spam filters have worked exactly this way for twenty years.
 
-## You taught it that
+## The training set is the lesson
 
 - Teachable Machine, live: a cat/dog model trained only on orange cats and brown dogs.
 - The room predicts what a black cat will do. Then watches it happen.
 - Bias is not a ghost in the machine. It is the training set, and you assembled it.
-- One line to carry out: today's classifier is one neuron; stack many and you have Week 7's model.
+- One connection to remember: today's classifier is one neuron; stack many and you have Week 7's model.
 
 ## The methods menu (before you commit)
 
@@ -55,8 +55,8 @@ What counts as science fiction is a choice built into the training labels. And t
 
 - **0:00**  Warm-up + Look at This: Underwood's genre prediction.
 - **0:10**  Teachable Machine, instructor demo: a two-class image model trained live, then the reveal that it learned from only orange cats and brown dogs. The room predicts what a black cat will do, then sees it.
-- **0:22**  Counting with weights, the lab: each word casts a weighted vote; a logistic regression adds them up. Train it on a pop corpus, then read the signed coefficients, its mind on the table.
-- **0:52**  For fun: the words that most predict "breakup song" or "this reviewer hated it."
+- **0:22**  Counting with weights, the lab: each word casts a weighted vote; a logistic regression adds them up. Train it on a pop corpus, then read the signed coefficients: the model's reasoning, laid out in full.
+- **0:52**  A short demonstration: the words that most predict "breakup song" or "this reviewer hated it."
 - **0:57**  One-line bridge: that classifier is a neuron; stack many for a neural net, which is what's inside the Week 7 model. A quick TensorFlow Playground glance.
 - **1:00**  Break
 - **1:10**  Methods menu preview, so Week 4's choice is informed: counting, classification, embeddings (Week 5), and optional approaches (character networks for fiction; sentiment arcs for story projects, Jockers's Syuzhet reproducible in Python, whose own smoothing controversy is the built-in lesson to doubt the shape; CLIP image search for visual projects; and, for the technically comfortable, fine-tuning a small open model, ModernBERT, on your own labels).

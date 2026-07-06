@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Week 7: The AI as a Reader, at Scale, Culture as Data</title>
-<meta name="description" content="Ask your own questions about the stories, lyrics, art, and online communities you love.">
+<meta name="description" content="Ask your own questions about the stories, lyrics, art, and online communities you care about.">
 <link rel="stylesheet" href="../assets/style.css">
 <link rel="icon" href="../assets/favicon.svg">
 </head>
@@ -34,13 +34,13 @@
 
   <section>
     <h2>The session, minute by minute</h2>
-    <table class="flow"><thead><tr><th>Time</th><th>Activity</th></tr></thead><tbody><tr><td class="time">0:00</td><td>Warm-up + Look at This, room names the choice first: the AI as a cheaper coder, and where it fails silently.</td></tr><tr><td class="time">0:10</td><td>The annotator move, on your corpus: write a labeling prompt for your categories, run it on a slice, read the labels back. Tighten the definition and watch the labels shift, the prompt is your codebook.</td></tr><tr><td class="time">0:35</td><td>Confidence, and when to trust it: ask the model not just what but how sure. Sort by confidence, trust the sure labels, hand-check the unsure ones, which is exactly which 30 to pull for Week 6.</td></tr><tr><td class="time">0:50</td><td>Break</td></tr><tr><td class="time">1:00</td><td>Accuracy check, then project workshop: run your prompt against a small hand-labeled gold set. Where does the AI disagree, and is it wrong or are you? Then build time on your corpus. Go further (optional, technically comfortable): instead of the closed API model, run an open model from Hugging Face, or fine-tune your own small classifier (ModernBERT) on the labels you just made, the third reader you own.</td></tr><tr><td class="time">1:50</td><td>Gemini-free check and check-out.</td></tr></tbody></table>
+    <table class="flow"><thead><tr><th>Time</th><th>Activity</th></tr></thead><tbody><tr><td class="time">0:00</td><td>Warm-up + Look at This, room names the choice first: the AI as a cheaper coder, and where it fails silently.</td></tr><tr><td class="time">0:10</td><td>The annotator move, on your corpus: write a labeling prompt for your categories, run it on a slice, read the labels back. Tighten the definition and watch the labels shift, the prompt is your codebook.</td></tr><tr><td class="time">0:35</td><td>Confidence, and when to trust it: ask the model not just what but how sure. Sort by confidence, trust the labels the model is sure of, and hand-check the unsure ones.</td></tr><tr><td class="time">0:50</td><td>Break</td></tr><tr><td class="time">1:00</td><td>Accuracy check, then project workshop: run your prompt against a small hand-labeled gold set. Where does the AI disagree, and is it wrong or are you? Then build time on your corpus. Go further (optional, technically comfortable): instead of the closed API model, run an open model from Hugging Face, or fine-tune your own small classifier (ModernBERT) on the labels you just made, the third reader you own.</td></tr><tr><td class="time">1:50</td><td>Gemini-free check and check-out.</td></tr></tbody></table>
   </section>
 
   <section>
     <h2>Reading and homework</h2>
     <p><strong>Reading:</strong> One short piece on the training-data fight (the NYT v. OpenAI complaint summary, or a Books3 explainer), read against your own Week 4 licensing conversation.</p>
-    <p><strong>Sketch:</strong> Show one label the AI got confidently wrong and one it nailed; for each, say how you knew.</p>
+    <p><strong>Sketch:</strong> Show one label the AI got confidently wrong and one it got exactly right; for each, say how you knew.</p>
     <p><strong>Competency check:</strong> Explain it: what is your labeling prompt deciding on your behalf, and how would you check whether to trust a given label? (Competencies 2, 5.)</p>
   </section>
 </article>

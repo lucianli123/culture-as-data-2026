@@ -18,7 +18,7 @@ Arnold, Tilton & Berke, "Visual Style in Two Network-Era Sitcoms" (2019), comput
 
 What counts as a "character-centered shot" is an operational definition, and a different one tells a different story; two shows is a slice, not "television."
 
-## The featured pair, in particulars
+## The featured pair, in detail
 
 - Arnold, Tilton & Berke (2019): computer vision on every shot of Bewitched and I Dream of Jeannie, measuring how the camera frames each lead.
 - "Character-centered shot" is an operational definition. Change the definition, change the story.
@@ -31,12 +31,12 @@ What counts as a "character-centered shot" is an operational definition, and a d
 - Watch an image set cluster by visual style nobody tagged: the beyond-counting contrast at its sharpest.
 - Week 1 ranked pixels by brightness; today style emerges unasked. Same corpus, two rungs of the ladder.
 
-## The hand-labeling set-piece (nobody skips it)
+## The hand-labeling exercise (required of everyone)
 
 - Label 30 items from your own corpus, by hand, no AI.
 - The AI labels the same 30. Study every disagreement: is it wrong, or are you?
 - This is calibration: learning exactly where the machine's reading of YOUR data breaks.
-- Deliberately Gemini-free. This beat is the one thing code cannot teach.
+- Deliberately done without the AI. It is the one exercise code cannot teach.
 
 ## Three modes today (about a third each)
 
@@ -50,7 +50,7 @@ What counts as a "character-centered shot" is an operational definition, and a d
 - **0:07**  Images on the same map, for real: embed an image set live and watch it cluster by visual style nobody tagged. The beyond-counting contrast at its sharpest.
 - **0:25**  Project lab: apply your method harder on your own data. Instructor floats; one-on-ones at the side.
 - **1:05**  Break
-- **1:15**  The hand-labeling set-piece (Gemini-free): label 30 items from your corpus by hand; the AI labels the same 30; study every disagreement. Nobody skips this.
+- **1:15**  The hand-labeling set-piece (Gemini-free): label 30 items from your corpus by hand; the AI labels the same 30; study every disagreement. No one skips this.
 - **1:40**  Fix-it check: a planted bug in the data pipeline, found AI-closed.
 - **1:48**  Check-out.
 

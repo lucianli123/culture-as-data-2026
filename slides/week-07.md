@@ -48,7 +48,7 @@ The prompt is the codebook; agreement with humans isn't ground truth; and the mo
 
 - **0:00**  Warm-up + Look at This, room names the choice first: the AI as a cheaper coder, and where it fails silently.
 - **0:10**  The annotator move, on your corpus: write a labeling prompt for your categories, run it on a slice, read the labels back. Tighten the definition and watch the labels shift, the prompt is your codebook.
-- **0:35**  Confidence, and when to trust it: ask the model not just what but how sure. Sort by confidence, trust the sure labels, hand-check the unsure ones, which is exactly which 30 to pull for Week 6.
+- **0:35**  Confidence, and when to trust it: ask the model not just what but how sure. Sort by confidence, trust the labels the model is sure of, and hand-check the unsure ones.
 - **0:50**  Break
 - **1:00**  Accuracy check, then project workshop: run your prompt against a small hand-labeled gold set. Where does the AI disagree, and is it wrong or are you? Then build time on your corpus. Go further (optional, technically comfortable): instead of the closed API model, run an open model from Hugging Face, or fine-tune your own small classifier (ModernBERT) on the labels you just made, the third reader you own.
 - **1:50**  Gemini-free check and check-out.

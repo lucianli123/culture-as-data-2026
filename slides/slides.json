@@ -2,11 +2,11 @@
  {
   "n": 1,
   "title": "Your First Investigation",
-  "promise": "By the break you'll have loaded a real dataset, asked it a question, and produced your first chart. By the end you'll have counted culture in all three shapes it comes in: rows, words, and pixels.",
+  "promise": "By the mid-session break you will have loaded a real dataset, asked a question of it, and produced a chart. By the end you will have counted culture in three forms: rows, words, and pixels.",
   "tool": "Counting: rows, words, pixels",
   "comps": "1, 8",
-  "admire": "The Pudding, \"She Giggles, He Gallops\" (2017): across ~2,000 film screenplays, the stage-direction verbs split by gender, women snuggle and giggle, men gallop and stride, and the interactive makes it impossible to unsee.",
-  "interrogate": "~2,000 screenplays skewed toward what got produced and digitized: is that \"film,\" or a slice? Whose choice is a gendered verb, the writer's, the character's, the genre's? Counting shows the split, not the cause. And read the visualization's choices, not just the data.",
+  "admire": "The Pudding, \"She Giggles, He Gallops\" (2017): across ~2,000 film screenplays, the stage-direction verbs split by gender, women snuggle and giggle, men gallop and stride. The interactive presentation makes the pattern unmistakable.",
+  "interrogate": "The 2,000 screenplays skew toward what was produced and digitized: is that \"film,\" or a sample of it? Whose choice is a gendered verb: the writer's, the character's, or the genre's? Counting shows the split, not the cause. The visualization's own choices deserve the same scrutiny as the data.",
   "content": [
    {
     "h": "Culture is already data",
@@ -27,7 +27,7 @@
     ]
    },
    {
-    "h": "The Drive ritual (every week, no exceptions)",
+    "h": "The Drive routine (every week, without exception)",
     "points": [
      "Colab wipes its machine when you idle. Your mounted Drive folder is what survives.",
      "Copy the notebook to Drive, mount Drive, save everything to the one project folder.",
@@ -36,12 +36,12 @@
     ]
    },
    {
-    "h": "When code errors (it will, today, on purpose)",
+    "h": "When code fails (it will, today, deliberately)",
     "points": [
-     "Read the LAST line of the traceback first. It names the problem.",
+     "Read the last line of the traceback first. It names the problem.",
      "Paste it to the AI: \"this errored, fix it and tell me what went wrong.\"",
-     "Try twice. Then ask a human. That order.",
-     "Keep the cheat sheet out. Nobody memorizes error messages; everybody reads them."
+     "Try twice, then ask a human. In that order.",
+     "Keep the cheat sheet at hand. No one memorizes error messages; everyone reads them."
     ]
    },
    {
@@ -50,14 +50,14 @@
      "Rows: what share of brides kept their name, year by year. One groupby, one chart.",
      "Words: the top words of a lyric are \"the, and, you\" until you remove stop-words. That removal is your first modeling choice.",
      "Pixels: rank 200 Met thumbnails darkest to brightest from average luminance.",
-     "Same move three times, and a decision hiding in each."
+     "The same technique three times, each containing a decision."
     ]
    }
   ],
   "flow": [
    {
     "t": "0:00",
-    "a": "Setting the room: the social rules, demonstrated by the instructor breaking one and being corrected. Today's live coding includes real mistakes on purpose."
+    "a": "Introductions and working agreements, demonstrated in practice. Today's live coding deliberately includes real mistakes."
    },
    {
     "t": "0:12",
@@ -77,11 +77,11 @@
    },
    {
     "t": "1:20",
-    "a": "Lab 2 (worked), count words, then pixels: first the top words of a small lyrics slice (stop-words drown the list until you remove them, your first counting choice), then an image corpus, ~200 Met thumbnails ranked darkest to brightest by average brightness. Text and pictures, counted with the same move; image projects start here."
+    "a": "Lab 2 (worked): count words, then pixels. First the top words of a small lyrics sample (stop-words dominate the list until you remove them, the first counting decision), then an image corpus: ~200 Met thumbnails ranked darkest to brightest by average brightness. Text and images, counted with the same technique; image projects begin here."
    },
    {
     "t": "1:50",
-    "a": "Teaser of the ladder ahead; the standing rituals named. First check-out."
+    "a": "Preview of the methods ahead; the weekly routines introduced. First check-out."
    }
   ],
   "reading": "Bollen et al., the cognitive-distortions hockey stick (PNAS 2021), with the Schmidt et al. critique",
@@ -91,7 +91,7 @@
   "threads": [
    {
     "name": "Read work critically",
-    "note": "She Giggles, He Gallops is great and its choices are arguable. We admire and interrogate at once, the habit the whole course turns on."
+    "note": "She Giggles, He Gallops is excellent and its choices are debatable. Admiring and questioning at once is the habit the course is built on."
    },
    {
     "name": "Make something real",
@@ -99,18 +99,18 @@
    },
    {
     "name": "Images are culture too",
-    "note": "A picture is numbers: you counted pixels on day one, and images ride along as a co-equal corpus all ten weeks."
+    "note": "A picture is numbers: you counted pixels on day one, and images continue as a co-equal corpus through all ten weeks."
    }
   ]
  },
  {
   "n": 2,
   "title": "Counting Is Already a Model",
-  "promise": "Put a famous PNAS paper on trial, find the words that make a voice distinctive (the method behind Week 1's featured study), and learn the one statistics move the course needs: the shuffle test for whether a difference is real.",
+  "promise": "Put a famous PNAS paper on trial, find the words that make a voice distinctive (the method behind Week 1's featured study), and learn the one statistical method the course requires: the shuffle test, which checks whether a difference is real.",
   "tool": "Advanced counting: baselines, keyness, and the shuffle test",
   "comps": "3, 5, 8",
   "admire": "The Bollen/Schmidt trial: a hockey stick of societal distress, found by counting.",
-  "interrogate": "The rising words are fiction-words, and Google scanned more fiction after 2000. The rebuttal and the move to steal: the authors removed the entire fiction corpus and re-ran it, and the pattern largely held. The answer to \"your corpus is biased\" is a test, not an argument.",
+  "interrogate": "The rising words are fiction-words, and Google scanned more fiction after 2000. The rebuttal, and the method worth adopting: the authors removed the entire fiction corpus and re-ran it, and the pattern largely held. The answer to \"your corpus is biased\" is a test, not an argument.",
   "content": [
    {
     "h": "The trial: Bollen et al. v. Schmidt",
@@ -118,7 +118,7 @@
      "The claim (PNAS 2021): phrases of distorted thinking (\"I am a failure,\" \"everyone hates me\") surge in Google Books after 2000. A hockey stick.",
      "The objection: Google scanned more fiction after 2000. Maybe the surge is novels, not distress.",
      "The rebuttal: the authors deleted the entire fiction corpus and re-ran the analysis. The pattern largely held.",
-     "The move to steal: answer \"your corpus is biased\" with a test, not an argument."
+     "The method worth adopting: answer \"your corpus is biased\" with a test rather than an argument."
     ]
    },
    {
@@ -131,18 +131,18 @@
     ]
    },
    {
-    "h": "Keyness: distinctively hers",
+    "h": "Keyness: what makes a voice distinctive",
     "points": [
      "For every word: how much likelier is it in corpus A than corpus B? A log-odds ratio, smoothed so rare words don't explode.",
      "Strongly positive = distinctively A. Strongly negative = distinctively B. The middle is shared language.",
-     "She Giggles, He Gallops IS this method: verbs after \"she\" vs. \"he\" in 2,000 screenplays. Women snuggle, giggle, squeal; men gallop, strap, shoot.",
+     "She Giggles, He Gallops is exactly this method: verbs after \"she\" vs. \"he\" in 2,000 screenplays. Women snuggle, giggle, squeal; men gallop, strap, shoot.",
      "The corpus pair is a choice: this artist against pop, this subreddit against a novel. Different pair, different \"distinctive.\""
     ]
    },
    {
     "h": "The shuffle test: is the gap real?",
     "points": [
-     "The question chance asks: could randomly dealt labels produce a gap this big?",
+     "The question: could randomly dealt labels produce a gap this large?",
      "Shuffle the labels, recount, 1,000 times. Mark where the real gap lands in that pile.",
      "Chance rarely matches it: a finding. Chance matches it often: a coincidence.",
      "It says \"probably not chance.\" It never says \"big enough to matter.\" Effect size is your argument to make."
@@ -160,7 +160,7 @@
    },
    {
     "t": "0:25",
-    "a": "For fun, before any complications: the words one artist uses far more than everyone else, their signature vocabulary against a pop baseline."
+    "a": "A brief demonstration before the complications: the words one artist uses far more than everyone else, a signature vocabulary measured against a pop baseline."
    },
    {
     "t": "0:30",
@@ -184,7 +184,7 @@
    },
    {
     "t": "1:42",
-    "a": "Is the difference real? The shuffle test: shuffle the labels, recount, a thousand times. If chance alone often makes a gap this big, don't trust it; if it almost never does, you have a finding. Real-but-tiny is still tiny."
+    "a": "Is the difference real? The shuffle test: shuffle the labels and recount, one thousand times. If chance alone frequently produces a gap this large, the difference should not be trusted; if it almost never does, the finding stands. A difference can be real and still small."
    },
    {
     "t": "1:50",
@@ -193,12 +193,12 @@
   ],
   "reading": "Wolfram, What Is ChatGPT Doing (opening sections only)",
   "supplement": "Zipf's law, the straight line in every text",
-  "sketch": "Count something in a text you love; one chart; one sentence naming a choice. Comparing two things? Shuffle-test it.",
+  "sketch": "Count something in a text you care about; one chart; one sentence naming a choice. If the count compares two things, shuffle-test the gap.",
   "check": "Explain it: why two tokenizers split a sentence differently, and what your stemming choice changed. (Competencies 3, 5.)",
   "threads": [
    {
     "name": "Beyond counting",
-    "note": "Counting is the honest floor, with no notion of meaning. This sets up the Week 5 payoff."
+    "note": "Counting is the simplest tool and has no notion of meaning. Week 5 addresses that limit."
    },
    {
     "name": "Every count is a choice",
@@ -206,21 +206,21 @@
    },
    {
     "name": "Is the difference real?",
-    "note": "Shuffle the labels and count again, a thousand times; if chance often beats your gap, don't trust it."
+    "note": "Shuffle the labels and count again, one thousand times; if chance often matches your gap, do not trust it."
    }
   ]
  },
  {
   "n": 3,
   "title": "Classification: Counting with Weights",
-  "promise": "Teach a machine a bias in ten minutes, build a classifier and read its mind, and preview the full methods menu before next week's commitment.",
+  "promise": "Teach a machine a bias in ten minutes, build a classifier and read the weights it learned, and preview the full menu of methods before next week's commitment.",
   "tool": "Classification. Train a reader and read what it learned",
   "comps": "2, 4, 5",
   "admire": "Ted Underwood's genre prediction (Distant Horizons, 2019): a logistic regression, the exact tool of today's lab, trained to recognize detective fiction and science fiction across a century of novels.",
   "interrogate": "What counts as science fiction is a choice built into the training labels. And the model's most famous error, misreading Pynchon's The Crying of Lot 49, a detective-fiction spoof, shows genre boundaries are real but fuzzy. A classifier's mistakes teach as much as its successes; yours will too.",
   "content": [
    {
-    "h": "Underwood's classifier, in particulars",
+    "h": "Underwood's classifier, in detail",
     "points": [
      "A logistic regression, the exact tool of today's lab, trained on a century of novels to recognize detective fiction and science fiction.",
      "Its most famous error is the lesson: it misreads Pynchon's The Crying of Lot 49, a novel critics call a detective-fiction spoof.",
@@ -238,12 +238,12 @@
     ]
    },
    {
-    "h": "You taught it that",
+    "h": "The training set is the lesson",
     "points": [
      "Teachable Machine, live: a cat/dog model trained only on orange cats and brown dogs.",
      "The room predicts what a black cat will do. Then watches it happen.",
      "Bias is not a ghost in the machine. It is the training set, and you assembled it.",
-     "One line to carry out: today's classifier is one neuron; stack many and you have Week 7's model."
+     "One connection to remember: today's classifier is one neuron; stack many and you have Week 7's model."
     ]
    },
    {
@@ -266,11 +266,11 @@
    },
    {
     "t": "0:22",
-    "a": "Counting with weights, the lab: each word casts a weighted vote; a logistic regression adds them up. Train it on a pop corpus, then read the signed coefficients, its mind on the table."
+    "a": "Counting with weights, the lab: each word casts a weighted vote; a logistic regression adds them up. Train it on a pop corpus, then read the signed coefficients: the model's reasoning, laid out in full."
    },
    {
     "t": "0:52",
-    "a": "For fun: the words that most predict \"breakup song\" or \"this reviewer hated it.\""
+    "a": "A short demonstration: the words that most predict \"breakup song\" or \"this reviewer hated it.\""
    },
    {
     "t": "0:57",
@@ -300,11 +300,11 @@
   "threads": [
    {
     "name": "The reader you can see",
-    "note": "The transparent classifier: read its signed weights, its mind on the table. Week 7 brings the opaque one."
+    "note": "The transparent classifier: read its signed weights and see exactly what it learned. Week 7 introduces the opaque counterpart."
    },
    {
-    "name": "You taught it the bias",
-    "note": "The Teachable Machine reveal, a training set teaches a machine its prejudice."
+    "name": "Bias comes from the training set",
+    "note": "The Teachable Machine demonstration: a machine learns the prejudice of the data it is given."
    },
    {
     "name": "Every choice is a choice",
@@ -319,19 +319,19 @@
   "tool": "The project (no new mechanism this week)",
   "comps": "2, 6",
   "admire": "A Pudding \"How We Made\u2026\" process post, the messy middle, where every polished piece had a moment its maker thought it wouldn't work.",
-  "interrogate": "Listen across the pitches for questions too vague to answer, corpora that don't exist as accessible data, methods chosen for vibes, and the quiet scaling-down of ambition.",
+  "interrogate": "Listen across the pitches for questions too vague to answer, corpora that don't exist as accessible data, methods chosen on instinct rather than fit, and the quiet scaling-down of ambition.",
   "content": [
    {
-    "h": "A pitch that survives contact",
+    "h": "What a viable pitch contains",
     "points": [
      "Three minutes, hard cap: your corpus (existence proof on screen), your two methods, and what would count as a finding.",
      "\"Explore themes in music\" is not answerable. \"Did Billboard #1 lyrics narrow in vocabulary 1990-2020?\" is.",
      "A null result, honestly shown, is a complete project: \"I expected X, the data doesn't show it, here's how I know.\"",
-     "The pivot kit exists because corpora fail. Adopting a fallback pair is normal, not defeat."
+     "The pivot kit exists because corpora fail. Adopting a fallback pair is normal, not a failure."
     ]
    },
    {
-    "h": "The licensing line, in one slide",
+    "h": "Licensing rules, in one slide",
     "points": [
      "CC0 museum data and public-domain books: use freely, republish freely.",
      "Academic corpora: analyze, don't redistribute. Lyrics and review text: metadata and counts only.",
@@ -343,8 +343,8 @@
     "h": "Three routes to a corpus",
     "points": [
      "Route 1, the common case: a prepared file. pd.read_csv(url), gdown for Drive links, load_dataset() for Hugging Face.",
-     "Route 2, the polite front door: an API. The Met's endpoint returns JSON, no key required.",
-     "Route 3, the back door: scrape, carefully. Read robots.txt and the ToS, go slow, take only what you need, never republish.",
+     "Route 2: an API, the sanctioned route. The Met's endpoint returns JSON, no key required.",
+     "Route 3, a last resort: scraping, done carefully. Read robots.txt and the terms of service, request slowly, take only what you need, never republish.",
      "Whatever the route: save the result to your Drive project folder today. Week 5 depends on it."
     ]
    },
@@ -381,7 +381,7 @@
    },
    {
     "t": "1:30",
-    "a": "Collect-and-build lab: point the cookbook notebook at your corpus, reshape it, and save it to your Drive project folder so it's there next week (when the Week 1 Drive mount pays off), and fork the publishing template. Your project repo is born today."
+    "a": "Collect-and-build lab: point the cookbook notebook at your corpus, reshape it, and save it to your Drive project folder so it's there next week (when the Week 1 Drive mount pays off), and fork the publishing template. Your project repository starts today."
    },
    {
     "t": "1:55",
@@ -410,7 +410,7 @@
  {
   "n": 5,
   "title": "Embeddings: A Map of Meaning",
-  "promise": "Watch your own corpus, text or images, sort itself by meaning, see the finding counting couldn't give you, and learn the same trick is how \"For You\" feeds place you.",
+  "promise": "Watch your own corpus, text or images, sort itself by meaning, see the finding counting could not give you, and learn that the same technique drives \"For You\" recommendation feeds.",
   "tool": "Embeddings, the heart of the course, the leap past counting",
   "comps": "4, 5",
   "admire": "A debate, two readings of one discovery: embedding space contains directions.",
@@ -422,7 +422,7 @@
      "To a counter, \"happy\" and \"joyful\" are unrelated strings. Zero overlap.",
      "An embedding turns each item into a vector, a few hundred numbers, positioned by the company the item keeps.",
      "Near in that space means similar in learned context: happy and joyful end up neighbors because they appear in the same company.",
-     "Neighbors are context-mates, NOT dictionary synonyms. Kill that misconception today, out loud."
+     "Neighbors are context-mates, not dictionary synonyms. Correct this misconception explicitly."
     ]
    },
    {
@@ -440,11 +440,11 @@
      "PCA and t-SNE flatten the same vectors two ways: clusters tighten, distances shift, a grouping you trusted can dissolve.",
      "\"Near\" means probably similar. Exact distances on the flattened map mean little.",
      "A visualization is an argument with decisions baked in: projection, axes, what's dropped.",
-     "Tonight's toggle: PCA vs. t-SNE on your own map. Name one cluster you believe and one you don't."
+     "Homework: toggle PCA against t-SNE on your own map. Name one cluster you believe and one you do not."
     ]
    },
    {
-    "h": "The recommender aside (five minutes, boxed)",
+    "h": "The recommender aside (five minutes, strictly limited)",
     "points": [
      "\"For You\" is this same map plus your history: you are a point in taste-space, the feed is your nearest neighbors.",
      "Spotify's own researchers found algorithmic listening less diverse than organic listening (Anderson et al., 2020).",
@@ -471,7 +471,7 @@
    },
    {
     "t": "1:05",
-    "a": "Project lab: push your embeddings, hunt the surprise cluster. A five-minute recommenders aside: \"For You\" is this same map plus your history. One-on-ones begin at the side."
+    "a": "Project lab: extend your embeddings and look for unexpected clusters. A five-minute aside on recommenders: \"For You\" is this same map plus your history. One-on-ones begin at the side."
    },
    {
     "t": "1:50",
@@ -507,7 +507,7 @@
   "interrogate": "What counts as a \"character-centered shot\" is an operational definition, and a different one tells a different story; two shows is a slice, not \"television.\"",
   "content": [
    {
-    "h": "The featured pair, in particulars",
+    "h": "The featured pair, in detail",
     "points": [
      "Arnold, Tilton & Berke (2019): computer vision on every shot of Bewitched and I Dream of Jeannie, measuring how the camera frames each lead.",
      "\"Character-centered shot\" is an operational definition. Change the definition, change the story.",
@@ -524,12 +524,12 @@
     ]
    },
    {
-    "h": "The hand-labeling set-piece (nobody skips it)",
+    "h": "The hand-labeling exercise (required of everyone)",
     "points": [
      "Label 30 items from your own corpus, by hand, no AI.",
      "The AI labels the same 30. Study every disagreement: is it wrong, or are you?",
      "This is calibration: learning exactly where the machine's reading of YOUR data breaks.",
-     "Deliberately Gemini-free. This beat is the one thing code cannot teach."
+     "Deliberately done without the AI. It is the one exercise code cannot teach."
     ]
    }
   ],
@@ -552,7 +552,7 @@
    },
    {
     "t": "1:15",
-    "a": "The hand-labeling set-piece (Gemini-free): label 30 items from your corpus by hand; the AI labels the same 30; study every disagreement. Nobody skips this."
+    "a": "The hand-labeling set-piece (Gemini-free): label 30 items from your corpus by hand; the AI labels the same 30; study every disagreement. No one skips this."
    },
    {
     "t": "1:40",
@@ -629,7 +629,7 @@
    },
    {
     "t": "0:35",
-    "a": "Confidence, and when to trust it: ask the model not just what but how sure. Sort by confidence, trust the sure labels, hand-check the unsure ones, which is exactly which 30 to pull for Week 6."
+    "a": "Confidence, and when to trust it: ask the model not just what but how sure. Sort by confidence, trust the labels the model is sure of, and hand-check the unsure ones."
    },
    {
     "t": "0:50",
@@ -666,17 +666,17 @@
  {
   "n": 8,
   "title": "Models as Time Capsules + Settle the Finding",
-  "promise": "Meet models that live entirely inside one historical period, learn what a famous model has secretly memorized, kill your own finding to see what survives, and leave with a prose draft.",
+  "promise": "Meet models that live entirely inside one historical period, learn what a famous model has secretly memorized, stress-test your own finding to see what survives, and leave with a prose draft.",
   "tool": "What a trained model is: a compression of its corpus",
   "comps": "3, 4, 5",
   "admire": "TimeCapsuleLLM, a small GPT trained from scratch on nothing but 1800s London publications, and \"Speak, Memory\" (Bamman's lab), which probes which books GPT-4 has effectively memorized.",
   "interrogate": "A period model speaks only for the period's published, surviving, digitized voices. And memorization isn't reading: models score higher on memorized books, so an LLM that seems to read your corpus may be partly reciting it, a validity problem, not just an ethics one.",
   "content": [
    {
-    "h": "Kill it, then keep it",
+    "h": "Stress-test the finding",
     "points": [
-     "The Bollen move, turned on your own finding: remove the slice that worries you most and re-run.",
-     "Survives? Say so, with the check shown. Dies? You just learned what your finding was made of.",
+     "Bollen's method, applied to your own finding: remove the slice that most concerns you and re-run.",
+     "If the pattern survives, report it with the check shown. If it does not, you have learned what the finding depended on.",
      "Minimum bar: ONE robustness check, the one that most threatens your result.",
      "\"I expected X, the data doesn't show it, here's how I know\" is a complete, publishable result."
     ]
@@ -686,7 +686,7 @@
     "points": [
      "Speak, Memory (Chang et al., 2023): name-cloze tests show GPT-4 has memorized many novels; it fills in \"___ Bennet\" without reading anything.",
      "A model may be reciting your corpus rather than analyzing it: a validity problem, not only an ethics one.",
-     "TimeCapsuleLLM: train only on 1800s London text and the model speaks its era. A corpus bounds a mind.",
+     "TimeCapsuleLLM: train only on 1800s London text and the model speaks its era. A model is bounded by its corpus.",
      "Ask of every model you used: what was in its training data, and does that undercut MY claim?"
     ]
    },
@@ -706,7 +706,7 @@
    },
    {
     "t": "0:07",
-    "a": "Kill it, then keep what survives, one continuous arc on your own results: shuffle the labels and re-run; split the corpus in half; ask \"compared to what?\". Then compress whatever survived into one headline sentence."
+    "a": "Stress-test the finding, one continuous arc on your own results: shuffle the labels and re-run; split the corpus in half; ask \"compared to what?\". Then compress whatever survived into one headline sentence."
    },
    {
     "t": "0:52",
@@ -739,8 +739,8 @@
     "note": "A model may recite your corpus rather than read it, a validity problem, not just ethics."
    },
    {
-    "name": "Kill it, then keep it",
-    "note": "The Week 2 trial move, now turned on your own finding."
+    "name": "Test it, then keep what survives",
+    "note": "The Week 2 trial's method, now applied to your own finding."
    }
   ]
  },
@@ -771,10 +771,10 @@
     ]
    },
    {
-    "h": "Ship it",
+    "h": "Publish",
     "points": [
      "Mullen's test, the course standard: \"I must be able to run it.\" The notebook works for someone who is not you.",
-     "A deployed URL leaves this room today.",
+     "Every student leaves this session with a deployed URL.",
      "The essay shows the thinking. The notebook proves it happened."
     ]
    }
@@ -827,7 +827,7 @@
  {
   "n": 10,
   "title": "The Showcase",
-  "promise": "A 90-minute public event followed by a reception. Snacks. Music. Friends and family invited. Printed program with everyone's titles and URLs.",
+  "promise": "A 90-minute public event followed by a reception, with friends and family invited. A printed program lists every project's title and URL.",
   "tool": "A public celebration; the two capstone assessments",
   "comps": "all eight",
   "admire": "The closing triptych, neural networks meet the art world: Edmond de Belamy (the market), Anna Ridler's Mosaic Virus (the labor), Refik Anadol's Unsupervised at MoMA (the museum).",
@@ -842,12 +842,12 @@
     ]
    },
    {
-    "h": "The send-off triptych",
+    "h": "The closing triptych",
     "points": [
      "Edmond de Belamy, the AI portrait that sold for $432,500: who is the author?",
      "Anna Ridler's Mosaic Virus: she photographed 10,000 tulips herself to build the training set: whose labor is the data?",
      "Anadol's Unsupervised at MoMA: the museum's own collection becomes the art: who decided what went in?",
-     "You spent Week 1 loading a museum's catalog. You end watching a catalog become the art."
+     "Week 1 began with loading a museum's catalog. The course ends watching a catalog become the art."
     ]
    },
    {
@@ -864,7 +864,7 @@
   "flow": [
    {
     "t": "0:00",
-    "a": "Welcome. This is a show, not a defense. The closing Look at This."
+    "a": "Welcome. This is a celebration, not a defense. The closing Look at This."
    },
    {
     "t": "0:10",

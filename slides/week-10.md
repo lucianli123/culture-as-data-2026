@@ -6,7 +6,7 @@ format: revealjs
 
 # Week 10 · The Showcase
 
-> A 90-minute public event followed by a reception. Snacks. Music. Friends and family invited. Printed program with everyone's titles and URLs.
+> A 90-minute public event followed by a reception, with friends and family invited. A printed program lists every project's title and URL.
 
 *Tool / method: A public celebration; the two capstone assessments · Competencies: all eight*
 
@@ -24,12 +24,12 @@ When a machine reads a culture's archive, what is it showing us, and who decided
 - The oral walkthrough is the one deliverable an AI cannot produce for you.
 - Expect three questions: what did you choose, what would you distrust, what would you do next?
 
-## The send-off triptych
+## The closing triptych
 
 - Edmond de Belamy, the AI portrait that sold for $432,500: who is the author?
 - Anna Ridler's Mosaic Virus: she photographed 10,000 tulips herself to build the training set: whose labor is the data?
 - Anadol's Unsupervised at MoMA: the museum's own collection becomes the art: who decided what went in?
-- You spent Week 1 loading a museum's catalog. You end watching a catalog become the art.
+- Week 1 began with loading a museum's catalog. The course ends watching a catalog become the art.
 
 ## What you can do now
 
@@ -47,7 +47,7 @@ When a machine reads a culture's archive, what is it showing us, and who decided
 
 ## The session
 
-- **0:00**  Welcome. This is a show, not a defense. The closing Look at This.
+- **0:00**  Welcome. This is a celebration, not a defense. The closing Look at This.
 - **0:10**  Presentations, 4–5 min each: corpus, headline finding, one surprise. Live URL projected.
 - **1:30**  Reception. Laptops at every seat with everyone's URLs loaded.
 

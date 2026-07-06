@@ -6,7 +6,7 @@ format: revealjs
 
 # Week 5 · Embeddings: A Map of Meaning
 
-> Watch your own corpus, text or images, sort itself by meaning, see the finding counting couldn't give you, and learn the same trick is how "For You" feeds place you.
+> Watch your own corpus, text or images, sort itself by meaning, see the finding counting could not give you, and learn that the same technique drives "For You" recommendation feeds.
 
 *Tool / method: Embeddings, the heart of the course, the leap past counting · Competencies: 4, 5*
 
@@ -23,7 +23,7 @@ Kozlowski, Taddy & Evans (2019) find a rich–poor axis in embedding space and r
 - To a counter, "happy" and "joyful" are unrelated strings. Zero overlap.
 - An embedding turns each item into a vector, a few hundred numbers, positioned by the company the item keeps.
 - Near in that space means similar in learned context: happy and joyful end up neighbors because they appear in the same company.
-- Neighbors are context-mates, NOT dictionary synonyms. Kill that misconception today, out loud.
+- Neighbors are context-mates, not dictionary synonyms. Correct this misconception explicitly.
 
 ## The debate: discovery, or bias read back?
 
@@ -37,9 +37,9 @@ Kozlowski, Taddy & Evans (2019) find a rich–poor axis in embedding space and r
 - PCA and t-SNE flatten the same vectors two ways: clusters tighten, distances shift, a grouping you trusted can dissolve.
 - "Near" means probably similar. Exact distances on the flattened map mean little.
 - A visualization is an argument with decisions baked in: projection, axes, what's dropped.
-- Tonight's toggle: PCA vs. t-SNE on your own map. Name one cluster you believe and one you don't.
+- Homework: toggle PCA against t-SNE on your own map. Name one cluster you believe and one you do not.
 
-## The recommender aside (five minutes, boxed)
+## The recommender aside (five minutes, strictly limited)
 
 - "For You" is this same map plus your history: you are a point in taste-space, the feed is your nearest neighbors.
 - Spotify's own researchers found algorithmic listening less diverse than organic listening (Anderson et al., 2020).
@@ -57,7 +57,7 @@ Kozlowski, Taddy & Evans (2019) find a rich–poor axis in embedding space and r
 - **0:10**  The beyond-counting moment: put Week 2 beside today. There you counted the words around an axis you care about; now embed them and watch them cluster. Run it on something the room enjoys, a beloved artist's songs sorted by mood and era, and groupings appear that counting couldn't see. Same question, two tools, the second visibly richer. Name the idea: an item becomes a vector, position learned from the company it keeps.
 - **0:25**  Embed your own corpus, text or images. Image projects embed their pictures and watch them group by untagged style. The embedding model is an open one from Hugging Face, the hub where open models live (the same place Week 8's period models come from). And here charts stop being neutral: switch PCA to t-SNE and the same data rearranges. A visualization is an argument with decisions baked in.
 - **0:55**  Break
-- **1:05**  Project lab: push your embeddings, hunt the surprise cluster. A five-minute recommenders aside: "For You" is this same map plus your history. One-on-ones begin at the side.
+- **1:05**  Project lab: extend your embeddings and look for unexpected clusters. A five-minute aside on recommenders: "For You" is this same map plus your history. One-on-ones begin at the side.
 - **1:50**  Gemini-free check and check-out.
 
 ## Reading & homework

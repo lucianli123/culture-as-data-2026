@@ -31,10 +31,10 @@ There's no single right way, only choices you can defend. Yours will be choices 
 - A structure that works: hook, corpus note, finding, how-it-could-be-wrong, appendix.
 - Write the headline finding in one sentence before you write anything else. If you can't, the essay isn't ready.
 
-## Ship it
+## Publish
 
 - Mullen's test, the course standard: "I must be able to run it." The notebook works for someone who is not you.
-- A deployed URL leaves this room today.
+- Every student leaves this session with a deployed URL.
 - The essay shows the thinking. The notebook proves it happened.
 
 ## Three modes today (about a third each)
