@@ -55,7 +55,8 @@ culture-as-data/
 │   ├── week07_annotator.ipynb             # fully worked
 │   ├── week07_annotator_GUIDED.ipynb
 │   ├── week07_annotator_SKELETON.ipynb
-│   └── cool-methods/              # optional starter notebooks (stylometry, color, etc.)
+│   ├── cool-methods/              # optional starter notebooks (stylometry, color, etc.)
+│   └── social-media-starters/     # Reddit (archives + PRAW + fiction loader), Bluesky, Mastodon, Gutenberg, scraper template
 ├── kits/
 │   ├── common-errors-cheatsheet.md        # the unblocking kit (see §3)
 │   ├── licensing-one-pager.md             # the Week-4 data-licensing rubric

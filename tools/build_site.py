@@ -80,6 +80,14 @@ NOTEBOOK_VARIANTS = {
     5: [("GUIDED", "notebooks/week05_embeddings_GUIDED.ipynb"), ("SKELETON", "notebooks/week05_embeddings_SKELETON.ipynb")],
     7: [("GUIDED", "notebooks/week07_annotator_GUIDED.ipynb"), ("SKELETON", "notebooks/week07_annotator_SKELETON.ipynb")],
 }
+SOCIAL_STARTERS = [
+    ("notebooks/social-media-starters/reddit_starter.ipynb", "Reddit, three routes", "Historical archives on Hugging Face, the official API via PRAW, and a fiction loader for r/nosleep and r/HFY."),
+    ("notebooks/social-media-starters/bluesky_jetstream.ipynb", "Bluesky firehose", "The most open social corpus: no key, hundreds of thousands of public posts an hour."),
+    ("notebooks/social-media-starters/mastodon_api.ipynb", "Mastodon", "Per-instance public timelines; the server you choose is a corpus choice."),
+    ("notebooks/social-media-starters/gutenberg_fiction.ipynb", "Project Gutenberg", "Public-domain genre fiction by ID: full text, zero legal risk."),
+    ("notebooks/social-media-starters/letterboxd_scraper_template.ipynb", "Polite scraper template", "The Letterboxd pattern with the delay and checklist built in; Goodreads via the UCSD Book Graph instead."),
+]
+
 COOL_METHODS = [
     ("notebooks/cool-methods/character_networks.ipynb", "Character networks", "Who shares a scene with whom: a network from any fiction corpus."),
     ("notebooks/cool-methods/sentiment_arcs.ipynb", "Sentiment arcs", "The Syuzhet move in Python, smoothing controversy included."),
@@ -949,6 +957,9 @@ def build_notebooks():
         f"<a href='{GH_REPO}/raw/main/slides/pptx/week-{w['n']:02d}.pptx'>Download .pptx</a> &nbsp; "
         f"<a href='{GH_REPO}/blob/main/slides/week-{w['n']:02d}.md'>Outline</a></td></tr>"
         for w in WEEKS)
+    social = "".join(
+        f"<li><strong>{esc(name)}</strong>, {esc(desc)} <a href='{COLAB}{path}'>Open in Colab</a></li>"
+        for path, name, desc in SOCIAL_STARTERS)
     cool = "".join(
         f"<li><strong>{esc(name)}</strong>, {esc(desc)} <a href='{COLAB}{path}'>Open in Colab</a></li>"
         for path, name, desc in COOL_METHODS)
@@ -976,6 +987,12 @@ def build_notebooks():
   <section>
     <h2>Optional method starters</h2>
     <ul>{cool}</ul>
+  </section>
+
+  <section>
+    <h2>Getting social-media and fiction data</h2>
+    <p>Ready-made loaders for the post-API era, used from Week 4 on. Each runs offline on a built-in sample; live pulls are opt-in.</p>
+    <ul>{social}</ul>
   </section>
 
   <section>

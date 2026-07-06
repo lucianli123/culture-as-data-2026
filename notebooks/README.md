@@ -32,6 +32,12 @@ healthy; a red one points you at the exact cheat-sheet entry.
 | `week07_annotator_GUIDED.ipynb` | 2 | completion (fuller guidance) | annotator |
 | `week07_annotator_SKELETON.ipynb` | 2 | completion (skeleton) | annotator |
 
+Two optional folders hold starters, used per-project rather than per-week:
+`cool-methods/` (character networks, sentiment arcs, stylometry, ModernBERT fine-tune) and
+`social-media-starters/` (Reddit via archives/PRAW with a fiction loader, Bluesky Jetstream,
+Mastodon, Project Gutenberg, and a polite Letterboxd scraper template). All run offline on
+built-in samples; live pulls are opt-in.
+
 Act-1 ships fully-worked notebooks. Act-2 ships **completion problems** in two parallel
 difficulty versions, *GUIDED* (fuller scaffolding) and *SKELETON* (more blanked), so one room
 serves a first-timer and an experienced coder at once.
