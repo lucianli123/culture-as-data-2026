@@ -56,5 +56,6 @@ There's no single right way, only choices you can defend. Yours will be choices 
 
 - **Reading:** None
 - **Supplement:** [A Pudding process post](https://pudding.cool/process/pivot-continue-down/)
+- **Deeper (optional):** [the Critical Inquiry online forum](https://critinq.wordpress.com/2019/03/31/computational-literary-studies-a-critical-inquiry-online-forum/): Underwood and others answer Da, a discipline arguing about itself in public
 - **Sketch:** Title your essay; write the headline finding in one sentence.
 - **Check (AI closed):** Fix it: a planted bug in publishing/layout code (or in opted-in JS). (Competencies 1, 7.)

@@ -57,5 +57,6 @@ The prompt is the codebook; agreement with humans isn't ground truth; and the mo
 
 - **Reading:** [NYT v. OpenAI](https://www.npr.org/2025/03/26/nx-s1-5288157/new-york-times-openai-copyright-case-goes-forward), read against your Week 4 licensing conversation
 - **Supplement:** [Gilardi et al., full](https://www.pnas.org/doi/10.1073/pnas.2305016120); [Bamman et al., LLM classification in cultural analytics (CHR 2024)](https://arxiv.org/abs/2410.12029)
+- **Deeper (optional):** [Ziems et al., Can LLMs Transform Computational Social Science? (CL 2024)](https://doi.org/10.1162/coli_a_00502), the systematic evaluation behind this week's method
 - **Sketch:** Show one label the AI got confidently wrong and one it nailed; say how you knew.
 - **Check (AI closed):** Explain it: what is your labeling prompt deciding on your behalf, and how would you check whether to trust a given label? (Competencies 2, 5.)

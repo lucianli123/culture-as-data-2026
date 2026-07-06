@@ -55,7 +55,8 @@ A period model speaks only for the period's published, surviving, digitized voic
 
 ## Reading & homework
 
-- **Reading:** None required
+- **Reading:** [Ted Chiang, ChatGPT Is a Blurry JPEG of the Web (2023)](https://www.newyorker.com/tech/annals-of-technology/chatgpt-is-a-blurry-jpeg-of-the-web), the compression idea this week is built on
 - **Supplement:** [TimeCapsuleLLM](https://github.com/haykgrigo3/TimeCapsuleLLM) and [Speak, Memory](https://aclanthology.org/2023.emnlp-main.453/); period models [MonadGPT](https://huggingface.co/Pclanglais/MonadGPT) and [MacBERTh](https://huggingface.co/emanjavacas/MacBERTh)
+- **Deeper (optional):** [Da, The Computational Case Against Computational Literary Studies (2019)](https://doi.org/10.1086/702594), the field's sharpest critique, read against your own robustness checks
 - **Sketch:** Expand to 600 to 1,000 words; write your show-your-work appendix and which checks survived.
 - **Check (AI closed):** Explain it: your headline finding, and what it does not show. (Competencies 3, 4.)

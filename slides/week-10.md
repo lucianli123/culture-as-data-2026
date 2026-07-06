@@ -55,5 +55,6 @@ When a machine reads a culture's archive, what is it showing us, and who decided
 
 - **Reading:** None
 - **Supplement:** [Edmond de Belamy](https://en.wikipedia.org/wiki/Edmond_de_Belamy); [Ridler's Mosaic Virus](https://annaridler.com/works/myriad-tulips); [Anadol's Unsupervised](https://www.moma.org/calendar/exhibitions/5535)
+- **Deeper (optional):** [Elgammal et al., CAN: Creative Adversarial Networks (2017)](https://arxiv.org/abs/1706.07068), the paper behind the de Belamy generation of AI art
 - **Sketch:** Within a week after: a private one-page reflection.
 - **Check (AI closed):** The oral walkthrough (the capstone): how you got your headline result, what it does not show, and how the tools actually work. Plus the workbench intro. (All eight competencies.)

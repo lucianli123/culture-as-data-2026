@@ -100,9 +100,10 @@ function build(w){
   s=pres.addSlide(); s.background={color:WHITE};
   s.addText("Reading & homework",{x:M,y:0.7,w:11,h:0.8,fontFace:SERIF,fontSize:30,bold:true,color:INK});
   const items=[["Reading",w.reading,TERRA],["Supplement",w.supplement,GREEN],
-               ["Sketch",w.sketch,GOLD],["Check (AI closed)",w.check,TERRA]];
+               ["Deeper (optional)",w.deeper||"None",GOLD],
+               ["Sketch",w.sketch,GREEN],["Check (AI closed)",w.check,TERRA]];
   items.forEach((it,i)=>{
-    const y=1.9+i*1.25;
+    const y=1.75+i*1.05;
     s.addShape("ellipse",{x:M,y:y+0.08,w:0.24,h:0.24,fill:{color:it[2]},line:{type:"none"}});
     s.addText(it[0],{x:M+0.45,y:y,w:11.4,h:0.4,fontFace:SANS,fontSize:15,bold:true,color:it[2]});
     s.addText(it[1],{x:M+0.45,y:y+0.42,w:11.4,h:0.8,fontFace:SANS,fontSize:14,color:INK,valign:"top",autoFit:true});

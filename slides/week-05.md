@@ -64,5 +64,6 @@ Kozlowski, Taddy & Evans (2019) find a rich–poor axis in embedding space and r
 
 - **Reading:** [Alammar, The Illustrated Word2Vec](https://jalammar.github.io/illustrated-word2vec/), plus the debate: [Kozlowski/Taddy/Evans, The Geometry of Culture (ASR 2019)](https://journals.sagepub.com/doi/10.1177/0003122419877135) vs. [Bolukbasi et al. (2016)](https://arxiv.org/abs/1607.06520)
 - **Supplement:** The second pairing: [Caliskan et al. (2017)](https://arxiv.org/abs/1608.07187) vs. [Soni/Klein, How Words Lead to Justice](https://www.publicbooks.org/how-words-lead-to-justice/); [Anderson et al., Spotify diversity](https://research.atspotify.com/algorithmic-effects-on-the-diversity-of-consumption-on-spotify/)
+- **Deeper (optional):** [Kozlowski et al., The Geometry of Culture (2019)](https://doi.org/10.1177/0003122419877135) in full; [Wattenberg, Viégas &amp; Johnson, How to Use t-SNE Effectively (Distill 2016)](https://distill.pub/2016/misread-tsne/)
 - **Sketch:** Toggle PCA vs. t-SNE and screenshot how the map changes; name one cluster you believe and one you don't.
 - **Check (AI closed):** Explain it: on your map, name one cluster you believe is real and one that's probably a projection artifact, and how you'd tell. (Competency 4.)

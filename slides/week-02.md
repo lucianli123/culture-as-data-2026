@@ -69,5 +69,6 @@ The rising words are fiction-words, and Google scanned more fiction after 2000. 
 
 - **Reading:** [Wolfram, What Is ChatGPT Doing](https://writings.stephenwolfram.com/2023/02/what-is-chatgpt-doing-and-why-does-it-work/) (opening sections only)
 - **Supplement:** [Zipf's law](https://en.wikipedia.org/wiki/Zipf%27s_law), the straight line in every text
+- **Deeper (optional):** [Grimmer &amp; Stewart, Text as Data (2013)](https://web.stanford.edu/~jgrimmer/tad2.pdf), §1–4: all quantitative models of language are wrong, but some are useful
 - **Sketch:** Count something in a text you care about; one chart; one sentence naming a choice. If the count compares two things, shuffle-test the gap.
 - **Check (AI closed):** Explain it: why two tokenizers split a sentence differently, and what your stemming choice changed. (Competencies 3, 5.)

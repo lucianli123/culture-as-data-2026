@@ -128,7 +128,7 @@ The rules don't work by being posted. In Week 1 the instructor models each rule 
 
 ## Reading
 
-One main reading per week (≤2,500 words or one 15-minute video/podcast). One optional supplement. Academic papers are "abstract + figures" reads, never full. A deeper-cuts list is available for the curious but never required.
+One required reading per week, kept under thirty minutes. One optional supplement. And one *deeper* option each week — the full paper or serious essay behind the session, never required — for those who want the scholarship itself. Required academic papers stay "abstract + figures" reads; the deeper column is where full papers live.
 
 **How to read everything here.** Bring three questions to every reading and featured project, and we'll often open them up in class: *What did the authors decide?* (the choices — what to count, what to exclude, where to draw the line, what to claim). *What's the load-bearing assumption?* (the thing that, if it's wrong, sinks the conclusion). *Where's the gap?* (the step that doesn't quite follow, the alternative reading they didn't address). This isn't about catching people out. The best work in the field is rigorous *and* contestable at once; reading well means holding both. Several of the assigned pieces are scholars doing exactly this to their own field — and to themselves.
 
@@ -430,18 +430,18 @@ If none of these spark interest, talk to the instructor — there are dozens mor
 
 ## Reading List at a Glance
 
-| Week | Main | Supplement |
-|---|---|---|
-| 1 | Bollen et al. (PNAS 2021), abstract + the hockey-stick figure, **plus** the one-page Schmidt/Piantadosi/Mahowald critique — the fight we put on trial in Week 2 | Robin Sloan, "Writing with the machine" |
-| 2 | Wolfram, "What Is ChatGPT Doing…" — opening sections only (generation built up from counting) | Zipf's law, the eerie straight line in every text (5-minute demo) |
-| 3 | Browse *America's Public Bible* (americaspublicbible.org) — intro + a verse or two | Underwood, "Using GPT-4 to measure the passage of time in fiction"; Juola's Rowling unmasking |
-| 4 | Krause, "Data Biographies: Getting to Know Your Data" (We All Count) | Freelon, "Post-API Age" |
-| 5 | Alammar, "The Illustrated Word2Vec" + the debate pair: Kozlowski/Taddy/Evans, "The Geometry of Culture" (ASR 2019), abstract + figures **vs.** Bolukbasi et al. (2016), abstract | The second pairing: Caliskan et al. (2017) vs. Soni/Klein/Eisenstein ("How Words Lead to Justice"); Anderson et al. (Spotify, 2020) on algorithmic diversity |
-| 6 | Gilardi et al. (2023), abstract — the AI as a cheaper coder | The Reagan/Swafford smoothing fight (sentiment projects) |
-| 7 | NYT v. OpenAI complaint summary, or a Books3 / pirated-books explainer — read against your own Week 4 licensing conversation | Gilardi et al. (2023), full |
-| 8 | None required | MonadGPT and MacBERTh model pages — two more time capsules |
-| 9 | None | A Pudding "how we made it" post |
-| 10 | None | The triptych's coverage: the de Belamy authorship story, Ridler's *Mosaic Virus*, Anadol's *Unsupervised* and its critics |
+| Week | Required | Supplement | Deeper (optional) |
+|---|---|---|---|
+| 1 | Bollen et al. (PNAS 2021), abstract + the hockey-stick figure, **plus** the one-page Schmidt/Piantadosi/Mahowald critique — the fight we put on trial in Week 2 | Robin Sloan, "Writing with the machine" | Moretti, “Conjectures on World Literature” (2000) |
+| 2 | Wolfram, "What Is ChatGPT Doing…" — opening sections only (generation built up from counting) | Zipf's law, the eerie straight line in every text (5-minute demo) | Grimmer & Stewart, “Text as Data” (2013), §1–4 |
+| 3 | Browse *America's Public Bible* (americaspublicbible.org) — intro + a verse or two | Underwood, "Using GPT-4 to measure the passage of time in fiction"; Juola's Rowling unmasking | Underwood, “The Life Cycles of Genres” (2016), in full |
+| 4 | Krause, "Data Biographies: Getting to Know Your Data" (We All Count) | Freelon, "Post-API Age" | boyd & Crawford, “Critical Questions for Big Data” (2012) |
+| 5 | Alammar, "The Illustrated Word2Vec" + the debate pair: Kozlowski/Taddy/Evans, "The Geometry of Culture" (ASR 2019), abstract + figures **vs.** Bolukbasi et al. (2016), abstract | The second pairing: Caliskan et al. (2017) vs. Soni/Klein/Eisenstein ("How Words Lead to Justice"); Anderson et al. (Spotify, 2020) on algorithmic diversity | Kozlowski et al. (2019) in full; “How to Use t-SNE Effectively” (Distill 2016) |
+| 6 | Gilardi et al. (2023), abstract — the AI as a cheaper coder | The Reagan/Swafford smoothing fight (sentiment projects) | Arnold & Tilton, “Distant Viewing” (DSH 2019) |
+| 7 | NYT v. OpenAI complaint summary, or a Books3 / pirated-books explainer — read against your own Week 4 licensing conversation | Gilardi et al. (2023), full | Ziems et al., “Can LLMs Transform Computational Social Science?” (CL 2024) |
+| 8 | Chiang, “ChatGPT Is a Blurry JPEG of the Web” (2023) | MonadGPT and MacBERTh model pages — two more time capsules | Da, “The Computational Case Against Computational Literary Studies” (2019) |
+| 9 | None | A Pudding "how we made it" post | The *Critical Inquiry* forum: the field answers Da (2019) |
+| 10 | None | The triptych's coverage: the de Belamy authorship story, Ridler's *Mosaic Virus*, Anadol's *Unsupervised* and its critics | Elgammal et al., “CAN: Creative Adversarial Networks” (2017) |
 
 A deeper-cuts list (Moretti, *Data Feminism*, Bender et al.'s "Stochastic Parrots," Da's "Computational Case against Computational Literary Studies," Crawford & Paglen's "Excavating AI," Gonen & Goldberg's "Lipstick on a Pig," Pechenick et al. on the Google Books corpus, full Manovich, the Netflix Prize and its de-anonymization aftermath, and — on the training-data fight the course now foregrounds — the NYT v. OpenAI and Getty complaints, reporting on the Books3 corpus, and the $1.5 billion Bartz v. Anthropic settlement over training Claude on pirated books) is available but never required.
 

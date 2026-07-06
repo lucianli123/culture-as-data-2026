@@ -86,6 +86,7 @@
   ],
   "reading": "Bollen et al., the cognitive-distortions hockey stick (PNAS 2021), with the Schmidt et al. critique",
   "supplement": "Robin Sloan, Writing with the machine",
+  "deeper": "Moretti, Conjectures on World Literature (NLR 2000), the founding argument for reading culture at scale",
   "sketch": "One question from your life answerable with text or image data; three sentences.",
   "check": "Trace it: one written sentence predicting what your cell does before you run it. (Competency 1.)",
   "threads": [
@@ -193,6 +194,7 @@
   ],
   "reading": "Wolfram, What Is ChatGPT Doing (opening sections only)",
   "supplement": "Zipf's law, the straight line in every text",
+  "deeper": "Grimmer &amp; Stewart, Text as Data (2013), \u00a71\u20134: all quantitative models of language are wrong, but some are useful",
   "sketch": "Count something in a text you care about; one chart; one sentence naming a choice. If the count compares two things, shuffle-test the gap.",
   "check": "Explain it: why two tokenizers split a sentence differently, and what your stemming choice changed. (Competencies 3, 5.)",
   "threads": [
@@ -295,6 +297,7 @@
   ],
   "reading": "Mullen, America's Public Bible (intro + a verse)",
   "supplement": "Underwood on GPT-4 and fictional time; Juola's Rowling unmasking",
+  "deeper": "Underwood, The Life Cycles of Genres (2016), the full paper behind today's featured study",
   "sketch": "Train a quick logistic regression on a labeled set; screenshot its five most positive and negative words.",
   "check": "Explain it: read your classifier's top weights aloud, and name one input where it would fail and why. (Competencies 4, 5.)",
   "threads": [
@@ -390,6 +393,7 @@
   ],
   "reading": "Krause, Data Biographies (We All Count)",
   "supplement": "Freelon, Post-API Age",
+  "deeper": "boyd &amp; Crawford, Critical Questions for Big Data (2012), the canonical statement of what large datasets cannot tell you",
   "sketch": "Write your Data Biography (~400 words) and actually collect your corpus with the cookbook.",
   "check": "Explain it: your question aloud, what it omits, and where your data actually comes from. (Competencies 2, 6.)",
   "threads": [
@@ -480,6 +484,7 @@
   ],
   "reading": "Alammar, The Illustrated Word2Vec, plus the debate: Kozlowski/Taddy/Evans, The Geometry of Culture (ASR 2019) vs. Bolukbasi et al. (2016)",
   "supplement": "The second pairing: Caliskan et al. (2017) vs. Soni/Klein, How Words Lead to Justice; Anderson et al., Spotify diversity",
+  "deeper": "Kozlowski et al., The Geometry of Culture (2019) in full; Wattenberg, Vi\u00e9gas &amp; Johnson, How to Use t-SNE Effectively (Distill 2016)",
   "sketch": "Toggle PCA vs. t-SNE and screenshot how the map changes; name one cluster you believe and one you don't.",
   "check": "Explain it: on your map, name one cluster you believe is real and one that's probably a projection artifact, and how you'd tell. (Competency 4.)",
   "threads": [
@@ -565,6 +570,7 @@
   ],
   "reading": "Gilardi et al. (2023), the AI as a cheaper coder",
   "supplement": "Reagan et al., Six Basic Shapes (the smoothing fight); Manovich, Selfiecity",
+  "deeper": "Arnold &amp; Tilton, Distant Viewing (DSH 2019), the theory behind treating images as data",
   "sketch": "One disagreement between your labels and the AI's where you were right, and why.",
   "check": "Fix it: the planted bug. (Competencies 1, 7.)",
   "threads": [
@@ -646,6 +652,7 @@
   ],
   "reading": "NYT v. OpenAI, read against your Week 4 licensing conversation",
   "supplement": "Gilardi et al., full; Bamman et al., LLM classification in cultural analytics (CHR 2024)",
+  "deeper": "Ziems et al., Can LLMs Transform Computational Social Science? (CL 2024), the systematic evaluation behind this week's method",
   "sketch": "Show one label the AI got confidently wrong and one it nailed; say how you knew.",
   "check": "Explain it: what is your labeling prompt deciding on your behalf, and how would you check whether to trust a given label? (Competencies 2, 5.)",
   "threads": [
@@ -725,8 +732,9 @@
     "a": "Check and check-out."
    }
   ],
-  "reading": "None required",
+  "reading": "Ted Chiang, ChatGPT Is a Blurry JPEG of the Web (2023), the compression idea this week is built on",
   "supplement": "TimeCapsuleLLM and Speak, Memory; period models MonadGPT and MacBERTh",
+  "deeper": "Da, The Computational Case Against Computational Literary Studies (2019), the field's sharpest critique, read against your own robustness checks",
   "sketch": "Expand to 600 to 1,000 words; write your show-your-work appendix and which checks survived.",
   "check": "Explain it: your headline finding, and what it does not show. (Competencies 3, 4.)",
   "threads": [
@@ -807,6 +815,7 @@
   ],
   "reading": "None",
   "supplement": "A Pudding process post",
+  "deeper": "the Critical Inquiry online forum: Underwood and others answer Da, a discipline arguing about itself in public",
   "sketch": "Title your essay; write the headline finding in one sentence.",
   "check": "Fix it: a planted bug in publishing/layout code (or in opted-in JS). (Competencies 1, 7.)",
   "threads": [
@@ -877,6 +886,7 @@
   ],
   "reading": "None",
   "supplement": "Edmond de Belamy; Ridler's Mosaic Virus; Anadol's Unsupervised",
+  "deeper": "Elgammal et al., CAN: Creative Adversarial Networks (2017), the paper behind the de Belamy generation of AI art",
   "sketch": "Within a week after: a private one-page reflection.",
   "check": "The oral walkthrough (the capstone): how you got your headline result, what it does not show, and how the tools actually work. Plus the workbench intro. (All eight competencies.)",
   "threads": [

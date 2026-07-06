@@ -73,5 +73,6 @@ The 2,000 screenplays skew toward what was produced and digitized: is that "film
 
 - **Reading:** [Bollen et al., the cognitive-distortions hockey stick (PNAS 2021)](https://www.pnas.org/doi/10.1073/pnas.2102061118), with the [Schmidt et al. critique](https://www.pnas.org/doi/10.1073/pnas.2115010118)
 - **Supplement:** [Robin Sloan, Writing with the machine](https://www.robinsloan.com/notes/writing-with-the-machine/)
+- **Deeper (optional):** [Moretti, Conjectures on World Literature (NLR 2000)](https://newleftreview.org/issues/ii1/articles/franco-moretti-conjectures-on-world-literature), the founding argument for reading culture at scale
 - **Sketch:** One question from your life answerable with text or image data; three sentences.
 - **Check (AI closed):** Trace it: one written sentence predicting what your cell does before you run it. (Competency 1.)

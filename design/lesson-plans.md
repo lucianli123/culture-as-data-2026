@@ -62,6 +62,7 @@ Full worked notebooks. Participatory live coding. Exposure and a hook, not maste
 **Pacing.** This is the most front-loaded session of the term (room-setting, vocabulary, two labs, the error drill). The named flex is the *word-count half of Lab 2*: it compresses to five minutes or folds into Lab 1's solo turn — Week 2 goes deep on words anyway. The pixel half is protected; it is images' only Week 1 beat.
 
 **Reading (cliffhanger):** the Bollen/Schmidt fight, abstract-and-figure only — Bollen et al. 2021 (PNAS), the "hockey stick" of cognitive distortions counted in Google Books; then the one-page Schmidt/Piantadosi/Mahowald critique: the surge may be an artifact of *which books Google scanned*. Bring the three questions (what did they decide / load-bearing assumption / where's the gap). *Trial next week — including how the authors fought back.* (Population-level mental-health topic; keep the touch light.)
+**Deeper (optional):** Moretti, “Conjectures on World Literature” (New Left Review, 2000) — the founding argument for reading literature at scale, and the essay the whole field answers to.
 **Sketch:** one question from your life answerable with text or image data; three sentences.
 **Check (trace it):** folded into Lab 1's solo turn — one written sentence predicting what your cell does before you run it. *(C1.)*
 
@@ -99,6 +100,7 @@ Full worked notebooks. Participatory live coding. Exposure and a hook, not maste
 **Pacing.** Six content beats and no slack — the tightest technical session of the term. If it runs short: the 0:33 demonstration folds into the keyness block (which repeats it properly), and the shuffle count is not load-bearing — 200 shuffles demonstrates the idea as well as 1,000. The trial and the hand-built bag-of-words do not shrink.
 
 **Reading:** Stephen Wolfram, "What Is ChatGPT Doing…" — the opening sections only, where even text generation turns out to be built from counting. *Proof that the humble tool you start with underlies the fanciest ones.*
+**Deeper (optional):** Grimmer & Stewart, “Text as Data” (Political Analysis 2013), §1–4 — the field's methods credo: all quantitative models of language are wrong; some are useful; validate everything.
 **Sketch:** count something in a text you love; one chart; one sentence naming a choice you made. If your count compares two things, shuffle-test the gap.
 **Check (explain it):** two tokenizers split the same sentence differently — explain why; and say in one sentence what your shuffle test can and cannot rule out. *(C3, C5.)*
 
@@ -127,6 +129,7 @@ Full worked notebooks. Participatory live coding. Exposure and a hook, not maste
 | 1:45 | **Gemini-free check + check-out.** |
 
 **Reading:** browse *America's Public Bible* online (americaspublicbible.org) — read the introduction and click through one or two verses to see the classifier's findings in situ (~15 min). *The classification tool, shown as finished scholarship you can poke at.*
+**Deeper (optional):** Underwood, “The Life Cycles of Genres” (Cultural Analytics 2016), in full — the paper behind today's featured study, now that you know enough to read its methods.
 **Sketch:** point the AI at a labeled dataset you're curious about, train a quick logistic regression, and screenshot its five most positive and five most negative words — do they make sense? **And bring a corpus existence proof to Week 4: a screenshot showing you can load 50 rows of your proposed data** (use the data-collection cookbook notebook — Week 4 teaches the how, but the cookbook works now). No proof, no pitch — it converts the classic Week-5 wall into a Week-3 homework problem.
 **Check (explain it):** read your classifier's top weights aloud — what did it learn — and name one input where it would fail and why. *(C4, C5.)*
 
@@ -163,6 +166,7 @@ Notebooks become **completion problems** in fuller-guidance and skeleton version
 **Pacing.** Forty minutes of pitches holds about eleven at the 3-minute cap with transitions. Above twelve students, cap pitches at two minutes or pitch in pairs; do not let the pitch block eat the collect-and-build lab, which is where Week 5's data comes from.
 
 **Reading:** Heather Krause, "Data Biographies" (We All Count).
+**Deeper (optional):** boyd & Crawford, “Critical Questions for Big Data” (2012) — six provocations that anticipate every Data Biography question.
 **Sketch:** write **the Data Biography** (~400 words) for your chosen corpus — and *actually collect it* using the cookbook notebook (the API or scrape you saw in class), so you arrive at Week 5 with real data in hand. If collection fails or the corpus turns out thin, that's exactly what the pivot kit is for — adopt a fallback pair rather than arriving empty. The Data Biography is the one full pass; its distilled form becomes your essay's corpus note in Week 8.
 **Check (explain it):** your question aloud — what it omits, and where your data actually comes from. *(C2, C6.)*
 
@@ -197,6 +201,7 @@ Notebooks become **completion problems** in fuller-guidance and skeleton version
 | 1:45 | **Gemini-free check + check-out.** |
 
 **Reading:** Jay Alammar, "The Illustrated Word2Vec" — through the personality-vectors and king/queen sections (~15 min).
+**Deeper (optional):** Kozlowski, Taddy & Evans, “The Geometry of Culture” (ASR 2019), in full; and Wattenberg, Viégas & Johnson, “How to Use t-SNE Effectively” (Distill 2016) — projection skepticism, made rigorous and interactive.
 **Sketch:** on your map from class, toggle PCA vs. t-SNE and screenshot how the picture changes; then name one neighbor (or, for images, one cluster) that surprised you and say whether you believe it — real pattern, or projection artifact?
 **Check (explain it):** on your map, name one cluster you believe is real and one that's probably a projection artifact — and how you'd tell. *(C4.)*
 
@@ -225,6 +230,7 @@ Notebooks become **completion problems** in fuller-guidance and skeleton version
 | 1:48 | Check-out. |
 
 **Reading:** a short piece on the AI-as-annotator question to prime Week 7 — Gilardi et al.'s abstract (ChatGPT vs. crowd workers) is enough. *Supplement, for sentiment projects:* the Reagan/Swafford smoothing fight.
+**Deeper (optional):** Arnold & Tilton, “Distant Viewing” (Digital Scholarship in the Humanities 2019) — the theoretical case for images as data, from the authors of today's featured study.
 **Sketch:** one disagreement between your labels and the AI's where you were right — why? Could it be a moment in your essay? (Image projects: instead, swap the image set or the number of clusters and screenshot how the grouping shifts.)
 **Check (fix it):** the planted bug. *(C1, C7.)*
 
@@ -252,6 +258,7 @@ Notebooks become **completion problems** in fuller-guidance and skeleton version
 | 1:48 | **Gemini-free check + check-out.** |
 
 **Reading:** one short piece on the training-data fight — the *New York Times* v. OpenAI complaint summary, or a plain-language explainer on the Books3 / pirated-books corpus — paired with the reminder of *your own* Week 4 licensing conversation. The question for class: you spent a whole session getting your corpus ethically; the models reading it for you did not. *(Supplement: Underwood's GPT-4 narrative-time study — the literary-history version of the same move.)*
+**Deeper (optional):** Ziems et al., “Can Large Language Models Transform Computational Social Science?” (Computational Linguistics 2024) — the systematic evaluation of the annotation practice you used today.
 **Sketch:** show one label the AI got confidently wrong on your data and one it nailed; for each, say how you knew. *(Competency 4 in its rawest form.)*
 **Check (explain it):** what is your labeling prompt deciding on your behalf, and how would you check whether to trust a given label? In your own words. *(C2, C5.)*
 **Go further (optional, for the technically comfortable).** The annotator here is a *closed* model behind an API. Two open alternatives, both on **Hugging Face**, for anyone who wants them: run an **open model** in Colab instead of calling Gemini (free, private, and its training data is more knowable — the Week 8 point — but weaker, and it needs the GPU); or the bigger step, **fine-tune your own small classifier** on the labels you just made — train `ModernBERT` (a modern, faster BERT) on your hand-labeled plus AI-labeled examples, and end with a model that is *yours*, free to run, and far quicker than prompting for a narrow repeated task. This is the **third reader**: Week 3's classifier was transparent, Week 7's annotator is powerful, and a fine-tune is the one you *own*. It's a real jump in complexity, so it lives strictly as a go-further in the optional `cool-methods` notebook, never a required beat.
@@ -281,7 +288,9 @@ The toolchain has been familiar since the Week 4 fork. The analysis is the evide
 | 1:22 | **Writing workshop (28 min):** opening question → what you found → what it does *not* show → the choices you made. Distill the Data Biography into the corpus note. |
 | 1:50 | **Check + check-out.** |
 
-**Reading:** none required. *Supplements:* the MonadGPT and MacBERTh model pages — two more time capsules, one playful, one scholarly. (Deeper cuts: the "Speak, Memory" paper; 3Blue1Brown's "But what is a GPT?"; Bycroft's 3D LLM walkthrough.)
+**Reading:** Ted Chiang, “ChatGPT Is a Blurry JPEG of the Web” (The New Yorker, 2023) — the compression idea this session is built on, stated precisely for a general audience.
+**Deeper (optional):** Da, “The Computational Case Against Computational Literary Studies” (Critical Inquiry 2019) — the field's sharpest critique: most published results, it argues, are statistically fragile. Read it against your own robustness checks.
+*Supplements:* the MonadGPT and MacBERTh model pages — two more time capsules, one playful, one scholarly. (Deeper cuts: the "Speak, Memory" paper; 3Blue1Brown's "But what is a GPT?"; Bycroft's 3D LLM walkthrough.)
 **Sketch (important):** expand to 600–1,000 words before Week 9. Write the **show-your-work appendix**: what you cut, what surprised you, what the AI got wrong, the choices you made and where a reader could disagree — plus which robustness checks your finding survived.
 **Check (explain it):** your headline finding, and what it does **not** show. *(C3, C4.)*
 
@@ -306,6 +315,7 @@ The toolchain has been familiar since the Week 4 fork. The analysis is the evide
 **Pacing.** If deployment problems absorb the room, the structured critique compresses from 35 to 20 minutes. A deployed URL is the point of the session; the critique can continue asynchronously.
 
 **Reading:** none. **Sketch:** title the essay; headline finding in one sentence.
+**Deeper (optional):** The Critical Inquiry online forum (2019), where Underwood and others answer Da — a discipline arguing about itself in public, and a model for disagreeing with a method rather than a person.
 **Check (fix it):** a planted bug in publishing/layout code (or in opted-in JS). *(C1, C7.)*
 
 ---

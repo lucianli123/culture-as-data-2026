@@ -58,5 +58,6 @@ What counts as a "character-centered shot" is an operational definition, and a d
 
 - **Reading:** [Gilardi et al. (2023)](https://www.pnas.org/doi/10.1073/pnas.2305016120), the AI as a cheaper coder
 - **Supplement:** [Reagan et al., Six Basic Shapes](https://link.springer.com/article/10.1140/epjds/s13688-016-0093-1) (the smoothing fight); [Manovich, Selfiecity](https://selfiecity.net/)
+- **Deeper (optional):** [Arnold &amp; Tilton, Distant Viewing (DSH 2019)](https://doi.org/10.1093/llc/fqz013), the theory behind treating images as data
 - **Sketch:** One disagreement between your labels and the AI's where you were right, and why.
 - **Check (AI closed):** Fix it: the planted bug. (Competencies 1, 7.)

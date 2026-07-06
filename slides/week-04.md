@@ -66,5 +66,6 @@ Listen across the pitches for questions too vague to answer, corpora that don't 
 
 - **Reading:** [Krause, Data Biographies](https://gijn.org/stories/data-biographies-getting-to-know-your-data/) (We All Count)
 - **Supplement:** [Freelon, Post-API Age](https://dfreelon.org/publications/2018_Computational_research_in_the_postAPI_age.pdf)
+- **Deeper (optional):** [boyd &amp; Crawford, Critical Questions for Big Data (2012)](https://doi.org/10.1080/1369118X.2012.678878), the canonical statement of what large datasets cannot tell you
 - **Sketch:** Write your Data Biography (~400 words) and actually collect your corpus with the cookbook.
 - **Check (AI closed):** Explain it: your question aloud, what it omits, and where your data actually comes from. (Competencies 2, 6.)
