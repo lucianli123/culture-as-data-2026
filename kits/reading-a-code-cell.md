@@ -20,6 +20,30 @@ from these.
 5. **Import — `import pandas as pd`.** Bring in a toolbox and give it a short name.
    Cells that are all imports do nothing visible; they stock the workshop.
 
+## What the names hold
+
+Every name in a cell holds one of about six kinds of thing. Knowing which is half of
+reading:
+
+- **A string** — text in quotes: `"keeping"`. Code treats it as characters, not meaning.
+- **A number** — `42` or `0.34`. No quotes.
+- **A list** — an ordered pile: `["she", "giggles"]`. Loops eat these.
+- **A dict** — labeled slots: `{"title": "...", "year": 1948}`. APIs return these.
+- **A DataFrame** — the spreadsheet-like table `pd.read_csv` gives you; columns have
+  names, rows have positions. Most course code is DataFrames in, DataFrames out.
+- **A model** — an object you `fit` or `encode` with. You interrogate it, not read it.
+
+Two values worth knowing by name: `NaN` means "missing," and it silently drops out of
+counts — ask where it went. `None` means "nothing here," and it errors loudly when
+touched — easier to catch.
+
+## Colab words
+
+A **cell** is one block that runs at once. The **runtime** (or *kernel*) is the machine
+running them; when it restarts, every name is forgotten and you re-run from the top —
+which is why the notebook must run top to bottom, and why your work lives in Drive. A
+**traceback** is the error report; read its last line first.
+
 ## One real cell, annotated
 
 ```python

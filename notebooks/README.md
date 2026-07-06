@@ -21,6 +21,7 @@ healthy; a red one points you at the exact cheat-sheet entry.
 
 | Notebook | Act | Form | Tool |
 |---|---|---|---|
+| `python_warmup.ipynb` | 0 (optional) | predict-then-run | names, lists, dicts, functions, a first DataFrame |
 | `week01_first_investigation.ipynb` | 1 | fully worked | load a CSV / first chart / word + pixel counting / error recovery |
 | `week02_counting.ipynb` | 1 | fully worked | counting / tf-idf / keyness / shuffle test |
 | `week03_classification.ipynb` | 1 | fully worked | logistic regression + signed weights |
