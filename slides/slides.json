@@ -9,12 +9,22 @@
   "interrogate": "The 2,000 screenplays skew toward what was produced and digitized: is that \"film,\" or a sample of it? Whose choice is a gendered verb: the writer's, the character's, or the genre's? Counting shows the split, not the cause. The visualization's own choices deserve the same scrutiny as the data.",
   "content": [
    {
-    "h": "Culture is already data",
+    "h": "Why this course: the stakes",
     "points": [
-     "Spotify counts your listening; the For You feed is a model reading culture at scale; you are on the receiving end every day.",
-     "In ten weeks you run the same kind of reading yourself, on culture you choose.",
-     "Today's corpus: 5,562 NYT wedding announcements, 1985-2014: whether the bride kept her name, and the couple's ages.",
-     "The deliverable, shown now: a published web essay on top of a notebook anyone can run."
+     "Machines already read culture at scale: the feed ranking what you see, the moderation filter, the model trained on scraped art and prose. That reading shapes which culture reaches you, and it happens without you.",
+     "Reading culture with machines produces real knowledge and real mistakes, and the two look identical until someone checks. Learning to check is the course.",
+     "Ten weeks from now, you do the reading: a question you chose, a corpus you built, a published finding anyone can verify.",
+     "The whole method in one sentence: it is all counting and weighting, and you can learn to read both."
+    ]
+   },
+   {
+    "h": "What counting culture has found",
+    "points": [
+     "In the stage directions of 2,000 film scripts: women snuggle, giggle, and sob; men strap, gallop, and kill. 85% of the screenwriters were men (The Pudding, 2017).",
+     "Across 17,000 Hot 100 songs, the biggest revolution in American pop was not the Beatles in 1964; it was hip-hop in 1991 (Mauch et al., 2015).",
+     "Counting small words like 'the' and 'of' unmasked Robert Galbraith as J.K. Rowling within days (Juola, 2013).",
+     "A model trained on Google News completes 'man is to computer programmer as woman is to...' with 'homemaker' (Bolukbasi et al., 2016).",
+     "An AI portrait sold at Christie's for $432,500; the training data was other people's paintings (2018). Every one of these is a count, and every one has arguable choices. Both halves are the course."
     ]
    },
    {
@@ -60,27 +70,31 @@
     "a": "Introductions and working agreements, demonstrated in practice. Today's live coding deliberately includes real mistakes."
    },
    {
-    "t": "0:12",
+    "t": "0:10",
+    "a": "Lecture, the stakes: machines already read culture at scale, the feed ranking what you see, the moderation filter, the model trained on scraped art and prose, and that reading happens without you. Counting culture has produced real knowledge (the screenplay verb split, the Rowling unmasking, pop music's 1991 revolution) and real mistakes, and both look identical until someone checks. In ten weeks you do the reading yourself and publish something checkable."
+   },
+   {
+    "t": "0:28",
     "a": "Look at This, then Question It: She Giggles, He Gallops."
    },
    {
-    "t": "0:17",
-    "a": "Pre-train the vocabulary (no code): corpus, method, model, embedding, in plain language with pictures. The course map and the deliverable."
+    "t": "0:35",
+    "a": "The vocabulary and the map (no code): corpus, method, model, embedding, in plain language with pictures. The deliverable, shown: a web essay on a runnable notebook."
    },
    {
-    "t": "0:32",
+    "t": "0:47",
     "a": "Lab 1 (worked, participatory): copy the notebook to Drive and mount Drive into the runtime (this is how your corpus and results survive Colab wiping the session, everything saving to one project folder), put a Gemini key in Colab Secrets, load NYT wedding data, make a first chart. Hand out the common-errors cheat sheet. Then solo with a partner: draft three questions, pick one, have the AI write the code, run it, chart it. Write one sentence predicting your cell before you run it."
    },
    {
-    "t": "1:10",
+    "t": "1:20",
     "a": "Break"
    },
    {
-    "t": "1:20",
+    "t": "1:30",
     "a": "Lab 2 (worked): count words, then pixels. First the top words of a small lyrics sample (stop-words dominate the list until you remove them, the first counting decision), then an image corpus: ~200 Met thumbnails ranked darkest to brightest by average brightness. Text and images, counted with the same technique; image projects begin here."
    },
    {
-    "t": "1:50",
+    "t": "1:52",
     "a": "Preview of the methods ahead; the weekly routines introduced. First check-out."
    }
   ],

@@ -162,11 +162,17 @@ SLIDES_THREADS={
 # Content slides (the substance of each deck): heading + concrete bullets. Rendered
 # between "Question It" and "Three modes" in both the .md and .pptx decks. ----------
 SLIDES_CONTENT={
-1:[("Culture is already data",
-   ["Spotify counts your listening; the For You feed is a model reading culture at scale; you are on the receiving end every day.",
-    "In ten weeks you run the same kind of reading yourself, on culture you choose.",
-    "Today's corpus: 5,562 NYT wedding announcements, 1985-2014: whether the bride kept her name, and the couple's ages.",
-    "The deliverable, shown now: a published web essay on top of a notebook anyone can run."]),
+1:[("Why this course: the stakes",
+   ["Machines already read culture at scale: the feed ranking what you see, the moderation filter, the model trained on scraped art and prose. That reading shapes which culture reaches you, and it happens without you.",
+    "Reading culture with machines produces real knowledge and real mistakes, and the two look identical until someone checks. Learning to check is the course.",
+    "Ten weeks from now, you do the reading: a question you chose, a corpus you built, a published finding anyone can verify.",
+    "The whole method in one sentence: it is all counting and weighting, and you can learn to read both."]),
+  ("What counting culture has found",
+   ["In the stage directions of 2,000 film scripts: women snuggle, giggle, and sob; men strap, gallop, and kill. 85% of the screenwriters were men (The Pudding, 2017).",
+    "Across 17,000 Hot 100 songs, the biggest revolution in American pop was not the Beatles in 1964; it was hip-hop in 1991 (Mauch et al., 2015).",
+    "Counting small words like 'the' and 'of' unmasked Robert Galbraith as J.K. Rowling within days (Juola, 2013).",
+    "A model trained on Google News completes 'man is to computer programmer as woman is to...' with 'homemaker' (Bolukbasi et al., 2016).",
+    "An AI portrait sold at Christie's for $432,500; the training data was other people's paintings (2018). Every one of these is a count, and every one has arguable choices. Both halves are the course."]),
   ("Four words, used all term",
    ["Corpus: the pile you study. 500 announcements, 2,000 screenplays, 10,000 album covers.",
     "Method: the counting or weighting you run on the corpus.",
@@ -344,12 +350,13 @@ WEEKS = [
    admire="The Pudding, \"She Giggles, He Gallops\" (2017): across ~2,000 film screenplays, the stage-direction verbs split by gender, women snuggle and giggle, men gallop and stride. The interactive presentation makes the pattern unmistakable.",
    interrogate="The 2,000 screenplays skew toward what was produced and digitized: is that \"film,\" or a sample of it? Whose choice is a gendered verb: the writer's, the character's, or the genre's? Counting shows the split, not the cause. The visualization's own choices deserve the same scrutiny as the data.",
    flow=[("0:00","Introductions and working agreements, demonstrated in practice. Today's live coding deliberately includes real mistakes."),
-         ("0:12","Look at This, then Question It: She Giggles, He Gallops."),
-         ("0:17","Pre-train the vocabulary (no code): corpus, method, model, embedding, in plain language with pictures. The course map and the deliverable."),
-         ("0:32","Lab 1 (worked, participatory): copy the notebook to Drive and mount Drive into the runtime (this is how your corpus and results survive Colab wiping the session, everything saving to one project folder), put a Gemini key in Colab Secrets, load NYT wedding data, make a first chart. Hand out the common-errors cheat sheet. Then solo with a partner: draft three questions, pick one, have the AI write the code, run it, chart it. Write one sentence predicting your cell before you run it."),
-         ("1:10","Break"),
-         ("1:20","Lab 2 (worked): count words, then pixels. First the top words of a small lyrics sample (stop-words dominate the list until you remove them, the first counting decision), then an image corpus: ~200 Met thumbnails ranked darkest to brightest by average brightness. Text and images, counted with the same technique; image projects begin here."),
-         ("1:50","Preview of the methods ahead; the weekly routines introduced. First check-out.")],
+         ("0:10","Lecture, the stakes: machines already read culture at scale, the feed ranking what you see, the moderation filter, the model trained on scraped art and prose, and that reading happens without you. Counting culture has produced real knowledge (the screenplay verb split, the Rowling unmasking, pop music's 1991 revolution) and real mistakes, and both look identical until someone checks. In ten weeks you do the reading yourself and publish something checkable."),
+         ("0:28","Look at This, then Question It: She Giggles, He Gallops."),
+         ("0:35","The vocabulary and the map (no code): corpus, method, model, embedding, in plain language with pictures. The deliverable, shown: a web essay on a runnable notebook."),
+         ("0:47","Lab 1 (worked, participatory): copy the notebook to Drive and mount Drive into the runtime (this is how your corpus and results survive Colab wiping the session, everything saving to one project folder), put a Gemini key in Colab Secrets, load NYT wedding data, make a first chart. Hand out the common-errors cheat sheet. Then solo with a partner: draft three questions, pick one, have the AI write the code, run it, chart it. Write one sentence predicting your cell before you run it."),
+         ("1:20","Break"),
+         ("1:30","Lab 2 (worked): count words, then pixels. First the top words of a small lyrics sample (stop-words dominate the list until you remove them, the first counting decision), then an image corpus: ~200 Met thumbnails ranked darkest to brightest by average brightness. Text and images, counted with the same technique; image projects begin here."),
+         ("1:52","Preview of the methods ahead; the weekly routines introduced. First check-out.")],
    reading="The Bollen/Schmidt exchange, abstract and figure only: the Google Books \"hockey stick\" of cognitive distortions, then the critique that it may be an artifact of which books Google scanned. The trial runs next week.",
    sketch="One question from your life answerable with text or image data; three sentences.",
    check="Trace it: one written sentence predicting what your cell does before you run it. (Competency 1.)",
@@ -599,19 +606,6 @@ def build_index():
   <p>Investigate cultural data at scale with an AI as your coding partner. You publish a web essay on a question only you would ask. No mathematics or programming background is required, and the course is free to take.</p>
   <p class="cta"><a class="button" href="syllabus.html">Read the syllabus</a> <a class="button" href="notebooks.html">Open the notebooks</a> <a class="button ghost" href="schedule.html">See the ten weeks</a></p>
   {svg_hero()}
-</section>
-
-<section>
-  <h2>Findings that started as counts</h2>
-  <p>Each of these began with someone counting culture. By the end of the course you will have produced a finding of your own the same way.</p>
-  {ul([
-    "In the stage directions of 2,000 film scripts, women snuggle, giggle, and sob; men strap, gallop, and kill. 85% of the screenwriters were men. (<a href='https://pudding.cool/2017/08/screen-direction/'>The Pudding, 2017</a>)",
-    "Measured across 17,000 Hot 100 songs, the biggest revolution in American pop wasn't the Beatles in 1964. It was hip-hop in 1991. (<a href='https://doi.org/10.1098/rsos.150081'>Mauch et al., 2015</a>)",
-    "Counting small words like <em>the</em> and <em>of</em> unmasked &quot;Robert Galbraith&quot; as J.K. Rowling within days of <em>The Cuckoo's Calling</em> reaching shelves. (<a href='https://www.scientificamerican.com/article/how-a-computer-program-helped-show-jk-rowling-write-a-cuckoos-calling/'>Juola, 2013</a>)",
-    "A model trained on Google News completes &quot;man is to computer programmer as woman is to&hellip;&quot; with &quot;homemaker.&quot; That result launched the field of AI bias research. (<a href='https://arxiv.org/abs/1607.06520'>Bolukbasi et al., 2016</a>)",
-    "Ask GPT-4 to fill in the blanked-out character names of a famous novel and it often can, nearly perfectly. It isn't reading; it memorized the book. (<a href='https://aclanthology.org/2023.emnlp-main.453/'>Chang et al., 2023</a>)",
-    "An AI-generated portrait sold at Christie's for $432,500. The training data was other people's paintings. (<a href='https://en.wikipedia.org/wiki/Edmond_de_Belamy'><em>Edmond de Belamy</em>, 2018</a>)",
-  ])}
 </section>
 
 <section>
