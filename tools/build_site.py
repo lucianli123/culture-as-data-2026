@@ -544,60 +544,12 @@ def ul(items): return "<ul>" + "".join(f"<li>{i}</li>" for i in items) + "</ul>"
 # Pages ---------------------------------------------------------------------
 FAVICON_SVG = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#7a3b2e"/><circle cx="11" cy="12" r="3" fill="#f0e9e2"/><circle cx="20" cy="10" r="3" fill="#b9852f"/><circle cx="22" cy="21" r="3" fill="#3f6f5f"/><circle cx="12" cy="22" r="3" fill="#f0e9e2"/></svg>'
 
-def svg_hero():
-    """A real chart of real data: share of brides keeping their name, from the
-    5,562 usable NYT wedding announcements (The Upshot dataset), by year sampled.
-    This is the chart students make in Week 1's first hour."""
-    pts = [(1985, 34.1), (1990, 19.6), (1995, 30.3), (2000, 38.3),
-           (2005, 42.1), (2010, 41.8), (2014, 41.5)]
-    def X(yr): return 70 + (yr - 1985) / (2014 - 1985) * 590
-    def Y(pct): return 210 - pct / 50 * 160
-    poly = " ".join(f"{X(y):.0f},{Y(p):.1f}" for y, p in pts)
-    dots = "".join(
-        f'<circle cx="{X(y):.0f}" cy="{Y(p):.1f}" r="4.5" fill="#7a3b2e"/>'
-        f'<text x="{X(y):.0f}" y="{Y(p)-10:.0f}" font-size="11.5" fill="#5a5a52" text-anchor="middle">{p:.0f}%</text>'
-        for y, p in pts)
-    xlabels = "".join(
-        f'<text x="{X(y):.0f}" y="232" font-size="12" fill="#5a5a52" text-anchor="middle">{y}</text>'
-        for y, _ in pts)
-    grid = "".join(
-        f'<line x1="70" y1="{Y(g):.0f}" x2="660" y2="{Y(g):.0f}" stroke="#e3e0d8" stroke-width="1"/>'
-        f'<text x="58" y="{Y(g)+4:.0f}" font-size="11" fill="#8a8a82" text-anchor="end">{g}%</text>'
-        for g in (0, 20, 40))
-    return ('<svg class="figure" viewBox="0 0 720 280" role="img" '
-            'aria-label="Line chart: share of brides keeping their name in NYT wedding '
-            'announcements rises from about a fifth in 1990 to about two in five by 2005.">'
-            '<rect x="1" y="1" width="718" height="278" rx="14" fill="#faf8f4" stroke="#e3e0d8"/>'
-            + grid
-            + f'<polyline points="{poly}" fill="none" stroke="#7a3b2e" stroke-width="2.5"/>'
-            + dots + xlabels +
-            '<text x="22" y="264" font-size="12" fill="#8a8a82">Share of brides who kept their name, '
-            'from 5,562 New York Times wedding announcements, 1985&#8211;2014 (data: The Upshot)</text>'
-            '</svg>')
-
-def svg_verbs():
-    """The real headline result of the Week 1 featured study: the most gender-skewed
-    verbs in the stage directions of ~2,000 screenplays (The Pudding, 2017)."""
-    she = ["snuggles", "giggles", "squeals", "sobs"]
-    he = ["strap", "gallops", "shoots", "kills"]
-    rows = []
-    for i, (a, b) in enumerate(zip(she, he)):
-        y = 92 + i * 34
-        rows.append(f'<text x="330" y="{y}" font-size="17" fill="#7a3b2e" text-anchor="end" font-style="italic">{a}</text>')
-        rows.append(f'<text x="390" y="{y}" font-size="17" fill="#3f6f5f" font-style="italic">{b}</text>')
-    return ('<svg class="figure" viewBox="0 0 720 248" role="img" '
-            'aria-label="The verbs most skewed toward she: snuggles, giggles, squeals, sobs. '
-            'Toward he: strap, gallops, shoots, kills.">'
-            '<rect x="1" y="1" width="718" height="246" rx="14" fill="#faf8f4" stroke="#e3e0d8"/>'
-            '<text x="330" y="52" font-size="13" fill="#5a5a52" text-anchor="end">after &#8220;she&#8221;&#8230;</text>'
-            '<text x="390" y="52" font-size="13" fill="#5a5a52">after &#8220;he&#8221;&#8230;</text>'
-            '<line x1="360" y1="40" x2="360" y2="200" stroke="#e3e0d8" stroke-width="1.5"/>'
-            + "".join(rows) +
-            '<text x="22" y="232" font-size="12" fill="#8a8a82">Verbs most skewed toward &#8220;she&#8221; and &#8220;he&#8221; '
-            'in the stage directions of 2,000 film scripts (The Pudding, 2017)</text>'
-            '</svg>')
-
 def build_index():
+    acts = {1: "Act 1 — The tools (Weeks 1–3)", 4: "Act 2 — The project (Weeks 4–7)", 8: "Act 3 — Publish (Weeks 8–10)"}
+    outline_rows = "".join(
+        (f'<tr class="act"><td colspan="2">{acts[w["n"]]}</td></tr>' if w["n"] in acts else "")
+        + f'<tr><td class="time">Week {w["n"]}</td><td><a href="weeks/week-{w["n"]:02d}.html">{esc(w["title"])}</a> &mdash; {esc(w["tool"])}</td></tr>'
+        for w in WEEKS)
     body = f"""
 <section class="hero">
   <p class="eyebrow">A 10-week project-based course for curious adults</p>
@@ -605,7 +557,6 @@ def build_index():
   <p class="lede">{esc(TAGLINE)}</p>
   <p>Investigate cultural data at scale with an AI as your coding partner. You publish a web essay on a question only you would ask. No mathematics or programming background is required, and the course is free to take.</p>
   <p class="cta"><a class="button" href="syllabus.html">Read the syllabus</a> <a class="button" href="notebooks.html">Open the notebooks</a> <a class="button ghost" href="schedule.html">See the ten weeks</a></p>
-  {svg_hero()}
 </section>
 
 <section>
@@ -616,8 +567,12 @@ def build_index():
     "<strong>Embeddings</strong>: items become positions on a map of meaning. The heart of the course.",
     "<strong>AI annotation</strong>: a powerful model reads your whole corpus; you decide which labels to trust.",
   ])}
-  {svg_verbs()}
   <p>Images receive the same treatment: you count, classify, and embed pictures as well as text.</p>
+</section>
+
+<section>
+  <h2>The ten weeks</h2>
+  <table class="flow"><tbody>{outline_rows}</tbody></table>
 </section>
 
 <section>
@@ -892,6 +847,7 @@ section{margin:1.5rem 0}
 .button{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;padding:.55rem 1.1rem;border-radius:8px;font-weight:600;font-size:.98rem}
 .button.ghost{background:transparent;color:var(--accent);border:1px solid var(--accent)}
 .button:hover{opacity:.9}
+tr.act td{padding-top:1.1rem;font-weight:700;color:var(--accent);border-bottom:none;font-size:.95rem}
 /* tables */
 table{border-collapse:collapse;width:100%;margin:1rem 0;font-size:.95rem;background:var(--card)}
 th,td{text-align:left;vertical-align:top;padding:.55rem .7rem;border-bottom:1px solid var(--line)}
