@@ -694,6 +694,7 @@ def build_syllabus():
 
 <section>
   <h2>Starter corpora</h2>
+  <p>Ten vetted pairs to start from; the full corpus library, organized by interest area with access notes for the post-API era, lives in <a href='https://github.com/lucianli123/culture-as-data-2026/blob/main/design/planning-doc.md'>the planning document</a>.</p>
   <p>Stuck for a corpus by Week 4? These are vetted and small enough to move fast. A star (⭐) means it opens straight in Colab with one line, the lowest-effort place to start if code feels new.</p>
   <table><thead><tr><th>Corpus</th><th>Access</th><th>Best for</th></tr></thead><tbody>{corpora}</tbody></table>
 </section>
@@ -1001,7 +1002,9 @@ def build_notebooks():
       f"<a href='{GH_REPO}/blob/main/kits/common-errors-cheatsheet.md'>Common-errors cheat sheet</a>: what to do when a cell fails, handed out in Week 1.",
       f"<a href='{GH_REPO}/blob/main/kits/licensing-one-pager.md'>Licensing one-pager</a>: which route to a corpus is allowed, used in Week 4's data conversation.",
       f"<a href='{GH_REPO}/blob/main/kits/pivot-kit-corpora.md'>Pivot kit</a>: pre-tested fallback corpus-and-question pairs, insurance for stalled projects.",
-      f"<a href='{GH_REPO}/tree/main/template'>Publishing template</a>: the Quarto essay skeleton each project forks in Week 4 and deploys in Week 9.",
+      f"<a href='{GH_REPO}/blob/main/kits/critical-response-process.md'>Critical Response Process one-pager</a>: the Week 9 critique protocol, meaning before questions, questions before opinions.",
+      f"<a href='{GH_REPO}/blob/main/kits/competency-checks.md'>Competency-check bank</a>: the weekly trace/fix/explain items for the AI-closed block.",
+      f"<a href='{GH_REPO}/tree/main/template'>Project template</a>: the Quarto essay skeleton, the Data Biography template with a worked example, and the workbench portfolio structure, forked in Week 4.",
     ])}
   </section>
 

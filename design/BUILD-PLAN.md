@@ -60,8 +60,10 @@ culture-as-data/
 ├── kits/
 │   ├── common-errors-cheatsheet.md        # the unblocking kit (see §3)
 │   ├── licensing-one-pager.md             # the Week-4 data-licensing rubric
+│   ├── critical-response-process.md       # the Week-9 critique protocol
+│   ├── competency-checks.md               # per-week trace/fix/explain bank
 │   └── pivot-kit-corpora.md               # fallback corpus+question bank
-├── template/                              # the publishing template students fork in W4 (Quarto → Pages)
+├── template/                              # forked per project in W4: Quarto essay + Data Biography + workbench
 └── tools/
     ├── check_compat.py            # package-compatibility harness (see §4)
     └── run_notebooks.sh           # execute all notebooks headless (see §4)

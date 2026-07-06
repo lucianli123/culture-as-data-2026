@@ -18,6 +18,9 @@ JavaScript unless you opt in at the Week 9 code-review checkpoint.
    **Deploy from a branch**, branch `main`, folder `/docs`.
 4. Your essay is live at `https://<username>.github.io/<repository>/` within minutes.
 
+Two more files live here and travel with the fork: `data-biography.md` (the six prompts,
+with a fully worked example) and `workbench.md` (the Week 10 portfolio structure).
+
 The essay is the communication layer; the analysis lives in your notebook. The course
 standard for the notebook is Mullen's: *the instructor must be able to run it.* Link the
 notebook prominently; the essay's claims are only as good as the notebook behind them.
