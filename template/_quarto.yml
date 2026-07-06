@@ -1,0 +1,14 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "[Your project title]"
+
+format:
+  html:
+    theme: cosmo
+    toc: false
+    embed-resources: false
+    # Static by default. JavaScript visualizations are opt-in and go through
+    # the Week 9 code-review checkpoint before they ship.

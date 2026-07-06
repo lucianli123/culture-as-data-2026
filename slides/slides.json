@@ -13,7 +13,7 @@
     "points": [
      "Spotify counts your listening; the For You feed is a model reading culture at scale; you are on the receiving end every day.",
      "In ten weeks you run the same kind of reading yourself, on culture you choose.",
-     "Today's corpus: every NYT wedding announcement 1985-2014 (~500 rows): who married whom, and whether the bride kept her name.",
+     "Today's corpus: 5,562 NYT wedding announcements, 1985-2014: whether the bride kept her name, and the couple's ages.",
      "The deliverable, shown now: a published web essay on top of a notebook anyone can run."
     ]
    },

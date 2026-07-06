@@ -157,7 +157,7 @@ SLIDES_CONTENT={
 1:[("Culture is already data",
    ["Spotify counts your listening; the For You feed is a model reading culture at scale; you are on the receiving end every day.",
     "In ten weeks you run the same kind of reading yourself, on culture you choose.",
-    "Today's corpus: every NYT wedding announcement 1985-2014 (~500 rows): who married whom, and whether the bride kept her name.",
+    "Today's corpus: 5,562 NYT wedding announcements, 1985-2014: whether the bride kept her name, and the couple's ages.",
     "The deliverable, shown now: a published web essay on top of a notebook anyone can run."]),
   ("Four words, used all term",
    ["Corpus: the pile you study. 500 announcements, 2,000 screenplays, 10,000 album covers.",
@@ -976,6 +976,16 @@ def build_notebooks():
   <section>
     <h2>Optional method starters</h2>
     <ul>{cool}</ul>
+  </section>
+
+  <section>
+    <h2>Handouts and the publishing template</h2>
+    {ul([
+      f"<a href='{GH_REPO}/blob/main/kits/common-errors-cheatsheet.md'>Common-errors cheat sheet</a>: what to do when a cell fails, handed out in Week 1.",
+      f"<a href='{GH_REPO}/blob/main/kits/licensing-one-pager.md'>Licensing one-pager</a>: which route to a corpus is allowed, used in Week 4's data conversation.",
+      f"<a href='{GH_REPO}/blob/main/kits/pivot-kit-corpora.md'>Pivot kit</a>: pre-tested fallback corpus-and-question pairs, insurance for stalled projects.",
+      f"<a href='{GH_REPO}/tree/main/template'>Publishing template</a>: the Quarto essay skeleton each project forks in Week 4 and deploys in Week 9.",
+    ])}
   </section>
 
   <section>

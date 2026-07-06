@@ -47,7 +47,7 @@ Full worked notebooks. Participatory live coding. Exposure and a hook, not maste
 
 **Featured study — *She Giggles, He Gallops* (The Pudding, 2017).** Across ~2,000 film screenplays, the *verbs* in stage directions split sharply by gender — women are written to "snuggle," "giggle," and "squeal"; men to "gallop," "stride," and "shoot." Counting the verbs attached to "she" versus "he" lands the pattern, and the interactive makes it impossible to unsee. **Interrogate:** ~2,000 screenplays skew toward what got produced and digitized — is that "film," or Hollywood's slice? And whose choice is a gendered verb — the screenwriter's, the character's, or the genre's? Counting shows the split, not the cause. And read the *visualization's* choices, not just the data: how it groups and ranks the verbs, what it foregrounds, what a different cut would surface — a chart is an argument with choices baked in, the same as a count. The icon of the form, and the cleanest "counting is already a model": every step (which verbs, near which pronoun, in which scripts) is a decision. That's how we read all term — the numbers *and* the choices behind them.
 
-**Data:** NYT Wedding Announcements (~500 rows, provided CSV); a small pop-lyrics slice (provided); ~200 Met Museum objects with thumbnails (CC0).
+**Data:** NYT Wedding Announcements (5,562 rows, The Upshot's public CSV, loaded by URL); a small pop-lyrics slice (provided); ~200 Met Museum objects with thumbnails (CC0).
 
 | Time | Activity |
 |---|---|

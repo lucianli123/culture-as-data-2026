@@ -58,7 +58,9 @@ culture-as-data/
 │   └── cool-methods/              # optional starter notebooks (stylometry, color, etc.)
 ├── kits/
 │   ├── common-errors-cheatsheet.md        # the unblocking kit (see §3)
+│   ├── licensing-one-pager.md             # the Week-4 data-licensing rubric
 │   └── pivot-kit-corpora.md               # fallback corpus+question bank
+├── template/                              # the publishing template students fork in W4 (Quarto → Pages)
 └── tools/
     ├── check_compat.py            # package-compatibility harness (see §4)
     └── run_notebooks.sh           # execute all notebooks headless (see §4)

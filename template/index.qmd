@@ -1,0 +1,46 @@
+---
+title: "[Your project title]"
+author: "[Your name]"
+date: last-modified
+---
+
+<!-- The structure below matches the Week 8-9 writing workshop:
+     opening question, corpus note, finding, limits, appendix.
+     Replace every bracketed placeholder. Target 800-1,500 words. -->
+
+## [The opening question]
+
+[One or two paragraphs. The question that made you collect this corpus, stated so a
+reader who has never met the data understands why it matters.]
+
+## The corpus
+
+[The distilled Data Biography, about a paragraph: where the data comes from, who is in
+it, who is missing, what it cannot tell you, and the licensing tier it sits in.]
+
+## [The headline finding]
+
+[State the finding in one sentence, then show it. Insert your main chart here and walk
+the reader through it: what to look at, and what it means.]
+
+![[Chart caption: what the chart shows, in plain words]](images/main-chart.png)
+
+[If you have an image finding, present it the same way.]
+
+## How this could be wrong
+
+[The robustness section, from Week 8: which check you ran (the shuffle test, the
+re-run-without-a-slice, the compared-to-what), what survived, and where a reasonable
+reader could still disagree.]
+
+## Show your work (appendix)
+
+[Your method choices and moments of doubt: what you cut, what surprised you, what the AI
+got wrong, and how you caught it.]
+
+**The notebook.** Every number and chart above is produced by
+[the project notebook](https://colab.research.google.com/YOUR-NOTEBOOK-LINK), which runs
+top to bottom without edits.
+
+**Data and credit.** [Dataset name and link; the license it carries; anyone whose work
+you built on.]
