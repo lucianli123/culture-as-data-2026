@@ -32,6 +32,14 @@ The rising words are fiction-words, and Google scanned more fiction after 2000. 
 - Your hand-count argument about run/running is the same decision, made with highlighters.
 - tf-idf: down-weight what is common everywhere. "Common here, rare overall" is what characterizes a text.
 
+## What the bag throws away
+
+- A bag-of-words keeps the vocabulary and discards the order: "the critics loved it, the public did not" and "the public loved it, the critics did not" are the same bag.
+- Negation goes with it: "not good, actually bad" and "not bad, actually good" count identically.
+- The bag-of-pixels loses the same way: a portrait and its shuffled pixels share the average color, the brightness, and the histogram. Composition is to images what word order is to sentences.
+- Every count this week carries that loss. It is a trade made for scale, and naming it is part of the method.
+- Week 5's embeddings exist to recover some of what the bag cannot hold: words represented by the company they keep.
+
 ## Keyness: what makes a voice distinctive
 
 - For every word: how much likelier is it in corpus A than corpus B? A log-odds ratio, smoothed so rare words don't explode.
@@ -57,7 +65,7 @@ The rising words are fiction-words, and Google scanned more fiction after 2000. 
 - **0:00**  Warm-up retrieval.
 - **0:05**  The trial: claim, objection, re-run-without-fiction rebuttal, "interpret with care." One named choice is the chart: the hockey-stick shape depends on its y-axis and smoothing.
 - **0:25**  A brief demonstration before the complications: the words one artist uses far more than everyone else, a signature vocabulary measured against a pop baseline.
-- **0:30**  Hand-built bag-of-words: two authors, highlighters, argue about merging run/running. Counting requires defining.
+- **0:30**  Hand-built bag-of-words: two authors, highlighters, argue about merging run/running. Counting requires defining. Close with the loss demonstration: two sentences with identical bags and opposite meanings, and a picture beside its shuffled pixels, so the trade the bag makes is on the table before anything scales up.
 - **0:55**  What counts as a word? Paste a sentence into two tokenizer playgrounds and watch it shatter differently. Models see tokens, not words.
 - **1:05**  Break
 - **1:15**  tf-idf: the AI scales your hand count; stop-words dominate, which motivates "common here, rare overall."
