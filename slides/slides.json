@@ -9,6 +9,16 @@
   "interrogate": "The 2,000 screenplays skew toward what was produced and digitized: is that \"film,\" or a sample of it? Whose choice is a gendered verb: the writer's, the character's, or the genre's? Counting shows the split, not the cause. The visualization's own choices deserve the same scrutiny as the data.",
   "content": [
    {
+    "h": "Course logistics",
+    "points": [
+     "Ten sessions, two hours each, in three parts every week: lecture and demonstration, hands-on workshop, and discussion, roughly a third each.",
+     "Bring a laptop. You need a Google account (Colab and Drive, where all work lives) and a GitHub account (where your essay publishes); both are free, and the course costs nothing.",
+     "The weekly rhythm: a short reading before each session, a small sketch after it, and a five-minute check with the AI closed. All materials live on the course site.",
+     "Icebreaker, one fast round: your name, one piece of culture you kept returning to this year, and one number about it you wish you knew. Keep your answer; it is a first draft of a project question.",
+     "The course ends in a public showcase, friends and family invited, your finding at a live URL."
+    ]
+   },
+   {
     "h": "Why this course: the stakes",
     "points": [
      "Machines already read culture at scale: the feed ranking what you see, the moderation filter, the model trained on scraped art and prose. That reading shapes which culture reaches you, and it happens without you.",
@@ -96,7 +106,7 @@
   "flow": [
    {
     "t": "0:00",
-    "a": "Introductions and working agreements, demonstrated in practice. Today's live coding deliberately includes real mistakes."
+    "a": "Logistics, working agreements, and a one-round icebreaker: your name, one piece of culture you kept returning to this year, and one number about it you wish you knew. Today's live coding deliberately includes real mistakes."
    },
    {
     "t": "0:10",
@@ -130,7 +140,7 @@
   "reading": "Bollen et al., the cognitive-distortions hockey stick (PNAS 2021), with the Schmidt et al. critique",
   "supplement": "Robin Sloan, Writing with the machine; Drucker, Humanities Approaches to Graphical Display (DHQ 2011), the case that all data is capta",
   "deeper": "Moretti, Conjectures on World Literature (NLR 2000), the founding argument for reading culture at scale",
-  "sketch": "One question from your life, answerable with data (three sentences), plus the notebook's after-class half (~20 minutes).",
+  "sketch": "A favorite Pudding piece and what it counted; the question from your life it inspires; the notebook's after-class half (~20 minutes).",
   "check": "Trace it: one written sentence predicting what your cell does before you run it. (Competency 1.)",
   "threads": [
    {
@@ -196,7 +206,7 @@
   "flow": [
    {
     "t": "0:00",
-    "a": "Warm-up retrieval."
+    "a": "Warm-up: favorite Pudding pieces from the sketch, what did yours count, and one choice its makers made. Then retrieval."
    },
    {
     "t": "0:05",

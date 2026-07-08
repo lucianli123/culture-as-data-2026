@@ -200,7 +200,7 @@ Each session includes one ~20-minute stretch with the assistant closed — you w
 | 1:52 | Wrap. First check-out. |
 
 **Reading:** a real scientific fight, in two short pieces (abstract and figure only). Bollen et al. (2021, PNAS) used nothing but word-counting in Google Books to claim human thinking has grown measurably more distorted since the 1980s — the "hockey stick." Then the one-page critique by Schmidt, Piantadosi & Mahowald: the surge might be an artifact of *which books Google scanned*. Bring the three questions from the *Reading* section. We hold the trial next week — and see how the original authors fought back. (One of the choices on trial is the chart itself: the hockey-stick shape leans on its y-axis and smoothing, and a different axis flattens the drama.)
-**Sketch:** Pick a question from your own life that might be answerable with text or image data (three sentences) — and run the notebook's after-class half: define color ranges, then see what every bag throws away (~20 minutes).
+**Sketch:** Browse pudding.cool and pick a favorite piece — one sentence on what it counted — then write the question from your own life it inspires (three sentences). And run the notebook's after-class half: define color ranges, then see what every bag throws away (~20 minutes).
 
 ---
 
@@ -212,7 +212,7 @@ Each session includes one ~20-minute stretch with the assistant closed — you w
 
 | Time | Activity |
 |---|---|
-| 0:00 | Warm-up retrieval |
+| 0:00 | **Warm-up: favorite Pudding pieces.** From the sketch — what did yours count, and one choice its makers made? |
 | 0:05 | **The trial** — claim, objection, rebuttal, verdict. Credit first, then the choice, then the test. |
 | 0:25 | **Bag-of-words by hand.** Two authors, highlighters, tally the top words. Argue about merging "run/running." The arguments are the lesson: counting requires defining. |
 | 0:50 | **What counts as a word?** Paste the same sentence into two tokenizer playgrounds and watch it shatter differently into colored chips. Models never see words — they see tokens, and *which* tokens is a design choice, the same one you just argued about with run/running. |

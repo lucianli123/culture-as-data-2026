@@ -116,7 +116,7 @@ READING_LIST = [
 
 # Slide-deck data (one-line sketch + the three per-deck through-lines), consumed by
 # slides/export_slides.py so the decks and the site share one content source. -----
-SLIDES_SKETCH={1:"One question from your life, answerable with data (three sentences), plus the notebook's after-class half (~20 minutes).",
+SLIDES_SKETCH={1:"A favorite Pudding piece and what it counted; the question from your life it inspires; the notebook's after-class half (~20 minutes).",
 2:"Count something in a text you care about; one chart; one sentence naming a choice. If the count compares two things, shuffle-test the gap.",
 3:"Train a quick logistic regression on a labeled set; screenshot its five most positive and negative words.",
 4:"Write your Data Biography (~400 words) and actually collect your corpus with the cookbook.",
@@ -163,7 +163,13 @@ SLIDES_THREADS={
 # Content slides (the substance of each deck): heading + concrete bullets. Rendered
 # between "Question It" and "Three modes" in both the .md and .pptx decks. ----------
 SLIDES_CONTENT={
-1:[("Why this course: the stakes",
+1:[("Course logistics",
+   ["Ten sessions, two hours each, in three parts every week: lecture and demonstration, hands-on workshop, and discussion, roughly a third each.",
+    "Bring a laptop. You need a Google account (Colab and Drive, where all work lives) and a GitHub account (where your essay publishes); both are free, and the course costs nothing.",
+    "The weekly rhythm: a short reading before each session, a small sketch after it, and a five-minute check with the AI closed. All materials live on the course site.",
+    "Icebreaker, one fast round: your name, one piece of culture you kept returning to this year, and one number about it you wish you knew. Keep your answer; it is a first draft of a project question.",
+    "The course ends in a public showcase, friends and family invited, your finding at a live URL."]),
+  ("Why this course: the stakes",
    ["Machines already read culture at scale: the feed ranking what you see, the moderation filter, the model trained on scraped art and prose. That reading shapes which culture reaches you, and it happens without you.",
     "Reading culture with machines produces real knowledge and real mistakes, and the two look identical until someone checks. Learning to check is the course.",
     "Ten weeks from now, you do the reading: a question you chose, a corpus you built, a published finding anyone can verify.",
@@ -367,7 +373,7 @@ WEEKS = [
    promise="By the mid-session break you will have loaded a real dataset, asked a question of it, and produced a chart. By the end you will have counted culture in three forms: rows, words, and pixels.",
    admire="The Pudding, \"She Giggles, He Gallops\" (2017): across ~2,000 film screenplays, the stage-direction verbs split by gender, women snuggle and giggle, men gallop and stride. The interactive presentation makes the pattern unmistakable.",
    interrogate="The 2,000 screenplays skew toward what was produced and digitized: is that \"film,\" or a sample of it? Whose choice is a gendered verb: the writer's, the character's, or the genre's? Counting shows the split, not the cause. The visualization's own choices deserve the same scrutiny as the data.",
-   flow=[("0:00","Introductions and working agreements, demonstrated in practice. Today's live coding deliberately includes real mistakes."),
+   flow=[("0:00","Logistics, working agreements, and a one-round icebreaker: your name, one piece of culture you kept returning to this year, and one number about it you wish you knew. Today's live coding deliberately includes real mistakes."),
          ("0:10","Lecture, the stakes: machines already read culture at scale, the feed ranking what you see, the moderation filter, the model trained on scraped art and prose, and that reading happens without you. Counting culture has produced real knowledge (the screenplay verb split, the Rowling unmasking, pop music's 1991 revolution) and real mistakes, and both look identical until someone checks. In ten weeks you do the reading yourself and publish something checkable."),
          ("0:28","Look at This, then Question It: She Giggles, He Gallops."),
          ("0:35","The vocabulary and the map (no code): corpus, method, model, embedding, plus what data itself is. A CSV, anatomized on screen (rows are observations, columns are recorded facts), and Drucker's correction: data is capta, taken not given. Two minutes in pairs: what did the makers of the wedding table take, and what did they leave out? The deliverable, shown: a web essay on a runnable notebook."),
@@ -376,14 +382,14 @@ WEEKS = [
          ("1:30","Lab 2 (worked): count words, then pixels. The real headlines' top words (stop-words dominate until removed, the first counting decision), then the Met image corpus ranked darkest to brightest by average brightness. The notebook's after-class half, defined color ranges and what every bag throws away, is this week's guided homework. Image projects begin here."),
          ("1:52","Preview of the methods ahead; the weekly routines introduced. First check-out.")],
    reading="The Bollen/Schmidt exchange, abstract and figure only: the Google Books \"hockey stick\" of cognitive distortions, then the critique that it may be an artifact of which books Google scanned. The trial runs next week.",
-   sketch="One question from your life answerable with text or image data (three sentences), plus the notebook's after-class half: color ranges, and what every bag throws away (~20 minutes).",
+   sketch="Browse pudding.cool and pick a favorite piece (one sentence: what did it count?), then write the question from your own life it inspires. Plus the notebook's after-class half: color ranges, and what every bag throws away (~20 minutes).",
    check="Trace it: one written sentence predicting what your cell does before you run it. (Competency 1.)",
    comps="1, 8"),
  dict(n=2, title="Counting, Compared: Is the Difference Real?", tool="Advanced counting: baselines, keyness, and the shuffle test",
    promise="Put a famous PNAS paper on trial, find the words that make a voice distinctive (the method behind Week 1's featured study), and learn the one statistical method the course requires: the shuffle test, which checks whether a difference is real.",
    admire="The Bollen/Schmidt trial: a hockey stick of societal distress, found by counting.",
    interrogate="The rising words are fiction-words, and Google scanned more fiction after 2000. The rebuttal, and the method worth adopting: the authors removed the entire fiction corpus and re-ran it, and the pattern largely held. The answer to \"your corpus is biased\" is a test, not an argument.",
-   flow=[("0:00","Warm-up retrieval."),
+   flow=[("0:00","Warm-up: favorite Pudding pieces from the sketch, what did yours count, and one choice its makers made. Then retrieval."),
          ("0:05","The trial: claim, objection, re-run-without-fiction rebuttal, \"interpret with care.\" One named choice is the chart: the hockey-stick shape depends on its y-axis and smoothing."),
          ("0:25","A brief demonstration before the complications: the words one artist uses far more than everyone else, a signature vocabulary measured against a pop baseline."),
          ("0:30","Hand-built bag-of-words: two authors, highlighters, argue about merging run/running. Counting requires defining."),

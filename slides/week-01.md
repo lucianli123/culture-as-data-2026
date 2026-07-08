@@ -18,6 +18,14 @@ The Pudding, "She Giggles, He Gallops" (2017): across ~2,000 film screenplays, t
 
 The 2,000 screenplays skew toward what was produced and digitized: is that "film," or a sample of it? Whose choice is a gendered verb: the writer's, the character's, or the genre's? Counting shows the split, not the cause. The visualization's own choices deserve the same scrutiny as the data.
 
+## Course logistics
+
+- Ten sessions, two hours each, in three parts every week: lecture and demonstration, hands-on workshop, and discussion, roughly a third each.
+- Bring a laptop. You need a Google account (Colab and Drive, where all work lives) and a GitHub account (where your essay publishes); both are free, and the course costs nothing.
+- The weekly rhythm: a short reading before each session, a small sketch after it, and a five-minute check with the AI closed. All materials live on the course site.
+- Icebreaker, one fast round: your name, one piece of culture you kept returning to this year, and one number about it you wish you knew. Keep your answer; it is a first draft of a project question.
+- The course ends in a public showcase, friends and family invited, your finding at a live URL.
+
 ## Why this course: the stakes
 
 - Machines already read culture at scale: the feed ranking what you see, the moderation filter, the model trained on scraped art and prose. That reading shapes which culture reaches you, and it happens without you.
@@ -92,7 +100,7 @@ The 2,000 screenplays skew toward what was produced and digitized: is that "film
 
 ## The session
 
-- **0:00**  Introductions and working agreements, demonstrated in practice. Today's live coding deliberately includes real mistakes.
+- **0:00**  Logistics, working agreements, and a one-round icebreaker: your name, one piece of culture you kept returning to this year, and one number about it you wish you knew. Today's live coding deliberately includes real mistakes.
 - **0:10**  Lecture, the stakes: machines already read culture at scale, the feed ranking what you see, the moderation filter, the model trained on scraped art and prose, and that reading happens without you. Counting culture has produced real knowledge (the screenplay verb split, the Rowling unmasking, pop music's 1991 revolution) and real mistakes, and both look identical until someone checks. In ten weeks you do the reading yourself and publish something checkable.
 - **0:28**  Look at This, then Question It: She Giggles, He Gallops.
 - **0:35**  The vocabulary and the map (no code): corpus, method, model, embedding, plus what data itself is. A CSV, anatomized on screen (rows are observations, columns are recorded facts), and Drucker's correction: data is capta, taken not given. Two minutes in pairs: what did the makers of the wedding table take, and what did they leave out? The deliverable, shown: a web essay on a runnable notebook.
@@ -106,5 +114,5 @@ The 2,000 screenplays skew toward what was produced and digitized: is that "film
 - **Reading:** [Bollen et al., the cognitive-distortions hockey stick (PNAS 2021)](https://www.pnas.org/doi/10.1073/pnas.2102061118), with the [Schmidt et al. critique](https://www.pnas.org/doi/10.1073/pnas.2115010118)
 - **Supplement:** [Robin Sloan, Writing with the machine](https://www.robinsloan.com/notes/writing-with-the-machine/); [Drucker, Humanities Approaches to Graphical Display (DHQ 2011)](http://www.digitalhumanities.org/dhq/vol/5/1/000091/000091.html), the case that all data is capta
 - **Deeper (optional):** [Moretti, Conjectures on World Literature (NLR 2000)](https://newleftreview.org/issues/ii1/articles/franco-moretti-conjectures-on-world-literature), the founding argument for reading culture at scale
-- **Sketch:** One question from your life, answerable with data (three sentences), plus the notebook's after-class half (~20 minutes).
+- **Sketch:** A favorite Pudding piece and what it counted; the question from your life it inspires; the notebook's after-class half (~20 minutes).
 - **Check (AI closed):** Trace it: one written sentence predicting what your cell does before you run it. (Competency 1.)

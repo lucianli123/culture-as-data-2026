@@ -54,7 +54,7 @@ The rising words are fiction-words, and Google scanned more fiction after 2000. 
 
 ## The session
 
-- **0:00**  Warm-up retrieval.
+- **0:00**  Warm-up: favorite Pudding pieces from the sketch, what did yours count, and one choice its makers made. Then retrieval.
 - **0:05**  The trial: claim, objection, re-run-without-fiction rebuttal, "interpret with care." One named choice is the chart: the hockey-stick shape depends on its y-axis and smoothing.
 - **0:25**  A brief demonstration before the complications: the words one artist uses far more than everyone else, a signature vocabulary measured against a pop baseline.
 - **0:30**  Hand-built bag-of-words: two authors, highlighters, argue about merging run/running. Counting requires defining.
