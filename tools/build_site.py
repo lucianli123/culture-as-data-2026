@@ -86,6 +86,7 @@ SOCIAL_STARTERS = [
     ("notebooks/social-media-starters/mastodon_api.ipynb", "Mastodon", "Per-instance public timelines; the server you choose is a corpus choice."),
     ("notebooks/social-media-starters/gutenberg_fiction.ipynb", "Project Gutenberg", "Public-domain genre fiction by ID: full text, zero legal risk."),
     ("notebooks/social-media-starters/letterboxd_scraper_template.ipynb", "Polite scraper template", "The Letterboxd pattern with the delay and checklist built in; Goodreads via the UCSD Book Graph instead."),
+    ("notebooks/social-media-starters/nyt_announcement_text.ipynb", "NYT announcement text", "Lead paragraphs for the wedding corpus via the official Article Search API; analyze, don't redistribute."),
 ]
 
 COOL_METHODS = [
