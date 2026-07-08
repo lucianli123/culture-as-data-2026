@@ -542,7 +542,12 @@ def ol(items): return "<ol>" + "".join(f"<li>{i}</li>" for i in items) + "</ol>"
 def ul(items): return "<ul>" + "".join(f"<li>{i}</li>" for i in items) + "</ul>"
 
 # Pages ---------------------------------------------------------------------
-FAVICON_SVG = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#7a3b2e"/><circle cx="11" cy="12" r="3" fill="#f0e9e2"/><circle cx="20" cy="10" r="3" fill="#b9852f"/><circle cx="22" cy="21" r="3" fill="#3f6f5f"/><circle cx="12" cy="22" r="3" fill="#f0e9e2"/></svg>'
+FAVICON_SVG = ('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">'
+               '<rect width="32" height="32" rx="6" fill="#7a3b2e"/>'
+               '<rect x="7" y="17" width="5" height="8" rx="1" fill="#f0e9e2"/>'
+               '<rect x="14" y="12" width="5" height="13" rx="1" fill="#b9852f"/>'
+               '<rect x="21" y="7" width="5" height="18" rx="1" fill="#3f6f5f"/>'
+               '</svg>')
 
 def build_index():
     acts = {1: "Act 1 — The tools (Weeks 1–3)", 4: "Act 2 — The project (Weeks 4–7)", 8: "Act 3 — Publish (Weeks 8–10)"}
