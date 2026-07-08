@@ -8,10 +8,10 @@ values; never reuse a fix-it on the same cohort twice.
 
 ## Week 1 — trace it (required)
 
-- **Trace:** `weddings[weddings["name_status"] == "keeping"].shape[0]` — one sentence
+- **Trace:** `sum(1 for s in sonnets if "summer" in s.lower())` — one sentence
   predicting what prints.
-- **Fix:** `by_year = weddings.groupby("Year")["name_status"].count()` — *KeyError: the
-  column is lowercase `year`.*
+- **Fix:** `counts.most_comon(5)` — *AttributeError: a typo the traceback names almost
+  verbatim (`most_common`).*
 - **Explain:** why does the notebook save everything to the Drive project folder rather
   than `/content`?
 

@@ -11,8 +11,8 @@
 # Two safety rails make this CI-able with no key and no spend:
 #   * Week 7's live Gemini cells are gated behind `if os.environ.get("GEMINI_API_KEY")`
 #     and ship a recorded sample response, so the notebook runs end-to-end mocked.
-#   * GPU notebooks (Week 5) run on CPU with a tiny corpus (SMOKE=1) so CI finishes;
-#     the full-size T4 run is a separate, manual Colab check (BUILD-PLAN §4d).
+#   * Week 5's embedder falls back to a deterministic stand-in when the model can't
+#     load; the full-size T4 run is a separate, manual Colab check (BUILD-PLAN §4d).
 set -euo pipefail
 
 REPO="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
@@ -21,10 +21,8 @@ OUT_DIR="$NB_DIR/_executed"
 COLAB_IMAGE="us-docker.pkg.dev/colab-images/public/runtime"
 MODE="${1:---local}"
 
-# Run notebooks in tiny/mocked mode so CI is fast and key-free. The notebooks read
-# these env vars; see each notebook's config cell.
-export CULTURE_AS_DATA_SMOKE=1     # tiny corpora, CPU-only
-# GEMINI_API_KEY intentionally unset here -> Week 7 uses its recorded cassette.
+# No keys are set here, so live paths fall back gracefully: Week 7 uses its recorded
+# cassette, and loaders prefer the repo's data snapshots.
 
 run_local() {
   python -m pip install -q nbclient nbconvert jupyter
@@ -32,7 +30,7 @@ run_local() {
   jupyter nbconvert --to notebook --execute \
     --ExecutePreprocessor.timeout=900 \
     --output-dir "$OUT_DIR" \
-    "$NB_DIR"/_smoke_test.ipynb $(ls "$NB_DIR"/week*.ipynb | grep -vE "_GUIDED|_SKELETON")
+    $(ls "$NB_DIR"/week*.ipynb | grep -vE "_GUIDED|_SKELETON")
   echo "All notebooks executed with zero cell errors. Output in $OUT_DIR"
   # GUIDED/SKELETON variants are completion problems: their blank cells error by
   # design until a student fills them, so they are excluded from headless execution.
@@ -42,7 +40,6 @@ run_docker() {
   echo "Pulling Colab base image (matches the student runtime)…"
   docker pull "$COLAB_IMAGE"
   docker run --rm -v "$REPO":/work -w /work \
-    -e CULTURE_AS_DATA_SMOKE=1 \
     "$COLAB_IMAGE" bash -lc '
       pip install -q nbclient nbconvert jupyter &&
       pip install -q -r notebooks/requirements.txt -c notebooks/constraints.txt &&
@@ -50,7 +47,7 @@ run_docker() {
       jupyter nbconvert --to notebook --execute \
         --ExecutePreprocessor.timeout=900 \
         --output-dir notebooks/_executed \
-        notebooks/_smoke_test.ipynb $(ls notebooks/week*.ipynb | grep -vE "_GUIDED|_SKELETON")
+        $(ls notebooks/week*.ipynb | grep -vE "_GUIDED|_SKELETON")
     '
   echo "All notebooks executed in the Colab base image with zero cell errors."
 }

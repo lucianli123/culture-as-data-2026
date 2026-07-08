@@ -44,7 +44,6 @@ culture-as-data/
 │   ├── README.md                  # how to open in Colab, the runtime expectations
 │   ├── requirements.txt           # PINNED versions (see §4)
 │   ├── constraints.txt            # optional: hard pins for the compat-test harness
-│   ├── _smoke_test.ipynb          # runs every notebook's imports + a tiny op (see §4)
 │   ├── python_warmup.ipynb                # optional 20-min predict-then-run basics (never required)
 │   ├── week01_first_investigation.ipynb   # fully worked (Drive-mount ritual + wedding data + word & pixel counting)
 │   ├── week02_counting.ipynb              # fully worked
@@ -150,14 +149,14 @@ or equivalently `nbclient`/`papermill` per notebook. Key points:
 - For notebooks that need the **Gemini API** (Week 7), gate the live-call cells behind an env check (`if os.environ.get("GEMINI_API_KEY")`) and provide a **mocked/cassette path** so the notebook executes end-to-end in CI without a key or network — assert on the parsing/sorting logic, not on the model's words. (A recorded sample response committed as a fixture is enough.)
 - For GPU notebooks (embeddings/CLIP), the harness should run on CPU with a **tiny corpus** (10–50 items) so it finishes in CI; keep the full-size run as a separate, manually-triggered Colab check. The point of CI is "imports resolve and the pipeline runs," not "reproduce the T4 timing."
 
-**Layer 3 — the in-notebook smoke test (the student-facing safety net).**
-`notebooks/_smoke_test.ipynb` is a single notebook a student or instructor can run in Colab on day one to confirm their runtime is healthy: it imports every package the course uses, prints each version, runs one trivial op per library (embed one sentence, label one string via Gemini if a key is present, open one image, fit a 5-row logistic regression), and prints a green "all systems go" or a specific failure pointing at the cheat-sheet entry. This is also the best living documentation of the working version set — its printed output *is* the "tested as of" record.
+**Layer 3 — the real-Colab check.**
+Run the heaviest notebook (`week05_embeddings.ipynb`) top to bottom in a real Colab free runtime.
 
 ### 4d. Compatibility acceptance criteria
 
 - `tools/check_compat.py` exits 0 (resolver finds a solution for the pinned set).
 - `tools/run_notebooks.sh` executes **all** notebooks in the Colab base image with **zero cell errors** (Gemini cells mocked, GPU cells on tiny CPU corpus).
-- `_smoke_test.ipynb` run in a real Colab free runtime prints all-green, and `notebooks/README.md` records the Colab Python/`numpy`/`torch` versions and the date it passed.
+- `week05_embeddings.ipynb` runs green in a real Colab free runtime, and `notebooks/README.md` records the Colab Python/`numpy`/`torch` versions and the date it passed.
 - A second, manual full-size run of `week05_embeddings.ipynb` on a real Colab **T4** completes within the runtime limits (this one can't be CI'd cheaply; do it once by hand and note the wall-clock time so the instructor knows what to expect in class).
 
 ---
@@ -173,7 +172,6 @@ or equivalently `nbclient`/`papermill` per notebook. Key points:
 7. **The two kits** (§3) — small, can be done any time; do them before final notebook polish so the "see the cheat sheet" references resolve.
 8. **`tools/run_notebooks.sh` + the Colab-image Docker harness** — wire up CI; get all notebooks green.
 9. **The site** (§2) — generate from the markdown docs, style with the `frontend-design` skill, verify links and JS-off rendering.
-10. **`_smoke_test.ipynb`** — last, since it imports the finished set; run it in real Colab and stamp the README.
 
 Each step: build, run the relevant harness layer, fix, commit. Don't batch — a green check after each notebook is the whole point of having the harness.
 

@@ -68,6 +68,24 @@ function build(w){
     });
   });
 
+  // 3c. Week 1 only: the real corpus, in pictures
+  if(w.n===1){
+    try{
+      const dir=path.join(__dirname,"..","notebooks","data","week01","met");
+      const files=fs.readdirSync(dir).filter(f=>f.endsWith(".jpg")).slice(0,8);
+      if(files.length){
+        s=pres.addSlide(); s.background={color:WHITE};
+        s.addText("WEEK 1 · THE IMAGE CORPUS",{x:M,y:0.7,w:11,h:0.35,fontFace:SANS,fontSize:12,bold:true,color:GREEN,charSpacing:3});
+        s.addText("Eighteen real paintings, public domain, snapshotted in the repo",{x:M,y:1.1,w:11.9,h:0.7,fontFace:SERIF,fontSize:26,bold:true,color:INK});
+        files.forEach((f,i)=>{
+          const x=M+(i%4)*3.05, y=2.2+Math.floor(i/4)*2.45;
+          s.addImage({path:path.join(dir,f),x,y,w:2.8,h:2.2,sizing:{type:"contain",w:2.8,h:2.2}});
+        });
+        s.addText("Counted by brightness in the session; by defined color ranges after class.",{x:M,y:7.0,w:11.9,h:0.35,fontFace:SANS,fontSize:12,italic:true,color:MUTED});
+      }
+    }catch(e){ console.log("week 1 image slide skipped:", e.message); }
+  }
+
   // 4. Three modes
   s=pres.addSlide(); s.background={color:WHITE};
   s.addText("Three modes today",{x:M,y:0.8,w:11,h:0.8,fontFace:SERIF,fontSize:30,bold:true,color:INK});

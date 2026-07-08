@@ -13,9 +13,8 @@ narrated**, not for being clever. Every code cell has a plain-language Markdown 
    pinned `%pip install` line you can use instead.)
 4. Run the **imports cell**. If it errors, open `../kits/common-errors-cheatsheet.md`.
 
-Run **`_smoke_test.ipynb` first** on day one. It imports every package the course uses, prints
-each version, and runs one trivial operation per library. A green report means your runtime is
-healthy; a red one points you at the exact cheat-sheet entry.
+Every notebook runs on real, snapshotted data (`data/`): the 154 sonnets, two public-domain
+novels, and 18 CC0 Met paintings with a manifest. Nothing depends on the network to teach.
 
 ## Which notebook is which
 
@@ -54,17 +53,17 @@ serves a first-timer and an experienced coder at once.
 
 ## "Tested as of", the version stamp
 
-The honest record of the working version set is the printed output of `_smoke_test.ipynb` from a
-real Colab run. Fill this in after the first green run:
+The honest record of the working version set is a real Colab run of `week05_embeddings.ipynb`
+(the heaviest notebook) followed by `pip freeze`. Fill this in after the first green run:
 
 | Field | Value |
 |---|---|
-| Date passed | _PLACEHOLDER. Run `_smoke_test.ipynb` in Colab and record the date_ |
+| Date passed | _PLACEHOLDER. Run week05 in Colab and record the date_ |
 | Python | _e.g. 3.11.x_ |
-| numpy | _from the smoke-test printout_ |
-| torch | _from the smoke-test printout_ |
-| scikit-learn | _from the smoke-test printout_ |
-| sentence-transformers | _from the smoke-test printout_ |
+| numpy | _from `pip freeze`_ |
+| torch | _from `pip freeze`_ |
+| scikit-learn | _from `pip freeze`_ |
+| sentence-transformers | _from `pip freeze`_ |
 
 Colab updates its image periodically. When the date above is stale, re-run the harness
 (`tools/check_compat.py`, then `tools/run_notebooks.sh`), re-freeze pins from a successful Colab
@@ -75,7 +74,7 @@ Colab updates its image periodically. When the date above is stale, re-run the h
 - **Layer 1, `tools/check_compat.py`**: resolver dry-run. Seconds. "Do the pins resolve?"
 - **Layer 2, `tools/run_notebooks.sh`**: headless execution in the Colab base image. Catches
   import-time and runtime breakage. Gemini mocked, GPU cells on a tiny CPU corpus.
-- **Layer 3, `_smoke_test.ipynb`**: the student-facing safety net, run in real Colab.
+- **Layer 3, a real Colab run**: open `week05_embeddings.ipynb` in Colab and run it top to bottom.
 
 A separate **manual** full-size run of `week05_embeddings.ipynb` on a real T4 confirms the heavy
 path fits the runtime limits; note the wall-clock time so the instructor knows what to expect in

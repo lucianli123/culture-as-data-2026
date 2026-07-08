@@ -13,8 +13,8 @@ from these.
 2. **Function call — `do(thing)`.** Parentheses mean *run this now*. `len(words)`,
    `print(df)`, `tokenize(text)`. What's inside the parentheses is the input.
 3. **The method chain — read left to right, like a pipeline.**
-   `weddings.groupby("year")["name_status"].count()` reads: take the table → bundle rows
-   by year → keep one column → count each bundle. Each dot passes the result along.
+   `manifest.groupby("artist")["title"].count()` reads: take the table → bundle rows
+   by artist → keep one column → count each bundle. Each dot passes the result along.
 4. **The loop — `for item in pile:`** means *for each*. Everything indented below it
    happens once per item.
 5. **Import — `import pandas as pd`.** Bring in a toolbox and give it a short name.
@@ -25,7 +25,7 @@ from these.
 Every name in a cell holds one of about six kinds of thing. Knowing which is half of
 reading:
 
-- **A string** — text in quotes: `"keeping"`. Code treats it as characters, not meaning.
+- **A string** — text in quotes: `"love"`. Code treats it as characters, not meaning.
 - **A number** — `42` or `0.34`. No quotes.
 - **A list** — an ordered pile: `["she", "giggles"]`. Loops eat these.
 - **A dict** — labeled slots: `{"title": "...", "year": 1948}`. APIs return these.
@@ -47,15 +47,14 @@ which is why the notebook must run top to bottom, and why your work lives in Dri
 ## One real cell, annotated
 
 ```python
-weddings["year"] = weddings["url"].str.extract(r"nytimes\.com/(\d{4})/").astype(float)
-#  ^ new column      ^ take the url column, pull out the four digits after the site name,
-#                      treat them as numbers  (pattern 1 wrapping pattern 3)
+sonnet_words = [w for s in sonnets for w in re.findall(r"[a-z']+", s.lower())]
+#  ^ new list        ^ for each sonnet, pull out its lowercase words and pool them
+#                      (pattern 1 wrapping pattern 4, a loop inside a list)
 
-by_year = (weddings[weddings["name_status"].isin(["keeping", "taking"])]
-           .groupby("year")["name_status"]
-           .apply(lambda s: (s == "keeping").mean()))
-#  keep only rows with a clear answer → bundle by year → for each year's bundle,
-#  the share that says "keeping"  (one long pipeline: pattern 3)
+per_sonnet = [len(re.findall(r"\blove\b", s.lower())) for s in sonnets]
+rolling = pd.Series(per_sonnet).rolling(15, min_periods=1).mean()
+#  count "love" in each sonnet → wrap the counts as a Series → smooth with a
+#  15-sonnet rolling average  (pattern 1, then pattern 3's pipeline)
 ```
 
 If you can say what each arrow-comment says, in your own words, you have read the cell.

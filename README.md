@@ -72,8 +72,8 @@ python tools/check_compat.py
 # Layer 2. Do all notebooks run top-to-bottom in a Colab-like image?
 bash tools/run_notebooks.sh
 
-# Layer 3, the student-facing safety net: open notebooks/_smoke_test.ipynb in real Colab
-#           and read the all-green report. Its printed output IS the "tested as of" record.
+# Layer 3, the real-Colab check: run notebooks/week05_embeddings.ipynb top to bottom in
+#           Colab, then `pip freeze`; that output is the "tested as of" record.
 ```
 
 If anything moved, re-freeze the working versions from a successful Colab run (`pip freeze`)

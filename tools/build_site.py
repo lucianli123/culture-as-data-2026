@@ -69,7 +69,7 @@ GH_REPO = "https://github.com/lucianli123/culture-as-data-2026"
 COLAB = "https://colab.research.google.com/github/lucianli123/culture-as-data-2026/blob/main/"
 
 NOTEBOOKS = [
-    ("notebooks/week01_first_investigation.ipynb", 1, "Your first investigation", "Load the wedding data, make your first chart, learn to read an error and recover, count words and pixels."),
+    ("notebooks/week01_first_investigation.ipynb", 1, "Your first investigation", "Load the 154 sonnets, make your first chart, learn to read an error and recover, count words and pixels."),
     ("notebooks/week02_counting.ipynb", 2, "Counting", "Bag-of-words by hand-logic, tf-idf, keyness (the She Giggles, He Gallops method), and the shuffle test."),
     ("notebooks/week03_classification.ipynb", 3, "Classification", "Train a logistic regression and read its signed weights, the model's mind on the table."),
     ("notebooks/week04_data_cookbook.ipynb", 4, "The data cookbook", "Three routes to a corpus: load a file, call an API, scrape politely. Saves your corpus to Drive."),
@@ -186,14 +186,14 @@ SLIDES_CONTENT={
     "Model: any simplification that turns culture into numbers. A word count is already one.",
     "Embedding: a few hundred numbers that place an item on a map of meaning. Week 5."]),
   ("What is data? A CSV, and Drucker's caveat",
-   ["Data is anything made countable: rows in a table, words in a headline, numbers in a pixel. The making is the part to watch.",
-    "A CSV is the plainest container: one row per observation, one column per recorded fact, a first line naming the columns. Ours has four columns and 7,835 rows, and opens in anything.",
-    "Johanna Drucker's correction: data (\"the given\") is the wrong word; capta (\"the taken\") is honest. Nothing is simply given - someone chose what to record.",
-    "The four columns are those choices. There is a name status for the bride and none for the groom; ages but no occupations; no field a same-sex couple could use for most of the period.",
-    "Discussion, in pairs: what did the makers of this table take, and what did they leave? That question is the course, asked of every corpus from now on - and it has a whole literature, on the next slide."]),
+   ["Data is anything made countable. The making is the part to watch.",
+    "A CSV: one row per thing, one column per recorded fact. Ours: 18 paintings, seven columns.",
+    "Drucker: data (\"the given\") is the wrong word. Capta, \"the taken,\" is honest.",
+    "The columns are choices: the artist's name but not the sitter's; a free-text date. Absence is a decision too.",
+    "Pairs, two minutes: what did the catalogers take, and what did they leave?"]),
   ("Quantification has a literature (the theory shelf, never required)",
    ["Porter, Trust in Numbers (1995): quantification is a technology of distance - numbers travel where personal trust cannot, which is why institutions demand them.",
-    "Bowker and Star, Sorting Things Out (1999): every classification makes some things visible and others invisible; categories have politics, including the four columns of a wedding table.",
+    "Bowker and Star, Sorting Things Out (1999): every classification makes some things visible and others invisible; categories have politics, including the columns of a museum catalog.",
     "Gitelman (ed.), 'Raw Data' Is an Oxymoron (2013): there is no raw data - collection, cleaning, and framing cook it before you arrive.",
     "Scott, Seeing Like a State (1998): counting makes the world legible to power, and the counting remakes the world to be more countable.",
     "Drucker's capta (the Week 1 supplement) is the door into this shelf; D'Ignazio and Klein's Data Feminism (open access) runs under the whole course. None of it is required; all of it is where the course's habits come from."]),
@@ -220,10 +220,10 @@ SLIDES_CONTENT={
     "Rule three: the report is never a source. Cite what you read, not the tool that found it.",
     "Rule four: scout, then close the tool. Your question, your reading, and your interpretation cannot be delegated - the same boundary as with code."]),
   ("Counting, three shapes",
-   ["Rows: what share of brides kept their name, year by year. One groupby, one chart.",
+   ["Rows: a manifest of 18 paintings, counted and ranked in one pipeline.",
     "Words: the top words of 154 sonnets are thy and thou until the stop list learns Early Modern English; then love (195 times), beauty, and time surface. The stop list must fit the corpus, and it is your choice.",
-    "Pixels: rank 200 Met thumbnails darkest to brightest from average luminance.",
-    "The same technique three times, each containing a decision."])],
+    "Pixels: the paintings themselves, ranked darkest to brightest from average luminance.",
+    "One technique, three shapes, a decision hiding in each."])],
 2:[("The trial: Bollen et al. v. Schmidt",
    ["The claim (PNAS 2021): phrases of distorted thinking (\"I am a failure,\" \"everyone hates me\") surge in Google Books after 2000. A hockey stick.",
     "The objection: Google scanned more fiction after 2000. Maybe the surge is novels, not distress.",
@@ -383,10 +383,10 @@ WEEKS = [
    flow=[("0:00","Logistics, working agreements, and a one-round icebreaker: your name, one piece of culture you kept returning to this year, and one number about it you wish you knew. Today's live coding deliberately includes real mistakes."),
          ("0:10","Lecture, the stakes: machines already read culture at scale, the feed ranking what you see, the moderation filter, the model trained on scraped art and prose, and that reading happens without you. Counting culture has produced real knowledge (the screenplay verb split, the Rowling unmasking, pop music's 1991 revolution) and real mistakes, and both look identical until someone checks. In ten weeks you do the reading yourself and publish something checkable."),
          ("0:28","Look at This, then Question It: She Giggles, He Gallops."),
-         ("0:35","The vocabulary and the map (no code): corpus, method, model, embedding, plus what data itself is. A CSV, anatomized on screen (rows are observations, columns are recorded facts), and Drucker's correction: data is capta, taken not given. Two minutes in pairs: what did the makers of the wedding table take, and what did they leave out? The deliverable, shown: a web essay on a runnable notebook."),
-         ("0:47","Lab 1 (worked, participatory): copy the notebook to Drive and mount Drive into the runtime (this is how your corpus and results survive Colab wiping the session, everything saving to one project folder), put a Gemini key in Colab Secrets, load NYT wedding data, make a first chart. Hand out the common-errors cheat sheet. Then solo with a partner: draft three questions, pick one, have the AI write the code, run it, chart it. Write one sentence predicting your cell before you run it."),
+         ("0:35","The vocabulary and the map (no code): corpus, method, model, embedding, plus what data itself is. A CSV, anatomized on screen using the painting manifest (rows are paintings, columns are what the Met chose to record), and Drucker's correction: data is capta, taken not given. Two minutes in pairs: what did the catalogers take, and what did they leave out? The deliverable, shown: a web essay on a runnable notebook."),
+         ("0:47","Lab 1 (worked, participatory): copy the notebook to Drive and mount Drive (this is how work survives Colab wiping the session), Gemini key into Colab Secrets, then load the 154 sonnets and make a first chart: love across the sequence. Count the whole corpus and watch the stop list matter. Then the AI loop, solo: ask, predict, run, interrogate. The error drill lands here, cheat sheet in hand."),
          ("1:20","Break"),
-         ("1:30","Lab 2 (worked): count words, then pixels. Shakespeare's 154 sonnets: thy and thou top the count until the stop list learns the corpus, then love, beauty, and time surface. Then the Met image corpus ranked darkest to brightest by average brightness. The notebook's after-class half, defined color ranges and Sonnet 130's bag against the poem itself, is this week's guided homework. Image projects begin here."),
+         ("1:30","Lab 2 (worked): count pixels. The manifest is the first CSV (rows are paintings, columns are the Met's choices), and the 18 paintings rank darkest to brightest by average luminance. The notebook's after-class half, defined color ranges and Sonnet 130's bag against the poem itself, is this week's guided homework. Image projects begin here."),
          ("1:52","Preview of the methods ahead; the weekly routines introduced. First check-out.")],
    reading="The Bollen/Schmidt exchange, abstract and figure only: the Google Books \"hockey stick\" of cognitive distortions, then the critique that it may be an artifact of which books Google scanned. The trial runs next week.",
    sketch="Browse pudding.cool and pick a favorite piece (one sentence: what did it count?), then write the question from your own life it inspires. Plus the notebook's after-class half: color ranges, and what every bag throws away (~20 minutes).",
@@ -953,12 +953,12 @@ def build_notebooks():
 <article>
   <h1>Notebooks &amp; slides</h1>
   <p class="lede">The labs the course teaches from. Every one runs on Colab's free tier, costs $0, and works without any API key.</p>
-  <p class="cta"><a class="button" href="{COLAB}notebooks/_smoke_test.ipynb">Run the smoke test first</a> <a class="button ghost" href="{GH_REPO}/tree/main/notebooks">All notebooks on GitHub</a></p>
+  <p class="cta"><a class="button" href="{COLAB}notebooks/week01_first_investigation.ipynb">Open Week 1 in Colab</a> <a class="button ghost" href="{GH_REPO}/tree/main/notebooks">All notebooks on GitHub</a></p>
 
   <section>
     <h2>Before your first session</h2>
     {ul([
-      "Open the smoke test above and run it top to bottom: a green report means your runtime is healthy.",
+      "Every notebook runs on real, snapshotted data (the sonnets, two public-domain novels, 18 CC0 Met paintings), so nothing depends on the network to teach.",
       f"Never coded at all? An optional twenty-minute <a href='{COLAB}notebooks/python_warmup.ipynb'>Python warm-up</a> covers names, lists, and a first table, predict-then-run. The course never quizzes syntax; this is only for those who want it.",
       "Each notebook's first cells mount your Google Drive (so work survives a Colab reset) and install the few pinned packages Colab doesn't ship.",
       "Week 7 wants a free Gemini API key in Colab Secrets; without one it runs end-to-end on a recorded response.",
