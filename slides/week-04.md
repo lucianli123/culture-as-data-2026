@@ -59,7 +59,7 @@ Listen across the pitches for questions too vague to answer, corpora that don't 
 - **0:48**  Break
 - **0:58**  The data conversation: the licensing one-pager (CC0 museums and public-domain books go anywhere; academic-only sets analyze-don't-redistribute; lyrics and review text metadata-only; AO3 and other community-opposed archives a small attributed sample at most, never a shared dataset; live firehoses we discuss, don't scrape; pirated full-text books from shadow libraries like LibGen never, the line the field's $1.5B settlement was about), and the Data Biography introduced.
 - **1:10**  Getting the data, APIs and scraping, demoed live with the AI writing the code. API first (the Met or Art Institute, no key); scraping second, with the robots.txt / ToS / rate-limit / anti-republish check.
-- **1:30**  Collect-and-build lab: point the cookbook notebook at your corpus, reshape it, and save it to your Drive project folder so it's there next week (when the Week 1 Drive mount pays off), and fork the publishing template. Your project repository starts today.
+- **1:30**  Collect-and-build lab: point the cookbook notebook at your corpus, reshape it, and save it to your Drive project folder so it's there next week (when the Week 1 Drive mount pays off), and fork the publishing template with GitHub Pages enabled, so a live placeholder URL exists from commit day. Your project repository starts today.
 - **1:55**  Commit, with the pivot kit named as insurance. A null result honestly shown is a complete project. Check-out.
 
 ## Reading & homework

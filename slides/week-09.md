@@ -18,13 +18,6 @@ Three published essays side by side: a Pudding piece, an Observable notebook, a 
 
 There's no single right way, only choices you can defend. Yours will be choices too.
 
-## Interrogate your own chart
-
-- Does the y-axis start at zero, or is the plotting default manufacturing your trend?
-- Is the eye pulled toward a pattern the data won't support?
-- What does this chart hide that a different one would show?
-- Ten weeks interrogating other people's charts. These ten minutes are for yours. Fix one thing.
-
 ## No single right way
 
 - Three published essays, same goal, three defensible sets of choices: a Pudding piece, an Observable notebook, a Quarto site.
@@ -48,8 +41,7 @@ There's no single right way, only choices you can defend. Yours will be choices 
 - **0:00**  Look at This: the three essays, common structure, divergent choices.
 - **0:15**  Structured critique (Critical Response Process) in trios: statements of meaning, maker's questions, neutral questions, permissioned opinions.
 - **0:50**  Break
-- **1:00**  Interrogate your own chart, the making-side mirror of Week 6's hand-labeling. Does the y-axis start at zero? Is the eye pulled toward a pattern the data won't support? Fix one thing.
-- **1:15**  Build lab: open the template you forked in Week 4; paste outline, charts, code; render; deploy. Static by default; JS opt-ins hit the code-review checkpoint.
+- **1:00**  Build lab, fifty minutes: open the template forked in Week 4, already live on Pages; paste outline, charts, code; render; push. Static by default; JS opt-ins hit the code-review checkpoint.
 - **1:50**  Phone test in pairs. Check-out.
 
 ## Reading & homework

@@ -55,7 +55,7 @@
     ]
    },
    {
-    "h": "Defining a color, and what every bag loses",
+    "h": "The after-class half: defining a color, and what every bag loses",
     "points": [
      "What counts as red? A boundary you set on the hue wheel. Shift it twenty degrees and paintings change category without changing a pixel: defining the ranges is the analysis, the same decision as the stop-word list.",
      "Two sentences with identical word-bags can mean opposite things: \"the critics loved it, the public did not\" and its reversal count the same. Order, negation, and who-did-what are the casualties.",
@@ -100,7 +100,7 @@
    },
    {
     "t": "1:30",
-    "a": "Lab 2 (worked): count words, then pixels. The real headlines' top words (stop-words dominate until removed, the first counting decision), then the Met image corpus: brightness ranking, defined color ranges and the corpus palette (what counts as red is a boundary you set), and the closing demonstration of what every bag throws away, identical word-bags with opposite meanings and a painting beside its shuffled pixels. Image projects begin here."
+    "a": "Lab 2 (worked): count words, then pixels. The real headlines' top words (stop-words dominate until removed, the first counting decision), then the Met image corpus ranked darkest to brightest by average brightness. The notebook's after-class half, defined color ranges and what every bag throws away, is this week's guided homework. Image projects begin here."
    },
    {
     "t": "1:52",
@@ -110,7 +110,7 @@
   "reading": "Bollen et al., the cognitive-distortions hockey stick (PNAS 2021), with the Schmidt et al. critique",
   "supplement": "Robin Sloan, Writing with the machine",
   "deeper": "Moretti, Conjectures on World Literature (NLR 2000), the founding argument for reading culture at scale",
-  "sketch": "One question from your life answerable with text or image data; three sentences.",
+  "sketch": "One question from your life, answerable with data (three sentences), plus the notebook's after-class half (~20 minutes).",
   "check": "Trace it: one written sentence predicting what your cell does before you run it. (Competency 1.)",
   "threads": [
    {
@@ -129,7 +129,7 @@
  },
  {
   "n": 2,
-  "title": "Counting Is Already a Model",
+  "title": "Counting, Compared: Is the Difference Real?",
   "promise": "Put a famous PNAS paper on trial, find the words that make a voice distinctive (the method behind Week 1's featured study), and learn the one statistical method the course requires: the shuffle test, which checks whether a difference is real.",
   "tool": "Advanced counting: baselines, keyness, and the shuffle test",
   "comps": "3, 5, 8",
@@ -407,7 +407,7 @@
    },
    {
     "t": "1:30",
-    "a": "Collect-and-build lab: point the cookbook notebook at your corpus, reshape it, and save it to your Drive project folder so it's there next week (when the Week 1 Drive mount pays off), and fork the publishing template. Your project repository starts today."
+    "a": "Collect-and-build lab: point the cookbook notebook at your corpus, reshape it, and save it to your Drive project folder so it's there next week (when the Week 1 Drive mount pays off), and fork the publishing template with GitHub Pages enabled, so a live placeholder URL exists from commit day. Your project repository starts today."
    },
    {
     "t": "1:55",
@@ -721,6 +721,15 @@
     ]
    },
    {
+    "h": "Interrogate your own chart",
+    "points": [
+     "Does the y-axis start at zero, or is the plotting default manufacturing your trend?",
+     "Is the eye pulled toward a pattern the data won't support?",
+     "What does this chart hide that a different one would show?",
+     "Ten weeks interrogating other people's charts. These ten minutes are for yours. Fix one thing."
+    ]
+   },
+   {
     "h": "The show-your-work appendix",
     "points": [
      "Your method choices, your moments of doubt, what you cut, what the AI got wrong.",
@@ -748,7 +757,7 @@
    },
    {
     "t": "1:22",
-    "a": "Writing workshop: opening question, what you found, what it does not show, the choices you made. Distill the Data Biography into the corpus note."
+    "a": "Writing workshop: opening question, what you found, what it does not show, the choices you made. Distill the Data Biography into the corpus note, and close on your main chart while the draft is open: interrogate it and fix one thing."
    },
    {
     "t": "1:50",
@@ -785,15 +794,6 @@
   "interrogate": "There's no single right way, only choices you can defend. Yours will be choices too.",
   "content": [
    {
-    "h": "Interrogate your own chart",
-    "points": [
-     "Does the y-axis start at zero, or is the plotting default manufacturing your trend?",
-     "Is the eye pulled toward a pattern the data won't support?",
-     "What does this chart hide that a different one would show?",
-     "Ten weeks interrogating other people's charts. These ten minutes are for yours. Fix one thing."
-    ]
-   },
-   {
     "h": "No single right way",
     "points": [
      "Three published essays, same goal, three defensible sets of choices: a Pudding piece, an Observable notebook, a Quarto site.",
@@ -825,11 +825,7 @@
    },
    {
     "t": "1:00",
-    "a": "Interrogate your own chart, the making-side mirror of Week 6's hand-labeling. Does the y-axis start at zero? Is the eye pulled toward a pattern the data won't support? Fix one thing."
-   },
-   {
-    "t": "1:15",
-    "a": "Build lab: open the template you forked in Week 4; paste outline, charts, code; render; deploy. Static by default; JS opt-ins hit the code-review checkpoint."
+    "a": "Build lab, fifty minutes: open the template forked in Week 4, already live on Pages; paste outline, charts, code; render; push. Static by default; JS opt-ins hit the code-review checkpoint."
    },
    {
     "t": "1:50",

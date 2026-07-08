@@ -7,8 +7,11 @@ JavaScript unless you opt in at the Week 9 code-review checkpoint.
 ## Fork it (Week 4, five minutes)
 
 1. Create a new GitHub repository for your project (public).
-2. Copy the two files in this folder (`_quarto.yml`, `index.qmd`) into it.
-3. Commit. Your project repository now exists; leave it until Week 9.
+2. Copy the two files in this folder (`_quarto.yml`, `index.qmd`) into it and commit.
+3. Enable Pages now: Settings → Pages → deploy from branch `main`, folder `/docs`
+   (run `quarto render` once so `docs/` exists, or commit a one-line `docs/index.html`).
+4. Your placeholder page is live from commit day. Week 9 fills a site that already
+   deploys, with no infrastructure left to stand up under deadline.
 
 ## Fill and deploy (Week 9)
 

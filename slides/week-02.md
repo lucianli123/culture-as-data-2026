@@ -1,10 +1,10 @@
 ---
-title: "Week 2: Counting Is Already a Model"
+title: "Week 2: Counting, Compared: Is the Difference Real?"
 subtitle: "Culture as Data · draft slides"
 format: revealjs
 ---
 
-# Week 2 · Counting Is Already a Model
+# Week 2 · Counting, Compared: Is the Difference Real?
 
 > Put a famous PNAS paper on trial, find the words that make a voice distinctive (the method behind Week 1's featured study), and learn the one statistical method the course requires: the shuffle test, which checks whether a difference is real.
 

@@ -196,15 +196,15 @@ Each session includes one ~20-minute stretch with the assistant closed — you w
 | 0:35 | **The vocabulary.** Before any code: corpus, method, model, embedding — plain ideas, with pictures. The course map, and the sentence you'll hear all term: *it's still just counting and weighting.* |
 | 0:47 | **Lab 1 — follow-along, then on your own.** First, setup that pays off all term: copy the notebook to Drive and **mount Drive** (this is how your work survives a session reset — everything saves to one project folder), and drop your key into Colab Secrets. Then load NYT wedding announcements, follow the live-coded walkthrough, and take your solo turn: with a partner, draft three questions this data could answer, pick one, have the assistant write the code, run it, chart it. Before you run your cell, write one sentence predicting what it does — that's this week's check. |
 | 1:20 | Break |
-| 1:30 | **Lab 2 — count words, then pixels, then define and count color.** The headlines' top words (stop-words drown the list until you remove them, your first counting *choice*); the Met thumbnails ranked by brightness; then named color ranges — *what counts as red* is a boundary you set, and moving it re-answers the question without changing a pixel. Close with what every bag throws away: identical word-bags with opposite meanings, and a painting beside its shuffled pixels. Image projects start here. |
+| 1:30 | **Lab 2 — count words, then pixels.** The headlines' top words (stop-words drown the list until you remove them, your first counting *choice*), then the Met thumbnails ranked darkest to brightest. The notebook's after-class half — defining color ranges, and what every bag throws away — is this week's guided homework, about twenty minutes. Image projects start here. |
 | 1:52 | Wrap. First check-out. |
 
 **Reading:** a real scientific fight, in two short pieces (abstract and figure only). Bollen et al. (2021, PNAS) used nothing but word-counting in Google Books to claim human thinking has grown measurably more distorted since the 1980s — the "hockey stick." Then the one-page critique by Schmidt, Piantadosi & Mahowald: the surge might be an artifact of *which books Google scanned*. Bring the three questions from the *Reading* section. We hold the trial next week — and see how the original authors fought back. (One of the choices on trial is the chart itself: the hockey-stick shape leans on its y-axis and smoothing, and a different axis flattens the drama.)
-**Sketch:** Pick a question from your own life that might be answerable with text or image data. Write three sentences.
+**Sketch:** Pick a question from your own life that might be answerable with text or image data (three sentences) — and run the notebook's after-class half: define color ranges, then see what every bag throws away (~20 minutes).
 
 ---
 
-## Week 2 — Counting Is Already a Model
+## Week 2 — Counting, Compared: Is the Difference Real?
 
 **Promise:** Put a famous PNAS paper on trial, build a word-counter by hand, find the words that make a voice distinctive — the method behind Week 1's featured study — and learn the one statistics move this course needs: the shuffle test for whether a difference is real.
 
@@ -264,7 +264,7 @@ Each session includes one ~20-minute stretch with the assistant closed — you w
 | 0:48 | Break |
 | 0:58 | **The data conversation.** One pass, not a gate: the licensing one-pager (CC0 museums and public-domain books — go anywhere; academic-only sets — analyze, don't redistribute; lyrics and review text — metadata only; AO3 and other community-opposed archives — a small attributed sample at most, never a shared dataset; live social firehoses — we discuss, we don't scrape; and pirated full-text books from shadow libraries like LibGen — never, and we'll talk about why the field's largest copyright settlement was about exactly that), and the Data Biography introduced. |
 | 1:10 | **Getting the data — APIs and scraping.** Where does a corpus come from? Two routes, demoed live with the AI writing the code. **API first** (the polite front door): hit an endpoint you've already met — the Met or Art Institute, no key — and watch a documented URL become a table; meet the words *endpoint*, *key*, *rate limit*. **Scraping second** (the back door, used with care): when there's no API, the AI writes a small scrape of a simple page — and the same breath teaches the check: read the site's `robots.txt` and terms, go slowly, take only what you need, never re-publish copyrighted text. The licensing one-pager tells you which route is even allowed. |
-| 1:30 | **Collect-and-build lab.** Point the cookbook notebook at *your* corpus — pull it via API or load the file you've got — and reshape it with the AI; you judge whether what came back is what you wanted. And fork the publishing template: your project repo is born the same day as your project. |
+| 1:30 | **Collect-and-build lab.** Point the cookbook notebook at *your* corpus — pull it via API or load the file you've got — and reshape it with the AI; you judge whether what came back is what you wanted. And fork the publishing template, enabling GitHub Pages immediately: your project repo — and a live placeholder URL — are born the same day as your project. |
 | 1:55 | Commit. Check-out. |
 
 **Reading:** Heather Krause, "Data Biographies: Getting to Know Your Data" (We All Count).
@@ -364,7 +364,6 @@ Each session includes one ~20-minute stretch with the assistant closed — you w
 | 0:00 | Look at This, then Question It: the three essays — common structure, divergent choices |
 | 0:15 | **Structured critique (Critical Response Process).** In trios: (1) responders say what landed; (2) the maker asks questions; (3) responders ask neutral, non-leading questions; (4) responders ask permission before offering opinions. |
 | 0:50 | Break |
-| 1:00 | **Interrogate your own chart (15 min)** — the making-side mirror of Week 6's hand-labeling. Put your main visualization on screen and turn the term's skepticism on it: does the y-axis start at zero, or is a default manufacturing a trend? Is the eye pulled toward a pattern the data won't support? What did this chart hide that another would show? Ten weeks interrogating other people's charts; this is the ten minutes you interrogate your own. Fix one thing. |
 | 1:15 | **Build lab.** Open the template you forked in Week 4; paste outline, charts, code; render; deploy. Static by default. If you opted into JavaScript, this is the code-review checkpoint: read the AI's code before you ship it. |
 | 1:50 | Phone test in pairs. Check-out. |
 

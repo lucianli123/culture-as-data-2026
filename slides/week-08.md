@@ -32,6 +32,13 @@ A period model speaks only for the period's published, surviving, digitized voic
 - TimeCapsuleLLM: train only on 1800s London text and the model speaks its era. A model is bounded by its corpus.
 - Ask of every model you used: what was in its training data, and does that undercut MY claim?
 
+## Interrogate your own chart
+
+- Does the y-axis start at zero, or is the plotting default manufacturing your trend?
+- Is the eye pulled toward a pattern the data won't support?
+- What does this chart hide that a different one would show?
+- Ten weeks interrogating other people's charts. These ten minutes are for yours. Fix one thing.
+
 ## The show-your-work appendix
 
 - Your method choices, your moments of doubt, what you cut, what the AI got wrong.
@@ -50,7 +57,7 @@ A period model speaks only for the period's published, surviving, digitized voic
 - **0:07**  Stress-test the finding, one continuous arc on your own results: shuffle the labels and re-run; split the corpus in half; ask "compared to what?". Then compress whatever survived into one headline sentence.
 - **0:52**  Break
 - **1:02**  Gemini-free writing block: write your one-sentence interpretation yourself.
-- **1:22**  Writing workshop: opening question, what you found, what it does not show, the choices you made. Distill the Data Biography into the corpus note.
+- **1:22**  Writing workshop: opening question, what you found, what it does not show, the choices you made. Distill the Data Biography into the corpus note, and close on your main chart while the draft is open: interrogate it and fix one thing.
 - **1:50**  Check and check-out.
 
 ## Reading & homework

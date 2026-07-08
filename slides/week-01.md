@@ -54,7 +54,7 @@ The 2,000 screenplays skew toward what was produced and digitized: is that "film
 - Try twice, then ask a human. In that order.
 - Keep the cheat sheet at hand. No one memorizes error messages; everyone reads them.
 
-## Defining a color, and what every bag loses
+## The after-class half: defining a color, and what every bag loses
 
 - What counts as red? A boundary you set on the hue wheel. Shift it twenty degrees and paintings change category without changing a pixel: defining the ranges is the analysis, the same decision as the stop-word list.
 - Two sentences with identical word-bags can mean opposite things: "the critics loved it, the public did not" and its reversal count the same. Order, negation, and who-did-what are the casualties.
@@ -82,7 +82,7 @@ The 2,000 screenplays skew toward what was produced and digitized: is that "film
 - **0:35**  The vocabulary and the map (no code): corpus, method, model, embedding, in plain language with pictures. The deliverable, shown: a web essay on a runnable notebook.
 - **0:47**  Lab 1 (worked, participatory): copy the notebook to Drive and mount Drive into the runtime (this is how your corpus and results survive Colab wiping the session, everything saving to one project folder), put a Gemini key in Colab Secrets, load NYT wedding data, make a first chart. Hand out the common-errors cheat sheet. Then solo with a partner: draft three questions, pick one, have the AI write the code, run it, chart it. Write one sentence predicting your cell before you run it.
 - **1:20**  Break
-- **1:30**  Lab 2 (worked): count words, then pixels. The real headlines' top words (stop-words dominate until removed, the first counting decision), then the Met image corpus: brightness ranking, defined color ranges and the corpus palette (what counts as red is a boundary you set), and the closing demonstration of what every bag throws away, identical word-bags with opposite meanings and a painting beside its shuffled pixels. Image projects begin here.
+- **1:30**  Lab 2 (worked): count words, then pixels. The real headlines' top words (stop-words dominate until removed, the first counting decision), then the Met image corpus ranked darkest to brightest by average brightness. The notebook's after-class half, defined color ranges and what every bag throws away, is this week's guided homework. Image projects begin here.
 - **1:52**  Preview of the methods ahead; the weekly routines introduced. First check-out.
 
 ## Reading & homework
@@ -90,5 +90,5 @@ The 2,000 screenplays skew toward what was produced and digitized: is that "film
 - **Reading:** [Bollen et al., the cognitive-distortions hockey stick (PNAS 2021)](https://www.pnas.org/doi/10.1073/pnas.2102061118), with the [Schmidt et al. critique](https://www.pnas.org/doi/10.1073/pnas.2115010118)
 - **Supplement:** [Robin Sloan, Writing with the machine](https://www.robinsloan.com/notes/writing-with-the-machine/)
 - **Deeper (optional):** [Moretti, Conjectures on World Literature (NLR 2000)](https://newleftreview.org/issues/ii1/articles/franco-moretti-conjectures-on-world-literature), the founding argument for reading culture at scale
-- **Sketch:** One question from your life answerable with text or image data; three sentences.
+- **Sketch:** One question from your life, answerable with data (three sentences), plus the notebook's after-class half (~20 minutes).
 - **Check (AI closed):** Trace it: one written sentence predicting what your cell does before you run it. (Competency 1.)
