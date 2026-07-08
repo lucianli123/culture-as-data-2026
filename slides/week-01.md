@@ -54,6 +54,13 @@ The 2,000 screenplays skew toward what was produced and digitized: is that "film
 - Try twice, then ask a human. In that order.
 - Keep the cheat sheet at hand. No one memorizes error messages; everyone reads them.
 
+## Defining a color, and what every bag loses
+
+- What counts as red? A boundary you set on the hue wheel. Shift it twenty degrees and paintings change category without changing a pixel: defining the ranges is the analysis, the same decision as the stop-word list.
+- Two sentences with identical word-bags can mean opposite things: "the critics loved it, the public did not" and its reversal count the same. Order, negation, and who-did-what are the casualties.
+- A painting and its shuffled pixels share the brightness, the average color, and the palette. Composition is to images what word order is to sentences.
+- The loss is the trade counting makes for scale. Name it on day one; Week 5's embeddings exist to recover some of it.
+
 ## Counting, three shapes
 
 - Rows: what share of brides kept their name, year by year. One groupby, one chart.
@@ -75,7 +82,7 @@ The 2,000 screenplays skew toward what was produced and digitized: is that "film
 - **0:35**  The vocabulary and the map (no code): corpus, method, model, embedding, in plain language with pictures. The deliverable, shown: a web essay on a runnable notebook.
 - **0:47**  Lab 1 (worked, participatory): copy the notebook to Drive and mount Drive into the runtime (this is how your corpus and results survive Colab wiping the session, everything saving to one project folder), put a Gemini key in Colab Secrets, load NYT wedding data, make a first chart. Hand out the common-errors cheat sheet. Then solo with a partner: draft three questions, pick one, have the AI write the code, run it, chart it. Write one sentence predicting your cell before you run it.
 - **1:20**  Break
-- **1:30**  Lab 2 (worked): count words, then pixels. First the top words of a small lyrics sample (stop-words dominate the list until you remove them, the first counting decision), then an image corpus: ~200 Met thumbnails ranked darkest to brightest by average brightness. Text and images, counted with the same technique; image projects begin here.
+- **1:30**  Lab 2 (worked): count words, then pixels. The real headlines' top words (stop-words dominate until removed, the first counting decision), then the Met image corpus: brightness ranking, defined color ranges and the corpus palette (what counts as red is a boundary you set), and the closing demonstration of what every bag throws away, identical word-bags with opposite meanings and a painting beside its shuffled pixels. Image projects begin here.
 - **1:52**  Preview of the methods ahead; the weekly routines introduced. First check-out.
 
 ## Reading & homework

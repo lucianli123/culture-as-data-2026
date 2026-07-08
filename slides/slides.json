@@ -55,6 +55,15 @@
     ]
    },
    {
+    "h": "Defining a color, and what every bag loses",
+    "points": [
+     "What counts as red? A boundary you set on the hue wheel. Shift it twenty degrees and paintings change category without changing a pixel: defining the ranges is the analysis, the same decision as the stop-word list.",
+     "Two sentences with identical word-bags can mean opposite things: \"the critics loved it, the public did not\" and its reversal count the same. Order, negation, and who-did-what are the casualties.",
+     "A painting and its shuffled pixels share the brightness, the average color, and the palette. Composition is to images what word order is to sentences.",
+     "The loss is the trade counting makes for scale. Name it on day one; Week 5's embeddings exist to recover some of it."
+    ]
+   },
+   {
     "h": "Counting, three shapes",
     "points": [
      "Rows: what share of brides kept their name, year by year. One groupby, one chart.",
@@ -91,7 +100,7 @@
    },
    {
     "t": "1:30",
-    "a": "Lab 2 (worked): count words, then pixels. First the top words of a small lyrics sample (stop-words dominate the list until you remove them, the first counting decision), then an image corpus: ~200 Met thumbnails ranked darkest to brightest by average brightness. Text and images, counted with the same technique; image projects begin here."
+    "a": "Lab 2 (worked): count words, then pixels. The real headlines' top words (stop-words dominate until removed, the first counting decision), then the Met image corpus: brightness ranking, defined color ranges and the corpus palette (what counts as red is a boundary you set), and the closing demonstration of what every bag throws away, identical word-bags with opposite meanings and a painting beside its shuffled pixels. Image projects begin here."
    },
    {
     "t": "1:52",
@@ -146,16 +155,6 @@
     ]
    },
    {
-    "h": "What the bag throws away",
-    "points": [
-     "A bag-of-words keeps the vocabulary and discards the order: \"the critics loved it, the public did not\" and \"the public loved it, the critics did not\" are the same bag.",
-     "Negation goes with it: \"not good, actually bad\" and \"not bad, actually good\" count identically.",
-     "The bag-of-pixels loses the same way: a portrait and its shuffled pixels share the average color, the brightness, and the histogram. Composition is to images what word order is to sentences.",
-     "Every count this week carries that loss. It is a trade made for scale, and naming it is part of the method.",
-     "Week 5's embeddings exist to recover some of what the bag cannot hold: words represented by the company they keep."
-    ]
-   },
-   {
     "h": "Keyness: what makes a voice distinctive",
     "points": [
      "For every word: how much likelier is it in corpus A than corpus B? A log-odds ratio, smoothed so rare words don't explode.",
@@ -189,7 +188,7 @@
    },
    {
     "t": "0:30",
-    "a": "Hand-built bag-of-words: two authors, highlighters, argue about merging run/running. Counting requires defining. Close with the loss demonstration: two sentences with identical bags and opposite meanings, and a picture beside its shuffled pixels, so the trade the bag makes is on the table before anything scales up."
+    "a": "Hand-built bag-of-words: two authors, highlighters, argue about merging run/running. Counting requires defining."
    },
    {
     "t": "0:55",
