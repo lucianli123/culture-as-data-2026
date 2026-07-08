@@ -157,7 +157,7 @@ You write it in Week 4 when you commit to your project corpus; its distilled for
 
 **As a thought-partner.** Brainstorm questions, find leads. *Treat every AI-suggested citation as a lead, not a source.* A citation isn't real until you've read the paper.
 
-**As a research scout.** Deep-research tools can survey datasets and prior work in one pass. Use them to find leads before Week 4's commitment; verify every citation and every dataset's access yourself, and never cite the report — cite what you read. The Week 1 notebook walks through the rules.
+**As a research scout.** Deep-research tools can survey datasets and prior work in one pass. Use them to find leads before Week 4's commitment; verify every citation and every dataset's access yourself, and never cite the report — cite what you read. The Week 1 deck carries the four rules.
 
 **As an analytical instrument.** For classification, qualitative coding, image captioning. The Week 6 protocol — codebook, prompt, hand-label 30, compare — is the gold standard.
 
