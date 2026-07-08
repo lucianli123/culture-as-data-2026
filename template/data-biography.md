@@ -21,7 +21,7 @@ becomes your essay's corpus note in Week 8. The framework follows Heather Krause
 
 ## A worked example: the NYT wedding announcements
 
-**What.** 5,562 wedding announcements published in the New York Times, 1985–2014,
+**What.** 7,835 wedding announcements published in the New York Times, 1985–2014 (5,562 with a clear kept/took name status),
 compiled by The Upshot as a CSV (`TheUpshot/nyt_weddings` on GitHub): article URL,
 whether the bride kept or took a name, and both ages.
 

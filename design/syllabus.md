@@ -434,7 +434,7 @@ If none of these spark interest, talk to the instructor — there are dozens mor
 
 | Week | Required | Supplement | Deeper (optional) |
 |---|---|---|---|
-| 1 | Bollen et al. (PNAS 2021), abstract + the hockey-stick figure, **plus** the one-page Schmidt/Piantadosi/Mahowald critique — the fight we put on trial in Week 2 | Robin Sloan, "Writing with the machine" | Moretti, “Conjectures on World Literature” (2000) |
+| 1 | Bollen et al. (PNAS 2021), abstract + the hockey-stick figure, **plus** the one-page Schmidt/Piantadosi/Mahowald critique — the fight we put on trial in Week 2 | Robin Sloan, "Writing with the machine"; Drucker, "Humanities Approaches to Graphical Display" (DHQ 2011) — all data is *capta*, taken not given | Moretti, “Conjectures on World Literature” (2000) |
 | 2 | Wolfram, "What Is ChatGPT Doing…" — opening sections only (generation built up from counting) | Zipf's law, the eerie straight line in every text (5-minute demo) | Grimmer & Stewart, “Text as Data” (2013), §1–4 |
 | 3 | Browse *America's Public Bible* (americaspublicbible.org) — intro + a verse or two | Underwood, "Using GPT-4 to measure the passage of time in fiction"; Juola's Rowling unmasking | Underwood, “The Life Cycles of Genres” (2016), in full |
 | 4 | Krause, "Data Biographies: Getting to Know Your Data" (We All Count) | Freelon, "Post-API Age" | boyd & Crawford, “Critical Questions for Big Data” (2012) |

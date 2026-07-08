@@ -40,6 +40,14 @@ The 2,000 screenplays skew toward what was produced and digitized: is that "film
 - Model: any simplification that turns culture into numbers. A word count is already one.
 - Embedding: a few hundred numbers that place an item on a map of meaning. Week 5.
 
+## What is data? A CSV, and Drucker's caveat
+
+- Data is anything made countable: rows in a table, words in a headline, numbers in a pixel. The making is the part to watch.
+- A CSV is the plainest container: one row per observation, one column per recorded fact, a first line naming the columns. Ours has four columns and 7,835 rows, and opens in anything.
+- Johanna Drucker's correction: data ("the given") is the wrong word; capta ("the taken") is honest. Nothing is simply given - someone chose what to record.
+- The four columns are those choices. There is a name status for the bride and none for the groom; ages but no occupations; no field a same-sex couple could use for most of the period.
+- Discussion, in pairs: what did the makers of this table take, and what did they leave? That question is the course, asked of every corpus from now on.
+
 ## The Drive routine (every week, without exception)
 
 - Colab wipes its machine when you idle. Your mounted Drive folder is what survives.
@@ -79,7 +87,7 @@ The 2,000 screenplays skew toward what was produced and digitized: is that "film
 - **0:00**  Introductions and working agreements, demonstrated in practice. Today's live coding deliberately includes real mistakes.
 - **0:10**  Lecture, the stakes: machines already read culture at scale, the feed ranking what you see, the moderation filter, the model trained on scraped art and prose, and that reading happens without you. Counting culture has produced real knowledge (the screenplay verb split, the Rowling unmasking, pop music's 1991 revolution) and real mistakes, and both look identical until someone checks. In ten weeks you do the reading yourself and publish something checkable.
 - **0:28**  Look at This, then Question It: She Giggles, He Gallops.
-- **0:35**  The vocabulary and the map (no code): corpus, method, model, embedding, in plain language with pictures. The deliverable, shown: a web essay on a runnable notebook.
+- **0:35**  The vocabulary and the map (no code): corpus, method, model, embedding, plus what data itself is. A CSV, anatomized on screen (rows are observations, columns are recorded facts), and Drucker's correction: data is capta, taken not given. Two minutes in pairs: what did the makers of the wedding table take, and what did they leave out? The deliverable, shown: a web essay on a runnable notebook.
 - **0:47**  Lab 1 (worked, participatory): copy the notebook to Drive and mount Drive into the runtime (this is how your corpus and results survive Colab wiping the session, everything saving to one project folder), put a Gemini key in Colab Secrets, load NYT wedding data, make a first chart. Hand out the common-errors cheat sheet. Then solo with a partner: draft three questions, pick one, have the AI write the code, run it, chart it. Write one sentence predicting your cell before you run it.
 - **1:20**  Break
 - **1:30**  Lab 2 (worked): count words, then pixels. The real headlines' top words (stop-words dominate until removed, the first counting decision), then the Met image corpus ranked darkest to brightest by average brightness. The notebook's after-class half, defined color ranges and what every bag throws away, is this week's guided homework. Image projects begin here.
@@ -88,7 +96,7 @@ The 2,000 screenplays skew toward what was produced and digitized: is that "film
 ## Reading & homework
 
 - **Reading:** [Bollen et al., the cognitive-distortions hockey stick (PNAS 2021)](https://www.pnas.org/doi/10.1073/pnas.2102061118), with the [Schmidt et al. critique](https://www.pnas.org/doi/10.1073/pnas.2115010118)
-- **Supplement:** [Robin Sloan, Writing with the machine](https://www.robinsloan.com/notes/writing-with-the-machine/)
+- **Supplement:** [Robin Sloan, Writing with the machine](https://www.robinsloan.com/notes/writing-with-the-machine/); [Drucker, Humanities Approaches to Graphical Display (DHQ 2011)](http://www.digitalhumanities.org/dhq/vol/5/1/000091/000091.html), the case that all data is capta
 - **Deeper (optional):** [Moretti, Conjectures on World Literature (NLR 2000)](https://newleftreview.org/issues/ii1/articles/franco-moretti-conjectures-on-world-literature), the founding argument for reading culture at scale
 - **Sketch:** One question from your life, answerable with data (three sentences), plus the notebook's after-class half (~20 minutes).
 - **Check (AI closed):** Trace it: one written sentence predicting what your cell does before you run it. (Competency 1.)

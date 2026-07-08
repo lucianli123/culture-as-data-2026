@@ -37,6 +37,16 @@
     ]
    },
    {
+    "h": "What is data? A CSV, and Drucker's caveat",
+    "points": [
+     "Data is anything made countable: rows in a table, words in a headline, numbers in a pixel. The making is the part to watch.",
+     "A CSV is the plainest container: one row per observation, one column per recorded fact, a first line naming the columns. Ours has four columns and 7,835 rows, and opens in anything.",
+     "Johanna Drucker's correction: data (\"the given\") is the wrong word; capta (\"the taken\") is honest. Nothing is simply given - someone chose what to record.",
+     "The four columns are those choices. There is a name status for the bride and none for the groom; ages but no occupations; no field a same-sex couple could use for most of the period.",
+     "Discussion, in pairs: what did the makers of this table take, and what did they leave? That question is the course, asked of every corpus from now on."
+    ]
+   },
+   {
     "h": "The Drive routine (every week, without exception)",
     "points": [
      "Colab wipes its machine when you idle. Your mounted Drive folder is what survives.",
@@ -88,7 +98,7 @@
    },
    {
     "t": "0:35",
-    "a": "The vocabulary and the map (no code): corpus, method, model, embedding, in plain language with pictures. The deliverable, shown: a web essay on a runnable notebook."
+    "a": "The vocabulary and the map (no code): corpus, method, model, embedding, plus what data itself is. A CSV, anatomized on screen (rows are observations, columns are recorded facts), and Drucker's correction: data is capta, taken not given. Two minutes in pairs: what did the makers of the wedding table take, and what did they leave out? The deliverable, shown: a web essay on a runnable notebook."
    },
    {
     "t": "0:47",
@@ -108,7 +118,7 @@
    }
   ],
   "reading": "Bollen et al., the cognitive-distortions hockey stick (PNAS 2021), with the Schmidt et al. critique",
-  "supplement": "Robin Sloan, Writing with the machine",
+  "supplement": "Robin Sloan, Writing with the machine; Drucker, Humanities Approaches to Graphical Display (DHQ 2011), the case that all data is capta",
   "deeper": "Moretti, Conjectures on World Literature (NLR 2000), the founding argument for reading culture at scale",
   "sketch": "One question from your life, answerable with data (three sentences), plus the notebook's after-class half (~20 minutes).",
   "check": "Trace it: one written sentence predicting what your cell does before you run it. (Competency 1.)",
