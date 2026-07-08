@@ -85,7 +85,7 @@
     ]
    },
    {
-    "h": "The after-class half: defining a color, and what every bag loses",
+    "h": "Bags of words, bags of pixels, and what scrambling shows",
     "points": [
      "What counts as red? A boundary you set on the hue wheel. Shift it twenty degrees and paintings change category without changing a pixel: defining the ranges is the analysis, the same decision as the stop-word list.",
      "Two sentences with identical word-bags can mean opposite things: \"the critics loved it, the public did not\" and its reversal count the same.",
@@ -141,7 +141,7 @@
    },
    {
     "t": "1:30",
-    "a": "Lab 2 (worked): count pixels. The manifest is the first CSV (rows are paintings, columns are the Met's choices), and the 18 paintings rank darkest to brightest by average luminance. The notebook's after-class half, defined color ranges and Sonnet 130's bag against the poem itself, is this week's guided homework. Image projects begin here."
+    "a": "Lab 2 (worked): count pixels. The manifest is the first CSV (rows are paintings, columns are the Met's choices); the 18 paintings rank darkest to brightest in a grid, and the corpus palette is a bar chart of defined color ranges. A painting beside its scrambled pixels shows what the bag cannot hold. The after-class half, the boundary experiment and Sonnet 130's bag against the poem itself, is this week's guided homework. Image projects begin here."
    },
    {
     "t": "1:52",
