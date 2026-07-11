@@ -78,12 +78,12 @@ The 2,000 screenplays skew toward what was produced and digitized: is that "film
 - Try twice, then ask a human. In that order.
 - Keep the cheat sheet at hand. No one memorizes error messages; everyone reads them.
 
-## Bags of words, bags of pixels, and what scrambling shows
+## Bags of words, bags of pixels, and what they miss
 
 - What counts as red? A boundary you set on the hue wheel. Shift it twenty degrees and paintings change category without changing a pixel: defining the ranges is the analysis, the same decision as the stop-word list.
 - Two sentences with identical word-bags can mean opposite things: "the critics loved it, the public did not" and its reversal count the same.
 - The centerpiece: Sonnet 130's bag is a catalogue of praise - sun, coral, roses, snow, music, goddess. The poem negates every item ("my mistress' eyes are nothing like the sun"). The count reads a love poem; Shakespeare wrote a satire of love poems.
-- A painting and its shuffled pixels share the brightness, the average color, and the palette. Composition is to images what order and negation are to sentences.
+- The manifest's date column reads "ca. 1520" and "1530s". Force it to numbers and pandas quietly turns those into NaN, and mean() skips NaN without telling you: the average drops half the paintings, the older half. Count your NaN before you average.
 - The loss is the trade counting makes for scale. Name it on day one; Week 5's embeddings exist to recover some of it.
 
 ## Deep-research tools: one role, four rules
@@ -115,7 +115,7 @@ The 2,000 screenplays skew toward what was produced and digitized: is that "film
 - **0:35**  The vocabulary and the map (no code): corpus, method, model, embedding, plus what data itself is. A CSV, anatomized on screen using the painting manifest (rows are paintings, columns are what the Met chose to record), and Drucker's correction: data is capta, taken not given. Two minutes in pairs: what did the catalogers take, and what did they leave out? The deliverable, shown: a web essay on a runnable notebook.
 - **0:47**  Lab 1 (worked, participatory): copy the notebook to Drive and mount Drive (this is how work survives Colab wiping the session), Gemini key into Colab Secrets, then load the 154 sonnets and make a first chart: love across the sequence. Count the whole corpus and watch the stop list matter. Then the AI loop, solo: ask, predict, run, interrogate. The error drill lands here, cheat sheet in hand.
 - **1:20**  Break
-- **1:30**  Lab 2 (worked): count pixels. The manifest is the first CSV (rows are paintings, columns are the Met's choices); the 18 paintings rank darkest to brightest in a grid, and the corpus palette is a bar chart of defined color ranges. A painting beside its scrambled pixels shows what the bag cannot hold. The after-class half, the boundary experiment and Sonnet 130's bag against the poem itself, is this week's guided homework. Image projects begin here.
+- **1:30**  Lab 2 (worked): count pixels. The manifest is the first CSV (rows are paintings, columns are the Met's choices); the 18 paintings rank darkest to brightest in a grid, and the corpus palette is a bar chart of defined color ranges. The manifest's messy dates set the missing-data trap: forced to numbers, half become NaN, and the average quietly drops the older half of the corpus. The after-class half, the boundary experiment and Sonnet 130's bag against the poem itself, is this week's guided homework. Image projects begin here.
 - **1:52**  Preview of the methods ahead; the weekly routines introduced. First check-out.
 
 ## Reading & homework
