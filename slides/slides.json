@@ -133,7 +133,7 @@
    },
    {
     "t": "0:47",
-    "a": "Lab 1 (worked, participatory): copy the notebook to Drive and mount Drive (this is how work survives Colab wiping the session), Gemini key into Colab Secrets, then load the 154 sonnets and make a first chart: love across the sequence. Count the whole corpus and watch the stop list matter. Then the AI loop, solo: ask, predict, run, interrogate. The error drill lands here, cheat sheet in hand."
+    "a": "Lab 1 (worked, participatory): copy the notebook to Drive and mount Drive (this is how work survives Colab wiping the session), Gemini key into Colab Secrets, then load the 154 sonnets and make a first chart: love across the sequence. Count the whole corpus three ways, one bar chart per stop list, and watch the answer change; then count word pairs, the first n-grams (She Giggles is a bigram count). Then the AI loop, solo: ask, predict, run, interrogate. The error drill lands here, cheat sheet in hand."
    },
    {
     "t": "1:20",
