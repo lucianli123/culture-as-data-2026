@@ -187,7 +187,7 @@ SLIDES_CONTENT={
     "Embedding: a few hundred numbers that place an item on a map of meaning. Week 5."]),
   ("What is data? A CSV, and Drucker's caveat",
    ["Data is anything made countable. The making is the part to watch.",
-    "A CSV: one row per thing, one column per recorded fact. Ours: 18 paintings, seven columns.",
+    "A CSV: one row per thing, one column per recorded fact. Ours: one row per painting, one column per fact the Met records.",
     "Drucker: data (\"the given\") is the wrong word. Capta, \"the taken,\" is honest.",
     "The columns are choices: the artist's name but not the sitter's; a free-text date. Absence is a decision too.",
     "Pairs, two minutes: what did the catalogers take, and what did they leave?"]),
@@ -220,7 +220,7 @@ SLIDES_CONTENT={
     "Rule three: the report is never a source. Cite what you read, not the tool that found it.",
     "Rule four: scout, then close the tool. Your question, your reading, and your interpretation cannot be delegated - the same boundary as with code."]),
   ("Counting, three shapes",
-   ["Rows: a manifest of 18 paintings, counted and ranked in one pipeline.",
+   ["Rows: a manifest of paintings, downloaded live and ranked in one pipeline.",
     "Words: the top words of 154 sonnets are thy and thou until the stop list learns Early Modern English; then love (195 times), beauty, and time surface. The stop list must fit the corpus, and it is your choice.",
     "Pixels: the paintings themselves, ranked darkest to brightest from average luminance.",
     "One technique, three shapes, a decision hiding in each."])],
@@ -392,7 +392,7 @@ WEEKS = [
          ("0:35","The vocabulary and the map (no code): corpus, method, model, embedding, plus what data itself is. A CSV, anatomized on screen using the painting manifest (rows are paintings, columns are what the Met chose to record), and Drucker's correction: data is capta, taken not given. Two minutes in pairs: what did the catalogers take, and what did they leave out? The deliverable, shown: a web essay on a runnable notebook."),
          ("0:47","Lab 1 (worked, participatory): copy the notebook to Drive and mount Drive (this is how work survives Colab wiping the session), Gemini key into Colab Secrets, then load the 154 sonnets and make a first chart: love across the sequence. Count the whole corpus three ways, one bar chart per stop list, and watch the answer change; then count word pairs, the first n-grams (She Giggles is a bigram count). Then the AI loop, solo: ask, predict, run, interrogate. The error drill lands here, cheat sheet in hand."),
          ("1:20","Break"),
-         ("1:30","Lab 2 (worked): count pixels. The manifest is the first CSV (rows are paintings, columns are the Met's choices); the 18 paintings rank darkest to brightest in a grid, and the corpus palette is a bar chart of defined color ranges. The manifest's messy dates set the missing-data trap: forced to numbers, half become NaN, and the average quietly drops the older half of the corpus. The after-class half, the boundary experiment and Sonnet 130's bag against the poem itself, is this week's guided homework. Image projects begin here."),
+         ("1:30","Lab 2 (worked): count pixels. The manifest is the first CSV (rows are paintings, columns are the Met's choices); a dozen paintings download live from the Met API and rank darkest to brightest in a grid, and the corpus palette is a bar chart of defined color ranges. The manifest's messy dates set the missing-data trap: forced to numbers, half become NaN, and the average quietly drops the older half of the corpus. The after-class half, the boundary experiment and Sonnet 130's bag against the poem itself, is this week's guided homework. Image projects begin here."),
          ("1:52","Preview of the methods ahead; the weekly routines introduced. First check-out.")],
    reading="The Bollen/Schmidt exchange, abstract and figure only: the Google Books \"hockey stick\" of cognitive distortions, then the critique that it may be an artifact of which books Google scanned. The trial runs next week.",
    sketch="Browse pudding.cool and pick a favorite piece (one sentence: what did it count?), then write the question from your own life it inspires. Plus the notebook's after-class half: color ranges, and what every bag throws away (~20 minutes).",
@@ -969,7 +969,7 @@ def build_notebooks():
   <section>
     <h2>Before your first session</h2>
     {ul([
-      "Every notebook runs on real, snapshotted data (the sonnets, two public-domain novels, 18 CC0 Met paintings), so nothing depends on the network to teach.",
+      "Every notebook pulls real data live from the source (Project Gutenberg, the Met's open-access API), the same route students take for their own corpora.",
       f"Never coded at all? An optional twenty-minute <a href='{COLAB}notebooks/python_warmup.ipynb'>Python warm-up</a> covers names, lists, and a first table, predict-then-run. The course never quizzes syntax; this is only for those who want it.",
       "Each notebook's first cells mount your Google Drive (so work survives a Colab reset) and install the few pinned packages Colab doesn't ship.",
       "Week 7 wants a free Gemini API key in Colab Secrets; without one it runs end-to-end on a recorded response.",
