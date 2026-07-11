@@ -29,7 +29,8 @@ The rising words are fiction-words, and Google scanned more fiction after 2000. 
 
 - Two tokenizers shatter the same sentence differently: "don't" becomes one chip, two, or three.
 - Models never see words. They see tokens, and the split is a design decision.
-- Your hand-count argument about run/running is the same decision, made with highlighters.
+- Your hand-count argument about run/running is the same decision, made with highlighters. A stemmer makes it by rule (and produces "beauti"); a lemmatizer makes it by dictionary (and reads "was" as a noun unless told otherwise).
+- Zipf's law: rank words by frequency and every corpus gives the same curve. The head is the stop list; the tail is too rare to count.
 - tf-idf: down-weight what is common everywhere. "Common here, rare overall" is what characterizes a text.
 
 ## Keyness: what makes a voice distinctive
@@ -58,7 +59,7 @@ The rising words are fiction-words, and Google scanned more fiction after 2000. 
 - **0:05**  The trial: claim, objection, re-run-without-fiction rebuttal, "interpret with care." One named choice is the chart: the hockey-stick shape depends on its y-axis and smoothing.
 - **0:25**  A brief demonstration before the complications: the words one artist uses far more than everyone else, a signature vocabulary measured against a pop baseline.
 - **0:30**  Hand-built bag-of-words: two authors, highlighters, argue about merging run/running. Counting requires defining.
-- **0:55**  What counts as a word? Paste a sentence into two tokenizer playgrounds and watch it shatter differently. Models see tokens, not words.
+- **0:55**  What counts as a word? Paste a sentence into two tokenizer playgrounds and watch it shatter differently. Models see tokens, not words. Then the standard tools for the run/running decision: NLTK stemming and lemmatization, a real stop list, and Zipf's law, the curve that explains why stop lists exist.
 - **1:05**  Break
 - **1:15**  tf-idf: the AI scales your hand count; stop-words dominate, which motivates "common here, rare overall."
 - **1:30**  Keyness, the She Giggles, He Gallops move: a log-odds ratio between two corpora finds the words one voice uses far more than a baseline, exactly the method behind Week 1's featured piece. The corpus pair is a choice too: artist vs. pop, lyrics vs. subreddit vs. novel.

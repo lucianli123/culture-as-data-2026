@@ -191,7 +191,8 @@
     "points": [
      "Two tokenizers shatter the same sentence differently: \"don't\" becomes one chip, two, or three.",
      "Models never see words. They see tokens, and the split is a design decision.",
-     "Your hand-count argument about run/running is the same decision, made with highlighters.",
+     "Your hand-count argument about run/running is the same decision, made with highlighters. A stemmer makes it by rule (and produces \"beauti\"); a lemmatizer makes it by dictionary (and reads \"was\" as a noun unless told otherwise).",
+     "Zipf's law: rank words by frequency and every corpus gives the same curve. The head is the stop list; the tail is too rare to count.",
      "tf-idf: down-weight what is common everywhere. \"Common here, rare overall\" is what characterizes a text."
     ]
    },
@@ -233,7 +234,7 @@
    },
    {
     "t": "0:55",
-    "a": "What counts as a word? Paste a sentence into two tokenizer playgrounds and watch it shatter differently. Models see tokens, not words."
+    "a": "What counts as a word? Paste a sentence into two tokenizer playgrounds and watch it shatter differently. Models see tokens, not words. Then the standard tools for the run/running decision: NLTK stemming and lemmatization, a real stop list, and Zipf's law, the curve that explains why stop lists exist."
    },
    {
     "t": "1:05",
