@@ -378,11 +378,16 @@ SLIDES_CONTENT={
 # Weekly data, curated from lesson-plans.md ---------------------------------
 WEEKS = [
  dict(n=1, title="Your First Investigation", tool="Counting: rows, words, pixels",
+   gslides="https://docs.google.com/presentation/d/1mHmHDO7idyUSo0jRvmTZvxWUHedM7qrnpDhv6pvZmOs/edit?usp=sharing",
+   links=[("She Giggles, He Gallops (The Pudding, 2017)", "https://pudding.cool/2017/08/screen-direction/"),
+          ("Ben Schmidt, Gendered Language in Teaching Reviews (the same method on 14M RateMyProfessors reviews)", "https://benschmidt.org/profGender/"),
+          ("Homework: Bollen et al., the cognitive-distortions hockey stick (PNAS 2021)", "https://www.pnas.org/doi/10.1073/pnas.2102061118"),
+          ("Homework: Schmidt et al., the critique (PNAS 2021)", "https://www.pnas.org/doi/10.1073/pnas.2115010118")],
    promise="By the mid-session break you will have loaded a real dataset, asked a question of it, and produced a chart. By the end you will have counted culture in three forms: rows, words, and pixels.",
    admire="The Pudding, \"She Giggles, He Gallops\" (2017): across ~2,000 film screenplays, the stage-direction verbs split by gender, women snuggle and giggle, men gallop and stride. The interactive presentation makes the pattern unmistakable.",
    interrogate="The 2,000 screenplays skew toward what was produced and digitized: is that \"film,\" or a sample of it? Whose choice is a gendered verb: the writer's, the character's, or the genre's? Counting shows the split, not the cause. The visualization's own choices deserve the same scrutiny as the data.",
    flow=[("0:00","Logistics, working agreements, and a one-round icebreaker: your name, one piece of culture you kept returning to this year, and one number about it you wish you knew. Today's live coding deliberately includes real mistakes."),
-         ("0:10","Lecture, the stakes: machines already read culture at scale, the feed ranking what you see, the moderation filter, the model trained on scraped art and prose, and that reading happens without you. Counting culture has produced real knowledge (the screenplay verb split, the Rowling unmasking, pop music's 1991 revolution) and real mistakes, and both look identical until someone checks. In ten weeks you do the reading yourself and publish something checkable."),
+         ("0:10","Lecture, the stakes: machines already read culture at scale, the feed ranking what you see, the moderation filter, the model trained on scraped art and prose, and that reading happens without you. Counting culture has produced real knowledge (the screenplay verb split, the gendered language in 14 million teaching reviews, the Rowling unmasking, pop music's 1991 revolution) and real mistakes, and both look identical until someone checks. In ten weeks you do the reading yourself and publish something checkable."),
          ("0:28","Look at This, then Question It: She Giggles, He Gallops."),
          ("0:35","The vocabulary and the map (no code): corpus, method, model, embedding, plus what data itself is. A CSV, anatomized on screen using the painting manifest (rows are paintings, columns are what the Met chose to record), and Drucker's correction: data is capta, taken not given. Two minutes in pairs: what did the catalogers take, and what did they leave out? The deliverable, shown: a web essay on a runnable notebook."),
          ("0:47","Lab 1 (worked, participatory): copy the notebook to Drive and mount Drive (this is how work survives Colab wiping the session), Gemini key into Colab Secrets, then load the 154 sonnets and make a first chart: love across the sequence. Count the whole corpus and watch the stop list matter. Then the AI loop, solo: ask, predict, run, interrogate. The error drill lands here, cheat sheet in hand."),
@@ -802,6 +807,8 @@ def build_weeks():
         nbs = [n for n in NOTEBOOKS if n[1] == w["n"]]
         deck = (f"<a class='button ghost' href='{GH_REPO}/raw/main/slides/pptx/week-{w['n']:02d}.pptx'>Slides (.pptx)</a> "
                 f"<a class='button ghost' href='{GH_REPO}/blob/main/slides/week-{w['n']:02d}.md'>Slide outline</a>")
+        if w.get("gslides"):
+            deck = f"<a class='button' href='{w['gslides']}'>Slides (Google Slides)</a> " + deck
         if nbs:
             path, _, name, _ = nbs[0]
             variants = "".join(f" &nbsp;<a href='{COLAB}{vp}'>{vl} version</a>" for vl, vp in NOTEBOOK_VARIANTS.get(w["n"], []))
@@ -814,6 +821,8 @@ def build_weeks():
                      "its image path (CLIP) is this week's tool. The hand-labeling exercise is deliberately code-free.") if w["n"] == 6 else ""
             nb_block = ("<section class='callout notebook-callout'><h2>This week's materials</h2>"
                         f"<p class='cta'>{deck}</p><p class='meta'>No new notebook this week.{extra}</p></section>")
+        links_row = ("<p><strong>Links:</strong> " + " &nbsp;&middot;&nbsp; ".join(
+            f"<a href='{u}'>{esc(l)}</a>" for l, u in w["links"]) + "</p>") if w.get("links") else ""
         prev_link = f'<a href="week-{w["n"]-1:02d}.html">&larr; Week {w["n"]-1}</a>' if i > 0 else "<span></span>"
         next_link = f'<a href="week-{w["n"]+1:02d}.html">Week {w["n"]+1} &rarr;</a>' if i < len(WEEKS)-1 else "<span></span>"
         body = f"""
@@ -839,6 +848,7 @@ def build_weeks():
   <section>
     <h2>Reading and homework</h2>
     <p><strong>Reading:</strong> {esc(w['reading'])}</p>
+{links_row}
     <p><strong>Sketch:</strong> {esc(w['sketch'])}</p>
     <p><strong>Competency check:</strong> {esc(w['check'])}</p>
   </section>
