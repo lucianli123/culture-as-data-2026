@@ -69,7 +69,5 @@ all at once, and free memory between batches."
 persists:* "No GPU is available. Make this run on CPU with a smaller sample so it still
 finishes."
 
----
-
-*Keep this open in a tab during every lab. The move is never to panic. It's to read the last
-line, paste it back, and keep moving.*
+**9. Binary incompatibility after an install**
+*Looks like:* `ValueError: numpy.dtype size changed, may indicate binary incompatibility.

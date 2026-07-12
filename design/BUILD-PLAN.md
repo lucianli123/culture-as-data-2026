@@ -124,7 +124,7 @@ Colab ships a large, *moving* preinstalled stack (pandas, numpy, scikit-learn, m
 Strategy:
 1. **Lean on Colab's preinstalled stack** for the boring packages — do not pin or reinstall pandas/numpy/scikit-learn/matplotlib/Pillow/requests unless a notebook genuinely needs a version Colab doesn't have. Reinstalling them is how you *create* conflicts.
 2. **Pin only the "extra" packages** in `requirements.txt`, with versions chosen to be compatible with Colab's current `numpy`/`torch` at build time. Capture the working versions by freezing *after* a successful run in Colab (`pip freeze`), not by guessing.
-3. **Maintain `constraints.txt`** (a pip constraints file) for the handful of hard pins (e.g. a known-good `sentence-transformers` + matching `torch` + `numpy` line). Install with `pip install -r requirements.txt -c constraints.txt` so transitive deps can't drift past the tested ceiling.
+3. **Keep `constraints.txt` deliberately empty.** It once pinned numpy/torch/transformers; on newer Colab images (numpy 2.x) those pins *caused* the "numpy.dtype size changed" ABI crash by downgrading numpy under preinstalled pandas/scikit-learn. The standing rule: install only what Colab lacks, unpinned, and never install or constrain numpy-adjacent packages. The empty file remains so old notebook copies using `-c constraints.txt` still work.
 4. **Record the Colab base** you tested against — Python version and the preinstalled `numpy`/`torch`/`scikit-learn` versions — in `notebooks/README.md`, with the date. Colab updates its image periodically; this is the "tested as of" stamp.
 
 ### 4c. **How to test package compatibility — the harness**
@@ -133,7 +133,7 @@ Yes, there is a clean way to test this, and it should be built as part of the de
 
 **Layer 1 — local resolver check (fast, catches version-solver conflicts before any execution).**
 `tools/check_compat.py` does dependency resolution without running notebooks:
-- Run `pip install --dry-run -r requirements.txt -c constraints.txt` (pip ≥ 23 supports `--dry-run` / report JSON) and fail on any conflict.
+- Run `pip install --dry-run -r requirements.txt` (pip ≥ 23 supports `--dry-run` / report JSON) and fail on any conflict or any numpy/pandas/torch reinstall in the report.
 - Cross-check with `uv pip compile requirements.txt` if `uv` is available — `uv`'s resolver is fast and its error messages name the exact conflicting pins. (`pipdeptree --warn fail` is a good third opinion for already-installed envs.)
 - This layer answers "do these pins even have a solution?" and runs in seconds in CI. It will *not* catch numpy-ABI / runtime-import problems — that's layer 2.
 
@@ -165,7 +165,7 @@ Run the heaviest notebook (`week05_embeddings.ipynb`) top to bottom in a real Co
 
 1. **Repo skeleton + `README.md`** (§1).
 2. **`requirements.txt` + `constraints.txt` first cut, and `tools/check_compat.py`** — get the resolver green before writing notebook logic, so you're not debugging pins and pedagogy at once.
-3. **`week05_embeddings.ipynb`** *first among notebooks* — it's the heaviest dependency (sentence-transformers + CLIP + dim-reduction) and the compat hot spot. If its stack resolves and runs in the Colab image, the rest are easy. Freeze the working versions back into `requirements.txt`/`constraints.txt`.
+3. **`week05_embeddings.ipynb`** *first among notebooks* — it's the heaviest dependency (sentence-transformers + CLIP + dim-reduction) and the compat hot spot. If its stack resolves and runs in the Colab image, the rest are easy. Record the working image's versions in notebooks/README.md ("tested as of"), but keep the requirements unpinned.
 4. **`week07_annotator.ipynb`** — the only API-dependent notebook; build the mock/cassette path with it.
 5. **`week02`, `week03`, `week04`** — lighter, mostly Colab-preinstalled; quick once the harness exists.
 6. **Act-2 GUIDED + SKELETON variants** for W5 and W7 (derive from the worked versions; blank the right cells).
