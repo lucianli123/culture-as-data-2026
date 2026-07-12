@@ -200,7 +200,7 @@
    {
     "h": "N-grams: counting phrases",
     "points": [
-     "A bigram is two words in a row. Week 1 counted the sonnets' pairs; this week counts pairs across three corpora, and each book's top bigrams are already a fingerprint.",
+     "A bigram is two words in a row. Week 1 counted one corpus's pairs; this week counts pairs across three communities, and each subreddit's top bigrams are already a fingerprint.",
      "Google Books n-grams are this method at civilizational scale: 500 billion words, one JSON request per query. Bollen et al. is an n-gram study.",
      "Longer n-grams buy context and pay in sparsity: the top word appears hundreds of times, the top pair dozens, the top triple six.",
      "\"My love\" is a different fact than \"my\" plus \"love\": pairs keep a sliver of the order the bag throws away."
@@ -209,8 +209,8 @@
    {
     "h": "The statistics of counts",
     "points": [
-     "Habit one: look at the distribution before the mean. Count data is skewed: most paragraphs of Dracula contain \"night\" zero times, a few contain many. Mean and median disagree, and the mean alone misleads.",
-     "Habit two: divide by a denominator. The novels outweigh all 154 sonnets combined, so raw totals always vote for the novels. Rates per 1,000 words: \"love\" is 10.8 in the sonnets, 0.7 in Frankenstein.",
+     "Habit one: look at the distribution before the mean. Count data is skewed: most r/gardening comments mention plants zero or one time, a few mention many. Mean and median disagree, and the mean alone misleads.",
+     "Habit two: divide by a denominator. Communities differ in how much they write, so raw totals mislead. Rates per 1,000 words: \"water\" is 3.9 in r/gardening and 0.1 elsewhere; \"feel\" is 1.8 in r/relationship_advice.",
      "Habit three: a gap between rates can still be luck. That is the shuffle test's question, and it closes the session.",
      "A difference can be real and still small; a big difference can be an artifact of the denominator. Say which you have."
     ]
@@ -269,7 +269,7 @@
    },
    {
     "t": "0:30",
-    "a": "Hand-built bag-of-words: two authors, highlighters, argue about merging run/running. Counting requires defining."
+    "a": "Hand-built bag-of-words: two communities, highlighters, argue about merging run/running. Counting requires defining."
    },
    {
     "t": "0:55",
@@ -281,7 +281,7 @@
    },
    {
     "t": "1:15",
-    "a": "N-grams and statistics, hands-on: bigrams across three corpora, distributions and mean-versus-median on real counts, rates per 1,000 words. Then tf-idf at two scales, sonnets as documents and twelve whole subreddits as documents, each community sight-read from its distinctive words (cpu and coolers, roth and rates, puts and bears), and k-means on 360 live Reddit comments from three subreddits: raw counts give a blob, tf-idf plus 60 dimensions sorts six in seven comments with their community. The representation, not the algorithm, does the work. Closer: the same k-means on twenty Met paintings counted into 27 color buckets sorts portraits from landscapes, three in four."
+    "a": "N-grams and statistics, hands-on: bigrams across three corpora, distributions and mean-versus-median on real counts, rates per 1,000 words. Then tf-idf at two scales, single comments as documents and twelve whole subreddits as documents, each community sight-read from its distinctive words (cpu and coolers, roth and rates, puts and bears), and k-means on 360 live Reddit comments from three subreddits: raw counts give a blob, tf-idf plus 60 dimensions sorts six in seven comments with their community. The representation, not the algorithm, does the work. Closer: the same k-means on twenty Met paintings counted into 27 color buckets sorts portraits from landscapes, three in four."
    },
    {
     "t": "1:30",
