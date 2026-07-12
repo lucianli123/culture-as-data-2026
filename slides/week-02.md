@@ -48,12 +48,12 @@ The rising words are fiction-words, and Google scanned more fiction after 2000. 
 - Habit three: a gap between rates can still be luck. That is the shuffle test's question, and it closes the session.
 - A difference can be real and still small; a big difference can be an artifact of the denominator. Say which you have.
 
-## Clustering: what do the counts separate?
+## Clustering: three communities, separable from counts alone
 
-- Give k-means the 314 documents as tf-idf vectors and ask for three piles, no labels. It returns: novels in one pile, sonnets split across two.
-- It found the loudest differences, verse against prose and a divide inside the sonnets, not the three books you had in mind. Clustering answers its own question.
-- The ablation: on raw counts, k-means returns one giant blob. The everywhere-words dominate the geometry; tf-idf is what makes the space navigable.
-- Novels only, two piles: about three in four paragraphs sort by author. Real signal, not a clean one. Name what separated before you claim it.
+- 360 Reddit comments from r/buildapc, r/gardening, and r/relationship_advice, streamed live (analyze-only: counts and findings are published, the text and usernames never are). k-means gets no labels.
+- Raw counts: one blob, the everywhere-words dominate. tf-idf: better, still smeared. tf-idf compressed to 60 dimensions: about six comments in seven land with their community.
+- The algorithm never changed; the representation did. Same data, same k-means, three answers, which previews Week 5's whole move: replace word columns with learned dimensions.
+- Read the stragglers: a gardening comment about a partner sorts with relationship_advice. The cluster found vocabulary; vocabulary mostly tracks community. Name what separated before you claim it.
 
 ## Where counting fails
 
@@ -90,7 +90,7 @@ The rising words are fiction-words, and Google scanned more fiction after 2000. 
 - **0:30**  Hand-built bag-of-words: two authors, highlighters, argue about merging run/running. Counting requires defining.
 - **0:55**  What counts as a word? Paste a sentence into two tokenizer playgrounds and watch it shatter differently. Models see tokens, not words. Then the standard tools for the run/running decision: NLTK stemming and lemmatization, a real stop list, and Zipf's law, the curve that explains why stop lists exist.
 - **1:05**  Break
-- **1:15**  N-grams and statistics, hands-on: bigrams across three corpora, distributions and mean-versus-median on real counts, rates per 1,000 words. Then tf-idf ("common here, rare overall") and k-means clustering: the counts separate verse from prose and split the sonnets in two, a lesson in what clustering actually answers.
+- **1:15**  N-grams and statistics, hands-on: bigrams across three corpora, distributions and mean-versus-median on real counts, rates per 1,000 words. Then tf-idf ("common here, rare overall") and k-means on 360 live Reddit comments from three subreddits: raw counts give a blob, tf-idf plus 60 dimensions sorts six in seven comments with their community. The representation, not the algorithm, does the work.
 - **1:30**  Keyness, the She Giggles, He Gallops move: a log-odds ratio between two corpora finds the words one voice uses far more than a baseline, exactly the method behind Week 1's featured piece. The corpus pair is a choice too: artist vs. pop, lyrics vs. subreddit vs. novel.
 - **1:42**  Is the difference real? The shuffle test: shuffle the labels and recount, one thousand times. If chance alone frequently produces a gap this large, the difference should not be trusted; if it almost never does, the finding stands. A difference can be real and still small.
 - **1:50**  Gemini-free check and check-out.

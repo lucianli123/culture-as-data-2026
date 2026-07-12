@@ -216,12 +216,12 @@
     ]
    },
    {
-    "h": "Clustering: what do the counts separate?",
+    "h": "Clustering: three communities, separable from counts alone",
     "points": [
-     "Give k-means the 314 documents as tf-idf vectors and ask for three piles, no labels. It returns: novels in one pile, sonnets split across two.",
-     "It found the loudest differences, verse against prose and a divide inside the sonnets, not the three books you had in mind. Clustering answers its own question.",
-     "The ablation: on raw counts, k-means returns one giant blob. The everywhere-words dominate the geometry; tf-idf is what makes the space navigable.",
-     "Novels only, two piles: about three in four paragraphs sort by author. Real signal, not a clean one. Name what separated before you claim it."
+     "360 Reddit comments from r/buildapc, r/gardening, and r/relationship_advice, streamed live (analyze-only: counts and findings are published, the text and usernames never are). k-means gets no labels.",
+     "Raw counts: one blob, the everywhere-words dominate. tf-idf: better, still smeared. tf-idf compressed to 60 dimensions: about six comments in seven land with their community.",
+     "The algorithm never changed; the representation did. Same data, same k-means, three answers, which previews Week 5's whole move: replace word columns with learned dimensions.",
+     "Read the stragglers: a gardening comment about a partner sorts with relationship_advice. The cluster found vocabulary; vocabulary mostly tracks community. Name what separated before you claim it."
     ]
    },
    {
@@ -279,7 +279,7 @@
    },
    {
     "t": "1:15",
-    "a": "N-grams and statistics, hands-on: bigrams across three corpora, distributions and mean-versus-median on real counts, rates per 1,000 words. Then tf-idf (\"common here, rare overall\") and k-means clustering: the counts separate verse from prose and split the sonnets in two, a lesson in what clustering actually answers."
+    "a": "N-grams and statistics, hands-on: bigrams across three corpora, distributions and mean-versus-median on real counts, rates per 1,000 words. Then tf-idf (\"common here, rare overall\") and k-means on 360 live Reddit comments from three subreddits: raw counts give a blob, tf-idf plus 60 dimensions sorts six in seven comments with their community. The representation, not the algorithm, does the work."
    },
    {
     "t": "1:30",
