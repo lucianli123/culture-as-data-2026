@@ -45,7 +45,8 @@ The rising words are fiction-words, and Google scanned more fiction after 2000. 
 
 - Habit one: look at the distribution before the mean. Count data is skewed: most r/gardening comments mention plants zero or one time, a few mention many. Mean and median disagree, and the mean alone misleads.
 - Habit two: divide by a denominator. Communities differ in how much they write, so raw totals mislead. Rates per 1,000 words: "water" is 3.9 in r/gardening and 0.1 elsewhere; "feel" is 1.8 in r/relationship_advice.
-- Habit three: a gap between rates can still be luck. That is the shuffle test's question, and it closes the session.
+- Habit three: standardize. A z-score rescales any number as distance from typical in units of spread: a comment with three plant mentions sits at z = +4.7, its 73-word length at +1.2. Unlike scales become comparable. Lemmatization is the same idea for word forms; the shuffle test is the same idea for gaps.
+- Habit four: a gap between rates can still be luck. That is the shuffle test's question, and it closes the session.
 - A difference can be real and still small; a big difference can be an artifact of the denominator. Say which you have.
 
 ## Clustering: three communities, separable from counts alone
@@ -69,6 +70,7 @@ The rising words are fiction-words, and Google scanned more fiction after 2000. 
 - For every word: how much likelier is it in corpus A than corpus B? A log-odds ratio, smoothed so rare words don't explode.
 - Strongly positive = distinctively A. Strongly negative = distinctively B. The middle is shared language.
 - She Giggles, He Gallops is exactly this method: verbs after "she" vs. "he" in 2,000 screenplays. Women snuggle, giggle, squeal; men gallop, strap, shoot.
+- Standardize the log-odds by their variance (Monroe et al.'s Fightin' Words) and the lists change character: topic words sink, register surfaces. r/buildapc's strongest markers become you/your (an advice room), r/gardening's i/we/them (a stories room).
 - The corpus pair is a choice: this artist against pop, this subreddit against a novel. Different pair, different "distinctive."
 
 ## The shuffle test: is the gap real?
@@ -92,7 +94,7 @@ The rising words are fiction-words, and Google scanned more fiction after 2000. 
 - **0:30**  Hand-built bag-of-words: two communities, highlighters, argue about merging run/running. Counting requires defining.
 - **0:55**  What counts as a word? Paste a sentence into two tokenizer playgrounds and watch it shatter differently. Models see tokens, not words. Then the standard tools for the run/running decision: NLTK stemming and lemmatization, a real stop list, and Zipf's law, the curve that explains why stop lists exist.
 - **1:05**  Break
-- **1:15**  N-grams and statistics, hands-on: bigrams across three corpora, distributions and mean-versus-median on real counts, rates per 1,000 words. Then tf-idf at two scales, single comments as documents and twelve whole subreddits as documents, each community sight-read from its distinctive words (cpu and coolers, roth and rates, puts and bears), and k-means on 360 live Reddit comments from three subreddits: raw counts give a blob, tf-idf plus 60 dimensions sorts six in seven comments with their community. The representation, not the algorithm, does the work. Closer: the same k-means on twenty Met paintings counted into 27 color buckets sorts portraits from landscapes, three in four.
+- **1:15**  N-grams and statistics, hands-on: bigrams across three corpora, distributions and mean-versus-median on real counts, rates per 1,000 words, z-scores as the common scale. Then tf-idf at two scales, single comments as documents and twelve whole subreddits as documents, each community sight-read from its distinctive words (cpu and coolers, roth and rates, puts and bears), and k-means on 360 live Reddit comments from three subreddits: raw counts give a blob, tf-idf plus 60 dimensions sorts six in seven comments with their community. The representation, not the algorithm, does the work. Closer: the same k-means on twenty Met paintings counted into 27 color buckets sorts portraits from landscapes, three in four.
 - **1:30**  Keyness, the She Giggles, He Gallops move: a log-odds ratio between two corpora finds the words one voice uses far more than a baseline, exactly the method behind Week 1's featured piece. The corpus pair is a choice too: artist vs. pop, lyrics vs. subreddit vs. novel.
 - **1:42**  Is the difference real? The shuffle test: shuffle the labels and recount, one thousand times. If chance alone frequently produces a gap this large, the difference should not be trusted; if it almost never does, the finding stands. A difference can be real and still small.
 - **1:50**  Gemini-free check and check-out.

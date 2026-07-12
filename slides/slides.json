@@ -211,7 +211,8 @@
     "points": [
      "Habit one: look at the distribution before the mean. Count data is skewed: most r/gardening comments mention plants zero or one time, a few mention many. Mean and median disagree, and the mean alone misleads.",
      "Habit two: divide by a denominator. Communities differ in how much they write, so raw totals mislead. Rates per 1,000 words: \"water\" is 3.9 in r/gardening and 0.1 elsewhere; \"feel\" is 1.8 in r/relationship_advice.",
-     "Habit three: a gap between rates can still be luck. That is the shuffle test's question, and it closes the session.",
+     "Habit three: standardize. A z-score rescales any number as distance from typical in units of spread: a comment with three plant mentions sits at z = +4.7, its 73-word length at +1.2. Unlike scales become comparable. Lemmatization is the same idea for word forms; the shuffle test is the same idea for gaps.",
+     "Habit four: a gap between rates can still be luck. That is the shuffle test's question, and it closes the session.",
      "A difference can be real and still small; a big difference can be an artifact of the denominator. Say which you have."
     ]
    },
@@ -241,6 +242,7 @@
      "For every word: how much likelier is it in corpus A than corpus B? A log-odds ratio, smoothed so rare words don't explode.",
      "Strongly positive = distinctively A. Strongly negative = distinctively B. The middle is shared language.",
      "She Giggles, He Gallops is exactly this method: verbs after \"she\" vs. \"he\" in 2,000 screenplays. Women snuggle, giggle, squeal; men gallop, strap, shoot.",
+     "Standardize the log-odds by their variance (Monroe et al.'s Fightin' Words) and the lists change character: topic words sink, register surfaces. r/buildapc's strongest markers become you/your (an advice room), r/gardening's i/we/them (a stories room).",
      "The corpus pair is a choice: this artist against pop, this subreddit against a novel. Different pair, different \"distinctive.\""
     ]
    },
@@ -281,7 +283,7 @@
    },
    {
     "t": "1:15",
-    "a": "N-grams and statistics, hands-on: bigrams across three corpora, distributions and mean-versus-median on real counts, rates per 1,000 words. Then tf-idf at two scales, single comments as documents and twelve whole subreddits as documents, each community sight-read from its distinctive words (cpu and coolers, roth and rates, puts and bears), and k-means on 360 live Reddit comments from three subreddits: raw counts give a blob, tf-idf plus 60 dimensions sorts six in seven comments with their community. The representation, not the algorithm, does the work. Closer: the same k-means on twenty Met paintings counted into 27 color buckets sorts portraits from landscapes, three in four."
+    "a": "N-grams and statistics, hands-on: bigrams across three corpora, distributions and mean-versus-median on real counts, rates per 1,000 words, z-scores as the common scale. Then tf-idf at two scales, single comments as documents and twelve whole subreddits as documents, each community sight-read from its distinctive words (cpu and coolers, roth and rates, puts and bears), and k-means on 360 live Reddit comments from three subreddits: raw counts give a blob, tf-idf plus 60 dimensions sorts six in seven comments with their community. The representation, not the algorithm, does the work. Closer: the same k-means on twenty Met paintings counted into 27 color buckets sorts portraits from landscapes, three in four."
    },
    {
     "t": "1:30",
