@@ -222,7 +222,8 @@
      "Raw counts: one blob, the everywhere-words dominate. tf-idf: better, still smeared. tf-idf compressed to 60 dimensions: about six comments in seven land with their community.",
      "The algorithm never changed; the representation did. Same data, same k-means, three answers, which previews Week 5's whole move: replace word columns with learned dimensions.",
      "Read the stragglers: a gardening comment about a partner sorts with relationship_advice. The cluster found vocabulary; vocabulary mostly tracks community. Name what separated before you claim it.",
-     "The hard version, in the go-further: r/sandiego against r/SanDiegan, one city, two communities. Clustering barely beats a coin flip, and even Week 3's supervised classifier reaches only about 60 percent. Topic is easy; community-within-topic is hard."
+     "The hard version, in the go-further: r/sandiego against r/SanDiegan, one city, two communities. Clustering barely beats a coin flip, and even Week 3's supervised classifier reaches only about 60 percent. Topic is easy; community-within-topic is hard.",
+     "And the same move for pictures: twenty Met paintings counted into 27 color buckets, k-means, no labels. Portraits sort from landscapes three in four, and the stragglers (a brown winter landscape counts like a portrait) are the discussion."
     ]
    },
    {
@@ -280,7 +281,7 @@
    },
    {
     "t": "1:15",
-    "a": "N-grams and statistics, hands-on: bigrams across three corpora, distributions and mean-versus-median on real counts, rates per 1,000 words. Then tf-idf (\"common here, rare overall\") and k-means on 360 live Reddit comments from three subreddits: raw counts give a blob, tf-idf plus 60 dimensions sorts six in seven comments with their community. The representation, not the algorithm, does the work."
+    "a": "N-grams and statistics, hands-on: bigrams across three corpora, distributions and mean-versus-median on real counts, rates per 1,000 words. Then tf-idf (\"common here, rare overall\") and k-means on 360 live Reddit comments from three subreddits: raw counts give a blob, tf-idf plus 60 dimensions sorts six in seven comments with their community. The representation, not the algorithm, does the work. Closer: the same k-means on twenty Met paintings counted into 27 color buckets sorts portraits from landscapes, three in four."
    },
    {
     "t": "1:30",
