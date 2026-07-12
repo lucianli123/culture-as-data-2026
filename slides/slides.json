@@ -183,6 +183,7 @@
      "The claim (PNAS 2021): phrases of distorted thinking (\"I am a failure,\" \"everyone hates me\") surge in Google Books after 2000. A hockey stick.",
      "The objection: Google scanned more fiction after 2000. Maybe the surge is novels, not distress.",
      "The rebuttal: the authors deleted the entire fiction corpus and re-ran the analysis. The pattern largely held.",
+     "The notebook runs the trial live: the Ngram Viewer's JSON endpoint returns the paper's own data. \"I am a failure\" hockey-sticks in the mixed corpus and sits roughly flat inside fiction; \"she whispered\" hockey-sticks too. The evidence cuts both ways, which is why it is a trial.",
      "The method worth adopting: answer \"your corpus is biased\" with a test rather than an argument."
     ]
    },
@@ -194,6 +195,42 @@
      "Your hand-count argument about run/running is the same decision, made with highlighters. A stemmer makes it by rule (and produces \"beauti\"); a lemmatizer makes it by dictionary (and reads \"was\" as a noun unless told otherwise).",
      "Zipf's law: rank words by frequency and every corpus gives the same curve. The head is the stop list; the tail is too rare to count.",
      "tf-idf: down-weight what is common everywhere. \"Common here, rare overall\" is what characterizes a text."
+    ]
+   },
+   {
+    "h": "N-grams: counting phrases",
+    "points": [
+     "A bigram is two words in a row. Week 1 counted the sonnets' pairs; this week counts pairs across three corpora, and each book's top bigrams are already a fingerprint.",
+     "Google Books n-grams are this method at civilizational scale: 500 billion words, one JSON request per query. Bollen et al. is an n-gram study.",
+     "Longer n-grams buy context and pay in sparsity: the top word appears hundreds of times, the top pair dozens, the top triple six.",
+     "\"My love\" is a different fact than \"my\" plus \"love\": pairs keep a sliver of the order the bag throws away."
+    ]
+   },
+   {
+    "h": "The statistics of counts",
+    "points": [
+     "Habit one: look at the distribution before the mean. Count data is skewed: most paragraphs of Dracula contain \"night\" zero times, a few contain many. Mean and median disagree, and the mean alone misleads.",
+     "Habit two: divide by a denominator. The novels outweigh all 154 sonnets combined, so raw totals always vote for the novels. Rates per 1,000 words: \"love\" is 10.8 in the sonnets, 0.7 in Frankenstein.",
+     "Habit three: a gap between rates can still be luck. That is the shuffle test's question, and it closes the session.",
+     "A difference can be real and still small; a big difference can be an artifact of the denominator. Say which you have."
+    ]
+   },
+   {
+    "h": "Clustering: what do the counts separate?",
+    "points": [
+     "Give k-means the 314 documents as tf-idf vectors and ask for three piles, no labels. It returns: novels in one pile, sonnets split across two.",
+     "It found the loudest differences, verse against prose and a divide inside the sonnets, not the three books you had in mind. Clustering answers its own question.",
+     "The ablation: on raw counts, k-means returns one giant blob. The everywhere-words dominate the geometry; tf-idf is what makes the space navigable.",
+     "Novels only, two piles: about three in four paragraphs sort by author. Real signal, not a clean one. Name what separated before you claim it."
+    ]
+   },
+   {
+    "h": "Where counting fails",
+    "points": [
+     "Negation: \"I am not happy\" adds one to the happy count. Bigrams catch a little of this; most context is invisible to a counter.",
+     "The stemmer is rules without a dictionary: universal, university, and universe all become \"univers\".",
+     "The lemmatizer needs the part of speech: \"saw\" is a tool as a noun and the past of see as a verb; told nothing, it guesses.",
+     "Polysemy: \"sick beat\" and \"sick child\" add to the same count. A word type is not a meaning. Week 5's embeddings exist for these holes, and bring their own."
     ]
    },
    {
@@ -222,7 +259,7 @@
    },
    {
     "t": "0:05",
-    "a": "The trial: claim, objection, re-run-without-fiction rebuttal, \"interpret with care.\" One named choice is the chart: the hockey-stick shape depends on its y-axis and smoothing."
+    "a": "The trial: claim, objection, re-run-without-fiction rebuttal, \"interpret with care.\" One named choice is the chart: the hockey-stick shape depends on its y-axis and smoothing. The notebook pulls the paper's own phrases live from Google Books and probes the fiction objection with fiction-marker phrases."
    },
    {
     "t": "0:25",
@@ -242,7 +279,7 @@
    },
    {
     "t": "1:15",
-    "a": "tf-idf: the AI scales your hand count; stop-words dominate, which motivates \"common here, rare overall.\""
+    "a": "N-grams and statistics, hands-on: bigrams across three corpora, distributions and mean-versus-median on real counts, rates per 1,000 words. Then tf-idf (\"common here, rare overall\") and k-means clustering: the counts separate verse from prose and split the sonnets in two, a lesson in what clustering actually answers."
    },
    {
     "t": "1:30",
