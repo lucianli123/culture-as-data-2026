@@ -54,6 +54,7 @@ The rising words are fiction-words, and Google scanned more fiction after 2000. 
 - Raw counts: one blob, the everywhere-words dominate. tf-idf: better, still smeared. tf-idf compressed to 60 dimensions: about six comments in seven land with their community.
 - The algorithm never changed; the representation did. Same data, same k-means, three answers, which previews Week 5's whole move: replace word columns with learned dimensions.
 - Read the stragglers: a gardening comment about a partner sorts with relationship_advice. The cluster found vocabulary; vocabulary mostly tracks community. Name what separated before you claim it.
+- The hard version, in the go-further: r/sandiego against r/SanDiegan, one city, two communities. Clustering barely beats a coin flip, and even Week 3's supervised classifier reaches only about 60 percent. Topic is easy; community-within-topic is hard.
 
 ## Where counting fails
 
