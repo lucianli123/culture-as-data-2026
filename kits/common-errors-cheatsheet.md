@@ -71,3 +71,15 @@ finishes."
 
 **9. Binary incompatibility after an install**
 *Looks like:* `ValueError: numpy.dtype size changed, may indicate binary incompatibility.
+Expected 96 from C header, got 88 from PyObject`.
+*Cause:* An install cell replaced numpy (or another compiled library) underneath modules
+Python had already loaded. The old version is still in memory; the new one is on disk.
+*Fix yourself:* `Runtime → Restart session`, then run the notebook again from the top. If
+it recurs, something is pinning or reinstalling numpy/pandas: never `pip install` those on
+Colab. *Paste back if it persists:* "I get 'numpy.dtype size changed' even after a runtime
+restart. Find which package in the install cell is downgrading numpy and remove or unpin it."
+
+---
+
+*Keep this open in a tab during every lab. The move is never to panic. It's to read the last
+line, paste it back, and keep moving.*
