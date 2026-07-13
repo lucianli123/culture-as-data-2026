@@ -228,6 +228,15 @@
     ]
    },
    {
+    "h": "Three ways to fool yourself with significance",
+    "points": [
+     "Selection: we shuffle-tested our top keyness word and got p = 0. Of course: we picked it BECAUSE its gap was the most extreme of 1,500. State the hypothesis before looking, then test exactly that.",
+     "Multiplicity: split one community's comments randomly in half and keyness still produces a convincing \"distinctive vocabulary\": pure noise. Test 1,500 words at p < .05 and ~75 pass by luck. Bollen et al. counted 241 phrases. Defenses: correct the threshold, pre-register, or check winners on held-out data.",
+     "Size: \"significant\" answers \"is it chance?\", never \"does it matter?\" With enough comments a microscopic gap passes. Report the effect and the p, both: \"3.3 per 1,000 words more (p < .001)\".",
+     "The bootstrap closes the loop: resample your own comments 1,000 times for a confidence interval. The shuffle test asks \"could it be zero?\"; the bootstrap asks \"what sizes are believable?\" A publishable finding survives both."
+    ]
+   },
+   {
     "h": "Where counting fails",
     "points": [
      "Negation: \"I am not happy\" adds one to the happy count. Bigrams catch a little of this; most context is invisible to a counter.",
@@ -250,8 +259,8 @@
     "h": "The shuffle test: is the gap real?",
     "points": [
      "The question: could randomly dealt labels produce a gap this large?",
-     "Shuffle the labels, recount, 1,000 times. Mark where the real gap lands in that pile.",
-     "Chance rarely matches it: a finding. Chance matches it often: a coincidence.",
+     "Shuffle the labels, recount, 1,000 times. Mark where the real gap lands in that pile. The fraction of shuffles that match it is the p-value, the number inside every \"p < .05\" you will ever read.",
+     "Chance rarely matches it: a finding. Chance matches it often: a coincidence. Pre-registered in the notebook: \"gardeners say water more\" (gap +3.3 per 1,000 words, p < .001); \"money\" between buildapc and advice fails (p = .17) and even flips sign between pulls.",
      "It says \"probably not chance.\" It never says \"big enough to matter.\" Effect size is your argument to make."
     ]
    }
@@ -291,7 +300,7 @@
    },
    {
     "t": "1:42",
-    "a": "Is the difference real? The shuffle test: shuffle the labels and recount, one thousand times. If chance alone frequently produces a gap this large, the difference should not be trusted; if it almost never does, the finding stands. A difference can be real and still small."
+    "a": "Is the difference real? The shuffle test names the p-value, then the three traps: selection (testing the word you picked for its extremity), multiplicity (random halves of one community yield a convincing fake vocabulary; ~75 of 1,500 words pass by luck), and size (significant is not big; report effect and p together, with a bootstrap interval for the size)."
    },
    {
     "t": "1:50",
