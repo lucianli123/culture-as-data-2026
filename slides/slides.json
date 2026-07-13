@@ -316,8 +316,8 @@
     "a": "Gemini-free check and check-out."
    }
   ],
-  "reading": "Wolfram, What Is ChatGPT Doing (opening sections only)",
-  "supplement": "Zipf's law, the straight line in every text",
+  "reading": "Underwood, The Historical Significance of Textual Distances (2018): does near-in-count-space mean near-in-culture?",
+  "supplement": "Wolfram, What Is ChatGPT Doing (opening sections only), where even generation turns out to be counting",
   "deeper": "Grimmer &amp; Stewart, Text as Data (2013), \u00a71\u20134: all quantitative models of language are wrong, but some are useful",
   "sketch": "Count something in a text you care about; one chart; one sentence naming a choice. If the count compares two things, shuffle-test the gap.",
   "check": "Explain it: why two tokenizers split a sentence differently, and what your stemming choice changed. (Competencies 3, 5.)",
