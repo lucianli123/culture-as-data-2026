@@ -420,7 +420,7 @@
    }
   ],
   "reading": "Mullen, America's Public Bible (intro + a verse)",
-  "supplement": "Underwood on GPT-4 and fictional time; Juola's Rowling unmasking",
+  "supplement": "Robinson, Trump's tweets: the Android/iPhone split (2016), distinctive words unmasking who typed; Juola's Rowling unmasking",
   "deeper": "Underwood, The Life Cycles of Genres (2016), the full paper behind today's featured study",
   "sketch": "Train a quick logistic regression on a labeled set; screenshot its five most positive and negative words.",
   "check": "Explain it: read your classifier's top weights aloud, and name one input where it would fail and why. (Competencies 4, 5.)",
@@ -935,7 +935,7 @@
   ],
   "reading": "None",
   "supplement": "A Pudding process post",
-  "deeper": "The Pudding, Making Internet Things: how the pros build the thing you are building this week",
+  "deeper": "None; build week",
   "sketch": "Title your essay; write the headline finding in one sentence.",
   "check": "Fix it: a planted bug in publishing/layout code (or in opted-in JS). (Competencies 1, 7.)",
   "threads": [

@@ -66,7 +66,7 @@ What counts as science fiction is a choice built into the training labels. And t
 ## Reading & homework
 
 - **Reading:** [Mullen, America's Public Bible](https://americaspublicbible.org/) (intro + a verse)
-- **Supplement:** [Underwood on GPT-4 and fictional time](https://tedunderwood.com/2023/03/19/using-gpt-4-to-measure-the-passage-of-time-in-fiction/); [Juola's Rowling unmasking](https://www.scientificamerican.com/article/how-a-computer-program-helped-show-jk-rowling-write-a-cuckoos-calling/)
+- **Supplement:** [Robinson, Trump's tweets: the Android/iPhone split (2016)](http://varianceexplained.org/r/trump-tweets/), distinctive words unmasking who typed; [Juola's Rowling unmasking](https://www.scientificamerican.com/article/how-a-computer-program-helped-show-jk-rowling-write-a-cuckoos-calling/)
 - **Deeper (optional):** [Underwood, The Life Cycles of Genres (2016)](https://doi.org/10.22148/16.005), the full paper behind today's featured study
 - **Sketch:** Train a quick logistic regression on a labeled set; screenshot its five most positive and negative words.
 - **Check (AI closed):** Explain it: read your classifier's top weights aloud, and name one input where it would fail and why. (Competencies 4, 5.)

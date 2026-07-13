@@ -48,6 +48,6 @@ There's no single right way, only choices you can defend. Yours will be choices 
 
 - **Reading:** None
 - **Supplement:** [A Pudding process post](https://pudding.cool/process/pivot-continue-down/)
-- **Deeper (optional):** [The Pudding, Making Internet Things](https://pudding.cool/process/how-to-make-dope-shit-part-1/): how the pros build the thing you are building this week
+- **Deeper (optional):** None; build week
 - **Sketch:** Title your essay; write the headline finding in one sentence.
 - **Check (AI closed):** Fix it: a planted bug in publishing/layout code (or in opted-in JS). (Competencies 1, 7.)
