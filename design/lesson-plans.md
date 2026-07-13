@@ -100,8 +100,9 @@ Full worked notebooks. Participatory live coding. Exposure and a hook, not maste
 
 **Pacing.** Six content beats and no slack — the tightest technical session of the term. If it runs short: the 0:33 demonstration folds into the keyness block (which repeats it properly), and the shuffle count is not load-bearing — 200 shuffles demonstrates the idea as well as 1,000. The trial and the hand-built bag-of-words do not shrink.
 
-**Reading:** Stephen Wolfram, "What Is ChatGPT Doing…" — the opening sections only, where even text generation turns out to be built from counting. *Proof that the humble tool you start with underlies the fanciest ones.*
-**Deeper (optional):** Grimmer & Stewart, “Text as Data” (Political Analysis 2013), §1–4 — the field's methods credo: all quantitative models of language are wrong; some are useful; validate everything.
+**Reading (a debate, with the week's tools as referee):** Underwood, "The Historical Significance of Textual Distances" (2018, arXiv, free) — does distance in count-space correspond to *cultural* distance? His answer (supervised learning anchors distance in social context) is where Week 3 begins, and he wrote Week 3's featured study. Against him: Da, "The Computational Case Against Computational Literary Studies" (*Critical Inquiry* 2019), introduction + one case study — results like his, she argues, are statistically fragile: tiny effects, many comparisons, no robustness. Students now know those traps by name; the assignment is to referee.
+**Supplement:** the *Critical Inquiry* online forum (free) — the field answers Da, Underwood included, and Da answers back.
+**Deeper (optional):** Grimmer & Stewart, "Text as Data" (Political Analysis 2013), §1–4 — the field's methods credo: all quantitative models of language are wrong; some are useful; validate everything. (Wolfram's "What Is ChatGPT Doing" moves to Week 8, beside Chiang.)
 **Sketch:** count something in a text you love; one chart; one sentence naming a choice you made. If your count compares two things, shuffle-test the gap.
 **Check (explain it):** two tokenizers split the same sentence differently — explain why; and say in one sentence what your shuffle test can and cannot rule out. *(C3, C5.)*
 

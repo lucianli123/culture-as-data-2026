@@ -316,8 +316,8 @@
     "a": "Gemini-free check and check-out."
    }
   ],
-  "reading": "Underwood, The Historical Significance of Textual Distances (2018): does near-in-count-space mean near-in-culture?",
-  "supplement": "Wolfram, What Is ChatGPT Doing (opening sections only), where even generation turns out to be counting",
+  "reading": "The debate: Underwood, The Historical Significance of Textual Distances (2018) against Da, The Computational Case Against Computational Literary Studies (2019), introduction and one case study",
+  "supplement": "the Critical Inquiry online forum (free): the field answers Da, Underwood included, and Da answers back",
   "deeper": "Grimmer &amp; Stewart, Text as Data (2013), \u00a71\u20134: all quantitative models of language are wrong, but some are useful",
   "sketch": "Count something in a text you care about; one chart; one sentence naming a choice. If the count compares two things, shuffle-test the gap.",
   "check": "Explain it: why two tokenizers split a sentence differently, and what your stemming choice changed. (Competencies 3, 5.)",
@@ -866,8 +866,8 @@
    }
   ],
   "reading": "Ted Chiang, ChatGPT Is a Blurry JPEG of the Web (2023), the compression idea this week is built on",
-  "supplement": "TimeCapsuleLLM and Speak, Memory; period models MonadGPT and MacBERTh",
-  "deeper": "Da, The Computational Case Against Computational Literary Studies (2019), the field's sharpest critique, read against your own robustness checks",
+  "supplement": "Wolfram, What Is ChatGPT Doing (opening sections), counting all the way down; TimeCapsuleLLM and Speak, Memory; period models MonadGPT and MacBERTh",
+  "deeper": "Da (2019), rereread now that the robustness checks are yours: which of her objections does your own project survive?",
   "sketch": "Expand to 600 to 1,000 words; write your show-your-work appendix and which checks survived.",
   "check": "Explain it: your headline finding, and what it does not show. (Competencies 3, 4.)",
   "threads": [

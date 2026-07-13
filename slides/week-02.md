@@ -115,8 +115,8 @@ The rising words are fiction-words, and Google scanned more fiction after 2000. 
 
 ## Reading & homework
 
-- **Reading:** [Underwood, The Historical Significance of Textual Distances (2018)](https://arxiv.org/abs/1807.00181): does near-in-count-space mean near-in-culture?
-- **Supplement:** [Wolfram, What Is ChatGPT Doing](https://writings.stephenwolfram.com/2023/02/what-is-chatgpt-doing-and-why-does-it-work/) (opening sections only), where even generation turns out to be counting
+- **Reading:** The debate: [Underwood, The Historical Significance of Textual Distances (2018)](https://arxiv.org/abs/1807.00181) against [Da, The Computational Case Against Computational Literary Studies (2019)](https://doi.org/10.1086/702594), introduction and one case study
+- **Supplement:** [the Critical Inquiry online forum](https://critinq.wordpress.com/2019/03/31/computational-literary-studies-a-critical-inquiry-online-forum/) (free): the field answers Da, Underwood included, and Da answers back
 - **Deeper (optional):** [Grimmer &amp; Stewart, Text as Data (2013)](https://web.stanford.edu/~jgrimmer/tad2.pdf), §1–4: all quantitative models of language are wrong, but some are useful
 - **Sketch:** Count something in a text you care about; one chart; one sentence naming a choice. If the count compares two things, shuffle-test the gap.
 - **Check (AI closed):** Explain it: why two tokenizers split a sentence differently, and what your stemming choice changed. (Competencies 3, 5.)
