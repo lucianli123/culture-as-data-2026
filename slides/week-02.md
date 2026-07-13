@@ -115,8 +115,8 @@ The rising words are fiction-words, and Google scanned more fiction after 2000. 
 
 ## Reading & homework
 
-- **Reading:** The debate: [Underwood, The Historical Significance of Textual Distances (2018)](https://arxiv.org/abs/1807.00181) against [Da, The Computational Case Against Computational Literary Studies (2019)](https://doi.org/10.1086/702594), introduction and one case study
-- **Supplement:** [the Critical Inquiry online forum](https://critinq.wordpress.com/2019/03/31/computational-literary-studies-a-critical-inquiry-online-forum/) (free): the field answers Da, Underwood included, and Da answers back
+- **Reading:** [Matt Daniels, The Largest Vocabulary in Hip Hop](https://pudding.cool/projects/vocabulary/) (The Pudding): 150 rappers ranked by unique words, token analysis exactly as in today's session, caveats and all
+- **Supplement:** For the curious, the field's own version of today's trial: [Underwood, Textual Distances (2018)](https://arxiv.org/abs/1807.00181) vs. [Da, The Computational Case (2019)](https://doi.org/10.1086/702594), with [the free forum](https://critinq.wordpress.com/2019/03/31/computational-literary-studies-a-critical-inquiry-online-forum/) where the field argues back
 - **Deeper (optional):** [Grimmer &amp; Stewart, Text as Data (2013)](https://web.stanford.edu/~jgrimmer/tad2.pdf), §1–4: all quantitative models of language are wrong, but some are useful
 - **Sketch:** Count something in a text you care about; one chart; one sentence naming a choice. If the count compares two things, shuffle-test the gap.
 - **Check (AI closed):** Explain it: why two tokenizers split a sentence differently, and what your stemming choice changed. (Competencies 3, 5.)

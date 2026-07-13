@@ -316,8 +316,8 @@
     "a": "Gemini-free check and check-out."
    }
   ],
-  "reading": "The debate: Underwood, The Historical Significance of Textual Distances (2018) against Da, The Computational Case Against Computational Literary Studies (2019), introduction and one case study",
-  "supplement": "the Critical Inquiry online forum (free): the field answers Da, Underwood included, and Da answers back",
+  "reading": "Matt Daniels, The Largest Vocabulary in Hip Hop (The Pudding): 150 rappers ranked by unique words, token analysis exactly as in today's session, caveats and all",
+  "supplement": "For the curious, the field's own version of today's trial: Underwood, Textual Distances (2018) vs. Da, The Computational Case (2019), with the free forum where the field argues back",
   "deeper": "Grimmer &amp; Stewart, Text as Data (2013), \u00a71\u20134: all quantitative models of language are wrong, but some are useful",
   "sketch": "Count something in a text you care about; one chart; one sentence naming a choice. If the count compares two things, shuffle-test the gap.",
   "check": "Explain it: why two tokenizers split a sentence differently, and what your stemming choice changed. (Competencies 3, 5.)",
@@ -606,8 +606,8 @@
     "a": "Gemini-free check and check-out."
    }
   ],
-  "reading": "Alammar, The Illustrated Word2Vec, plus the debate: Kozlowski/Taddy/Evans, The Geometry of Culture (ASR 2019) vs. Bolukbasi et al. (2016)",
-  "supplement": "The second pairing: Caliskan et al. (2017) vs. Soni/Klein, How Words Lead to Justice; Anderson et al., Spotify diversity",
+  "reading": "Alammar, The Illustrated Word2Vec: the space of meaning, drawn one picture at a time",
+  "supplement": "The debates, for the curious: Kozlowski/Taddy/Evans, The Geometry of Culture (2019) vs. Bolukbasi et al. (2016); Caliskan et al. (2017) vs. Soni/Klein, How Words Lead to Justice; Anderson et al., Spotify diversity",
   "deeper": "Kozlowski et al., The Geometry of Culture (2019) in full; Wattenberg, Vi\u00e9gas &amp; Johnson, How to Use t-SNE Effectively (Distill 2016)",
   "sketch": "Toggle PCA vs. t-SNE and screenshot how the map changes; name one cluster you believe and one you don't.",
   "check": "Explain it: on your map, name one cluster you believe is real and one that's probably a projection artifact, and how you'd tell. (Competency 4.)",
@@ -692,8 +692,8 @@
     "a": "Check-out."
    }
   ],
-  "reading": "Gilardi et al. (2023), the AI as a cheaper coder",
-  "supplement": "Reagan et al., Six Basic Shapes (the smoothing fight); Manovich, Selfiecity",
+  "reading": "Manovich, Selfiecity: browse it. 3,200 selfies from five cities, measured, mapped, and strange",
+  "supplement": "Gilardi et al. (2023) abstract, the AI as a cheaper coder (primes Week 7); Reagan et al., Six Basic Shapes (the smoothing fight)",
   "deeper": "Arnold &amp; Tilton, Distant Viewing (DSH 2019), the theory behind treating images as data",
   "sketch": "One disagreement between your labels and the AI's where you were right, and why.",
   "check": "Fix it: the planted bug. (Competencies 1, 7.)",
@@ -935,7 +935,7 @@
   ],
   "reading": "None",
   "supplement": "A Pudding process post",
-  "deeper": "the Critical Inquiry online forum: Underwood and others answer Da, a discipline arguing about itself in public",
+  "deeper": "The Pudding, Making Internet Things: how the pros build the thing you are building this week",
   "sketch": "Title your essay; write the headline finding in one sentence.",
   "check": "Fix it: a planted bug in publishing/layout code (or in opted-in JS). (Competencies 1, 7.)",
   "threads": [
