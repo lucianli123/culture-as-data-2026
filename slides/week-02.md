@@ -49,6 +49,13 @@ The rising words are fiction-words, and Google scanned more fiction after 2000. 
 - Habit four: a gap between rates can still be luck. That is the shuffle test's question, and it closes the session.
 - A difference can be real and still small; a big difference can be an artifact of the denominator. Say which you have.
 
+## Documents as points: the idea of a space
+
+- A document's counts are a list of numbers, and a list of numbers is a coordinate. One axis per word, and every document becomes a point; the corpus becomes a cloud. In that space, near means similar vocabulary.
+- Seen in the only size that fits on a slide: a two-word space. Gardening comments live along the plant axis, buildapc along the cpu axis, relationship_advice at the origin, where neither word is its vocabulary.
+- The real space has one axis per vocabulary word, about five thousand. Unpicturable, but the arithmetic is identical. Clustering finds neighborhoods in the cloud; PCA is a camera angle that flattens it to two axes for viewing.
+- Week 5's embeddings are this exact move with learned axes: near comes to mean similar meaning instead of shared vocabulary. Whenever you read "embedding": a placement of things into a space where distance is designed to mean something.
+
 ## Clustering: three communities, separable from counts alone
 
 - 360 Reddit comments from r/buildapc, r/gardening, and r/relationship_advice, streamed live (analyze-only: counts and findings are published, the text and usernames never are). k-means gets no labels.
@@ -101,7 +108,7 @@ The rising words are fiction-words, and Google scanned more fiction after 2000. 
 - **0:30**  Hand-built bag-of-words: two communities, highlighters, argue about merging run/running. Counting requires defining.
 - **0:55**  What counts as a word? Paste a sentence into two tokenizer playgrounds and watch it shatter differently. Models see tokens, not words. Then the standard tools for the run/running decision: NLTK stemming and lemmatization, a real stop list, and Zipf's law, the curve that explains why stop lists exist.
 - **1:05**  Break
-- **1:15**  N-grams and statistics, hands-on: bigrams across three corpora, distributions and mean-versus-median on real counts, rates per 1,000 words, z-scores as the common scale. Then tf-idf at two scales, single comments as documents and twelve whole subreddits as documents, each community sight-read from its distinctive words (cpu and coolers, roth and rates, puts and bears), and k-means on 360 live Reddit comments from three subreddits: raw counts give a blob, tf-idf plus 60 dimensions sorts six in seven comments with their community. The representation, not the algorithm, does the work. Closer: the same k-means on twenty Met paintings counted into 27 color buckets sorts portraits from landscapes, three in four.
+- **1:15**  N-grams and statistics, hands-on: bigrams across three corpora, distributions and mean-versus-median on real counts, rates per 1,000 words, z-scores as the common scale. Then tf-idf at two scales, single comments as documents and twelve whole subreddits as documents, each community sight-read from its distinctive words (cpu and coolers, roth and rates, puts and bears), then the idea of a space made explicit (documents as points, one axis per word, a two-word space drawn), and k-means on the live comments: raw counts give a blob, tf-idf plus 60 dimensions sorts six in seven comments with their community. The representation, not the algorithm, does the work. Closer: the same k-means on twenty Met paintings counted into 27 color buckets sorts portraits from landscapes, three in four.
 - **1:30**  Keyness, the She Giggles, He Gallops move: a log-odds ratio between two corpora finds the words one voice uses far more than a baseline, exactly the method behind Week 1's featured piece. The corpus pair is a choice too: artist vs. pop, lyrics vs. subreddit vs. novel.
 - **1:42**  Is the difference real? The shuffle test names the p-value, then the three traps: selection (testing the word you picked for its extremity), multiplicity (random halves of one community yield a convincing fake vocabulary; ~75 of 1,500 words pass by luck), and size (significant is not big; report effect and p together, with a bootstrap interval for the size).
 - **1:50**  Gemini-free check and check-out.

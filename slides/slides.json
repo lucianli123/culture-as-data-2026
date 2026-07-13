@@ -217,6 +217,15 @@
     ]
    },
    {
+    "h": "Documents as points: the idea of a space",
+    "points": [
+     "A document's counts are a list of numbers, and a list of numbers is a coordinate. One axis per word, and every document becomes a point; the corpus becomes a cloud. In that space, near means similar vocabulary.",
+     "Seen in the only size that fits on a slide: a two-word space. Gardening comments live along the plant axis, buildapc along the cpu axis, relationship_advice at the origin, where neither word is its vocabulary.",
+     "The real space has one axis per vocabulary word, about five thousand. Unpicturable, but the arithmetic is identical. Clustering finds neighborhoods in the cloud; PCA is a camera angle that flattens it to two axes for viewing.",
+     "Week 5's embeddings are this exact move with learned axes: near comes to mean similar meaning instead of shared vocabulary. Whenever you read \"embedding\": a placement of things into a space where distance is designed to mean something."
+    ]
+   },
+   {
     "h": "Clustering: three communities, separable from counts alone",
     "points": [
      "360 Reddit comments from r/buildapc, r/gardening, and r/relationship_advice, streamed live (analyze-only: counts and findings are published, the text and usernames never are). k-means gets no labels.",
@@ -292,7 +301,7 @@
    },
    {
     "t": "1:15",
-    "a": "N-grams and statistics, hands-on: bigrams across three corpora, distributions and mean-versus-median on real counts, rates per 1,000 words, z-scores as the common scale. Then tf-idf at two scales, single comments as documents and twelve whole subreddits as documents, each community sight-read from its distinctive words (cpu and coolers, roth and rates, puts and bears), and k-means on 360 live Reddit comments from three subreddits: raw counts give a blob, tf-idf plus 60 dimensions sorts six in seven comments with their community. The representation, not the algorithm, does the work. Closer: the same k-means on twenty Met paintings counted into 27 color buckets sorts portraits from landscapes, three in four."
+    "a": "N-grams and statistics, hands-on: bigrams across three corpora, distributions and mean-versus-median on real counts, rates per 1,000 words, z-scores as the common scale. Then tf-idf at two scales, single comments as documents and twelve whole subreddits as documents, each community sight-read from its distinctive words (cpu and coolers, roth and rates, puts and bears), then the idea of a space made explicit (documents as points, one axis per word, a two-word space drawn), and k-means on the live comments: raw counts give a blob, tf-idf plus 60 dimensions sorts six in seven comments with their community. The representation, not the algorithm, does the work. Closer: the same k-means on twenty Met paintings counted into 27 color buckets sorts portraits from landscapes, three in four."
    },
    {
     "t": "1:30",
