@@ -233,7 +233,7 @@ SLIDES_CONTENT={
   ("What counts as a word?",
    ["Two tokenizers shatter the same sentence differently: \"don't\" becomes one chip, two, or three.",
     "Models never see words. They see tokens, and the split is a design decision.",
-    "Your hand-count argument about run/running is the same decision, made with highlighters. A stemmer makes it by rule (and produces \"beauti\"); a lemmatizer makes it by dictionary (and reads \"was\" as a noun unless told otherwise).",
+    "Your hand-count argument about run/running is the same decision, made with highlighters. A stemmer makes it by rule: r/gardening's own garden, gardener, gardening, and gardens all collapse to one stem, person lumped with activity. A lemmatizer consults a dictionary, but must be told the part of speech.",
     "Zipf's law: rank words by frequency and every corpus gives the same curve. The head is the stop list; the tail is too rare to count.",
     "tf-idf: down-weight what is common everywhere. \"Common here, rare overall\" is what characterizes a text."]),
   ("N-grams: counting phrases",
