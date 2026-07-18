@@ -434,6 +434,7 @@ WEEKS = [
    check="Trace it: one written sentence predicting what your cell does before you run it. (Competency 1.)",
    comps="1, 8"),
  dict(n=2, title="Counting, Compared: Is the Difference Real?", tool="Advanced counting: baselines, keyness, and the shuffle test",
+   gslides="https://docs.google.com/presentation/d/1vPSLm6YH1YRT8QeeQUoKh3KCIDl2zXHDae6__oUDEgQ/edit?usp=sharing",
    promise="Put a famous PNAS paper on trial, find the words that make a voice distinctive (the method behind Week 1's featured study), and learn the one statistical method the course requires: the shuffle test, which checks whether a difference is real.",
    admire="The Bollen/Schmidt trial: a hockey stick of societal distress, found by counting.",
    interrogate="The rising words are fiction-words, and Google scanned more fiction after 2000. The rebuttal, and the method worth adopting: the authors removed the entire fiction corpus and re-ran it, and the pattern largely held. The answer to \"your corpus is biased\" is a test, not an argument.",
