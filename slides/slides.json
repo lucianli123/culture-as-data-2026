@@ -229,7 +229,7 @@
     "h": "Clustering: three communities, separable from counts alone",
     "points": [
      "360 Reddit comments from r/buildapc, r/gardening, and r/relationship_advice, streamed live (analyze-only: counts and findings are published, the text and usernames never are). k-means gets no labels.",
-     "Raw counts: one blob, the everywhere-words dominate. tf-idf: better, still smeared. tf-idf compressed to 60 dimensions: about six comments in seven land with their community.",
+     "Raw counts: one blob, the everywhere-words dominate. tf-idf: better, still smeared. tf-idf compressed to 60 dimensions: about four comments in five land with their community.",
      "The algorithm never changed; the representation did. Same data, same k-means, three answers, which previews Week 5's whole move: replace word columns with learned dimensions.",
      "Read the stragglers: a gardening comment about a partner sorts with relationship_advice. The cluster found vocabulary; vocabulary mostly tracks community. Name what separated before you claim it.",
      "The hard version, in the go-further: r/sandiego against r/SanDiegan, one city, two communities. Clustering barely beats a coin flip, and even Week 3's supervised classifier reaches only about 60 percent. Topic is easy; community-within-topic is hard.",
@@ -301,7 +301,7 @@
    },
    {
     "t": "1:15",
-    "a": "N-grams and statistics, hands-on: bigrams across three corpora, distributions and mean-versus-median on real counts, rates per 1,000 words, z-scores as the common scale. Then tf-idf at two scales, single comments as documents and twelve whole subreddits as documents, each community sight-read from its distinctive words (cpu and coolers, roth and rates, puts and bears), then the idea of a space made explicit (documents as points, one axis per word, a two-word space drawn), and k-means on the live comments: raw counts give a blob, tf-idf plus 60 dimensions sorts six in seven comments with their community. The representation, not the algorithm, does the work. Closer: the same k-means on twenty Met paintings counted into 27 color buckets sorts portraits from landscapes, three in four."
+    "a": "N-grams and statistics, hands-on: bigrams across three corpora, distributions and mean-versus-median on real counts, rates per 1,000 words, z-scores as the common scale. Then tf-idf at two scales, single comments as documents and twelve whole subreddits as documents, each community sight-read from its distinctive words (cpu and coolers, roth and rates, puts and bears), then the idea of a space made explicit (documents as points, one axis per word, a two-word space drawn), and k-means on the live comments: raw counts give a blob, tf-idf plus 60 dimensions sorts about four comments in five with their community. The representation, not the algorithm, does the work. Then the room drives: propose a question, pick three communities, everyone predicts which stands alone and which two blur, one call clusters them live, and the table scores the room. Closer: the same k-means on twenty Met paintings counted into 27 color buckets sorts portraits from landscapes, three in four."
    },
    {
     "t": "1:30",
