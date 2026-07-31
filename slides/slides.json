@@ -410,7 +410,7 @@
    },
    {
     "t": "1:15",
-    "a": "Group work in Colab, threes, one screen, rotating driver / reader / skeptic. The blank notebook (week03_modeling_TOGETHER) has stations, not answers: pick your two piles, build the features, fit it, judge it against the baseline, read its mind, break it with something from neither pile, then change ONE modelling decision (min_df, tf-idf, bigrams, C, class_weight) and fit again. Several models, side by side, is the point: does the accuracy move, and do the top words change more than the accuracy does?"
+    "a": "Group work in Colab, threes, one screen, rotating driver / reader / skeptic. The notebook (week03_modeling_TOGETHER) is guided but blank, a worked six-sentence warm-up and then stations, not answers: pick your two piles, build the features, fit it, judge it against the baseline, read its mind, break it with something from neither pile, then change ONE modelling decision (min_df, tf-idf, bigrams, C, class_weight) and fit again. Several models, side by side, is the point: does the accuracy move, and do the top words change more than the accuracy does?"
    },
    {
     "t": "1:47",
