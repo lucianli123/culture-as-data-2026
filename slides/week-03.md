@@ -6,67 +6,72 @@ format: revealjs
 
 # Week 3 · Classification: Counting with Weights
 
-> Teach a machine a bias in ten minutes, build a classifier and read the weights it learned, and preview the full menu of methods before next week's commitment.
+> Argue out the genre article that made this method famous, watch a model get built in practice (and mis-built), then build your own in a group: a logistic regression you can read, doubt, and defend.
 
-*Tool / method: Classification. Train a reader and read what it learned · Competencies: 2, 4, 5*
+*Tool / method: Modelling in practice. Fit a logistic regression, read it, break it · Competencies: 2, 4, 5*
 
 ## Look at This
 
-Ted Underwood's genre prediction (Distant Horizons, 2019): a logistic regression, the exact tool of today's lab, trained to recognize detective fiction and science fiction across a century of novels.
+Ted Underwood's genre prediction (Distant Horizons, 2019; "The Life Cycles of Genres," 2016): a logistic regression, the exact tool of today's group work, trained to recognize detective fiction and science fiction across a century of novels.
 
 ## Question It
 
 What counts as science fiction is a choice built into the training labels. And the model's most famous error, misreading Pynchon's The Crying of Lot 49, a detective-fiction spoof, shows genre boundaries are real but fuzzy. A classifier's mistakes teach as much as its successes; yours will too.
 
-## Underwood's classifier, in detail
+## Discussion: The Life Cycles of Genres
 
-- A logistic regression, the exact tool of today's lab, trained on a century of novels to recognize detective fiction and science fiction.
-- Its most famous error is the lesson: it misreads Pynchon's The Crying of Lot 49, a novel critics call a detective-fiction spoof.
-- Genre boundaries are real but fuzzy, and the classifier's mistake is what shows it.
-- Ask of every classifier, including yours: where does it fail, and what does the failure teach?
+- You read the article. The room argues it, not the instructor. Four questions on the board, thirty-five minutes.
+- What did Underwood actually count, and who decided which novels were detective fiction?
+- The Pynchon misread (The Crying of Lot 49, a detective-fiction spoof) is the best thing in the paper: genre boundaries are real but fuzzy, and the error is what shows it.
+- Carry this into the second hour: where would YOUR classifier fail, and what would the failure teach?
 
-## A classifier is counting with weights
+## Modelling in practice, built live
 
-- Every word casts a vote, for or against. The model adds the votes.
-- Training means learning the weights from labeled examples.
+- Features, weights, a fit, and a score you would believe. That is the whole object.
+- Every word casts a vote, for or against; the model adds the votes and learns the weights from labeled examples.
+- Held out or it doesn't count. Score against a baseline that always guesses the bigger pile, or the number means nothing.
 - Read the signed weights: the most positive and most negative words are the model's mind on the table.
-- Spam filters have worked exactly this way for twenty years.
 
-## The training set is the lesson
+## What goes wrong in practice
 
-- Teachable Machine, live: a cat/dog model trained only on orange cats and brown dogs.
-- The room predicts what a black cat will do. Then watches it happen.
-- Bias is not a ghost in the machine. It is the training set, and you assembled it.
-- One connection to remember: today's classifier is one neuron; stack many and you have Week 7's model.
+- Scoring on the training rows: that measures memory, not reading.
+- An imbalanced pair flattering itself, and a leaked giveaway feature you never meant to hand it.
+- No 'neither' box: hand it Shakespeare and it answers confidently anyway.
+- Teachable Machine, sixty seconds: orange cats and brown dogs. Bias is not a ghost in the machine, it is the training set, and you assembled it.
 
-## The methods menu (before you commit)
+## Group work: your model, your call
 
-- Counting and keyness: differences and trends. Classification: sort and label at scale. Embeddings (W5): a map of meaning. Annotation (W7): the AI reads for you.
-- Optional add-ons where they fit: character networks, sentiment arcs, CLIP image search, a fine-tuned ModernBERT.
+- Threes, one screen, rotating driver / reader / skeptic. The notebook has stations, not answers.
+- Pick two piles, build features, fit, judge against the baseline, read the weights, break it.
+- Then change ONE decision (min_df, tf-idf, bigrams, C, class_weight) and fit again: several models side by side is the point.
+- Does the accuracy move, and do the top words change more than the accuracy does?
+
+## Report back, then Week 4
+
+- Ninety seconds a group: your pair, baseline vs. best, your two word lists, one caveat you would put in writing.
+- Sort your top words into topic, register, and community habit. That sort is the finding; the accuracy is not.
+- The methods menu in one slide: counting, classification, embeddings (W5), annotation (W7), plus optional add-ons.
 - The corpus-existence rule: bring a screenshot of 50 loadable rows of your data to Week 4. No proof, no pitch.
 
 ## Three modes today (about a third each)
 
-- **Lecture / demo:** Classification. Train a reader and read what it learned
+- **Lecture / demo:** Modelling in practice. Fit a logistic regression, read it, break it
 - **Workshop:** build hands-on on your own data
 - **Discussion:** the study above, interrogate it, debate it, or critique each other's work
 
 ## The session
 
-- **0:00**  Warm-up + Look at This: Underwood's genre prediction.
-- **0:10**  Teachable Machine, instructor demo: a two-class image model trained live, then the reveal that it learned from only orange cats and brown dogs. The room predicts what a black cat will do, then sees it.
-- **0:22**  Counting with weights, the lab: each word casts a weighted vote; a logistic regression adds them up. Train it live on a hard pair, r/sandiego against r/SanDiegan, one city, two communities, then read the signed coefficients: the model's reasoning, laid out in full. Accuracy sits near 60 percent, and the words earning it are the discussion.
-- **0:52**  A short demonstration: the words that most predict "breakup song" or "this reviewer hated it."
-- **0:57**  One-line bridge: that classifier is a neuron; stack many for a neural net, which is what's inside the Week 7 model. A quick TensorFlow Playground glance.
-- **1:00**  Break
-- **1:10**  Methods menu preview, so Week 4's choice is informed: counting, classification, embeddings (Week 5), and optional approaches (character networks for fiction; sentiment arcs for story projects, Jockers's Syuzhet reproducible in Python, whose own smoothing controversy is the built-in lesson to doubt the shape; CLIP image search for visual projects; and, for the technically comfortable, fine-tuning a small open model, ModernBERT, on your own labels).
-- **1:25**  Pitch prep: what makes a tractable question, and the corpus-existence rule.
-- **1:45**  Gemini-free check and check-out.
+- **0:00**  Warm-up and retrieval: last week's shuffle test in one sentence, and one thing you still don't trust about it.
+- **0:05**  Discussion, Underwood's "The Life Cycles of Genres," read for today. The room argues it out, not the instructor: what exactly did he count, who decided which novels were detective fiction, and what does the model's misread of Pynchon's The Crying of Lot 49 show about genre boundaries? Then the transfer question every group carries into the second hour: where would YOUR classifier fail, and what would that failure teach?
+- **0:40**  Lecture, modelling in practice: a model is features, weights, a fit, and a score you would believe. Built live on screen, mistakes included, in this order, turn text into a matrix, split off data the model never sees, fit it, compare the score against a baseline that always guesses the bigger pile, then read the signed weights. Then what goes wrong in practice: scoring on the training rows, an imbalanced pair flattering itself, a leaked giveaway feature, and the model with no "neither" box. Teachable Machine's orange cats and brown dogs is the sixty-second version of all of it; the bias is the training set, and you assembled it.
+- **1:05**  Break
+- **1:15**  Group work in Colab, threes, one screen, rotating driver / reader / skeptic. The blank notebook (week03_modeling_TOGETHER) has stations, not answers: pick your two piles, build the features, fit it, judge it against the baseline, read its mind, break it with something from neither pile, then change ONE modelling decision (min_df, tf-idf, bigrams, C, class_weight) and fit again. Several models, side by side, is the point: does the accuracy move, and do the top words change more than the accuracy does?
+- **1:47**  Report-backs, ninety seconds a group: the pair you chose, baseline against best, your two word lists sorted into topic / register / habit, and the one caveat you would put in writing. Then the two things Week 4 needs, the methods menu in one slide (counting, classification, embeddings in Week 5, annotation in Week 7, plus the optional add-ons) and the corpus-existence rule, no proof no pitch. Gemini-free check and check-out.
 
 ## Reading & homework
 
-- **Reading:** [Mullen, America's Public Bible](https://americaspublicbible.org/) (intro + a verse)
-- **Supplement:** [Robinson, Trump's tweets: the Android/iPhone split (2016)](http://varianceexplained.org/r/trump-tweets/), distinctive words unmasking who typed; [Juola's Rowling unmasking](https://www.scientificamerican.com/article/how-a-computer-program-helped-show-jk-rowling-write-a-cuckoos-calling/)
-- **Deeper (optional):** [Underwood, The Life Cycles of Genres (2016)](https://doi.org/10.22148/16.005), the full paper behind today's featured study
-- **Sketch:** Train a quick logistic regression on a labeled set; screenshot its five most positive and negative words.
+- **Reading:** [Underwood, The Life Cycles of Genres (2016)](https://doi.org/10.22148/16.005), the article the session discusses: read the argument and the figures, skim the model tables
+- **Supplement:** [Mullen, America's Public Bible](https://americaspublicbible.org/) (intro + a verse), the same tool as finished scholarship you can poke at; [Robinson, Trump's tweets: the Android/iPhone split (2016)](http://varianceexplained.org/r/trump-tweets/), distinctive words unmasking who typed; [Juola's Rowling unmasking](https://www.scientificamerican.com/article/how-a-computer-program-helped-show-jk-rowling-write-a-cuckoos-calling/)
+- **Deeper (optional):** [Underwood, Distant Horizons (2019)](https://press.uchicago.edu/ucp/books/book/chicago/D/bo35853783.html), chapter 2, the book-length version of today's article, with the Pynchon misread in context
+- **Sketch:** Take one of the group-work models to a labeled set you care about; screenshot its five most positive and negative words.
 - **Check (AI closed):** Explain it: read your classifier's top weights aloud, and name one input where it would fail and why. (Competencies 4, 5.)
