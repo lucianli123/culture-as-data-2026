@@ -39,3 +39,26 @@ bash slides/render_pptx.sh   # refreshes slides.json from the site data, then re
 `slides/export_slides.py`, so the decks, the site, and the design docs stay in step.
 The Markdown decks remain the lightweight outline; `slides/styled_pptx.js` builds the styled
 PowerPoint from the same content.
+
+## The hand-built lecture drafts
+
+Two weeks have a fuller, hand-written teaching deck alongside the generated one, with figures
+drawn from live data rather than bullets alone:
+
+| Deck | Built by | Figures |
+|---|---|---|
+| `week-02-lecture-draft.pptx` | `week02_deck_build.js` | the Bollen trial, shuffle test, bootstrap, replication |
+| `week-03-lecture-draft.pptx` | `week03_figs.py` → `week03_deck_build.js` | logistic regression: the sigmoid, the overlap in 2-D, baseline vs. model, the confusion matrix, over-fitting as C rises, the learning curve, the signed weights |
+
+Week 3 is a two-step build, because the deck prints the numbers the figures were made from:
+
+```bash
+python3 slides/week03_figs.py       # fits the models, writes PNGs + week03_figs.json to $FIG_DIR (default /tmp/figs)
+node slides/week03_deck_build.js    # reads both, writes slides/week-03-lecture-draft.pptx
+```
+
+The corpus is pulled live (two subreddits, falling back to two novels offline), so the committed
+`.pptx` is a snapshot of one run and the accuracies move a point or two when you re-run it.
+**Re-run both before teaching** so the slides match what the room will see in the notebook.
+Figure colors are the course palette stepped up in chroma, so the two-series pairs clear the
+colorblind-separation and chroma floors.
