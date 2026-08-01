@@ -60,40 +60,68 @@ def tidy(ax, xlabel="", ylabel="", title=""):
 
 
 # --------------------------------------------------------------- the corpus
-def load_reddit(a, b, n=N_PER_SIDE):
-    import time
+ARCHIVE = os.environ.get("ARCHIVE_URL",
+                        "https://arctic-shift.photon-reddit.com/api/comments/search")
+MIN_PER_SIDE = 60
+
+
+def fetch_comments(sub, n=N_PER_SIDE, max_pages=12, tries=4):
+    """One subreddit, analyze-only. Returns (texts, note); keeps partial results
+    across retries. Same loader as the group-work notebook, so the deck's numbers
+    come from the same pull the room will make."""
+    import random, time
     import requests
-    def pull(sub, tries=2):
-        for attempt in range(tries):
-            got, before, pages = [], None, 0
-            try:
-                while len(got) < n and pages < 10:
-                    params = {"subreddit": sub, "limit": 100, "fields": "body,created_utc"}
-                    if before:
-                        params["before"] = before
-                    resp = requests.get("https://arctic-shift.photon-reddit.com/api/comments/search",
-                                        params=params, timeout=30)
-                    resp.raise_for_status()
-                    rows = resp.json()["data"]
-                    pages += 1
-                    if not rows:
-                        break
-                    before = int(min(r["created_utc"] for r in rows))
-                    got += [r["body"] for r in rows if isinstance(r.get("body"), str)
-                            and 80 < len(r["body"]) < 800
-                            and "[removed]" not in r["body"] and "[deleted]" not in r["body"]
-                            and "moderator" not in r["body"].lower()
-                            and "has been removed" not in r["body"].lower()]
-                if got:
-                    return got[:n]
-            except Exception as e:
-                print(f"  r/{sub}: {type(e).__name__} (attempt {attempt + 1}/{tries})", file=sys.stderr)
-            time.sleep(3 * (attempt + 1))
-        return []
-    a_txt, b_txt = pull(a), pull(b)
-    if not (a_txt and b_txt):
-        raise ValueError("empty pull")
-    return pd.DataFrame({"text": a_txt + b_txt, "label": [a] * len(a_txt) + [b] * len(b_txt)})
+    got, before, pages, attempt, dead = [], None, 0, 0, 0
+    time.sleep(random.uniform(0, 2.0))
+    while len(got) < n and pages < max_pages and attempt < tries:
+        params = {"subreddit": sub, "limit": 100, "fields": "body,created_utc"}
+        if before:
+            params["before"] = before
+        try:
+            resp = requests.get(ARCHIVE, params=params, timeout=30)
+        except Exception as e:
+            attempt += 1
+            dead += 1
+            if dead >= 2:
+                return got, "unreachable"
+            print(f"  r/{sub}: {type(e).__name__}, retry {attempt}/{tries}", file=sys.stderr)
+            time.sleep(min(8, 2 ** attempt) + random.uniform(0, 1))
+            continue
+        dead = 0
+        if resp.status_code == 200:
+            rows = resp.json().get("data") or []
+            pages += 1
+            if not rows:
+                return got, ("empty" if not got else "ok")
+            before = int(min(r["created_utc"] for r in rows))
+            got += [r["body"] for r in rows if isinstance(r.get("body"), str)
+                    and 80 < len(r["body"]) < 800
+                    and "[removed]" not in r["body"] and "[deleted]" not in r["body"]
+                    and "moderator" not in r["body"].lower()
+                    and "has been removed" not in r["body"].lower()]
+            continue
+        if resp.status_code == 400:
+            return got, f"rejected: {resp.text[:80]}"
+        attempt += 1
+        wait = float(resp.headers.get("Retry-After") or min(8, 2 ** attempt))
+        print(f"  r/{sub}: HTTP {resp.status_code}, waiting {wait:.0f}s "
+              f"(retry {attempt}/{tries})", file=sys.stderr)
+        time.sleep(wait + random.uniform(0, 1))
+    return got, ("ok" if got else "failed")
+
+
+def load_reddit(a, b, n=N_PER_SIDE):
+    piles = {}
+    for sub in (a, b):
+        rows, note = fetch_comments(sub, n)
+        print(f"  r/{sub}: {len(rows)} comments ({note})", file=sys.stderr)
+        if note == "unreachable":
+            raise ConnectionError("archive unreachable")
+        if len(rows) < MIN_PER_SIDE:
+            raise ValueError(f"r/{sub} returned {len(rows)} comments ({note})")
+        piles[sub] = rows
+    return pd.DataFrame({"text": piles[a] + piles[b],
+                         "label": [a] * len(piles[a]) + [b] * len(piles[b])})
 
 
 def load_novelists(n=N_PER_SIDE):
