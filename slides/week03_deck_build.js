@@ -58,7 +58,7 @@ s=base(); kicker(s,"TODAY",TERRA); title(s,"One method, four questions, then you
  ["3","Would you believe the score?","Baseline, held-out rows, and the shape of the errors",BLUE],
  ["4","What did it learn?","Signed weights: topic, register, or community habit",GOLD],
  ["5","What goes wrong","Memorising, imbalance, leakage, and no box for “neither”",TERRA],
- ["6","Your model","Threes, one screen, eight stations, one decision changed at a time",GREEN]].forEach((st,i)=>{
+ ["6","Your model","Threes, one screen, a workbench, and one decision changed at a time",GREEN]].forEach((st,i)=>{
   const col=i%2,row=Math.floor(i/2),x=M+col*6.2,y=2.15+row*1.55;
   s.addShape("roundRect",{x,y,w:5.9,h:1.3,fill:{color:TINT},line:{type:"none"},rectRadius:0.1});
   s.addShape("ellipse",{x:x+0.25,y:y+0.33,w:0.62,h:0.62,fill:{color:st[3]},line:{type:"none"}});
@@ -216,7 +216,7 @@ s.addText("Your two piles were also a choice. Which comments the archive kept, w
 caption(s,"For image projects: this IS a classifier on pixels. Same move, different features.");
 
 // 17 group work
-s=base(); kicker(s,"YOUR TURN · 32 MINUTES",GREEN); title(s,"Threes, one screen, eight stations");
+s=base(); kicker(s,"YOUR TURN · 32 MINUTES",GREEN); title(s,"Threes, one screen, stations not answers");
 [["Driver","types, and prompts the AI — never a line nobody has read aloud",TERRA],
  ["Reader","says what the cell will do before it runs, then whether it did",BLUE],
  ["Skeptic","asks: is that better than guessing? would that word survive elsewhere?",GREEN]].forEach((r,i)=>{
@@ -231,12 +231,13 @@ s.addText("Rotate at every station.",{x:M,y:3.65,w:11.9,h:0.3,fontFace:SANS,font
  ["4","judge it: baseline, held-out, confusion matrix"],
  ["5","read the weights, and sort them: topic / register / habit"],
  ["6","break it: three inputs from neither pile, one real error read in full"],
- ["7","change ONE decision — min_df · tf-idf · bigrams · C · class_weight — and fit again"],
- ["8","report back: ninety seconds"]].forEach((r,i)=>{
+ ["7","the workbench: sweep min_df · tf-idf · bigrams · C · class_weight into one table"],
+ ["8 or 9","interrogate a weight (how many PEOPLE wrote it?) — or swap in your own two subreddits"],
+ ["10","report back: ninety seconds"]].forEach((r,i)=>{
   s.addText(r[0],{x:M+0.1,y:4.1+i*0.4,w:0.9,h:0.35,fontFace:SANS,fontSize:13,bold:true,color:TERRA,margin:0});
   s.addText(r[1],{x:M+1.1,y:4.1+i*0.4,w:10.6,h:0.35,fontFace:SANS,fontSize:13.5,color:INK,margin:0});
 });
-caption(s,"Behind schedule? Stations 4, 5 and 7 are the ones that must happen. One model is a result; several are an argument.");
+caption(s,"Behind schedule? Stations 4, 5 and 7 are the ones that must happen. One model is a result; several are an argument — and 8 and 9 are where the homework starts.");
 
 // 18 discussion, after the build
 s=base(); kicker(s,"DISCUSSION · AFTER THE BUILD",BLUE); title(s,"What did your model actually measure?");
