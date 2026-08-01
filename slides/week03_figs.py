@@ -27,7 +27,7 @@ from sklearn.dummy import DummyClassifier
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import confusion_matrix
-from sklearn.model_selection import cross_val_score, train_test_split
+from sklearn.model_selection import StratifiedKFold, cross_val_score, train_test_split
 
 FIG_DIR = os.environ.get("FIG_DIR", "/tmp/figs")
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -46,7 +46,7 @@ plt.rcParams.update({
     "axes.spines.top": False, "axes.spines.right": False,
 })
 
-PAIR = ("sandiego", "SanDiegan")
+PAIR = ("sandiego", "bayarea")
 N_PER_SIDE = 400
 
 
@@ -157,7 +157,10 @@ clf_full = LogisticRegression(max_iter=2000).fit(X, y)
 acc = clf.score(Xte, yte)
 dummy = DummyClassifier(strategy="most_frequent").fit(Xtr, ytr)
 base_acc = dummy.score(Xte, yte)
-cv = cross_val_score(LogisticRegression(max_iter=2000), X, y, cv=5)
+# Shuffle the folds: the rows arrive newest-first per pile, so contiguous folds
+# would be comparing different weeks rather than different samples.
+cv = cross_val_score(LogisticRegression(max_iter=2000), X, y,
+                     cv=StratifiedKFold(5, shuffle=True, random_state=0))
 
 facts = {
     "label_a": LABEL_A, "label_b": LABEL_B, "source": SOURCE,
@@ -222,7 +225,7 @@ ax.set_yticks(range(len(idx)))
 ax.set_yticklabels(words[idx], fontsize=10.5)
 ax.axvline(0, color=MUTED, lw=1)
 ax.text(0.02, 0.965, f"→ {LABEL_A}", transform=ax.transAxes, color=WARM, fontsize=11, ha="left")
-ax.text(0.02, 0.03, f"← {LABEL_B}", transform=ax.transAxes, color=COOL, fontsize=11, ha="left")
+ax.text(0.98, 0.03, f"← {LABEL_B}", transform=ax.transAxes, color=COOL, fontsize=11, ha="right")
 ax.grid(axis="y", visible=False)
 tidy(ax, "weight (the size of the word's vote)", "")
 fig.savefig(os.path.join(FIG_DIR, "w3_weights.png"))

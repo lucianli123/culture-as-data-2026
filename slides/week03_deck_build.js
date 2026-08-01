@@ -127,12 +127,12 @@ s.addText("A quarter of the rows are set aside before any fitting, and never loo
  {x:6.9,y:5.25,w:5.4,h:0.9,fontFace:SANS,fontSize:13,color:INK,margin:0,valign:"top"});
 
 // 8 the 2-D view
-s=base(); kicker(s,"WHY THE NUMBER IS WHAT IT IS",GOLD); title(s,"Two communities, one city, heavily overlapping");
+s=base(); kicker(s,"WHY THE NUMBER IS WHAT IT IS",GOLD); title(s,"Two regions, and how much they still overlap");
 fig(s,"w3_boundary.png",M,2.1,6.6,4.4);
 bullets(s,[`Every document is a point in ${facts.n_features.toLocaleString()}-dimensional word-space. Here it is flattened to the two directions that carry the most variation.`,
- `The two piles sit on top of each other. The best straight line in this flattened view gets ${pct(facts.boundary_accuracy_2d)} right.`,
+ `Even two different regions overlap heavily: the best straight line in this flattened view gets ${pct(facts.boundary_accuracy_2d)} right.`,
  `With all ${facts.n_features.toLocaleString()} columns the model reaches ${pct(facts.accuracy)} — better, because the separating evidence lives in directions this picture cannot show.`,
- "A hard pair is the honest case. Two unrelated subreddits would split cleanly and teach you nothing you didn't already know."],{x:7.5,w:5.1,fontSize:14});
+ "Swap in r/sandiego against r/SanDiegan — the same city, two communities — and the same code drops to about 0.60. That is the honest hard case, and the notebook offers it as hard mode."],{x:7.5,w:5.1,fontSize:14});
 
 // 9 baseline
 s=base(); kicker(s,"QUESTION 1 · COMPARED TO WHAT?",TERRA); title(s,"An accuracy alone means nothing");
@@ -172,8 +172,9 @@ fig(s,"w3_weights.png",M,2.1,6.2,4.6);
 bullets(s,["One number per word. Positive pushes one way, negative the other, and you can read every one of them.",
  `Most r/${A}: ${facts.top_a.slice(0,5).join(", ")}.`,
  `Most r/${B}: ${facts.top_b.slice(0,5).join(", ")}.`,
- "A big weight is not proof of a big pattern: a rare word that happens to fall on one side gets a large coefficient. Check how many documents it is actually in.",
- "Week 7's annotator is far more powerful and will not let you do any of this."],{x:7.2,w:5.4,fontSize:14});
+ "Place names lead the list, and that is correct and uninteresting: the model found the giveaway. The question starts one step later.",
+ "Remove them and refit. If the accuracy collapses, the difference WAS the names. If it holds, the words underneath are the finding.",
+ "Week 7's annotator is far more powerful and will not let you do any of this."],{x:7.2,w:5.4,fontSize:13.5});
 
 // 14 topic / register / habit
 s=base(); kicker(s,"THE READING, NOT THE SCORE",GREEN); title(s,"Three kinds of word, three different claims");

@@ -206,6 +206,6 @@ s.addText("Homework",{x:M,y:1.0,w:11,h:0.8,fontFace:SERIF,fontSize:34,bold:true,
   s.addText(r[0],{x:M+0.45,y:2.1+i*1.45,w:11,h:0.4,fontFace:SANS,fontSize:15,bold:true,color:r[2],margin:0});
   s.addText(r[1],{x:M+0.45,y:2.5+i*1.45,w:10.8,h:0.95,fontFace:SANS,fontSize:14,color:CREAM,valign:"top",margin:0});
 });
-s.addText("Next week: the classifier. r/sandiego vs. r/SanDiegan, and the words that give a comment away.",{x:M,y:6.6,w:11.9,h:0.5,fontFace:SANS,fontSize:13,italic:true,color:GOLD});
+s.addText("Next week: the classifier. r/sandiego vs. r/bayarea, and the words that give a comment away.",{x:M,y:6.6,w:11.9,h:0.5,fontFace:SANS,fontSize:13,italic:true,color:GOLD});
 
 pres.writeFile({ fileName: "week-02-lecture-draft.pptx" }).then(()=>console.log("written"));
