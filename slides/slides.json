@@ -402,7 +402,7 @@
    },
    {
     "t": "0:40",
-    "a": "Lecture, modelling in practice: a model is features, weights, a fit, and a score you would believe. Built live on screen, mistakes included, in this order, turn text into a matrix, split off data the model never sees, fit it, compare the score against a baseline that always guesses the bigger pile, then read the signed weights. Then what goes wrong in practice: scoring on the training rows, an imbalanced pair flattering itself, a leaked giveaway feature, and the model with no \"neither\" box. Teachable Machine's orange cats and brown dogs is the sixty-second version of all of it; the bias is the training set, and you assembled it."
+    "a": "Lecture, modelling in practice: a model is features, weights, a fit, and a score you would believe. Built live on screen, mistakes included, in this order, turn text into a matrix, split off data the model never sees, fit it, compare the score against a baseline that always guesses the bigger pile, then read the signed weights. Then what goes wrong in practice: scoring on the training rows, an imbalanced pair flattering itself, a leaked giveaway feature, and the model with no \"neither\" box. Two browser tools carry the last five minutes: Quick, Draw! (a classifier guessing your doodle, so the room meets one it can play with) and Teachable Machine's orange cats and brown dogs, where the bias turns out to be the training set you assembled."
    },
    {
     "t": "1:05",
