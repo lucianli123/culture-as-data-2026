@@ -72,8 +72,8 @@ COLAB = "https://colab.research.google.com/github/lucianli123/culture-as-data-20
 NOTEBOOKS = [
     ("notebooks/week01_first_investigation.ipynb", 1, "Your first investigation", "Load the 154 sonnets, make your first chart, learn to read an error and recover, count words and pixels."),
     ("notebooks/week02_counting.ipynb", 2, "Counting", "Bag-of-words by hand-logic, tf-idf, keyness (the She Giggles, He Gallops method), and the shuffle test."),
-    ("notebooks/week03_classification.ipynb", 3, "Classification", "Train a logistic regression and read its signed weights, the model's mind on the table."),
-    ("notebooks/week03_modeling_TOGETHER.ipynb", 3, "Modelling together (group work)", "The group-work notebook: a worked warm-up, then thirty-five empty cells. Play with the vectorizer settings, fit and judge a model, read its weights, then design your own experiments on the workbench."),
+    ("notebooks/week03_modeling_TOGETHER.ipynb", 3, "Modelling together (group work)", "The session's notebook: a worked warm-up, then thirty-five empty cells. Play with the vectorizer settings, fit and judge a model, read its weights, then design your own experiments on the workbench."),
+    ("notebooks/week03_classification.ipynb", 3, "Classification (worked reference)", "The same pipeline written out in full, for the lecture demo and for groups who want to check their work afterwards."),
     ("notebooks/week04_data_cookbook.ipynb", 4, "The data cookbook", "Three routes to a corpus: load a file, call an API, scrape politely. Saves your corpus to Drive."),
     ("notebooks/week05_embeddings.ipynb", 5, "Embeddings", "Embed your own corpus (text or images), look for unexpected clusters, and compare PCA against t-SNE."),
     ("notebooks/week07_annotator.ipynb", 7, "The AI as annotator", "Gemini labels your corpus at scale; you audit it by confidence and a hand-labeled gold set."),
@@ -859,15 +859,10 @@ def build_weeks():
         if nbs:
             path, _, name, _ = nbs[0]
             variants = "".join(f" &nbsp;<a href='{COLAB}{vp}'>{vl} version</a>" for vl, vp in NOTEBOOK_VARIANTS.get(w["n"], []))
-            # A week can ship more than one notebook (Week 3: the worked lab plus the blank
-            # group-work notebook). The first is the primary button; the rest follow it.
-            others = "".join(
-                f"<p class='meta'><strong>{esc(n_name)}</strong> &nbsp;{esc(n_desc)}</p>"
-                f"<p class='cta'>{nb_buttons(n_path)}</p>"
-                for n_path, _, n_name, n_desc in nbs[1:])
+            # One notebook per week page: the one the session is taught from. Any others
+            # for that week (Week 3's worked reference) stay on the notebooks page.
             nb_block = ("<section class='callout notebook-callout'><h2>This week's materials</h2>"
                         f"<p class='cta'>{nb_buttons(path)} {deck}</p>"
-                        + others
                         + (f"<p class='meta'>Completion-problem versions:{variants}</p>" if variants else "")
                         + "</section>")
         else:
