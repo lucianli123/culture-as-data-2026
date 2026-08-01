@@ -24,7 +24,7 @@ novels, and 18 CC0 Met paintings with a manifest. Nothing depends on the network
 | `week01_first_investigation.ipynb` | 1 | fully worked | load a CSV / first chart / word + pixel counting / error recovery |
 | `week02_counting.ipynb` | 1 | fully worked | counting / tf-idf / keyness / shuffle test |
 | `week03_classification.ipynb` | 1 | fully worked | logistic regression + signed weights |
-| `week03_modeling_TOGETHER.ipynb` | 1 | guided group work (blank stations + workbench) | worked toy warm-up, then: features / fit / baseline / weights / break it, then a provided workbench (config sweep, weight interrogation, giveaway-removal, corpus swap) |
+| `week03_modeling_TOGETHER.ipynb` | 1 | guided group work (25 blank cells + workbench) | worked toy warm-up, then one task per empty cell: features / fit / baseline / weights / break it, then a provided workbench (config sweep, weight interrogation, giveaway-removal, corpus swap) and an open bench |
 | `week04_data_cookbook.ipynb` | 2 | fully worked | file load + API pull + polite scrape |
 | `week05_embeddings.ipynb` | 2 | fully worked | text + CLIP image embeddings |
 | `week05_embeddings_GUIDED.ipynb` | 2 | completion (fuller guidance) | embeddings |
