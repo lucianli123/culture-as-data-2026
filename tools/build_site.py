@@ -72,7 +72,7 @@ NOTEBOOKS = [
     ("notebooks/week01_first_investigation.ipynb", 1, "Your first investigation", "Load the 154 sonnets, make your first chart, learn to read an error and recover, count words and pixels."),
     ("notebooks/week02_counting.ipynb", 2, "Counting", "Bag-of-words by hand-logic, tf-idf, keyness (the She Giggles, He Gallops method), and the shuffle test."),
     ("notebooks/week03_classification.ipynb", 3, "Classification", "Train a logistic regression and read its signed weights, the model's mind on the table."),
-    ("notebooks/week03_modeling_TOGETHER.ipynb", 3, "Modelling together (group work)", "Guided but blank: a worked warm-up, then thirty-five empty cells. Each station says what to find out and leaves the how to the group and its AI; the plumbing is collapsed out of the way. Sweep tf-idf, min_df, n-grams, C and class weights side by side; interrogate a single weight and then strip out the giveaway words to see what the model finds underneath; swap in your own two subreddits and see what survives."),
+    ("notebooks/week03_modeling_TOGETHER.ipynb", 3, "Modelling together (group work)", "The group-work notebook: a worked warm-up, then thirty-five empty cells. Play with the vectorizer settings, fit and judge a model, read its weights, then design your own experiments on the workbench."),
     ("notebooks/week04_data_cookbook.ipynb", 4, "The data cookbook", "Three routes to a corpus: load a file, call an API, scrape politely. Saves your corpus to Drive."),
     ("notebooks/week05_embeddings.ipynb", 5, "Embeddings", "Embed your own corpus (text or images), look for unexpected clusters, and compare PCA against t-SNE."),
     ("notebooks/week07_annotator.ipynb", 7, "The AI as annotator", "Gemini labels your corpus at scale; you audit it by confidence and a hand-labeled gold set."),
@@ -854,8 +854,10 @@ def build_weeks():
             variants = "".join(f" &nbsp;<a href='{COLAB}{vp}'>{vl} version</a>" for vl, vp in NOTEBOOK_VARIANTS.get(w["n"], []))
             # A week can ship more than one notebook (Week 3: the worked lab plus the blank
             # group-work notebook). The first is the primary button; the rest follow it.
-            others = "".join(f"<p class='meta'>{esc(n_name)}, {esc(n_desc)} {nb_buttons(n_path, primary=False)}</p>"
-                             for n_path, _, n_name, n_desc in nbs[1:])
+            others = "".join(
+                f"<p class='meta'><strong>{esc(n_name)}</strong> &nbsp;{esc(n_desc)}</p>"
+                f"<p class='cta'>{nb_buttons(n_path)}</p>"
+                for n_path, _, n_name, n_desc in nbs[1:])
             nb_block = ("<section class='callout notebook-callout'><h2>This week's materials</h2>"
                         f"<p class='cta'>{nb_buttons(path)} {deck}</p>"
                         + others
