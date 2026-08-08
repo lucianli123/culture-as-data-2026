@@ -470,16 +470,32 @@ for ax in axes:
 snippet = json.dumps({"data": data[:2]}, indent=1)[:520]
 axes[0].text(0, 1, snippet, family="monospace", fontsize=7.6, va="top", color=INK)
 axes[0].set_title("what the endpoint returns: JSON", fontsize=12, loc="left", pad=10)
-cols = ["title", "artist_title", "date_display"]
+cols = [("title", 0.2, 4.6), ("artist_title", 5.0, 2.8), ("date_display", 8.0, 1.9)]
 axes[1].set_xlim(0, 10); axes[1].set_ylim(0, len(data) + 1.5)
-for j, c in enumerate(cols):
-    axes[1].text(0.2 + j * 3.3, len(data) + 0.7, c, fontsize=10.5, color=MUTED)
+
+
+def fit_text(ax, x, y, s, room, size=10.5, **kw):
+    """Draw s at x, trimming with an ellipsis until it fits `room` data units."""
+    rend = fig.canvas.get_renderer()
+    inv = ax.transData.inverted()
+    t = ax.text(x, y, s, fontsize=size, **kw)
+    while len(t.get_text()) > 1:
+        bb = t.get_window_extent(renderer=rend)
+        (x0, _), (x1, _) = inv.transform([(bb.x0, bb.y0), (bb.x1, bb.y1)])
+        if x1 - x0 <= room:
+            break
+        t.set_text(t.get_text()[:-2] + "\u2026")
+    return t
+
+
+for c, x, _ in cols:
+    axes[1].text(x, len(data) + 0.7, c, fontsize=10.5, color=MUTED)
 for i, row_ in enumerate(data):
     yy_ = len(data) - i - 0.2
     axes[1].add_patch(FancyBboxPatch((0.1, yy_ - 0.3), 9.8, 0.6, boxstyle="round,pad=0.04",
                                      fc=TINT if i % 2 == 0 else "white", ec="none"))
-    for j, c in enumerate(cols):
-        axes[1].text(0.2 + j * 3.3, yy_, str(row_.get(c, ""))[:26], fontsize=10.5)
+    for c, x, room in cols:
+        fit_text(axes[1], x, yy_, str(row_.get(c, "") or ""), room)
 axes[1].set_title("three lines later: a table", fontsize=12, loc="left", pad=10)
 fig.savefig(os.path.join(FIG_DIR, "w4_api.png")); plt.close(fig)
 
