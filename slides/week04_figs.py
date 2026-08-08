@@ -322,6 +322,42 @@ for i, row_ in enumerate(data):
 axes[1].set_title("three lines later: a table", fontsize=12, loc="left", pad=10)
 fig.savefig(os.path.join(FIG_DIR, "w4_api.png")); plt.close(fig)
 
+# ---------------------------------------------- 10. figures from the paper itself
+# Downloaded and cropped at build time from the arXiv preprint of the week's reading
+# (arXiv:1711.08412 = PNAS 2018). Kept out of the repo: the build fetches them.
+PAPER_CROPS = {                      # name: (page index, clip rect in PDF points)
+    "w4_paper_time":       (2, (310, 74, 566, 212)),    # Fig 1b, bias vs occupation share
+    "w4_paper_validation": (2, (62, 74, 305, 212)),     # Fig 1a, embedding bias vs census
+    "w4_paper_ethnic":     (2, (75, 258, 292, 402)),    # Fig 1c, occupations by group
+    "w4_paper_adjectives": (5, (98, 66, 270, 212)),     # Fig 2a, adjectives 1910/1950/1990
+    "w4_paper_phaseshift": (5, (305, 62, 558, 205)),    # Fig 2b, decade correlation matrix
+}
+
+def paper_figures():
+    import requests
+    try:
+        import pymupdf
+    except ImportError:
+        import fitz as pymupdf
+    pdf = os.path.join(FIG_DIR, "garg2018.pdf")
+    if not os.path.exists(pdf):
+        r = requests.get("https://arxiv.org/pdf/1711.08412", timeout=60)
+        r.raise_for_status()
+        open(pdf, "wb").write(r.content)
+    doc = pymupdf.open(pdf)
+    for name, (page, box) in PAPER_CROPS.items():
+        doc[page].get_pixmap(clip=pymupdf.Rect(*box), dpi=300).save(
+            os.path.join(FIG_DIR, name + ".png"))
+    return len(PAPER_CROPS)
+
+try:
+    facts["paper_figures"] = paper_figures()
+    print(f"cropped {facts['paper_figures']} figures from the paper")
+except Exception as e:
+    facts["paper_figures"] = 0
+    print("paper figures unavailable:", type(e).__name__, e, file=sys.stderr)
+    print("  (the deck falls back to text-only versions of those slides)", file=sys.stderr)
+
 with open(os.path.join(FIG_DIR, "week04_figs.json"), "w") as f:
     json.dump(facts, f, indent=1)
 print(json.dumps(facts, indent=1)[:700])
