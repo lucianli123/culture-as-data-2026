@@ -30,7 +30,7 @@ WARM, COOL, GOLD = "#A34526", "#1F5FA8", "#B9852F"
 MUTED, GRID, INK, TINT = "#9A9A90", "#E5E1DA", "#1A1A1A", "#F4EEE8"
 
 plt.rcParams.update({
-    "figure.dpi": 300, "savefig.dpi": 300, "savefig.bbox": "tight",
+    "figure.dpi": 130, "savefig.dpi": 130, "savefig.bbox": "tight",
     "font.family": "DejaVu Sans", "font.size": 11,
     "axes.edgecolor": GRID, "axes.labelcolor": INK, "text.color": INK,
     "xtick.color": MUTED, "ytick.color": MUTED,
@@ -98,7 +98,7 @@ ax.text(0.2, 5.85, "counts", fontsize=11, color=MUTED)
 ax.text(3.4, 5.85, "weights", fontsize=11, color=MUTED)
 ax.text(5.35, 5.85, "add them up", fontsize=11, color=MUTED)
 ax.text(7.6, 5.85, "squash", fontsize=11, color=MUTED)
-ax.text(0.2, 0.35, "This is Week 3's classifier. It is also one neuron.", fontsize=13.5,
+ax.text(0.2, 0.35, "Week 3's classifier, drawn as one neuron.", fontsize=13.5,
         style="italic")
 fig.savefig(os.path.join(FIG_DIR, "w4_neuron.png")); plt.close(fig)
 
@@ -151,8 +151,8 @@ ax.add_patch(Circle(out, 0.32, fc="white", ec=WARM, lw=1.8, zorder=2))
 ax.text(1.7, 6.0, "one per word", ha="center", fontsize=11, color=MUTED)
 ax.text(5.0, 6.0, "four neurons in between", ha="center", fontsize=11, color=GOLD)
 ax.text(8.4, 6.0, "which novel?", ha="center", fontsize=11, color=WARM)
-ax.text(5.0, 0.7, "Every line is a weight. Each middle neuron adds up all the words in its\n"
-                  "own way, and the output neuron adds up the four of them.",
+ax.text(5.0, 0.7, "Every line is a weight. Each middle neuron adds up all the words in its own\n"
+                  "way. The output neuron adds up the four of them.",
         ha="center", va="center", fontsize=11.5, color=INK, linespacing=1.5)
 fig.savefig(os.path.join(FIG_DIR, "w4_network.png")); plt.close(fig)
 
@@ -167,7 +167,7 @@ axes[0].set_yticks(range(len(top))); axes[0].set_yticklabels(names_[top], fontsi
 axes[0].axvline(0, color=MUTED, lw=1)
 axes[0].set_title(f"Week 3's model: {facts['novel_lr_acc']:.0%} on held-out passages",
                   fontsize=12.5, loc="left", pad=8)
-axes[0].set_xlabel("one weight per word — and you can read them", color=MUTED, fontsize=10.5)
+axes[0].set_xlabel("one weight per word", color=MUTED, fontsize=10.5)
 axes[0].grid(axis="y", visible=False)
 
 W1 = net_.coefs_[0]
@@ -179,8 +179,7 @@ axes[1].set_yticks(range(4)); axes[1].set_yticklabels([f"unit {i+1}" for i in ra
 axes[1].set_xticks([]); axes[1].grid(False); axes[1].tick_params(length=0)
 axes[1].set_title(f"the network: {facts['novel_net_acc']:.0%} on the same passages",
                   fontsize=12.5, loc="left", pad=8)
-axes[1].set_xlabel("the 60 busiest words × 4 units — and now nothing reads as an answer",
-                   color=MUTED, fontsize=10.5)
+axes[1].set_xlabel("the 60 busiest words x 4 units", color=MUTED, fontsize=10.5)
 fig.savefig(os.path.join(FIG_DIR, "w4_readability.png")); plt.close(fig)
 
 # ------------- 2c. the same method on a question that is genuinely hard
@@ -423,7 +422,7 @@ for (x, y), w in zip([(2.4, 5.0), (1.9, 3.1), (3.0, 1.5)], negatives):
     away = (D - A) / np.linalg.norm(D - A)
     arrow(ax, D + away * 0.32, D + away * 1.15, color=COOL, lw=2.0)
 ax.text(0.1, 6.55, "three words drawn at random  →  PUSH APART", fontsize=11.5, color=COOL)
-ax.text(0.1, 0.1, f"One step. Repeat it {n_pairs:,} times and the space arranges itself.",
+ax.text(0.1, 0.1, f"One step of training. There are {n_pairs:,} of them.",
         fontsize=12.5, style="italic")
 fig.savefig(os.path.join(FIG_DIR, "w4_contrastive_idea.png")); plt.close(fig)
 
@@ -449,8 +448,8 @@ for i, (q, ns) in enumerate(rows):
     ax.text(2.4, y, "   ".join(ns), fontsize=12.5, va="center", color=INK)
 ax.text(0.2, len(rows) + 1.1, "nearest neighbours, from vectors trained on two novels",
         fontsize=11.5, color=MUTED)
-ax.text(0.2, 0.28, f"{len(toks):,} words, {n_pairs:,} pulls, and five pushes for each one. "
-                   "Nobody labelled anything.", fontsize=10.5, color=MUTED)
+ax.text(0.2, 0.28, f"{len(toks):,} words, {n_pairs:,} pulls, five pushes each.",
+        fontsize=10.5, color=MUTED)
 fig.savefig(os.path.join(FIG_DIR, "w4_neighbours.png")); plt.close(fig)
 
 # 8b. before and after: how alike every pair is, at the start and at the end of training
@@ -495,8 +494,7 @@ for i in range(len(DENSE_WORDS)):
 axes[0].set_xticks(range(len(DENSE_WORDS)))
 axes[0].set_xticklabels(DENSE_WORDS, rotation=30, ha="right", fontsize=10.5)
 axes[0].set_title("counting: one column per word", fontsize=12.5, loc="left", pad=8)
-axes[0].set_xlabel("every pair overlaps in nothing — all equally unrelated",
-                   color=MUTED, fontsize=10.5)
+axes[0].set_xlabel("every pair overlaps in nothing", color=MUTED, fontsize=10.5)
 dense = after_n[[index[w] for w in DENSE_WORDS], :DIMS_SHOWN]
 axes[1].imshow(dense, cmap="RdBu_r", vmin=-np.abs(dense).max(), vmax=np.abs(dense).max(),
                aspect="auto")
@@ -507,7 +505,7 @@ for i in range(dense.shape[0]):
 axes[1].set_xticks(range(DIMS_SHOWN))
 axes[1].set_xticklabels([f"d{i+1}" for i in range(DIMS_SHOWN)], fontsize=9)
 sim = lambda a, b: float(after_n[index[a]] @ after_n[index[b]])
-axes[1].set_title("training: a few dozen numbers instead", fontsize=12.5, loc="left", pad=8)
+axes[1].set_title("training: sixty numbers instead", fontsize=12.5, loc="left", pad=8)
 axes[1].set_xlabel(f"night · morning = {sim('night','morning'):+.2f}      "
                    f"night · ship = {sim('night','ship'):+.2f}",
                    color=MUTED, fontsize=10.5)
@@ -668,7 +666,7 @@ def arithmetic_figure():
     ax2.text(0.02, 0.78, "\n".join(rows_txt), family="monospace", fontsize=10.5,
              va="top", linespacing=1.9)
     ax2.text(0.02, 0.20, f"=  {out[r, c]:+.0f}", fontsize=17, color=WARM, weight="bold")
-    ax2.text(0.02, 0.02, "one number, for that one spot", fontsize=10.5, color=MUTED)
+    ax2.text(0.02, 0.02, "one number, for one spot", fontsize=10.5, color=MUTED)
 
     ax3.imshow(out, cmap="gray")
     ax3.add_patch(plt.Rectangle((c - .5, r - .5), 1, 1, fill=False, ec=WARM, lw=2.4))
@@ -762,8 +760,7 @@ def clip_figure():
         else:
             arrow(ax, (8.8, y), (10.0, y), color=col, lw=2.4)
         ax.text(2.25, y - 0.68, tag, fontsize=10, color=col)
-    ax.text(0.0, 0.05, "Same move as the word vectors, on picture–caption pairs. That is CLIP, "
-                       "and it is why you can search a museum in words.",
+    ax.text(0.0, 0.05, "The word-vector rule, run on picture and caption pairs. This is CLIP.",
             fontsize=11.5, style="italic")
     fig.savefig(os.path.join(FIG_DIR, "w4_clip.png")); plt.close(fig)
     facts["clip_example"] = me["title"]
@@ -805,7 +802,7 @@ def distributional_figure(target="door", n=6, span=7, seed=1):
         ax.text(5.6, y, right, fontsize=10.5, ha="left", va="center", family="monospace")
     ax.text(0.15, len(lines) + 1.6, "Six real lines from the two novels. What is the missing word?",
             fontsize=12.5)
-    ax.text(0.15, 0.3, "You knew it, and the only evidence you had was the company it keeps.",
+    ax.text(0.15, 0.3, "The only evidence was the company the word keeps.",
             fontsize=12, style="italic", color=MUTED)
     fig.savefig(os.path.join(FIG_DIR, "w4_distributional.png")); plt.close(fig)
     facts["distributional_word"] = target
@@ -904,8 +901,7 @@ def api_shapes():
         ax.add_patch(FancyBboxPatch((4.9, 2.25 - i * 0.42), 6.6, 0.34,
                                     boxstyle="round,pad=0.03", fc=WARM, ec="none",
                                     alpha=0.85 - i * 0.12))
-    ax.text(0.2, 0.25, f"one request, {n_artic} rows, and it is already a table.",
-            fontsize=11, color=WARM)
+    ax.text(0.2, 0.25, f"one request, {n_artic} rows.", fontsize=11, color=WARM)
 
     ax = axes[1]
     ax.set_title("The Met: one request for the ID numbers, then one request each",
@@ -969,7 +965,7 @@ def scrape_anatomy():
                                          boxstyle="round,pad=0.08", fc=TINT, ec="none"))
         axes[1].text(0.5, y + 0.35, sel, fontsize=10, color=col, **MONO)
         axes[1].text(0.5, y - 0.3, val, fontsize=10.5, color=INK)
-    axes[1].text(0.2, 0.6, "A selector that matches nothing returns None,\nwith no error at all.",
+    axes[1].text(0.2, 0.6, "A selector that matches nothing returns None,\nand raises no error.",
                  fontsize=10.5, color=MUTED, linespacing=1.5)
     fig.savefig(os.path.join(FIG_DIR, "w4_scrape_anatomy.png")); plt.close(fig)
 
@@ -1022,7 +1018,7 @@ def paper_figures():
         open(pdf, "wb").write(r.content)
     doc = pymupdf.open(pdf)
     for name, (page, box) in PAPER_CROPS.items():
-        doc[page].get_pixmap(clip=pymupdf.Rect(*box), dpi=450).save(
+        doc[page].get_pixmap(clip=pymupdf.Rect(*box), dpi=200).save(
             os.path.join(FIG_DIR, name + ".png"))
     return len(PAPER_CROPS)
 
