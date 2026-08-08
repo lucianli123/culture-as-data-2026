@@ -135,6 +135,13 @@ figSlide(s,"w4_onehot_vs_dense.png",{x:1.2,y:2.1,w:10.9,h:4.0,
   note:"Week 2 gave every word its own column, so night and morning have nothing in common. Nor do night and ship.",
   cred:`And Week 3 puts one weight on each column, so what it learns about one word tells it nothing about the next. Trained vectors: night and morning ${facts.sim_night_morning}, night and ship ${facts.sim_night_ship}.`});
 
+// 9b the distributional hypothesis, as an exercise
+s=base(); kicker(s,"THE IDEA UNDERNEATH ALL OF IT",GOLD);
+title(s,"\u201cYou shall know a word by the company it keeps\u201d");
+figSlide(s,"w4_distributional.png",{x:1.0,y:2.05,w:11.3,h:3.9,
+  note:"Ask the room before you show the answer. Nobody needs a definition of the word; the contexts are enough.",
+  cred:"J. R. Firth, \u201cA Synopsis of Linguistic Theory 1930\u20131955\u201d (1957). The claim itself is the distributional hypothesis, Zellig Harris, \u201cDistributional Structure\u201d (1954): words used in similar contexts tend to mean similar things. Lines drawn live from this week's corpus."});
+
 // 10 where the numbers come from: the contrastive move
 s=base(); kicker(s,"IDEA TWO",TERRA); title(s,"Same context, pull together. Different, push apart");
 figSlide(s,"w4_contrastive_idea.png",{x:1.9,y:1.9,w:9.6,h:4.4,

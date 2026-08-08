@@ -652,6 +652,44 @@ for name_, fn_ in (("conv_arith", arithmetic_figure), ("convolution", convolutio
     except Exception as e:
         print(f"{name_} figure skipped:", type(e).__name__, e, file=sys.stderr)
 
+# ------------------------------- 8d. the distributional hypothesis, as an exercise
+# Real lines from the corpus with the target word blanked out. Everyone in the room can
+# fill the gap, and the only evidence they have is the company the word keeps.
+def distributional_figure(target="door", n=6, span=7, seed=1):
+    rng_ = np.random.default_rng(seed)
+    hits = [i for i, w in enumerate(toks) if w == target and span < i < len(toks) - span]
+    picks = sorted(rng_.choice(hits, size=min(n, len(hits)), replace=False))
+    lines = []
+    for i in picks:
+        left = " ".join(toks[i - span:i])
+        right = " ".join(toks[i + 1:i + 1 + span])
+        lines.append((left, right))
+
+    fig, ax = plt.subplots(figsize=(10.6, 3.9)); blank(ax)
+    ax.set_xlim(0, 10); ax.set_ylim(0, len(lines) + 2.2)
+    for k, (left, right) in enumerate(lines):
+        y = len(lines) - k + 0.6
+        ax.add_patch(FancyBboxPatch((0.15, y - 0.32), 9.7, 0.64, boxstyle="round,pad=0.05",
+                                    fc=TINT if k % 2 == 0 else "white", ec="none"))
+        ax.text(4.45, y, left, fontsize=10.5, ha="right", va="center", family="monospace")
+        ax.text(5.0, y, "?", fontsize=13, ha="center", va="center", color=WARM,
+                weight="bold", family="monospace")
+        ax.add_patch(FancyBboxPatch((4.62, y - 0.2), 0.76, 0.4, boxstyle="round,pad=0.03",
+                                    fc="none", ec=WARM, lw=1.2))
+        ax.text(5.6, y, right, fontsize=10.5, ha="left", va="center", family="monospace")
+    ax.text(0.15, len(lines) + 1.6, "Six real lines from the two novels. What is the missing word?",
+            fontsize=12.5)
+    ax.text(0.15, 0.3, "You knew it, and the only evidence you had was the company it keeps.",
+            fontsize=12, style="italic", color=MUTED)
+    fig.savefig(os.path.join(FIG_DIR, "w4_distributional.png")); plt.close(fig)
+    facts["distributional_word"] = target
+
+
+try:
+    distributional_figure()
+except Exception as e:
+    print("distributional figure skipped:", type(e).__name__, e, file=sys.stderr)
+
 # ------------------------------------------- 9c. where a corpus comes from
 # Four figures for the second half of the lecture. All of them call the real endpoints
 # and fall back to recorded values if the network is unavailable at build time.
