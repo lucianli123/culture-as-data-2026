@@ -506,6 +506,7 @@ WEEKS = [
    check="Explain it: read your classifier's top weights aloud, and name one input where it would fail and why. (Competencies 4, 5.)",
    comps="2, 4, 5"),
  dict(n=4, title="How Machines Learn to Read: Neural Networks and Word Embeddings",
+   gslides="https://docs.google.com/presentation/d/1iMqbwMA2iKQYvDMjFzI8tgxUTHjH2x5pFQ3cwWNCWAM/edit?usp=sharing",
    tool="Neural networks and word embeddings, plus getting data off the web",
    promise="See what your Week 3 classifier becomes when you stack it, learn where word vectors come from and what they can and cannot do, and leave with your own corpus collected, saved and committed to.",
    links=[("TensorFlow Playground, the network to watch learn during the first lecture", "https://playground.tensorflow.org/"),
