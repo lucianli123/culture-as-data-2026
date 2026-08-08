@@ -115,7 +115,7 @@ figSlide(s,"w4_network.png",{x:1.6,y:1.9,w:10.1,h:4.5,
 // 6b what the layer costs
 s=base(); kicker(s,"WHAT IT COSTS",TERRA); title(s,"You stop being able to read it");
 figSlide(s,"w4_readability.png",{x:1.4,y:1.95,w:10.5,h:4.3,
-  note:`Same passages, same job: ${pct(facts.novel_lr_acc)} against ${pct(facts.novel_net_acc)}. You can read the left panel and say why. You cannot do that with the right one.`,
+  note:`Same passages, same job: ${pct(facts.novel_lr_acc)} against ${pct(facts.novel_net_acc)}. You can read the left panel. You cannot read the right one.`,
   cred:`Both fitted for this slide on ${facts.novel_chunks} passages of Frankenstein and Dracula.`});
 
 // 7 the spiral
@@ -142,14 +142,14 @@ s.addText([{text:"\u201cThe meaning of a word is its use in the language.\u201d"
            {text:"   Wittgenstein, Philosophical Investigations \u00a743 (1953)",options:{italic:false,color:MUTED,fontSize:13}}],
  {x:M,y:1.82,w:11.9,h:0.4,fontFace:SERIF,fontSize:17,color:TERRA,valign:"middle"});
 figSlide(s,"w4_distributional.png",{x:1.0,y:2.35,w:11.3,h:3.6,
-  note:"Ask the room before you show the answer. Nobody needs a definition of the word; the contexts are enough.",
+  note:"Ask the room before you show the answer. Nobody needs a definition. The contexts are enough.",
   cred:"Frege 1884, never ask for the meaning of a word in isolation \u00b7 Harris 1954, the distributional hypothesis \u00b7 Firth 1957, the title. Lines drawn live from this week's corpus."});
 
 // 10 where the numbers come from: the contrastive move
 s=base(); kicker(s,"IDEA TWO",TERRA); title(s,"Same context, pull together. Different, push apart");
 figSlide(s,"w4_contrastive_idea.png",{x:1.9,y:1.9,w:9.6,h:4.4,
   note:"For a word, a context is a few words of text. That is the whole rule. It is called contrastive learning, and most modern embeddings are trained this way.",
-  cred:`Underneath it, Week 3's four moves: multiply, add, squash, nudge. The difference is that the prediction is thrown away and the weights are what you keep. ${facts.contrastive_pairs.toLocaleString()} pairs in one pass.`});
+  cred:`Underneath it, Week 3's four moves: multiply, add, squash, nudge. The prediction gets thrown away; the weights are what you keep. ${facts.contrastive_pairs.toLocaleString()} pairs in one pass.`});
 
 // 10b what falls out of it
 s=base(); kicker(s,"THE SAME VECTORS, BEFORE AND AFTER",GOLD); title(s,"Nobody labelled the blocks");
@@ -159,7 +159,7 @@ figSlide(s,"w4_contrastive_result.png",{x:1.5,y:1.9,w:10.3,h:4.4,
 // 11 neighbours, from our own corpus
 s=base(); kicker(s,"IT WORKS ON A SMALL CORPUS TOO",GREEN); title(s,"Trained on two novels, an hour ago");
 figSlide(s,"w4_neighbours.png",{x:1.7,y:2.0,w:9.9,h:4.3,
-  note:`${facts.corpus_tokens.toLocaleString()} words of Frankenstein and Dracula, and no labels anywhere. Nobody told it what a door is.`});
+  note:`${facts.corpus_tokens.toLocaleString()} words of Frankenstein and Dracula. Nobody told it what a door is.`});
 
 // 12 the map
 s=base(); kicker(s,"THE MAP",BLUE); title(s,"Meaning becomes geometry");
@@ -171,7 +171,7 @@ figSlide(s,"w4_map.png",{x:2.2,y:1.9,w:8.9,h:4.5,
 s=base(); kicker(s,"THE SAME GEOMETRY, THE OTHER RESULT",TERRA);
 title(s,"Occupations closest to each group's words");
 figSlide(s,"w4_paper_ethnic.png",{x:3.9,y:1.85,w:5.6,h:4.5,
-  note:"Nobody labelled any of this. It is what a century of printed English put near what.",
+  note:"Nobody labelled any of this. It is only what a century of printed English put side by side.",
   cred:"Fig. 1c, " + PAPER + " · shown for teaching"});
 
 // 13 the analogy, with caveats
@@ -206,13 +206,13 @@ figSlide(s,"w4_convolution.png",{x:0.9,y:2.2,w:11.5,h:3.5,
 s=base(); kicker(s,"WHY A CNN IS DEEP",BLUE); title(s,"Filters on top of filters");
 figSlide(s,"w4_conv_stack.png",{x:0.9,y:2.2,w:11.5,h:3.5,
   note:"Run a filter over the output of the last filter, then shrink. Edges turn into corners, and corners into regions.",
-  cred:"Every panel is real arithmetic on the painting to its left. Stacking them is all a CNN is."});
+  cred:"Every panel is real arithmetic on the painting to its left. Stacking them is what a CNN does."});
 
 // 13e where the two halves meet
 s=base(); kicker(s,"BOTH IDEAS AT ONCE",GOLD); title(s,"The same rule, where a context is a picture");
 figSlide(s,"w4_clip.png",{x:1.2,y:1.95,w:10.9,h:4.2,
   note:"Same context: a painting and its own caption, pulled together. Different context: anyone else's caption, pushed away. Two kinds of thing in one space.",
-  cred:"Which is why \"a painting of a woman in a red hat\" can search a museum with no tags in it at all. The notebook trains a small one on 18 paintings."});
+  cred:"Which is why \"a painting of a woman in a red hat\" can search a museum with no tags in it. The notebook trains a small one on 18 paintings."});
 
 // 14 break
 s=base(true); kicker(s,"BREAK",GOLD);
@@ -250,7 +250,7 @@ s=base(); kicker(s,"EVERY API IS SOMEBODY'S DESIGN",GOLD);
 title(s,"Two museums, two shapes");
 figSlide(s,"w4_api_shapes.png",{x:1.1,y:2.0,w:11.1,h:4.2,
   note:"One hands you rows. The other hands you a phone book, and every row after that is another request.",
-  cred:"Both queried live for this slide. Work out which kind you have before you estimate how long anything will take."});
+  cred:"Both queried live for this slide. Work out which kind you have before you estimate how long it takes."});
 
 // 17 scraping, with the rules attached
 s=base(); kicker(s,"ROUTE THREE",TERRA); title(s,"Scraping, and the four things that come with it");
@@ -270,13 +270,13 @@ s.addText("CC0 and public domain: go anywhere.   Academic sets and community tex
 s=base(); kicker(s,"ROUTE THREE, IN PRACTICE",TERRA); title(s,"Find the data inside the markup");
 figSlide(s,"w4_scrape_anatomy.png",{x:0.7,y:2.05,w:11.9,h:3.9,
   note:"Fetch one page, look at one block, and read the selectors off it. Right-click, Inspect, and the tag names are right there.",
-  cred:"Real HTML from quotes.toscrape.com. A selector that matches nothing returns None and raises no error, which is the bug you will actually hit."});
+  cred:"Real HTML from quotes.toscrape.com. A selector that matches nothing returns None and raises no error. That is the bug you will hit."});
 
 // 17c what it costs to be polite
 s=base(); kicker(s,"BEFORE YOU START IT RUNNING",GOLD); title(s,"How long will this take?");
 figSlide(s,"w4_scrape_cost.png",{x:2.3,y:1.95,w:8.7,h:4.3,
   note:"A one-second pause on 5,000 pages is an hour and a half. That number decides your sample size, so work it out first.",
-  cred:"And the site notices the difference. One page a second is a reader; fifty a second is an outage."});
+  cred:"One page a second is a reader. Fifty a second is an outage."});
 
 // 18 the lab
 s=base(); kicker(s,"YOUR TURN · 20 MINUTES",GREEN); title(s,"Collect it, save it, start the repo");
