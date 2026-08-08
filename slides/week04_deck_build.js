@@ -110,12 +110,12 @@ figSlide(s,"w4_neuron.png",{x:1.6,y:1.9,w:10.1,h:4.5,
 // 6 the network
 s=base(); kicker(s,"IDEA ONE",GREEN); title(s,"Stack them and something changes");
 figSlide(s,"w4_network.png",{x:1.6,y:1.9,w:10.1,h:4.5,
-  note:"Four neurons in between, each adding up every word in its own way. Nobody wrote those combinations down."});
+  note:"Four neurons in between, each adding up every word in its own way. Nobody chose those combinations."});
 
 // 6b what the layer costs
 s=base(); kicker(s,"WHAT IT COSTS",TERRA); title(s,"You stop being able to read it");
 figSlide(s,"w4_readability.png",{x:1.4,y:1.95,w:10.5,h:4.3,
-  note:`Same passages, same job: ${pct(facts.novel_lr_acc)} against ${pct(facts.novel_net_acc)}. The left panel is an explanation. The right one is not.`,
+  note:`Same passages, same job: ${pct(facts.novel_lr_acc)} against ${pct(facts.novel_net_acc)}. You can read the left panel and say why. You cannot do that with the right one.`,
   cred:`Both fitted for this slide on ${facts.novel_chunks} passages of Frankenstein and Dracula.`});
 
 // 7 the spiral
@@ -137,13 +137,13 @@ figSlide(s,"w4_onehot_vs_dense.png",{x:1.2,y:2.1,w:10.9,h:4.0,
 // 10 where the numbers come from: the contrastive move
 s=base(); kicker(s,"IDEA TWO",TERRA); title(s,"Same context, pull together. Different, push apart");
 figSlide(s,"w4_contrastive_idea.png",{x:1.9,y:1.9,w:9.6,h:4.4,
-  note:"For a word, a context is a few words of text. That is the whole rule, it is called contrastive learning, and it is how most modern embeddings are made.",
+  note:"For a word, a context is a few words of text. That is the whole rule. It is called contrastive learning, and most modern embeddings are trained this way.",
   cred:`Anchor, neighbour and the three random words all taken from this week's corpus. ${facts.contrastive_pairs.toLocaleString()} pairs in one pass.`});
 
 // 10b what falls out of it
 s=base(); kicker(s,"THE SAME VECTORS, BEFORE AND AFTER",GOLD); title(s,"Nobody labelled the blocks");
 figSlide(s,"w4_contrastive_result.png",{x:1.5,y:1.9,w:10.3,h:4.4,
-  note:"Twelve words, every pair compared. On the left they start as noise; on the right, times of day, family and rooms have found each other."});
+  note:"Twelve words, every pair compared. On the left they start as noise. On the right, times of day, family and rooms have found each other."});
 
 // 11 neighbours, from our own corpus
 s=base(); kicker(s,"IT WORKS ON A SMALL CORPUS TOO",GREEN); title(s,"Trained on two novels, an hour ago");
@@ -182,25 +182,25 @@ s.addShape("roundRect",{x:7.1,y:4.0,w:5.5,h:2.4,fill:{color:TINT},line:{type:"no
 // 13b what a convolution is, with nothing left out
 s=base(); kicker(s,"THE SAME TRICK, ON PIXELS",BLUE); title(s,"A convolution, all of it");
 figSlide(s,"w4_conv_arith.png",{x:0.6,y:2.15,w:12.1,h:3.6,
-  note:`A picture is a grid of numbers. Take nine of them, multiply by nine other numbers, add: ${facts.conv_one_output}. Slide one step and do it again.`,
+  note:`A picture is a grid of numbers. Take nine of them, multiply by nine other numbers, add them up: ${facts.conv_one_output}. Move one pixel across and repeat.`,
   cred:"Numbers read off a Met painting from the Week 1 data. Nothing else happens in a convolution."});
 
 // 13c a filter is a question about the picture
 s=base(); kicker(s,"WHAT THE NINE NUMBERS DO",BLUE); title(s,"Change the filter, ask a different question");
 figSlide(s,"w4_convolution.png",{x:0.9,y:2.2,w:11.5,h:3.5,
   note:"Each panel is the same painting under a different 3x3 grid. One finds vertical edges, one horizontal, one blurs.",
-  cred:"A CNN is not given these. It starts with random grids and learns which ones are worth having — same downhill roll as before."});
+  cred:"A CNN is not given these. It starts with random grids and learns which ones are worth having, by the same downhill roll as before."});
 
 // 13d depth
 s=base(); kicker(s,"WHY A CNN IS DEEP",BLUE); title(s,"Filters on top of filters");
 figSlide(s,"w4_conv_stack.png",{x:0.9,y:2.2,w:11.5,h:3.5,
-  note:"Run a filter on the answers of the last filter, and shrink. Edges become corners; corners become regions; regions become faces.",
-  cred:"Every panel here is real arithmetic on the painting to its left. That stack is the whole architecture."});
+  note:"Run a filter over the output of the last filter, then shrink. Edges turn into corners, and corners into regions.",
+  cred:"Every panel is real arithmetic on the painting to its left. Stacking them is all a CNN is."});
 
 // 13e where the two halves meet
 s=base(); kicker(s,"BOTH IDEAS AT ONCE",GOLD); title(s,"The same rule, where a context is a picture");
 figSlide(s,"w4_clip.png",{x:1.2,y:1.95,w:10.9,h:4.2,
-  note:"Same context: a painting and its own caption, pulled together. Different context: anyone else's caption, pushed away. Two kinds of thing, one space.",
+  note:"Same context: a painting and its own caption, pulled together. Different context: anyone else's caption, pushed away. Two kinds of thing in one space.",
   cred:"Which is why \"a painting of a woman in a red hat\" can search a museum with no tags in it at all. The notebook trains a small one on 18 paintings."});
 
 // 14 break
