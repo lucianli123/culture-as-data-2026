@@ -118,6 +118,13 @@ figSlide(s,"w4_readability.png",{x:1.4,y:1.95,w:10.5,h:4.3,
   note:`Same passages, same job: ${pct(facts.novel_lr_acc)} against ${pct(facts.novel_net_acc)}. You can read the left panel. You cannot read the right one.`,
   cred:`Both fitted for this slide on ${facts.novel_chunks} passages of Frankenstein and Dracula.`});
 
+// 6c the same method on a harder question
+s=base(); kicker(s,"BEFORE YOU BELIEVE THE NUMBER",TERRA);
+title(s,"Ask a harder question and watch it drop");
+figSlide(s,"w4_hard.png",{x:2.2,y:1.95,w:8.9,h:4.3,
+  note:"Two authors with different casts: anything gets that right. Three narrators inside one book is a real question, and the models drop to 71% and 77%.",
+  cred:`The left-hand 100% is a fact about the question, not proof the method works. Journals parsed from the chapter headings: ${(facts.hard_passages||0)} passages, Jonathan, Mina and Seward.`});
+
 // 7 two questions about meaning
 s=base(); kicker(s,"WHEN YOU NEED THE EXTRA LAYER",BLUE);
 title(s,"One question a line can answer, one it cannot");

@@ -530,7 +530,7 @@
    },
    {
     "t": "0:15",
-    "a": "Lecture one, from one neuron to a network (20 min). Your logistic regression, redrawn: inputs, one weight each, a sum, a squash. Then stack it, hidden layer first, and what stacking buys you: features nobody hand-wrote. Training as rolling downhill, loss and gradient descent without the calculus. The demo: two questions about the same 13,915 rated words. Is it pleasant is a direction, and a line gets 100%. Is it emotionally charged either way is a distance, and the same line drops to 68% while a small network gets 100%. Then TensorFlow Playground live on the XOR set, which is the same shape. What it costs: the weights stop being readable, which is exactly the trade Week 7 asks you to accept."
+    "a": "Lecture one, from one neuron to a network (20 min). Your logistic regression, redrawn: inputs, one weight each, a sum, a squash. Then stack it, hidden layer first, and what stacking buys you: features nobody hand-wrote. Training as rolling downhill, loss and gradient descent without the calculus. Put a hard question beside the easy one first: Frankenstein against Dracula is 100% because the cast lists give it away, while three narrators inside Dracula lands at 71% and 77% against a 43% guess. Then the demo: two questions about the same 13,915 rated words. Is it pleasant is a direction, and a line gets 100%. Is it emotionally charged either way is a distance, and the same line drops to 68% while a small network gets 100%. Then TensorFlow Playground live on the XOR set, which is the same shape. What it costs: the weights stop being readable, which is exactly the trade Week 7 asks you to accept."
    },
    {
     "t": "0:30",

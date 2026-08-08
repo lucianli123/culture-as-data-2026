@@ -183,6 +183,70 @@ axes[1].set_xlabel("the 60 busiest words × 4 units — and now nothing reads as
                    color=MUTED, fontsize=10.5)
 fig.savefig(os.path.join(FIG_DIR, "w4_readability.png")); plt.close(fig)
 
+# ------------- 2c. the same method on a question that is genuinely hard
+# Telling two authors apart is easy: the cast lists give it away. Telling three narrators
+# inside one book apart is the same machinery on a real question, and the numbers say so.
+def narrator_task():
+    from sklearn.model_selection import cross_val_score, StratifiedKFold
+    raw = open(os.path.join(REPO, "notebooks", "data", "texts", "dracula.txt"),
+               encoding="utf-8", errors="ignore").read()
+    a, b = raw.find("*** START OF"), raw.find("*** END OF")
+    book = raw[raw.find("\n", a) + 1:b]
+    head = re.compile(r"^(JONATHAN HARKER|MINA MURRAY|MINA HARKER|DR\. SEWARD)[^\n]*$", re.M)
+    who = {"JONATHAN HARKER": "Jonathan", "MINA MURRAY": "Mina",
+           "MINA HARKER": "Mina", "DR. SEWARD": "Seward"}
+    marks = [(m.start(), who[m.group(1)]) for m in head.finditer(book)]
+    docs, labs = [], []
+    for i, (pos, name) in enumerate(marks):
+        end = marks[i + 1][0] if i + 1 < len(marks) else len(book)
+        ws = re.findall(r"[a-z']{2,}", book[pos:end].lower())
+        for j in range(0, len(ws) - 350, 350):
+            docs.append(" ".join(ws[j:j + 350])); labs.append(name)
+    y = np.array(labs)
+    vec = CountVectorizer(max_features=1200, min_df=5)
+    Xn = vec.fit_transform(docs).toarray().astype(float)
+    Xn = 100 * Xn / (Xn.sum(1, keepdims=True) + 1e-9)
+    cv = StratifiedKFold(5, shuffle=True, random_state=0)
+    guess = max(Counter(labs).values()) / len(labs)
+    lr = cross_val_score(LogisticRegression(max_iter=3000), Xn, y, cv=cv).mean()
+    nn = cross_val_score(MLPClassifier((32,), max_iter=2000, random_state=0), Xn, y, cv=cv).mean()
+    return guess, lr, nn, len(y), Counter(labs)
+
+
+try:
+    g_hard, lr_hard, nn_hard, n_hard, mix = narrator_task()
+    facts["hard_guess"] = round(float(g_hard), 3)
+    facts["hard_lr"] = round(float(lr_hard), 3)
+    facts["hard_nn"] = round(float(nn_hard), 3)
+    facts["hard_passages"] = n_hard
+
+    tasks = [("Which novel?\nFrankenstein or Dracula", 0.5,
+              facts["novel_lr_acc"], facts["novel_net_acc"]),
+             ("Whose journal?\nJonathan, Mina or Seward, inside Dracula",
+              facts["hard_guess"], facts["hard_lr"], facts["hard_nn"])]
+    fig, ax = plt.subplots(figsize=(8.6, 4.0))
+    width, gap = 0.24, 1.0
+    for k, (name, guess, lr, nn) in enumerate(tasks):
+        for j, (val, col, lab) in enumerate(((guess, MUTED, "always guess the commonest"),
+                                             (lr, COOL, "Week 3's classifier"),
+                                             (nn, WARM, "a small network"))):
+            ax.bar(k * gap + (j - 1) * width, val, width * 0.9, color=col,
+                   label=lab if k == 0 else None)
+            ax.text(k * gap + (j - 1) * width, val + 0.015, f"{val:.0%}", ha="center",
+                    fontsize=11, color=col)
+    ax.set_xticks([0, gap])
+    ax.set_xticklabels([t[0] for t in tasks], fontsize=11.5)
+    ax.set_ylim(0, 1.12); ax.set_yticks([0, 0.5, 1.0])
+    ax.set_yticklabels(["0", "50%", "100%"])
+    ax.legend(frameon=False, fontsize=10.5, loc="upper right", ncols=3,
+              bbox_to_anchor=(1.0, 1.14))
+    ax.grid(axis="x", visible=False)
+    ax.set_xlabel(f"{facts['novel_chunks']} passages on the left, {n_hard} on the right, "
+                  "five-fold cross-validation", color=MUTED, fontsize=10.5)
+    fig.savefig(os.path.join(FIG_DIR, "w4_hard.png")); plt.close(fig)
+except Exception as e:
+    print("narrator figure skipped:", type(e).__name__, e, file=sys.stderr)
+
 # --------------------------------------------------------- 3. rolling downhill
 fig, ax = plt.subplots(figsize=(6.2, 4.0))
 w = np.linspace(-3, 3, 300)
