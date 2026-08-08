@@ -514,6 +514,7 @@ WEEKS = [
           ("Harley's network visualizer: draw a digit, watch every layer light up", "https://adamharley.com/nn_vis/cnn/2d.html"),
           ("X Degrees of Separation: a path between two artworks, by look alone", "https://artsexperiments.withgoogle.com/xdegrees/"),
           ("t-SNE Map: 30,000 artworks arranged by what a network sees in them", "https://artsexperiments.withgoogle.com/tsnemap/"),
+          ("NAVIGU: swim through ImageNet, where every neighbour is one the model chose", "https://navigu.net/#imagenet"),
           ("Art Palette, the same idea run on colour instead", "https://artsexperiments.withgoogle.com/artpalette/"),
           ("Reading: Alammar, The Illustrated Word2Vec", "https://jalammar.github.io/illustrated-word2vec/"),
           ("The Met Collection API, the endpoint called live in the data demo", "https://metmuseum.github.io/"),
