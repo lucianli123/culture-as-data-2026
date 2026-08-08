@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Figures for the Week 4 lecture draft deck (neural networks, word embeddings, APIs).
 
-Nothing here is a stock illustration. The spiral is a real fit, the word vectors are
+Nothing here is a stock illustration. The models are really fitted, the word vectors are
 trained on the two novels in notebooks/data/texts, the nearest neighbours are computed
-from them, and the API panel calls a live endpoint (falling back to a saved response).
+from them, and the API panels call live endpoints.
 
     python3 slides/week04_figs.py      # then: node slides/week04_deck_build.js
 
@@ -207,31 +207,77 @@ ax.set_ylabel("loss: how wrong the model is", color=MUTED, fontsize=10)
 ax.set_xticks([]); ax.set_yticks([]); ax.tick_params(length=0)
 fig.savefig(os.path.join(FIG_DIR, "w4_gradient.png")); plt.close(fig)
 
-# --------------------------------------- 4. the spiral: one line vs a network
-rng = np.random.default_rng(0)
-n = 220
-t = np.sqrt(rng.random(n)) * 3.2 * np.pi
-x1 = np.c_[t * np.cos(t), t * np.sin(t)] + rng.normal(0, 0.55, (n, 2))
-x2 = np.c_[t * np.cos(t + np.pi), t * np.sin(t + np.pi)] + rng.normal(0, 0.55, (n, 2))
-X = np.vstack([x1, x2]); y = np.r_[np.ones(n), np.zeros(n)]
-lin = LogisticRegression().fit(X, y)
-net = MLPClassifier(hidden_layer_sizes=(24, 24), max_iter=4000, random_state=0).fit(X, y)
-xx, yy = np.meshgrid(np.linspace(X[:, 0].min() - 1, X[:, 0].max() + 1, 300),
-                     np.linspace(X[:, 1].min() - 1, X[:, 1].max() + 1, 300))
-fig, axes = plt.subplots(1, 2, figsize=(9.0, 4.4))
-for ax, model, name in ((axes[0], lin, "one neuron"), (axes[1], net, "a network")):
-    zz = model.predict_proba(np.c_[xx.ravel(), yy.ravel()])[:, 1].reshape(xx.shape)
-    ax.contourf(xx, yy, zz, levels=[0, 0.5, 1], colors=[COOL, WARM], alpha=0.10)
-    ax.contour(xx, yy, zz, levels=[0.5], colors=[MUTED], linewidths=1.4)
-    ax.scatter(X[y == 1, 0], X[y == 1, 1], s=9, color=WARM, alpha=0.85, lw=0)
-    ax.scatter(X[y == 0, 0], X[y == 0, 1], s=9, color=COOL, alpha=0.85, lw=0)
-    blank(ax)
-    ax.set_title(f"{name}: {model.score(X, y):.0%} right", fontsize=13, pad=8, loc="left")
-axes[0].set_xlabel("a straight line, wherever you put it", color=MUTED, fontsize=10.5)
-axes[1].set_xlabel("stacked neurons bend the boundary", color=MUTED, fontsize=10.5)
-fig.savefig(os.path.join(FIG_DIR, "w4_spiral.png")); plt.close(fig)
-facts["spiral_linear"] = round(float(lin.score(X, y)), 3)
-facts["spiral_net"] = round(float(net.score(X, y)), 3)
+# ------------------ 4. two questions about meaning: one linear, one not
+# Osgood's semantic differential found three dimensions behind how people rate words:
+# evaluation, potency, activity. Warriner et al. re-measured them on 13,915 words, and
+# the modern names are valence, dominance, arousal. Fetched at build time, not stored here.
+def meaning_figure():
+    import csv, io, requests
+    url = "https://raw.githubusercontent.com/JULIELab/XANEW/master/Ratings_Warriner_et_al.csv"
+    rows = list(csv.DictReader(io.StringIO(requests.get(url, timeout=60).text)))
+    word = np.array([r["Word"] for r in rows])
+    val = np.array([float(r["V.Mean.Sum"]) for r in rows])     # unpleasant 1 - pleasant 9
+    aro = np.array([float(r["A.Mean.Sum"]) for r in rows])     # calm 1 - excited 9
+    X = np.c_[val, aro]
+
+    mid = np.median(val)
+    pleasant = (val > mid).astype(int)
+    swing = np.abs(val - mid)
+    quiet, loud = np.percentile(swing, [35, 65])
+    keep = (swing <= quiet) | (swing >= loud)
+    Xc, charged = X[keep], (swing[keep] >= loud).astype(int)
+
+    lin_a = LogisticRegression(max_iter=2000).fit(X, pleasant)
+    lin_b = LogisticRegression(max_iter=2000).fit(Xc, charged)
+    net_b = MLPClassifier((16, 16), max_iter=3000, random_state=0).fit(Xc, charged)
+
+    rng_ = np.random.default_rng(0)
+    show_a = rng_.choice(len(X), 2200, replace=False)
+    show_b = rng_.choice(len(Xc), 2200, replace=False)
+    xx, yy = np.meshgrid(np.linspace(1, 9, 300), np.linspace(1, 9, 300))
+    grid = np.c_[xx.ravel(), yy.ravel()]
+
+    fig, axes = plt.subplots(1, 3, figsize=(12.8, 4.2))
+    panels = [(axes[0], X[show_a], pleasant[show_a], lin_a,
+               "Is it pleasant?", f"one line: {lin_a.score(X, pleasant):.0%}"),
+              (axes[1], Xc[show_b], charged[show_b], lin_b,
+               "Is it emotionally charged, either way?", f"one line: {lin_b.score(Xc, charged):.0%}"),
+              (axes[2], Xc[show_b], charged[show_b], net_b,
+               "Is it emotionally charged, either way?", f"a network: {net_b.score(Xc, charged):.0%}")]
+    for ax, pts, lab, model, title, score in panels:
+        zz = model.predict(grid).reshape(xx.shape)
+        ax.contourf(xx, yy, zz, levels=[-0.5, 0.5, 1.5], colors=[COOL, WARM], alpha=0.10)
+        ax.contour(xx, yy, zz, levels=[0.5], colors=[MUTED], linewidths=1.6)
+        ax.scatter(pts[lab == 1, 0], pts[lab == 1, 1], s=4, color=WARM, alpha=0.55, lw=0)
+        ax.scatter(pts[lab == 0, 0], pts[lab == 0, 1], s=4, color=COOL, alpha=0.55, lw=0)
+        ax.set_title(title, fontsize=11.5, loc="left", pad=8)
+        ax.set_xlabel(score, color=MUTED, fontsize=11)
+        ax.set_xlim(1, 9); ax.set_ylim(1, 9)
+        ax.set_xticks([2, 5, 8]); ax.set_yticks([2, 5, 8])
+        ax.grid(False)
+    axes[0].set_ylabel("arousal: calm to excited", color=MUTED, fontsize=10)
+    for ax in axes:
+        ax.set_xticklabels(["unpleasant", "neutral", "pleasant"], fontsize=9.5)
+
+    at = {w: i for i, w in enumerate(word)}
+    for w, dx, dy in (("murder", 5, 4), ("torture", 5, -10), ("love", 6, 5),
+                      ("joy", -6, -12), ("chair", 5, -10), ("habit", 5, 5)):
+        if w in at:
+            axes[1].annotate(w, (val[at[w]], aro[at[w]]), xytext=(dx, dy),
+                             textcoords="offset points", fontsize=9.5, color=INK,
+                             ha="right" if dx < 0 else "left")
+    fig.savefig(os.path.join(FIG_DIR, "w4_meaning.png")); plt.close(fig)
+    facts["meaning_words"] = len(word)
+    facts["meaning_lin_pleasant"] = round(float(lin_a.score(X, pleasant)), 3)
+    facts["meaning_lin_charged"] = round(float(lin_b.score(Xc, charged)), 3)
+    facts["meaning_net_charged"] = round(float(net_b.score(Xc, charged)), 3)
+
+
+try:
+    meaning_figure()
+except Exception as e:
+    print("meaning figure skipped:", type(e).__name__, e, file=sys.stderr)
+
 
 # ---------- 7 + 8. vectors trained on the two repo novels, the contrastive way
 counts = Counter(toks)

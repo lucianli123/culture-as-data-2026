@@ -1,7 +1,7 @@
 // Week 4 lecture draft deck: neural networks, word embeddings, and getting data.
 //
-// Figures come from slides/week04_figs.py — the spiral is a real fit, the word vectors
-// are trained on the two novels in the repo, the API panel is a live call. Run that
+// Figures come from slides/week04_figs.py — the models are really fitted, the word vectors
+// are trained on the two novels in the repo, the API panels are live calls. Run that
 // first; this reads its PNGs and week04_figs.json out of $FIG_DIR (default /tmp/figs).
 //
 //   python3 slides/week04_figs.py && node slides/week04_deck_build.js
@@ -118,11 +118,12 @@ figSlide(s,"w4_readability.png",{x:1.4,y:1.95,w:10.5,h:4.3,
   note:`Same passages, same job: ${pct(facts.novel_lr_acc)} against ${pct(facts.novel_net_acc)}. You can read the left panel. You cannot read the right one.`,
   cred:`Both fitted for this slide on ${facts.novel_chunks} passages of Frankenstein and Dracula.`});
 
-// 7 the spiral
-s=base(); kicker(s,"WHY IT MATTERS",BLUE); title(s,"Some questions a straight line cannot answer");
-figSlide(s,"w4_spiral.png",{x:1.2,y:1.9,w:10.9,h:4.5,
-  note:`Same points, same training. One neuron: ${pct(facts.spiral_linear)}. Two hidden layers: ${pct(facts.spiral_net)}.`,
-  cred:"Both models fitted for this slide. Next: the same thing live in TensorFlow Playground."});
+// 7 two questions about meaning
+s=base(); kicker(s,"WHEN YOU NEED THE EXTRA LAYER",BLUE);
+title(s,"One question a line can answer, one it cannot");
+figSlide(s,"w4_meaning.png",{x:0.6,y:2.0,w:12.1,h:4.0,
+  note:`"Which side?" is a direction: a line gets ${pct(facts.meaning_lin_pleasant)}. "How far from the middle?" is a distance: ${pct(facts.meaning_lin_charged)} for the line, ${pct(facts.meaning_net_charged)} for the network.`,
+  cred:`Valence and arousal for ${(facts.meaning_words||0).toLocaleString()} words, Warriner, Kuperman & Brysbaert (2013), fetched at build time. Osgood's dimensions, measured again. Next: Playground on the XOR set.`});
 
 // 8 gradient descent
 s=base(); kicker(s,"HOW IT LEARNS",GOLD); title(s,"Rolling downhill in fog");
@@ -148,7 +149,7 @@ figSlide(s,"w4_distributional.png",{x:1.0,y:2.35,w:11.3,h:3.6,
 // 10 where the numbers come from: the contrastive move
 s=base(); kicker(s,"IDEA TWO",TERRA); title(s,"Same context, pull together. Different, push apart");
 figSlide(s,"w4_contrastive_idea.png",{x:1.9,y:1.9,w:9.6,h:4.4,
-  note:"For a word, a context is a few words of text. That is the whole rule. It is called contrastive learning, and most modern embeddings are trained this way.",
+  note:"For a word, a context is a few words of text. That is the whole rule, and it is how most modern embeddings are trained.",
   cred:`Underneath it, Week 3's four moves: multiply, add, squash, nudge. The prediction gets thrown away; the weights are what you keep. ${facts.contrastive_pairs.toLocaleString()} pairs in one pass.`});
 
 // 10b what falls out of it
