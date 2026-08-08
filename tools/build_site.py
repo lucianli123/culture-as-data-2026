@@ -69,6 +69,10 @@ ANCHOR_TOOLS = [
 GH_REPO = "https://github.com/lucianli123/culture-as-data-2026"
 COLAB = "https://colab.research.google.com/github/lucianli123/culture-as-data-2026/blob/main/"
 
+# Weeks with a hand-built figure deck in slides/week-NN-lecture-draft.pptx, alongside the
+# generated outline deck. That file is the one to upload to Drive for a Google Slides copy.
+LECTURE_DECKS = {2, 3, 4}
+
 NOTEBOOKS = [
     ("notebooks/week01_first_investigation.ipynb", 1, "Your first investigation", "Load the 154 sonnets, make your first chart, learn to read an error and recover, count words and pixels."),
     ("notebooks/week02_counting.ipynb", 2, "Counting", "Bag-of-words by hand-logic, tf-idf, keyness (the She Giggles, He Gallops method), and the shuffle test."),
@@ -887,6 +891,9 @@ def build_weeks():
         nbs = [n for n in NOTEBOOKS if n[1] == w["n"]]
         deck = (f"<a class='button ghost' href='{GH_REPO}/raw/main/slides/pptx/week-{w['n']:02d}.pptx'>Slides (.pptx)</a> "
                 f"<a class='button ghost' href='{GH_REPO}/blob/main/slides/week-{w['n']:02d}.md'>Slide outline</a>")
+        if w["n"] in LECTURE_DECKS:
+            deck = (f"<a class='button ghost' href='{GH_REPO}/raw/main/slides/"
+                    f"week-{w['n']:02d}-lecture-draft.pptx'>Lecture deck, with figures (.pptx)</a> ") + deck
         if w.get("gslides"):
             deck = f"<a class='button' href='{w['gslides']}'>Slides (Google Slides)</a> " + deck
         if nbs:
