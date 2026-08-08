@@ -110,7 +110,13 @@ figSlide(s,"w4_neuron.png",{x:1.6,y:1.9,w:10.1,h:4.5,
 // 6 the network
 s=base(); kicker(s,"IDEA ONE",GREEN); title(s,"Stack them and something changes");
 figSlide(s,"w4_network.png",{x:1.6,y:1.9,w:10.1,h:4.5,
-  note:"A layer in between, learning combinations nobody wrote down. The price: no more readable weights."});
+  note:"Four neurons in between, each adding up every word in its own way. Nobody wrote those combinations down."});
+
+// 6b what the layer costs
+s=base(); kicker(s,"WHAT IT COSTS",TERRA); title(s,"You stop being able to read it");
+figSlide(s,"w4_readability.png",{x:1.4,y:1.95,w:10.5,h:4.3,
+  note:`Same passages, same job: ${pct(facts.novel_lr_acc)} against ${pct(facts.novel_net_acc)}. The left panel is an explanation. The right one is not.`,
+  cred:`Both fitted for this slide on ${facts.novel_chunks} passages of Frankenstein and Dracula.`});
 
 // 7 the spiral
 s=base(); kicker(s,"WHY IT MATTERS",BLUE); title(s,"Some questions a straight line cannot answer");
@@ -126,23 +132,29 @@ figSlide(s,"w4_gradient.png",{x:2.4,y:1.9,w:8.5,h:4.5,
 // 9 the problem embeddings solve
 s=base(); kicker(s,"IDEA TWO",TERRA); title(s,"What counting cannot do");
 figSlide(s,"w4_onehot_vs_dense.png",{x:1.2,y:2.1,w:10.9,h:4.0,
-  note:"Left: happy and joyful share nothing, and neither do Oakland and Berkeley. Right: a few dozen numbers instead."});
+  note:`Counting says night and morning have nothing in common. The trained vectors put them at ${facts.sim_night_morning}, against ${facts.sim_night_ship} for night and ship.`});
 
-// 10 where vectors come from
-s=base(); kicker(s,"IDEA TWO",TERRA); title(s,"Where the numbers come from");
-figSlide(s,"w4_skipgram.png",{x:1.7,y:2.0,w:9.9,h:4.2,
-  note:"Guess the neighbours, over a billion words. Throw the guesses away and keep the hidden layer: that is word2vec."});
+// 10 where the numbers come from: the contrastive move
+s=base(); kicker(s,"IDEA TWO",TERRA); title(s,"Pull the neighbours together, push the strangers apart");
+figSlide(s,"w4_contrastive_idea.png",{x:1.9,y:1.9,w:9.6,h:4.4,
+  note:"That is the whole training rule. It has a name — contrastive learning — and it is how most modern embeddings are made.",
+  cred:`Anchor, neighbour and the three random words all taken from this week's corpus. ${facts.contrastive_pairs.toLocaleString()} pairs in one pass.`});
+
+// 10b what falls out of it
+s=base(); kicker(s,"THE SAME VECTORS, BEFORE AND AFTER",GOLD); title(s,"Nobody labelled the blocks");
+figSlide(s,"w4_contrastive_result.png",{x:1.5,y:1.9,w:10.3,h:4.4,
+  note:"Twelve words, every pair compared. On the left they start as noise; on the right, times of day, family and rooms have found each other."});
 
 // 11 neighbours, from our own corpus
 s=base(); kicker(s,"IT WORKS ON A SMALL CORPUS TOO",GREEN); title(s,"Trained on two novels, an hour ago");
 figSlide(s,"w4_neighbours.png",{x:1.7,y:2.0,w:9.9,h:4.3,
-  note:`Trained this morning on ${facts.corpus_tokens.toLocaleString()} words of Frankenstein and Dracula. Nobody told it what a door is.`});
+  note:`${facts.corpus_tokens.toLocaleString()} words of Frankenstein and Dracula, and no labels anywhere. Nobody told it what a door is.`});
 
 // 12 the map
 s=base(); kicker(s,"THE MAP",BLUE); title(s,"Meaning becomes geometry");
 figSlide(s,"w4_map.png",{x:2.2,y:1.9,w:8.9,h:4.5,
-  note:"Times of day together. Family words together. Ship, sea and ice together. Nothing was labelled.",
-  cred:"Two dimensions of eighty; the picture always loses something. Next: the Embedding Projector, live."});
+  note:"Family words on one side. Door, room and window on the other. Night and morning at the bottom. Nothing was labelled.",
+  cred:"Two dimensions of sixty; the picture always loses something. Next: the Embedding Projector, live."});
 
 // what the vectors also learned
 s=base(); kicker(s,"THE SAME GEOMETRY, THE OTHER RESULT",TERRA);
@@ -165,6 +177,31 @@ s.addShape("roundRect",{x:7.1,y:4.0,w:5.5,h:2.4,fill:{color:TINT},line:{type:"no
   s.addText(r[0],{x:7.4,y:4.2+i*0.72,w:2.2,h:0.5,fontFace:SERIF,fontSize:16,bold:true,color:r[2],margin:0,valign:"middle"});
   s.addText(r[1],{x:9.5,y:4.2+i*0.72,w:2.9,h:0.5,fontFace:SANS,fontSize:13.5,color:INK,margin:0,valign:"middle"});
 });
+
+// --- the same two ideas, on pixels
+// 13b what a convolution is, with nothing left out
+s=base(); kicker(s,"THE SAME TRICK, ON PIXELS",BLUE); title(s,"A convolution, all of it");
+figSlide(s,"w4_conv_arith.png",{x:0.6,y:2.15,w:12.1,h:3.6,
+  note:`A picture is a grid of numbers. Take nine of them, multiply by nine other numbers, add: ${facts.conv_one_output}. Slide one step and do it again.`,
+  cred:"Numbers read off a Met painting from the Week 1 data. Nothing else happens in a convolution."});
+
+// 13c a filter is a question about the picture
+s=base(); kicker(s,"WHAT THE NINE NUMBERS DO",BLUE); title(s,"Change the filter, ask a different question");
+figSlide(s,"w4_convolution.png",{x:0.9,y:2.2,w:11.5,h:3.5,
+  note:"Each panel is the same painting under a different 3x3 grid. One finds vertical edges, one horizontal, one blurs.",
+  cred:"A CNN is not given these. It starts with random grids and learns which ones are worth having — same downhill roll as before."});
+
+// 13d depth
+s=base(); kicker(s,"WHY A CNN IS DEEP",BLUE); title(s,"Filters on top of filters");
+figSlide(s,"w4_conv_stack.png",{x:0.9,y:2.2,w:11.5,h:3.5,
+  note:"Run a filter on the answers of the last filter, and shrink. Edges become corners; corners become regions; regions become faces.",
+  cred:"Every panel here is real arithmetic on the painting to its left. That stack is the whole architecture."});
+
+// 13e where the two halves meet
+s=base(); kicker(s,"BOTH IDEAS AT ONCE",GOLD); title(s,"CLIP: the same pull and push, on pictures");
+figSlide(s,"w4_clip.png",{x:1.2,y:1.95,w:10.9,h:4.2,
+  note:"A CNN reads the picture, a language model reads the caption, and the training rule is the one from the word vectors.",
+  cred:"Which is why \"a painting of a woman in a red hat\" can search a museum with no tags in it at all."});
 
 // 14 break
 s=base(true); kicker(s,"BREAK",GOLD);
