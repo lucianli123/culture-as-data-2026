@@ -140,7 +140,7 @@ s=base(); kicker(s,"THE IDEA UNDERNEATH ALL OF IT",GOLD);
 title(s,"\u201cYou shall know a word by the company it keeps\u201d");
 figSlide(s,"w4_distributional.png",{x:1.0,y:2.05,w:11.3,h:3.9,
   note:"Ask the room before you show the answer. Nobody needs a definition of the word; the contexts are enough.",
-  cred:"J. R. Firth, \u201cA Synopsis of Linguistic Theory 1930\u20131955\u201d (1957). The claim itself is the distributional hypothesis, Zellig Harris, \u201cDistributional Structure\u201d (1954): words used in similar contexts tend to mean similar things. Lines drawn live from this week's corpus."});
+  cred:"Frege 1884, never ask for the meaning of a word in isolation \u00b7 Wittgenstein 1953, the meaning of a word is its use \u00b7 Harris 1954, the distributional hypothesis \u00b7 Firth 1957, the line above. Lines drawn live from this week's corpus."});
 
 // 10 where the numbers come from: the contrastive move
 s=base(); kicker(s,"IDEA TWO",TERRA); title(s,"Same context, pull together. Different, push apart");
