@@ -248,26 +248,24 @@ Each session includes one ~20-minute stretch with the assistant closed — you w
 
 ---
 
-## Week 4 — Pick a Corpus. Pick Two Methods. Commit.
+## Week 4 — How Machines Learn to Read: Neural Networks and Word Embeddings
 
-**Promise:** By end of class you have a pitched project, two chosen methods (one swappable in Week 6), your Data Biography drafted — and the skill that makes "bring your own corpus" real: getting data off the web, from an API or a careful scrape.
+**Promise:** See what your Week 3 classifier becomes when you stack it, learn where word vectors come from and what they can and cannot do, and leave with your own corpus collected, saved, and committed to.
 
-**Look at This:** a Pudding "How We Made…" process post — the messy middle. Every polished piece had a moment its maker thought it wouldn't work.
-
-**The methods on offer (pick two):** counting and comparison · classification (the AI as a reader you train and check) · embeddings (text and image) · character networks.
+**Look at This, then Question It:** the word2vec analogy — *king − man + woman* lands near *queen*. A model told nothing about royalty or gender, trained only to guess neighbouring words, ends up carrying those relationships as directions in space. The interrogation: it is also a magic trick. The arithmetic excludes the query words, most analogies fail, and the same geometry produced *doctor − man + woman = nurse*. What the vectors know, they learned from us.
 
 | Time | Activity |
 |---|---|
-| 0:00 | Warm-up + Look at This: the process post |
-| 0:08 | **Pitches — three minutes each, hard cap.** Your corpus (existence proof shown), your two methods, what would count as a finding. |
-| 0:48 | Break |
-| 0:58 | **The data conversation.** One pass, not a gate: the licensing one-pager (CC0 museums and public-domain books — go anywhere; academic-only sets — analyze, don't redistribute; lyrics and review text — metadata only; AO3 and other community-opposed archives — a small attributed sample at most, never a shared dataset; live social firehoses — we discuss, we don't scrape; and pirated full-text books from shadow libraries like LibGen — never, and we'll talk about why the field's largest copyright settlement was about exactly that), and the Data Biography introduced. |
-| 1:10 | **Getting the data — APIs and scraping.** Where does a corpus come from? Two routes, demoed live with the AI writing the code. **API first** (the polite front door): hit an endpoint you've already met — the Met or Art Institute, no key — and watch a documented URL become a table; meet the words *endpoint*, *key*, *rate limit*. **Scraping second** (the back door, used with care): when there's no API, the AI writes a small scrape of a simple page — and the same breath teaches the check: read the site's `robots.txt` and terms, go slowly, take only what you need, never re-publish copyrighted text. The licensing one-pager tells you which route is even allowed. |
-| 1:30 | **Collect-and-build lab.** Point the cookbook notebook at *your* corpus — pull it via API or load the file you've got — and reshape it with the AI; you judge whether what came back is what you wanted. And fork the publishing template, enabling GitHub Pages immediately: your project repo — and a live placeholder URL — are born the same day as your project. |
-| 1:55 | Commit. Check-out. |
+| 0:00 | Warm-up: the classifier you built in Week 3 is one neuron. Today it grows. |
+| 0:05 | **From one neuron to a network (25 min).** Your logistic regression redrawn: inputs, one weight each, a sum, a squash. Stack them and you get a hidden layer, and features nobody hand-wrote. Training as rolling downhill: a loss says how wrong you are, and every weight gets nudged in the direction that lowers it. No calculus. TensorFlow Playground live on the spiral. The cost: the weights stop being readable. |
+| 0:30 | **Word embeddings (30 min).** To a bag of words, *happy* and *joyful* are unrelated columns — counting's honest floor. A word is known by the company it keeps, so word2vec trains a small network on a fake task (guess the neighbours) and keeps the by-product: one vector per word. Nearest neighbours, cosine similarity, the analogy with its caveats attached, and the Embedding Projector live. One line each on static vs. contextual vectors, and on the sentence embeddings Week 5 uses. |
+| 1:00 | Break |
+| 1:10 | **Where a corpus comes from — APIs and scraping (20 min),** demoed live. A prepared file first, because that is what most projects need. Then an API: a documented URL returning JSON, with endpoint, key, pagination and rate limit named as they appear. Then a small, careful scrape: robots.txt and terms, request slowly, take only what you need, never republish. Licensing in three sentences. |
+| 1:30 | **Collect-and-build (20 min).** Point the cookbook notebook at your corpus, reshape it, save it to your Drive project folder, and fork the publishing template with GitHub Pages on, so a live URL exists from today. |
+| 1:50 | **Pitch in pairs, two minutes each,** then commit: corpus, two methods, what would count as a finding. The pivot kit as insurance; a null result, honestly shown, is a complete project. Check-out. |
 
-**Reading:** Heather Krause, "Data Biographies: Getting to Know Your Data" (We All Count).
-**Sketch:** Write **the Data Biography** (~400 words) for your chosen corpus — where it came from, who's in it, who isn't, what it can't say — and *actually collect the corpus* with the cookbook notebook, so you reach Week 5 with real data in hand. Its distilled form becomes your essay's corpus note in Week 8.
+**Reading:** Alammar, "The Illustrated Word2Vec" (~20 min) — the lecture assumes its pictures, so read it first. *(Supplement: Krause, "Data Biographies," the frame for this week's sketch.)*
+**Sketch:** Write your Data Biography (~400 words) and actually collect your corpus with the cookbook notebook, so you reach Week 5 with real data. Then open the Embedding Projector, look up a word from your own corpus, and note one neighbour that makes sense and one that does not.
 
 ---
 
