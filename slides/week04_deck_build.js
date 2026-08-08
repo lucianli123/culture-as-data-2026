@@ -138,9 +138,12 @@ figSlide(s,"w4_onehot_vs_dense.png",{x:1.2,y:2.1,w:10.9,h:4.0,
 // 9b the distributional hypothesis, as an exercise
 s=base(); kicker(s,"THE IDEA UNDERNEATH ALL OF IT",GOLD);
 title(s,"\u201cYou shall know a word by the company it keeps\u201d");
-figSlide(s,"w4_distributional.png",{x:1.0,y:2.05,w:11.3,h:3.9,
+s.addText([{text:"\u201cThe meaning of a word is its use in the language.\u201d",options:{italic:true}},
+           {text:"   Wittgenstein, Philosophical Investigations \u00a743 (1953)",options:{italic:false,color:MUTED,fontSize:13}}],
+ {x:M,y:1.82,w:11.9,h:0.4,fontFace:SERIF,fontSize:17,color:TERRA,valign:"middle"});
+figSlide(s,"w4_distributional.png",{x:1.0,y:2.35,w:11.3,h:3.6,
   note:"Ask the room before you show the answer. Nobody needs a definition of the word; the contexts are enough.",
-  cred:"Frege 1884, never ask for the meaning of a word in isolation \u00b7 Wittgenstein 1953, the meaning of a word is its use \u00b7 Harris 1954, the distributional hypothesis \u00b7 Firth 1957, the line above. Lines drawn live from this week's corpus."});
+  cred:"Frege 1884, never ask for the meaning of a word in isolation \u00b7 Harris 1954, the distributional hypothesis \u00b7 Firth 1957, the title. Lines drawn live from this week's corpus."});
 
 // 10 where the numbers come from: the contrastive move
 s=base(); kicker(s,"IDEA TWO",TERRA); title(s,"Same context, pull together. Different, push apart");
