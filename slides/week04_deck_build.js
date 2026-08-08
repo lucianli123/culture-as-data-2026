@@ -135,9 +135,9 @@ figSlide(s,"w4_onehot_vs_dense.png",{x:1.2,y:2.1,w:10.9,h:4.0,
   note:`Counting says night and morning have nothing in common. The trained vectors put them at ${facts.sim_night_morning}, against ${facts.sim_night_ship} for night and ship.`});
 
 // 10 where the numbers come from: the contrastive move
-s=base(); kicker(s,"IDEA TWO",TERRA); title(s,"Pull the neighbours together, push the strangers apart");
+s=base(); kicker(s,"IDEA TWO",TERRA); title(s,"Same context, pull together. Different, push apart");
 figSlide(s,"w4_contrastive_idea.png",{x:1.9,y:1.9,w:9.6,h:4.4,
-  note:"That is the whole training rule. It has a name — contrastive learning — and it is how most modern embeddings are made.",
+  note:"For a word, a context is a few words of text. That is the whole rule, it is called contrastive learning, and it is how most modern embeddings are made.",
   cred:`Anchor, neighbour and the three random words all taken from this week's corpus. ${facts.contrastive_pairs.toLocaleString()} pairs in one pass.`});
 
 // 10b what falls out of it
@@ -198,10 +198,10 @@ figSlide(s,"w4_conv_stack.png",{x:0.9,y:2.2,w:11.5,h:3.5,
   cred:"Every panel here is real arithmetic on the painting to its left. That stack is the whole architecture."});
 
 // 13e where the two halves meet
-s=base(); kicker(s,"BOTH IDEAS AT ONCE",GOLD); title(s,"CLIP: the same pull and push, on pictures");
+s=base(); kicker(s,"BOTH IDEAS AT ONCE",GOLD); title(s,"The same rule, where a context is a picture");
 figSlide(s,"w4_clip.png",{x:1.2,y:1.95,w:10.9,h:4.2,
-  note:"A CNN reads the picture, a language model reads the caption, and the training rule is the one from the word vectors.",
-  cred:"Which is why \"a painting of a woman in a red hat\" can search a museum with no tags in it at all."});
+  note:"Same context: a painting and its own caption, pulled together. Different context: anyone else's caption, pushed away. Two kinds of thing, one space.",
+  cred:"Which is why \"a painting of a woman in a red hat\" can search a museum with no tags in it at all. The notebook trains a small one on 18 paintings."});
 
 // 14 break
 s=base(true); kicker(s,"BREAK",GOLD);
