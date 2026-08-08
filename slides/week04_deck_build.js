@@ -132,13 +132,14 @@ figSlide(s,"w4_gradient.png",{x:2.4,y:1.9,w:8.5,h:4.5,
 // 9 the problem embeddings solve
 s=base(); kicker(s,"IDEA TWO",TERRA); title(s,"What counting cannot do");
 figSlide(s,"w4_onehot_vs_dense.png",{x:1.2,y:2.1,w:10.9,h:4.0,
-  note:`Counting says night and morning have nothing in common. The trained vectors put them at ${facts.sim_night_morning}, against ${facts.sim_night_ship} for night and ship.`});
+  note:"Week 2 gave every word its own column, so night and morning have nothing in common. Nor do night and ship.",
+  cred:`And Week 3 puts one weight on each column, so what it learns about one word tells it nothing about the next. Trained vectors: night and morning ${facts.sim_night_morning}, night and ship ${facts.sim_night_ship}.`});
 
 // 10 where the numbers come from: the contrastive move
 s=base(); kicker(s,"IDEA TWO",TERRA); title(s,"Same context, pull together. Different, push apart");
 figSlide(s,"w4_contrastive_idea.png",{x:1.9,y:1.9,w:9.6,h:4.4,
   note:"For a word, a context is a few words of text. That is the whole rule. It is called contrastive learning, and most modern embeddings are trained this way.",
-  cred:`Anchor, neighbour and the three random words all taken from this week's corpus. ${facts.contrastive_pairs.toLocaleString()} pairs in one pass.`});
+  cred:`Underneath it, Week 3's four moves: multiply, add, squash, nudge. The difference is that the prediction is thrown away and the weights are what you keep. ${facts.contrastive_pairs.toLocaleString()} pairs in one pass.`});
 
 // 10b what falls out of it
 s=base(); kicker(s,"THE SAME VECTORS, BEFORE AND AFTER",GOLD); title(s,"Nobody labelled the blocks");
