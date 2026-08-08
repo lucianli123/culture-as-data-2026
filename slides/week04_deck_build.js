@@ -62,10 +62,10 @@ s.addText("Your Week 3 classifier is one neuron. Today it grows, learns a map of
 s=base(); kicker(s,"TODAY",TERRA); title(s,"Two ideas, then the practical half hour");
 [["1","A century, measured","Garg et al.: stereotype change read off an embedding space",TERRA],
  ["2","One neuron, then many","Your classifier, stacked - and what stacking buys and costs",GREEN],
- ["3","Rolling downhill","What training actually is, without the calculus",BLUE],
- ["4","Words as vectors","Where they come from, and what the geometry can do",GOLD],
- ["5","Where a corpus comes from","A file, an API, or a careful scrape",TERRA],
- ["6","Collect and commit","Your data in Drive, your repo born, your project pitched",GREEN]].forEach((st,i)=>{
+ ["3","Words as vectors","Same context pull together, different context push apart",GOLD],
+ ["4","The same rule on pixels","Convolutions, and how CLIP searches a museum by typing",BLUE],
+ ["5","Reading an API","What to look at before you write the loop",TERRA],
+ ["6","A careful scrape","Finding the data in a page, and the four rules attached",GREEN]].forEach((st,i)=>{
   const col=i%2,row=Math.floor(i/2),x=M+col*6.2,y=2.15+row*1.55;
   s.addShape("roundRect",{x,y,w:5.9,h:1.3,fill:{color:TINT},line:{type:"none"},rectRadius:0.1});
   s.addShape("ellipse",{x:x+0.25,y:y+0.33,w:0.62,h:0.62,fill:{color:st[3]},line:{type:"none"}});
@@ -223,11 +223,24 @@ s=base(); kicker(s,"GETTING THE DATA",TERRA); title(s,"Three routes, in the orde
 });
 caption(s,"The licensing line decides which routes are even open to you. That is the next slide.");
 
-// 16 the API, live
+// 16 read the reply before writing the loop
+s=base(); kicker(s,"ROUTE TWO",BLUE); title(s,"Look at one reply before you write the loop");
+figSlide(s,"w4_api_anatomy.png",{x:0.7,y:2.05,w:11.9,h:3.9,
+  note:"Ask for one item. The pagination block tells you how big the job is; the data block is your rows.",
+  cred:`A live call made while this deck was built: ${(facts.api_total||0).toLocaleString()} works match "landscape", handed over two at a time.`});
+
+// 16b JSON into a table
 s=base(); kicker(s,"ROUTE TWO, LIVE",BLUE); title(s,"A URL, some JSON, and then a table");
 figSlide(s,"w4_api.png",{x:1.2,y:2.1,w:10.9,h:4.1,
   note:"An endpoint is a URL that answers with data. A key is a name badge. Pagination hands you a page at a time.",
   cred:`Left panel: a real response, ${facts.api_source}. The AI writes the three lines that make the table.`});
+
+// 16c two APIs, two shapes
+s=base(); kicker(s,"EVERY API IS SOMEBODY'S DESIGN",GOLD);
+title(s,"Two museums, two shapes");
+figSlide(s,"w4_api_shapes.png",{x:1.1,y:2.0,w:11.1,h:4.2,
+  note:"One hands you rows. The other hands you a phone book, and every row after that is another request.",
+  cred:"Both queried live for this slide. Work out which kind you have before you estimate how long anything will take."});
 
 // 17 scraping, with the rules attached
 s=base(); kicker(s,"ROUTE THREE",TERRA); title(s,"Scraping, and the four things that come with it");
@@ -242,6 +255,18 @@ s=base(); kicker(s,"ROUTE THREE",TERRA); title(s,"Scraping, and the four things 
 });
 s.addText("CC0 and public domain: go anywhere.   Academic sets and community text: analyse, don't redistribute.   Shadow libraries: never.",
  {x:M,y:6.9,w:11.9,h:0.4,fontFace:SANS,fontSize:12.5,italic:true,color:MUTED});
+
+// 17b where the data is in the page
+s=base(); kicker(s,"ROUTE THREE, IN PRACTICE",TERRA); title(s,"Find the data inside the markup");
+figSlide(s,"w4_scrape_anatomy.png",{x:0.7,y:2.05,w:11.9,h:3.9,
+  note:"Fetch one page, look at one block, and read the selectors off it. Right-click, Inspect, and the tag names are right there.",
+  cred:"Real HTML from quotes.toscrape.com. A selector that matches nothing returns None and raises no error, which is the bug you will actually hit."});
+
+// 17c what it costs to be polite
+s=base(); kicker(s,"BEFORE YOU START IT RUNNING",GOLD); title(s,"How long will this take?");
+figSlide(s,"w4_scrape_cost.png",{x:2.3,y:1.95,w:8.7,h:4.3,
+  note:"A one-second pause on 5,000 pages is an hour and a half. That number decides your sample size, so work it out first.",
+  cred:"And the site notices the difference. One page a second is a reader; fifty a second is an outage."});
 
 // 18 the lab
 s=base(); kicker(s,"YOUR TURN · 20 MINUTES",GREEN); title(s,"Collect it, save it, start the repo");

@@ -49,7 +49,7 @@ drawn from live data rather than bullets alone:
 |---|---|---|
 | `week-02-lecture-draft.pptx` | `week02_deck_build.js` | the Bollen trial, shuffle test, bootstrap, replication |
 | `week-03-lecture-draft.pptx` | `week03_figs.py` → `week03_deck_build.js` | logistic regression: the sigmoid, the overlap in 2-D, baseline vs. model, the confusion matrix, over-fitting as C rises, the learning curve, the signed weights |
-| `week-04-lecture-draft.pptx` | `week04_figs.py` → `week04_deck_build.js` | 19 figures on 28 slides: five cropped from the week's reading (Garg et al.), plus a neuron, a network beside the readable weights it costs you, gradient descent, the spiral fitted twice, one-hot against dense vectors, the contrastive pull-and-push and the similarity blocks it produces, neighbours and a 2-D map from vectors trained on the repo's two novels, a convolution worked out number by number, a filter bank and a three-layer stack on a Met painting, CLIP as the same pull and push on picture-caption pairs, and a live API response beside the table it becomes |
+| `week-04-lecture-draft.pptx` | `week04_figs.py` → `week04_deck_build.js` | 23 figures on 32 slides: five cropped from the week's reading (Garg et al.), plus a neuron, a network beside the readable weights it costs you, gradient descent, the spiral fitted twice, one-hot against dense vectors, the contrastive pull-and-push and the similarity blocks it produces, neighbours and a 2-D map from vectors trained on the repo's two novels, a convolution worked out number by number, a filter bank and a three-layer stack on a Met painting, CLIP as the same pull and push on picture-caption pairs, and then the collecting half: a live request and reply with the pagination block called out, the same JSON beside the table it becomes, the Art Institute and the Met drawn side by side to show one API handing you rows and the other handing you ID numbers, one quote block of real HTML with its three selectors marked, and what a one-second pause costs across 5,000 pages |
 
 Weeks 3 and 4 are two-step builds, because each deck prints the numbers its figures were made from:
 
@@ -57,7 +57,7 @@ Weeks 3 and 4 are two-step builds, because each deck prints the numbers its figu
 python3 slides/week03_figs.py       # fits the models, writes PNGs + week03_figs.json to $FIG_DIR (default /tmp/figs)
 node slides/week03_deck_build.js    # reads both, writes slides/week-03-lecture-draft.pptx
 
-python3 slides/week04_figs.py       # ~90s: fits the spiral, trains word vectors contrastively on the two novels, convolves a Met painting, calls the museum API
+python3 slides/week04_figs.py       # ~2 min: fits the spiral, trains word vectors contrastively on the two novels, convolves a Met painting, and calls the Art Institute, Met and quotes.toscrape endpoints live
 node slides/week04_deck_build.js    # writes slides/week-04-lecture-draft.pptx
 ```
 

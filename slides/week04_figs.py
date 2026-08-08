@@ -652,6 +652,188 @@ for name_, fn_ in (("conv_arith", arithmetic_figure), ("convolution", convolutio
     except Exception as e:
         print(f"{name_} figure skipped:", type(e).__name__, e, file=sys.stderr)
 
+# ------------------------------------------- 9c. where a corpus comes from
+# Four figures for the second half of the lecture. All of them call the real endpoints
+# and fall back to recorded values if the network is unavailable at build time.
+MONO = {"family": "monospace"}
+
+
+def api_anatomy():
+    """The request on the left, the reply on the right, with the two parts that matter
+    labelled: pagination tells you how big the job is, data is the rows."""
+    import requests
+    url = "https://api.artic.edu/api/v1/artworks/search"
+    r = requests.get(url, params={"q": "landscape", "limit": 2,
+                                  "fields": "title,artist_title,date_start"}, timeout=25)
+    j = r.json()
+    fig, axes = plt.subplots(1, 2, figsize=(11.4, 3.9),
+                             gridspec_kw={"width_ratios": [1, 1.25], "wspace": 0.12})
+    for ax in axes:
+        blank(ax); ax.set_xlim(0, 10); ax.set_ylim(0, 10)
+
+    axes[0].set_title("what you send", fontsize=12.5, loc="left", pad=10)
+    req = ["GET api.artic.edu/api/v1/artworks/search",
+           "        ?q=landscape",
+           "        &limit=2",
+           "        &fields=title,artist_title,date_start"]
+    axes[0].add_patch(FancyBboxPatch((0.2, 5.6), 9.6, 3.4, boxstyle="round,pad=0.12",
+                                     fc=TINT, ec="none"))
+    axes[0].text(0.5, 8.5, "\n".join(req), fontsize=9.6, va="top", **MONO)
+    for y, lab, col in ((4.6, "the endpoint: a URL that answers with data", INK),
+                        (3.7, "the query: what you are asking for", WARM),
+                        (2.8, "the page size: how much per request", COOL),
+                        (1.9, "the fields: ask only for what you need", GOLD)):
+        ax = axes[0]
+        ax.add_patch(Circle((0.45, y + 0.08), 0.13, fc=col, ec="none"))
+        ax.text(0.85, y, lab, fontsize=11, va="center", color=col if col != INK else INK)
+    axes[0].text(0.2, 0.5, f"status {r.status_code} · {r.headers['Content-Type'].split(';')[0]}",
+                 fontsize=11, color=MUTED)
+
+    axes[1].set_title("what comes back", fontsize=12.5, loc="left", pad=10)
+    short = lambda t: (t or "")[:30] + ("..." if len(t or "") > 30 else "")
+    body = json.dumps({"pagination": j["pagination"],
+                       "data": [{"title": short(d.get("title")),
+                                 "artist_title": short(d.get("artist_title")),
+                                 "date_start": d.get("date_start")}
+                                for d in j["data"][:2]]},
+                      indent=1, ensure_ascii=False).split("\n")
+    axes[1].add_patch(FancyBboxPatch((0.2, 0.3), 6.6, 8.9, boxstyle="round,pad=0.12",
+                                     fc=TINT, ec="none"))
+    top_y, step = 8.9, 0.42
+    for i, ln in enumerate(body[:21]):
+        axes[1].text(0.45, top_y - i * step, ln, fontsize=7.6, va="center", **MONO)
+    # brackets and labels down the right-hand side, so nothing crosses the code
+    def bracket(i0, i1, col, label):
+        y0, y1 = top_y - i1 * step - 0.15, top_y - i0 * step + 0.15
+        axes[1].plot([7.0, 7.0], [y0, y1], color=col, lw=2.2)
+        axes[1].text(7.25, (y0 + y1) / 2, label, fontsize=10, color=col, va="center",
+                     linespacing=1.4)
+    pag_end = next(i for i, ln in enumerate(body) if ln.startswith(" }"))
+    bracket(1, pag_end, WARM, "read this first:\nhow many exist,\nhow many you got")
+    bracket(pag_end + 1, min(len(body), 21) - 1, COOL, "the rows")
+    fig.savefig(os.path.join(FIG_DIR, "w4_api_anatomy.png")); plt.close(fig)
+    facts["api_total"] = j["pagination"]["total"]
+
+
+def api_shapes():
+    """Two museums, two designs. One hands you rows; the other hands you a phone book."""
+    import requests
+    artic = requests.get("https://api.artic.edu/api/v1/artworks/search",
+                         params={"q": "storm", "limit": 100}, timeout=25).json()
+    n_artic = len(artic["data"])
+    met = requests.get("https://collectionapi.metmuseum.org/public/collection/v1/search",
+                       params={"q": "storm", "hasImages": "true"}, timeout=25).json()
+    n_met = met["total"]
+
+    fig, axes = plt.subplots(2, 1, figsize=(10.6, 4.6), gridspec_kw={"hspace": 0.45})
+    for ax in axes:
+        blank(ax); ax.set_xlim(0, 12); ax.set_ylim(0, 3)
+
+    ax = axes[0]
+    ax.set_title("Art Institute: one request, and you have a table",
+                 fontsize=12.5, loc="left", pad=6)
+    ax.add_patch(FancyBboxPatch((0.2, 1.0), 3.0, 1.2, boxstyle="round,pad=0.08",
+                                fc=TINT, ec="none"))
+    ax.text(0.45, 1.6, "search?q=storm", fontsize=10.5, va="center", **MONO)
+    arrow(ax, (3.4, 1.6), (4.6, 1.6), color=INK, lw=1.6)
+    for i in range(5):
+        ax.add_patch(FancyBboxPatch((4.9, 2.25 - i * 0.42), 6.6, 0.34,
+                                    boxstyle="round,pad=0.03", fc=WARM, ec="none",
+                                    alpha=0.85 - i * 0.12))
+    ax.text(0.2, 0.25, f"one request, {n_artic} rows, and it is already a table.",
+            fontsize=11, color=WARM)
+
+    ax = axes[1]
+    ax.set_title("The Met: one request for the ID numbers, then one request each",
+                 fontsize=12.5, loc="left", pad=6)
+    ax.add_patch(FancyBboxPatch((0.2, 1.0), 3.0, 1.2, boxstyle="round,pad=0.08",
+                                fc=TINT, ec="none"))
+    ax.text(0.45, 1.6, "search?q=storm", fontsize=10.5, va="center", **MONO)
+    arrow(ax, (3.4, 1.6), (4.4, 1.6), color=INK, lw=1.6)
+    ax.add_patch(FancyBboxPatch((4.6, 1.05), 2.6, 1.1, boxstyle="round,pad=0.06",
+                                fc=COOL, ec="none", alpha=0.25))
+    ax.text(5.9, 1.6, f"{n_met:,} ID\nnumbers", fontsize=11, ha="center", va="center",
+            color=COOL, linespacing=1.3)
+    for i in range(4):
+        y = 2.55 - i * 0.55
+        arrow(ax, (7.4, 1.6), (8.5, y), color=COOL, lw=1.2, alpha=0.8)
+        ax.add_patch(FancyBboxPatch((8.7, y - 0.17), 2.6, 0.34, boxstyle="round,pad=0.03",
+                                    fc=COOL, ec="none", alpha=0.8))
+    ax.text(0.2, 0.25, f"one request for the IDs, then {n_met:,} more to get {n_met:,} rows.",
+            fontsize=11, color=COOL)
+    fig.savefig(os.path.join(FIG_DIR, "w4_api_shapes.png")); plt.close(fig)
+    facts["artic_storm"] = n_artic
+    facts["met_storm"] = n_met
+
+
+def scrape_anatomy():
+    """The HTML on the left with the three selectors marked, the row it becomes on the right."""
+    import requests
+    from bs4 import BeautifulSoup
+    html = requests.get("https://quotes.toscrape.com/page/1/", timeout=25,
+                        headers={"User-Agent": "culture-as-data course build"}).text
+    block = BeautifulSoup(html, "html.parser").select_one("div.quote")
+    lines = [ln for ln in block.prettify().split("\n") if ln.strip()][:20]
+
+    fig, axes = plt.subplots(1, 2, figsize=(11.6, 4.0),
+                             gridspec_kw={"width_ratios": [1.55, 1], "wspace": 0.1})
+    for ax in axes:
+        blank(ax); ax.set_xlim(0, 10); ax.set_ylim(0, 10)
+
+    axes[0].set_title("the page: find the data inside the markup",
+                      fontsize=12.5, loc="left", pad=10)
+    marks = {"span class=\"text\"": WARM, "small class=\"author\"": COOL,
+             "a class=\"tag\"": GOLD}
+    for i, ln in enumerate(lines):
+        y = 9.4 - i * 0.47
+        hit = next((c for k, c in marks.items() if k in ln), None)
+        if hit:
+            axes[0].add_patch(FancyBboxPatch((0.15, y - 0.17), 9.7, 0.36,
+                                             boxstyle="round,pad=0.03", fc=hit, ec="none",
+                                             alpha=0.16))
+        axes[0].text(0.35, y, ln[:76].replace("\t", "  "), fontsize=7.4, va="center",
+                     color=hit or INK, **MONO)
+
+    axes[1].set_title("the row you wanted", fontsize=12.5, loc="left", pad=10)
+    row = [("span.text", block.select_one("span.text").get_text(strip=True)[:38] + "...", WARM),
+           ("small.author", block.select_one("small.author").get_text(strip=True), COOL),
+           ("a.tag", ", ".join(t.get_text(strip=True)
+                               for t in block.select("a.tag")[:3]), GOLD)]
+    for i, (sel, val, col) in enumerate(row):
+        y = 8.2 - i * 2.2
+        axes[1].add_patch(FancyBboxPatch((0.2, y - 0.75), 9.5, 1.5,
+                                         boxstyle="round,pad=0.08", fc=TINT, ec="none"))
+        axes[1].text(0.5, y + 0.35, sel, fontsize=10, color=col, **MONO)
+        axes[1].text(0.5, y - 0.3, val, fontsize=10.5, color=INK)
+    axes[1].text(0.2, 0.6, "A selector that matches nothing returns None,\nwith no error at all.",
+                 fontsize=10.5, color=MUTED, linespacing=1.5)
+    fig.savefig(os.path.join(FIG_DIR, "w4_scrape_anatomy.png")); plt.close(fig)
+
+
+def scrape_cost():
+    """What a polite pause costs, so the number is decided before the loop runs."""
+    pages = np.arange(0, 5001)
+    fig, ax = plt.subplots(figsize=(7.2, 4.0))
+    for pause, col, lab in ((0.0, MUTED, "no pause: you are a load test"),
+                            (1.0, WARM, "1 second between pages"),
+                            (2.0, COOL, "2 seconds between pages")):
+        ax.plot(pages, pages * (pause + 0.15) / 60, color=col, lw=2.2,
+                ls="--" if pause == 0 else "-")
+        ax.text(5050, 5000 * (pause + 0.15) / 60, lab, fontsize=10.5, color=col, va="center")
+    ax.set_xlabel("pages requested", color=MUTED, fontsize=10.5)
+    ax.set_ylabel("minutes", color=MUTED, fontsize=10.5)
+    ax.set_xlim(0, 5000)
+    ax.set_title("Decide this before you write the loop", fontsize=13, loc="left", pad=10)
+    fig.savefig(os.path.join(FIG_DIR, "w4_scrape_cost.png")); plt.close(fig)
+
+
+for name_, fn_ in (("api_anatomy", api_anatomy), ("api_shapes", api_shapes),
+                   ("scrape_anatomy", scrape_anatomy), ("scrape_cost", scrape_cost)):
+    try:
+        fn_()
+    except Exception as e:
+        print(f"{name_} figure skipped:", type(e).__name__, e, file=sys.stderr)
+
 # ---------------------------------------------- 10. figures from the paper itself
 # Downloaded and cropped at build time from the arXiv preprint of the week's reading
 # (arXiv:1711.08412 = PNAS 2018). Kept out of the repo: the build fetches them.
