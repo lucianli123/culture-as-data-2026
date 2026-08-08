@@ -54,14 +54,14 @@ let s=base(true);
 s.addText("CULTURE AS DATA · WEEK 4",{x:M,y:0.7,w:8,h:0.3,fontFace:SANS,fontSize:13,color:GOLD,bold:true,charSpacing:3});
 s.addText("How Machines Learn to Read:",{x:M,y:2.0,w:11.5,h:1.0,fontFace:SERIF,fontSize:44,bold:true,color:WHITE});
 s.addText("Neural Networks and Word Embeddings",{x:M,y:2.95,w:11.5,h:1.0,fontFace:SERIF,fontSize:44,bold:true,color:CREAM});
-s.addText("Your Week 3 classifier is one neuron. Today it grows, learns a map of meaning,\nand then you go and fetch the data you will use it on",
+s.addText("Your Week 3 classifier is one neuron. Today it grows, learns to place words by the\ncompany they keep, and then you go and collect the data you will use it on",
  {x:M,y:4.5,w:10.5,h:1.1,fontFace:SANS,fontSize:17,italic:true,color:CREAM,lineSpacingMultiple:1.25});
 [GOLD,GREEN,CREAM].forEach((c,i)=>s.addShape("ellipse",{x:11.3+i*0.42,y:0.62,w:0.22,h:0.22,fill:{color:c},line:{type:"none"}}));
 
 // 2 the arc
 s=base(); kicker(s,"TODAY",TERRA); title(s,"Two ideas, then the practical half hour");
 [["1","A century, measured","Garg et al.: stereotype change read off an embedding space",TERRA],
- ["2","One neuron, then many","Your classifier, stacked - and what stacking buys and costs",GREEN],
+ ["2","One neuron, then many","Your classifier, stacked, and what that gains and costs",GREEN],
  ["3","Words as vectors","Same context pull together, different context push apart",GOLD],
  ["4","The same rule on pixels","Convolutions, and how CLIP searches a museum by typing",BLUE],
  ["5","Reading an API","What to look at before you write the loop",TERRA],
@@ -108,7 +108,7 @@ figSlide(s,"w4_neuron.png",{x:1.6,y:1.9,w:10.1,h:4.5,
   note:"Counts in, one weight each, add them up, squash. Week 3's classifier is one neuron."});
 
 // 6 the network
-s=base(); kicker(s,"IDEA ONE",GREEN); title(s,"Stack them and something changes");
+s=base(); kicker(s,"IDEA ONE",GREEN); title(s,"Stack them and they learn combinations");
 figSlide(s,"w4_network.png",{x:1.6,y:1.9,w:10.1,h:4.5,
   note:"Four neurons in between, each adding up every word in its own way. Nobody chose those combinations."});
 
@@ -127,7 +127,7 @@ figSlide(s,"w4_spiral.png",{x:1.2,y:1.9,w:10.9,h:4.5,
 // 8 gradient descent
 s=base(); kicker(s,"HOW IT LEARNS",GOLD); title(s,"Rolling downhill in fog");
 figSlide(s,"w4_gradient.png",{x:2.4,y:1.9,w:8.5,h:4.5,
-  note:"A loss says how wrong you are. Step downhill, repeat, thousands of weights at once. No calculus today."});
+  note:"A loss is one number saying how wrong you are. Step downhill, repeat, for thousands of weights at once. No calculus today."});
 
 // 9 the problem embeddings solve
 s=base(); kicker(s,"IDEA TWO",TERRA); title(s,"What counting cannot do");
@@ -165,13 +165,13 @@ figSlide(s,"w4_neighbours.png",{x:1.7,y:2.0,w:9.9,h:4.3,
 s=base(); kicker(s,"THE MAP",BLUE); title(s,"Meaning becomes geometry");
 figSlide(s,"w4_map.png",{x:2.2,y:1.9,w:8.9,h:4.5,
   note:"Family words on one side. Door, room and window on the other. Night and morning at the bottom. Nothing was labelled.",
-  cred:"Two dimensions of sixty; the picture always loses something. Next: the Embedding Projector, live."});
+  cred:"Two dimensions out of sixty, so the picture loses a lot. Next: the Embedding Projector, live."});
 
 // what the vectors also learned
 s=base(); kicker(s,"THE SAME GEOMETRY, THE OTHER RESULT",TERRA);
 title(s,"Occupations closest to each group's words");
 figSlide(s,"w4_paper_ethnic.png",{x:3.9,y:1.85,w:5.6,h:4.5,
-  note:"Nobody labelled any of this. It is only what a century of printed English put side by side.",
+  note:"Nobody labelled any of this. It is what a century of printed English put side by side.",
   cred:"Fig. 1c, " + PAPER + " · shown for teaching"});
 
 // 13 the analogy, with caveats
@@ -212,7 +212,7 @@ figSlide(s,"w4_conv_stack.png",{x:0.9,y:2.2,w:11.5,h:3.5,
 s=base(); kicker(s,"BOTH IDEAS AT ONCE",GOLD); title(s,"The same rule, where a context is a picture");
 figSlide(s,"w4_clip.png",{x:1.2,y:1.95,w:10.9,h:4.2,
   note:"Same context: a painting and its own caption, pulled together. Different context: anyone else's caption, pushed away. Two kinds of thing in one space.",
-  cred:"Which is why \"a painting of a woman in a red hat\" can search a museum with no tags in it. The notebook trains a small one on 18 paintings."});
+  cred:"This is why you can search an untagged museum by typing \"a woman in a red hat\". The notebook trains a small one on 18 paintings."});
 
 // 14 break
 s=base(true); kicker(s,"BREAK",GOLD);
@@ -236,7 +236,7 @@ caption(s,"The licensing line decides which routes are even open to you. That is
 // 16 read the reply before writing the loop
 s=base(); kicker(s,"ROUTE TWO",BLUE); title(s,"Look at one reply before you write the loop");
 figSlide(s,"w4_api_anatomy.png",{x:0.7,y:2.05,w:11.9,h:3.9,
-  note:"Ask for one item. The pagination block tells you how big the job is; the data block is your rows.",
+  note:"Ask for one item. The pagination block tells you how big the job is. The data block is your rows.",
   cred:`A live call made while this deck was built: ${(facts.api_total||0).toLocaleString()} works match "landscape", handed over two at a time.`});
 
 // 16b JSON into a table
@@ -249,7 +249,7 @@ figSlide(s,"w4_api.png",{x:1.2,y:2.1,w:10.9,h:4.1,
 s=base(); kicker(s,"EVERY API IS SOMEBODY'S DESIGN",GOLD);
 title(s,"Two museums, two shapes");
 figSlide(s,"w4_api_shapes.png",{x:1.1,y:2.0,w:11.1,h:4.2,
-  note:"One hands you rows. The other hands you a phone book, and every row after that is another request.",
+  note:"One returns rows. The other returns ID numbers, and every row after that is another request.",
   cred:"Both queried live for this slide. Work out which kind you have before you estimate how long it takes."});
 
 // 17 scraping, with the rules attached
@@ -269,7 +269,7 @@ s.addText("CC0 and public domain: go anywhere.   Academic sets and community tex
 // 17b where the data is in the page
 s=base(); kicker(s,"ROUTE THREE, IN PRACTICE",TERRA); title(s,"Find the data inside the markup");
 figSlide(s,"w4_scrape_anatomy.png",{x:0.7,y:2.05,w:11.9,h:3.9,
-  note:"Fetch one page, look at one block, and read the selectors off it. Right-click, Inspect, and the tag names are right there.",
+  note:"Fetch one page, look at one block, and read the selectors off it. In a browser: right-click, Inspect, and the tag names are there.",
   cred:"Real HTML from quotes.toscrape.com. A selector that matches nothing returns None and raises no error. That is the bug you will hit."});
 
 // 17c what it costs to be polite
