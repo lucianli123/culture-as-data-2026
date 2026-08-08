@@ -12,11 +12,18 @@ format: revealjs
 
 ## Look at This
 
-The word2vec analogy that made the field pay attention: king - man + woman lands near queen. A model nobody told about royalty or gender, trained only to guess neighbouring words, ends up with those relationships as directions in space.
+Garg, Schiebinger, Jurafsky and Zou, "Word embeddings quantify 100 years of gender and ethnic stereotypes" (PNAS 2018): train word vectors on each decade of American text from 1910 onward, measure how far occupation words sit from woman-words versus man-words, and read a century of stereotype change off the geometry. The embedding stops being a gadget and becomes a measuring instrument.
 
 ## Question It
 
-The analogy is real and it is also a magic trick: the arithmetic is nudged (the query word is excluded from the answer), most analogies fail, and the same geometry that gives you queen gives you the occupational stereotypes Bolukbasi found. What the vectors know, they learned from us.
+The measurement tracks the corpus, not the country: Google Books and COHA are what got printed and digitised, so a shift may be a shift in publishing. The word lists (which words count as "female", which occupations count) are the authors' choices, and the bias they find is the bias in the text, which is the same geometry that makes the king-queen analogy work. What the vectors know, they learned from us.
+
+## A century of stereotypes, measured as distance
+
+- Garg et al. (PNAS 2018) trained word vectors on each decade of American text from 1910 on.
+- The measure: how far do occupation words sit from woman-words versus man-words, decade by decade?
+- The curve tracks the century - and matches independent census and survey data, which is what makes it evidence rather than a demo.
+- Question it: is that the country changing, or what got printed and digitised? And who chose which words count as female?
 
 ## Your classifier, redrawn as a neuron
 
@@ -76,7 +83,8 @@ The analogy is real and it is also a magic trick: the arithmetic is nudged (the 
 ## The session
 
 - **0:00**  Warm-up: where Week 3 left off, and one sentence on where today goes. The classifier you built is one neuron; today it grows.
-- **0:05**  Lecture one, from one neuron to a network (25 min). Your logistic regression, redrawn: inputs, one weight each, a sum, a squash. Then stack it, hidden layer first, and what stacking buys you: features nobody hand-wrote. Training as rolling downhill, loss and gradient descent without the calculus. TensorFlow Playground live on the spiral, watching hidden units carve the space. What it costs: the weights stop being readable, which is exactly the trade Week 7 asks you to accept.
+- **0:08**  Look at This, then Question It: the Garg paper's headline figure, a century of stereotype change measured as distance in an embedding space. Then the questions: is that a change in the country or in what got printed, and who chose the word lists?
+- **0:15**  Lecture one, from one neuron to a network (20 min). Your logistic regression, redrawn: inputs, one weight each, a sum, a squash. Then stack it, hidden layer first, and what stacking buys you: features nobody hand-wrote. Training as rolling downhill, loss and gradient descent without the calculus. TensorFlow Playground live on the spiral, watching hidden units carve the space. What it costs: the weights stop being readable, which is exactly the trade Week 7 asks you to accept.
 - **0:30**  Lecture two, word embeddings (30 min). The problem first: to a bag of words, happy and joyful are unrelated columns, which is counting's honest floor. The distributional idea, a word is known by the company it keeps. word2vec as a small neural net trained on a fake task, predict the neighbouring word, whose by-product is the vector. Then the geometry: nearest neighbours, cosine similarity, and the king - man + woman analogy with its caveats shown. The Embedding Projector live on a real vocabulary. Closing distinction, one line each: static vectors (one per word) versus contextual ones (one per occurrence), and the sentence embeddings Week 5 actually uses.
 - **1:00**  Break
 - **1:10**  Where a corpus comes from, APIs and scraping (20 min), demoed live with the AI writing the code. Route one, the prepared file most projects should use. Route two, an API: hit the Met or Art Institute endpoint, no key, and name what an endpoint, a key, pagination and a rate limit are as they appear on screen. Route three, a small scrape with BeautifulSoup, and the four-line check that comes with it: read robots.txt and the terms, request slowly, take only what you need, never republish. The licensing line in three sentences: CC0 and public domain go anywhere, academic sets are analyze-don't-redistribute, shadow libraries never.
@@ -85,8 +93,8 @@ The analogy is real and it is also a magic trick: the arithmetic is nudged (the 
 
 ## Reading & homework
 
-- **Reading:** [Alammar, The Illustrated Word2Vec](https://jalammar.github.io/illustrated-word2vec/): where word vectors come from, drawn one picture at a time. The lecture assumes the pictures, so read it first
-- **Supplement:** [Krause, Data Biographies](https://gijn.org/stories/data-biographies-getting-to-know-your-data/) (We All Count), the frame for this week's sketch; [Freelon, Post-API Age](https://dfreelon.org/publications/2018_Computational_research_in_the_postAPI_age.pdf), on what happens when the front door closes
-- **Deeper (optional):** [3Blue1Brown, Neural Networks](https://www.3blue1brown.com/topics/neural-networks), chapters 1 and 2, the same lecture with better animation; then [Mikolov et al. (2013)](https://arxiv.org/abs/1301.3781), the four-page paper that started it
+- **Reading:** [Garg, Schiebinger, Jurafsky &amp; Zou, Word embeddings quantify 100 years of gender and ethnic stereotypes (PNAS 2018)](https://www.pnas.org/doi/10.1073/pnas.1720347115): abstract, significance statement and figures, methods skimmed. What the lecture's machinery is for
+- **Supplement:** [Alammar, The Illustrated Word2Vec](https://jalammar.github.io/illustrated-word2vec/), where the vectors in that paper come from, drawn one picture at a time; [Krause, Data Biographies](https://gijn.org/stories/data-biographies-getting-to-know-your-data/) (We All Count), the frame for this week's sketch
+- **Deeper (optional):** [3Blue1Brown, Neural Networks](https://www.3blue1brown.com/topics/neural-networks), chapters 1 and 2; [Mikolov et al. (2013)](https://arxiv.org/abs/1301.3781), the four-page paper that started it; [Freelon, Post-API Age](https://dfreelon.org/publications/2018_Computational_research_in_the_postAPI_age.pdf), for when the front door closes
 - **Sketch:** Data Biography (~400 words), collect your corpus with the cookbook, and one surprising neighbour from the Embedding Projector.
 - **Check (AI closed):** Explain it: what a word vector is, in your own words, and one thing it cannot tell you. Plus your question aloud, what it omits, and where your data comes from. (Competencies 2, 6.)

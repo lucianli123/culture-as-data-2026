@@ -443,9 +443,18 @@
   "promise": "See what your Week 3 classifier becomes when you stack it, learn where word vectors come from and what they can and cannot do, and leave with your own corpus collected, saved and committed to.",
   "tool": "Neural networks and word embeddings, plus getting data off the web",
   "comps": "2, 6",
-  "admire": "The word2vec analogy that made the field pay attention: king - man + woman lands near queen. A model nobody told about royalty or gender, trained only to guess neighbouring words, ends up with those relationships as directions in space.",
-  "interrogate": "The analogy is real and it is also a magic trick: the arithmetic is nudged (the query word is excluded from the answer), most analogies fail, and the same geometry that gives you queen gives you the occupational stereotypes Bolukbasi found. What the vectors know, they learned from us.",
+  "admire": "Garg, Schiebinger, Jurafsky and Zou, \"Word embeddings quantify 100 years of gender and ethnic stereotypes\" (PNAS 2018): train word vectors on each decade of American text from 1910 onward, measure how far occupation words sit from woman-words versus man-words, and read a century of stereotype change off the geometry. The embedding stops being a gadget and becomes a measuring instrument.",
+  "interrogate": "The measurement tracks the corpus, not the country: Google Books and COHA are what got printed and digitised, so a shift may be a shift in publishing. The word lists (which words count as \"female\", which occupations count) are the authors' choices, and the bias they find is the bias in the text, which is the same geometry that makes the king-queen analogy work. What the vectors know, they learned from us.",
   "content": [
+   {
+    "h": "A century of stereotypes, measured as distance",
+    "points": [
+     "Garg et al. (PNAS 2018) trained word vectors on each decade of American text from 1910 on.",
+     "The measure: how far do occupation words sit from woman-words versus man-words, decade by decade?",
+     "The curve tracks the century - and matches independent census and survey data, which is what makes it evidence rather than a demo.",
+     "Question it: is that the country changing, or what got printed and digitised? And who chose which words count as female?"
+    ]
+   },
    {
     "h": "Your classifier, redrawn as a neuron",
     "points": [
@@ -516,8 +525,12 @@
     "a": "Warm-up: where Week 3 left off, and one sentence on where today goes. The classifier you built is one neuron; today it grows."
    },
    {
-    "t": "0:05",
-    "a": "Lecture one, from one neuron to a network (25 min). Your logistic regression, redrawn: inputs, one weight each, a sum, a squash. Then stack it, hidden layer first, and what stacking buys you: features nobody hand-wrote. Training as rolling downhill, loss and gradient descent without the calculus. TensorFlow Playground live on the spiral, watching hidden units carve the space. What it costs: the weights stop being readable, which is exactly the trade Week 7 asks you to accept."
+    "t": "0:08",
+    "a": "Look at This, then Question It: the Garg paper's headline figure, a century of stereotype change measured as distance in an embedding space. Then the questions: is that a change in the country or in what got printed, and who chose the word lists?"
+   },
+   {
+    "t": "0:15",
+    "a": "Lecture one, from one neuron to a network (20 min). Your logistic regression, redrawn: inputs, one weight each, a sum, a squash. Then stack it, hidden layer first, and what stacking buys you: features nobody hand-wrote. Training as rolling downhill, loss and gradient descent without the calculus. TensorFlow Playground live on the spiral, watching hidden units carve the space. What it costs: the weights stop being readable, which is exactly the trade Week 7 asks you to accept."
    },
    {
     "t": "0:30",
@@ -540,9 +553,9 @@
     "a": "Pitch in pairs, two minutes each: your corpus, your two methods, what would count as a finding. Then commit, with the pivot kit named as insurance and a null result named as a real result. Check-out."
    }
   ],
-  "reading": "Alammar, The Illustrated Word2Vec: where word vectors come from, drawn one picture at a time. The lecture assumes the pictures, so read it first",
-  "supplement": "Krause, Data Biographies (We All Count), the frame for this week's sketch; Freelon, Post-API Age, on what happens when the front door closes",
-  "deeper": "3Blue1Brown, Neural Networks, chapters 1 and 2, the same lecture with better animation; then Mikolov et al. (2013), the four-page paper that started it",
+  "reading": "Garg, Schiebinger, Jurafsky &amp; Zou, Word embeddings quantify 100 years of gender and ethnic stereotypes (PNAS 2018): abstract, significance statement and figures, methods skimmed. What the lecture's machinery is for",
+  "supplement": "Alammar, The Illustrated Word2Vec, where the vectors in that paper come from, drawn one picture at a time; Krause, Data Biographies (We All Count), the frame for this week's sketch",
+  "deeper": "3Blue1Brown, Neural Networks, chapters 1 and 2; Mikolov et al. (2013), the four-page paper that started it; Freelon, Post-API Age, for when the front door closes",
   "sketch": "Data Biography (~400 words), collect your corpus with the cookbook, and one surprising neighbour from the Embedding Projector.",
   "check": "Explain it: what a word vector is, in your own words, and one thing it cannot tell you. Plus your question aloud, what it omits, and where your data comes from. (Competencies 2, 6.)",
   "threads": [

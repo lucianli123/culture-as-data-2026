@@ -49,12 +49,16 @@ drawn from live data rather than bullets alone:
 |---|---|---|
 | `week-02-lecture-draft.pptx` | `week02_deck_build.js` | the Bollen trial, shuffle test, bootstrap, replication |
 | `week-03-lecture-draft.pptx` | `week03_figs.py` → `week03_deck_build.js` | logistic regression: the sigmoid, the overlap in 2-D, baseline vs. model, the confusion matrix, over-fitting as C rises, the learning curve, the signed weights |
+| `week-04-lecture-draft.pptx` | `week04_figs.py` → `week04_deck_build.js` | neural networks and embeddings: a neuron, a network, gradient descent, the spiral fitted twice, one-hot against dense vectors, the skip-gram window, nearest neighbours and a 2-D map from vectors trained on the repo's two novels, and a live API response beside the table it becomes |
 
-Week 3 is a two-step build, because the deck prints the numbers the figures were made from:
+Weeks 3 and 4 are two-step builds, because each deck prints the numbers its figures were made from:
 
 ```bash
 python3 slides/week03_figs.py       # fits the models, writes PNGs + week03_figs.json to $FIG_DIR (default /tmp/figs)
 node slides/week03_deck_build.js    # reads both, writes slides/week-03-lecture-draft.pptx
+
+python3 slides/week04_figs.py       # fits the spiral, trains word vectors on the two novels, calls the museum API
+node slides/week04_deck_build.js    # writes slides/week-04-lecture-draft.pptx
 ```
 
 The corpus is pulled live (two subreddits, falling back to two novels offline), so the committed

@@ -252,19 +252,20 @@ Each session includes one ~20-minute stretch with the assistant closed — you w
 
 **Promise:** See what your Week 3 classifier becomes when you stack it, learn where word vectors come from and what they can and cannot do, and leave with your own corpus collected, saved, and committed to.
 
-**Look at This, then Question It:** the word2vec analogy — *king − man + woman* lands near *queen*. A model told nothing about royalty or gender, trained only to guess neighbouring words, ends up carrying those relationships as directions in space. The interrogation: it is also a magic trick. The arithmetic excludes the query words, most analogies fail, and the same geometry produced *doctor − man + woman = nurse*. What the vectors know, they learned from us.
+**Look at This, then Question It:** Garg, Schiebinger, Jurafsky & Zou, "Word embeddings quantify 100 years of gender and ethnic stereotypes" (PNAS 2018) — word vectors trained on each decade of American text since 1910, with the distance between occupation words and gendered words tracking a century of social change. The interrogation: the measurement tracks the corpus, not the country; the word lists are the authors' choices; and the bias it finds is the same geometry that makes *king − man + woman = queen* work.
 
 | Time | Activity |
 |---|---|
 | 0:00 | Warm-up: the classifier you built in Week 3 is one neuron. Today it grows. |
-| 0:05 | **From one neuron to a network (25 min).** Your logistic regression redrawn: inputs, one weight each, a sum, a squash. Stack them and you get a hidden layer, and features nobody hand-wrote. Training as rolling downhill: a loss says how wrong you are, and every weight gets nudged in the direction that lowers it. No calculus. TensorFlow Playground live on the spiral. The cost: the weights stop being readable. |
+| 0:08 | **Look at This, then Question It (7 min):** the Garg figure, and the two questions it invites. |
+| 0:15 | **From one neuron to a network (20 min).** Your logistic regression redrawn: inputs, one weight each, a sum, a squash. Stack them and you get a hidden layer, and features nobody hand-wrote. Training as rolling downhill: a loss says how wrong you are, and every weight gets nudged in the direction that lowers it. No calculus. TensorFlow Playground live on the spiral. The cost: the weights stop being readable. |
 | 0:30 | **Word embeddings (30 min).** To a bag of words, *happy* and *joyful* are unrelated columns — counting's honest floor. A word is known by the company it keeps, so word2vec trains a small network on a fake task (guess the neighbours) and keeps the by-product: one vector per word. Nearest neighbours, cosine similarity, the analogy with its caveats attached, and the Embedding Projector live. One line each on static vs. contextual vectors, and on the sentence embeddings Week 5 uses. |
 | 1:00 | Break |
 | 1:10 | **Where a corpus comes from — APIs and scraping (20 min),** demoed live. A prepared file first, because that is what most projects need. Then an API: a documented URL returning JSON, with endpoint, key, pagination and rate limit named as they appear. Then a small, careful scrape: robots.txt and terms, request slowly, take only what you need, never republish. Licensing in three sentences. |
 | 1:30 | **Collect-and-build (20 min).** Point the cookbook notebook at your corpus, reshape it, save it to your Drive project folder, and fork the publishing template with GitHub Pages on, so a live URL exists from today. |
 | 1:50 | **Pitch in pairs, two minutes each,** then commit: corpus, two methods, what would count as a finding. The pivot kit as insurance; a null result, honestly shown, is a complete project. Check-out. |
 
-**Reading:** Alammar, "The Illustrated Word2Vec" (~20 min) — the lecture assumes its pictures, so read it first. *(Supplement: Krause, "Data Biographies," the frame for this week's sketch.)*
+**Reading:** Garg et al., "Word embeddings quantify 100 years of gender and ethnic stereotypes" (PNAS 2018) — abstract, significance statement and figures; skim the methods (~30 min). *(Supplement: Alammar, "The Illustrated Word2Vec," for where those vectors come from; Krause, "Data Biographies," the frame for this week's sketch.)*
 **Sketch:** Write your Data Biography (~400 words) and actually collect your corpus with the cookbook notebook, so you reach Week 5 with real data. Then open the Embedding Projector, look up a word from your own corpus, and note one neighbour that makes sense and one that does not.
 
 ---
