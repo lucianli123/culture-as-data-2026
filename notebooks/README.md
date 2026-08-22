@@ -33,7 +33,7 @@ novels, and 18 CC0 Met paintings with a manifest. Nothing depends on the network
 | `week07_annotator.ipynb` | 2 | fully worked | Gemini LLM-as-annotator |
 | `week07_annotator_GUIDED.ipynb` | 2 | completion (fuller guidance) | annotator |
 | `week07_annotator_SKELETON.ipynb` | 2 | completion (skeleton) | annotator |
-| `transformers_playground.ipynb` | any | grab bag, run what you need | GPU check + Hugging Face + tokens + ModernBERT in context, layer by layer + CLS vs. mean vs. trained pooling + semantic search over two novels + CLIP search, zero-shot labels, patches and attention |
+| `transformers_playground.ipynb` | any | grab bag, run what you need | GPU check + Hugging Face + tokens + ModernBERT reading a word in context + CLS vs. mean vs. trained pooling + semantic search over two novels + CLIP search, zero-shot labels, patches and attention |
 
 `transformers_playground.ipynb` is the odd one out: not a week, not a lab, just a reference to
 keep open beside a project. Each part stands alone. It is deliberately **not** named `week*`,
