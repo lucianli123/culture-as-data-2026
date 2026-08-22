@@ -33,6 +33,12 @@ novels, and 18 CC0 Met paintings with a manifest. Nothing depends on the network
 | `week07_annotator.ipynb` | 2 | fully worked | Gemini LLM-as-annotator |
 | `week07_annotator_GUIDED.ipynb` | 2 | completion (fuller guidance) | annotator |
 | `week07_annotator_SKELETON.ipynb` | 2 | completion (skeleton) | annotator |
+| `transformers_playground.ipynb` | any | grab bag, run what you need | GPU check + Hugging Face + tokens + ModernBERT in context + sentence-embedding search + CLIP search and zero-shot labels |
+
+`transformers_playground.ipynb` is the odd one out: not a week, not a lab, just a reference to
+keep open beside a project. Each part stands alone. It is deliberately **not** named `week*`,
+so `tools/run_notebooks.sh` skips it: it downloads about 1.3 GB of models, which is fine once
+in Colab and wasteful on every CI run.
 
 Two optional folders hold starters, used per-project rather than per-week:
 `cool-methods/` (character networks, sentiment arcs, stylometry, ModernBERT fine-tune) and
