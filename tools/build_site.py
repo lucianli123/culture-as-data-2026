@@ -536,6 +536,8 @@ WEEKS = [
    check="Explain it: what a word vector is, in your own words, and one thing it cannot tell you. Plus your question aloud, what it omits, and where your data comes from. (Competencies 2, 6.)",
    comps="2, 6"),
   dict(n=5, title="Embeddings: A Map of Meaning", tool="Embeddings, the heart of the course, the leap past counting",
+   gslides="https://docs.google.com/presentation/d/1xP2Up6Z8SDcfuyrs3vX8BBeK0DsCnVJfM9hcO_N9t3w/edit?usp=sharing",
+   extra_nb=("notebooks/transformers_playground.ipynb", "Transformers playground"),
    promise="Watch your own corpus, text or images, sort itself by meaning, see the finding counting could not give you, and learn that the same technique drives \"For You\" recommendation feeds.",
    admire="A debate, two readings of one discovery: embedding space contains directions.",
    interrogate="Kozlowski, Taddy & Evans (2019) find a rich\u2013poor axis in embedding space and read it as the cultural structure of social class, measurable across a century. Bolukbasi et al. (2016) find the same kind of direction, a gender axis pairing men with \"programmer\" and women with \"homemaker,\" and read it as prejudice to remove. Identical technique, opposite verdicts. The room decides: when is a dimension found in a corpus a discovery about culture, and when is it the corpus's own bias read back?",
@@ -899,6 +901,9 @@ def build_weeks():
                     f"week-{w['n']:02d}-lecture-draft.pptx'>Lecture deck, with figures (.pptx)</a> ") + deck
         if w.get("gslides"):
             deck = f"<a class='button' href='{w['gslides']}'>Slides (Google Slides)</a> " + deck
+        if w.get("extra_nb"):
+            xp, xl = w["extra_nb"]
+            deck += f" <a class='button ghost' href='{COLAB}{xp}'>{esc(xl)} (Colab)</a>"
         if nbs:
             path, _, name, _ = nbs[0]
             variants = "".join(f" &nbsp;<a href='{COLAB}{vp}'>{vl} version</a>" for vl, vp in NOTEBOOK_VARIANTS.get(w["n"], []))
