@@ -48,7 +48,7 @@ What counts as a "character-centered shot" is an operational definition, and a d
 
 - **0:00**  Warm-up + Look at This, a pair: a contemporary visual study leads, then the sitcom camerawork as the rigor case to interrogate.
 - **0:07**  Images on the same map, for real: embed an image set live and watch it cluster by visual style nobody tagged. The beyond-counting contrast at its sharpest.
-- **0:25**  Project lab: apply your method harder on your own data. Instructor floats; one-on-ones at the side.
+- **0:25**  Project lab: apply your method harder on your own data, then red-team it in trios (project-workshop-kit). The maker states one finding and stays silent while the trio works down the five standard objections: something else got bigger, the category is doing the work, a giveaway feature, who is missing from the sample, and would it look like this anyway. Whichever objection you cannot answer is next week's work. Instructor floats; one-on-ones at the side.
 - **1:05**  Break
 - **1:15**  The hand-labeling set-piece (Gemini-free): label 30 items from your corpus by hand; the AI labels the same 30; study every disagreement. No one skips this.
 - **1:40**  Fix-it check: a planted bug in the data pipeline, found AI-closed.

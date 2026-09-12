@@ -57,7 +57,7 @@ Kozlowski, Taddy & Evans (2019) find a rich–poor axis in embedding space and r
 - **0:10**  The beyond-counting moment: put Week 2 beside today. There you counted the words around an axis you care about; now embed them and watch them cluster. Run it on something the room enjoys, a beloved artist's songs sorted by mood and era, and groupings appear that counting couldn't see. Same question, two tools, the second visibly richer. Name the idea: an item becomes a vector, position learned from the company it keeps.
 - **0:25**  Embed your own corpus, text or images. Image projects embed their pictures and watch them group by untagged style. The embedding model is an open one from Hugging Face, the hub where open models live (the same place Week 8's period models come from). And here charts stop being neutral: switch PCA to t-SNE and the same data rearranges. A visualization is an argument with decisions baked in.
 - **0:55**  Break
-- **1:05**  Project lab: extend your embeddings and look for unexpected clusters. A five-minute aside on recommenders: "For You" is this same map plus your history. One-on-ones begin at the side.
+- **1:05**  Project lab, run as a workshop rather than twenty people in headphones (project-workshop-kit): corpus tour in trios, four minutes each, where you show the rows and not the idea; then a blind chart read, where the room says what it sees before you say what you meant. Extend your embeddings and look for unexpected clusters between rounds. A five-minute aside on recommenders: "For You" is this same map plus your history. One-on-ones begin at the side.
 - **1:50**  Gemini-free check and check-out.
 
 ## Reading & homework

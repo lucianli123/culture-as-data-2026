@@ -547,7 +547,7 @@ WEEKS = [
          ("0:10","The beyond-counting moment: put Week 2 beside today. There you counted the words around an axis you care about; now embed them and watch them cluster. Run it on something the room enjoys, a beloved artist's songs sorted by mood and era, and groupings appear that counting couldn't see. Same question, two tools, the second visibly richer. Name the idea: an item becomes a vector, position learned from the company it keeps."),
          ("0:25","Embed your own corpus, text or images. Image projects embed their pictures and watch them group by untagged style. The embedding model is an open one from Hugging Face, the hub where open models live (the same place Week 8's period models come from). And here charts stop being neutral: switch PCA to t-SNE and the same data rearranges. A visualization is an argument with decisions baked in."),
          ("0:55","Break"),
-         ("1:05","Project lab: extend your embeddings and look for unexpected clusters. A five-minute aside on recommenders: \"For You\" is this same map plus your history. One-on-ones begin at the side."),
+         ("1:05","Project lab, run as a workshop rather than twenty people in headphones (project-workshop-kit): corpus tour in trios, four minutes each, where you show the rows and not the idea; then a blind chart read, where the room says what it sees before you say what you meant. Extend your embeddings and look for unexpected clusters between rounds. A five-minute aside on recommenders: \"For You\" is this same map plus your history. One-on-ones begin at the side."),
          ("1:50","Gemini-free check and check-out.")],
    reading="Kozlowski, Taddy and Evans, \"The Geometry of Culture\" (2019): the argument that directions in an embedding space are cultural findings rather than artifacts. You met the mechanism in Week 4; this is what people do with it.",
    sketch="On your map, toggle PCA vs. t-SNE and screenshot how the picture changes. Name one neighbor or cluster that surprised you, and say whether you believe it.",
@@ -559,7 +559,7 @@ WEEKS = [
    interrogate="What counts as a \"character-centered shot\" is an operational definition, and a different one tells a different story; two shows is a slice, not \"television.\"",
    flow=[("0:00","Warm-up + Look at This, a pair: a contemporary visual study leads, then the sitcom camerawork as the rigor case to interrogate."),
          ("0:07","Images on the same map, for real: embed an image set live and watch it cluster by visual style nobody tagged. The beyond-counting contrast at its sharpest."),
-         ("0:25","Project lab: apply your method harder on your own data. Instructor floats; one-on-ones at the side."),
+         ("0:25","Project lab: apply your method harder on your own data, then red-team it in trios (project-workshop-kit). The maker states one finding and stays silent while the trio works down the five standard objections: something else got bigger, the category is doing the work, a giveaway feature, who is missing from the sample, and would it look like this anyway. Whichever objection you cannot answer is next week's work. Instructor floats; one-on-ones at the side."),
          ("1:05","Break"),
          ("1:15","The hand-labeling set-piece (Gemini-free): label 30 items from your corpus by hand; the AI labels the same 30; study every disagreement. No one skips this."),
          ("1:40","Fix-it check: a planted bug in the data pipeline, found AI-closed."),
@@ -852,7 +852,7 @@ def build_resources():
 
 <section>
   <h2>When you get stuck</h2>
-  <p>Two kits in <code>kits/</code>: a <strong>common-errors cheat sheet</strong> (the errors a non-coder hits in Colab, with the phrase to paste back to the AI) and a <strong>pivot kit</strong> of vetted corpus-and-question pairs for when a project stalls.</p>
+  <p>Three kits in <code>kits/</code>: a <strong>common-errors cheat sheet</strong> (the errors a non-coder hits in Colab, with the phrase to paste back to the AI), a <strong>pivot kit</strong> of vetted corpus-and-question pairs for when a project stalls, and a <strong>project workshop kit</strong> of timed group activities for the lab weeks.</p>
 </section>
 """
     write(SITE / "resources.html", page("Resources", body, depth=0, active="resources.html"))
@@ -1098,6 +1098,7 @@ def build_notebooks():
       f"<a href='{GH_REPO}/blob/main/kits/reading-a-code-cell.md'>How to read a code cell</a>: the five patterns behind nearly every cell in the course, handed out beside it.",
       f"<a href='{GH_REPO}/blob/main/kits/licensing-one-pager.md'>Licensing one-pager</a>: which route to a corpus is allowed, used in Week 4's data conversation.",
       f"<a href='{GH_REPO}/blob/main/kits/pivot-kit-corpora.md'>Pivot kit</a>: pre-tested fallback corpus-and-question pairs, insurance for stalled projects.",
+      f"<a href='{GH_REPO}/blob/main/kits/project-workshop-kit.md'>Project workshop kit</a>: timed group activities for the project weeks, a 90-minute workshop plus a bank to swap from.",
       f"<a href='{GH_REPO}/blob/main/kits/critical-response-process.md'>Critical Response Process one-pager</a>: the Week 9 critique protocol, meaning before questions, questions before opinions.",
       f"<a href='{GH_REPO}/blob/main/kits/competency-checks.md'>Competency-check bank</a>: the weekly trace/fix/explain items for the AI-closed block.",
       f"<a href='{GH_REPO}/tree/main/template'>Project template</a>: the Quarto essay skeleton, the Data Biography template with a worked example, and the workbench portfolio structure, forked in Week 4.",
