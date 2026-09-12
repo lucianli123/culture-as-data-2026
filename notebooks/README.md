@@ -15,10 +15,11 @@ narrated**, not for being clever. Every code cell has a plain-language Markdown 
 
 Most notebooks run on real, snapshotted data (`data/`): the 154 sonnets, two public-domain
 novels, and 18 CC0 Met paintings with a manifest, so a dropped connection does not stop a class.
-Three of them fetch instead, because the fetching is the point: `week04_demo` and
-`week04_data_cookbook` call museum APIs, `week05_charts` pulls The Pudding's public CSVs, and
+Several fetch instead, because the fetching is the point: `week04_demo` and
+`week04_data_cookbook` call museum APIs, `week05_charts` pulls The Pudding's public CSVs,
+`week05_annotation` pulls letters, paintings and recordings from three different archives, and
 `transformers_playground` takes its texts from Project Gutenberg and its paintings from the Met
-API so it opens in Colab with no repo attached.
+API. Those four open in Colab with no repo attached.
 
 ## Which notebook is which
 
@@ -32,13 +33,14 @@ API so it opens in Colab with no repo attached.
 | `week04_demo.ipynb` | 2 | demo, run top to bottom | notebooks and Python, then two museum APIs and a polite scrape, then GloVe loaded and played with, a convolution worked by hand, and CLIP searching the Met sample by typing |
 | `week04_data_cookbook.ipynb` | 2 | fully worked | file load + API pull + polite scrape |
 | `week05_embeddings.ipynb` | 2 | fully worked | text + CLIP image embeddings |
+| `week05_annotation.ipynb` | 2 | fully worked | LLM annotation of text, images and audio with Gemini: Dear Abby letters, Met portraits, and 1894-1927 recordings, each scored against a hand pass or the real dates. Downloads everything itself |
 | `week05_charts.ipynb` | 2 | fully worked | charts, on real Pudding datasets pulled live: bars, spread, lines, rates, colour-as-data, category choices, titles, then small multiples, a bump chart, a dumbbell, a heatmap and a null-result scatter |
 | `week05_embeddings_GUIDED.ipynb` | 2 | completion (fuller guidance) | embeddings |
 | `week05_embeddings_SKELETON.ipynb` | 2 | completion (skeleton) | embeddings |
 | `week07_annotator.ipynb` | 2 | fully worked | Gemini LLM-as-annotator |
 | `week07_annotator_GUIDED.ipynb` | 2 | completion (fuller guidance) | annotator |
 | `week07_annotator_SKELETON.ipynb` | 2 | completion (skeleton) | annotator |
-| `transformers_playground.ipynb` | any | grab bag, run what you need | GPU check + Hugging Face + tokens + ModernBERT reading a word in context + CLS vs. mean vs. trained pooling + semantic search over two novels + CLIP search, zero-shot labels, patches and attention + API keys and LLM annotation of text, images and audio: ten Dear Abby letters, the 18 paintings, and five public-domain recordings 1894-1927, each checked against a hand pass or the real dates |
+| `transformers_playground.ipynb` | any | grab bag, run what you need | GPU check + Hugging Face + tokens + ModernBERT reading a word in context + CLS vs. mean vs. trained pooling + semantic search over two novels + CLIP search, zero-shot labels, patches and attention |
 
 `transformers_playground.ipynb` is the odd one out: not a week, not a lab, just a reference to
 keep open beside a project. Each part stands alone. It is deliberately **not** named `week*`,

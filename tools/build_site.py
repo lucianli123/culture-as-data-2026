@@ -81,6 +81,7 @@ NOTEBOOKS = [
     ("notebooks/week04_demo.ipynb", 4, "Week 4 demo: an API, a scrape, then vectors", "Run it top to bottom. Opens with notebooks and Python, then goes and gets data: two museum APIs, one that hands you rows and one that hands you ID numbers, and a scrape taken from reading the HTML to knowing when to stop. Then words become vectors, with GloVe loaded so you can ask it for neighbours, similarities and analogies, including the ones that show its bias. It ends on pixels: a convolution worked out number by number, and a small CLIP that lets you search the Met sample by typing."),
     ("notebooks/week04_data_cookbook.ipynb", 4, "The data cookbook", "The lab notebook: three routes to a corpus - load a file, call an API, scrape politely - and it saves your corpus to Drive."),
     ("notebooks/week05_embeddings.ipynb", 5, "Embeddings", "Embed your own corpus (text or images), look for unexpected clusters, and compare PCA against t-SNE."),
+    ("notebooks/week05_annotation.ipynb", 5, "Annotation", "Get a model to label things for you, and check whether it was right. An API key kept out of the code, then the same shape three times: ten Dear Abby letters, eighteen Met portraits, and five public-domain recordings from 1894 to 1927 that it has to date by ear. Every dataset downloads itself; each run is scored against a hand pass or against something already known."),
     ("notebooks/week05_charts.ipynb", 5, "Charts", "Twelve short lessons on real Pudding datasets, pulled live from their public data repo. Seven basics: a bar for a comparison, the spread a bar hides, a line over time, dividing by whatever grew anyway, colour that is the data, the category somebody chose, and a title that says the finding. Then five harder builds from the same parts: small multiples, a bump chart, a dumbbell, a heatmap, and a scatter whose finding is that there is nothing there."),
     ("notebooks/week07_annotator.ipynb", 7, "The AI as annotator", "Gemini labels your corpus at scale; you audit it by confidence and a hand-labeled gold set."),
 ]
@@ -98,7 +99,7 @@ SOCIAL_STARTERS = [
 ]
 
 COOL_METHODS = [
-    ("notebooks/transformers_playground.ipynb", "Transformers playground", "Seven parts to keep open beside your project: the GPU, Hugging Face, tokens, ModernBERT reading the same word differently in four sentences, the three ways to turn a passage into one vector (and why only the trained one is readable), CLIP searching paintings by typing, labelling them with no training, and showing its patches and its attention, and API keys with LLM annotation on all three kinds of thing: ten Dear Abby letters, the eighteen paintings again (where Gemini gets the Bronzino that CLIP missed), and five public-domain recordings from 1894 to 1927 that it has to date by ear."),
+    ("notebooks/transformers_playground.ipynb", "Transformers playground", "Six parts to keep open beside your project: the GPU, Hugging Face, tokens, ModernBERT reading the same word differently in four sentences, the three ways to turn a passage into one vector (and why only the trained one is readable), and CLIP searching paintings by typing, labelling them with no training, and showing its patches and its attention."),
     ("notebooks/cool-methods/character_networks.ipynb", "Character networks", "Who shares a scene with whom: a network from any fiction corpus."),
     ("notebooks/cool-methods/sentiment_arcs.ipynb", "Sentiment arcs", "The Syuzhet move in Python, smoothing controversy included."),
     ("notebooks/cool-methods/stylometry_starter.ipynb", "Stylometry", "Authorship by function words, the Rowling-unmasking method."),
@@ -538,7 +539,8 @@ WEEKS = [
    comps="2, 6"),
   dict(n=5, title="Embeddings: A Map of Meaning", tool="Embeddings, the heart of the course, the leap past counting",
    gslides="https://docs.google.com/presentation/d/1xP2Up6Z8SDcfuyrs3vX8BBeK0DsCnVJfM9hcO_N9t3w/edit?usp=sharing",
-   extra_nb=[("notebooks/week05_charts.ipynb", "Charts"),
+   extra_nb=[("notebooks/week05_annotation.ipynb", "Annotation"),
+             ("notebooks/week05_charts.ipynb", "Charts"),
              ("notebooks/transformers_playground.ipynb", "Transformers playground")],
    promise="Watch your own corpus, text or images, sort itself by meaning, see the finding counting could not give you, and learn that the same technique drives \"For You\" recommendation feeds.",
    admire="A debate, two readings of one discovery: embedding space contains directions.",
