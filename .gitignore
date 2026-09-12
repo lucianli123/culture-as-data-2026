@@ -16,3 +16,6 @@ culture-as-data-project/
 # node (pptx rendering)
 node_modules/
 slides/package-lock.json
+
+# Notebook download caches (Gutenberg texts, Met images, Pudding CSVs)
+downloads/
