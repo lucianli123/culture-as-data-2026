@@ -81,6 +81,7 @@ NOTEBOOKS = [
     ("notebooks/week04_demo.ipynb", 4, "Week 4 demo: an API, a scrape, then vectors", "Run it top to bottom. Opens with notebooks and Python, then goes and gets data: two museum APIs, one that hands you rows and one that hands you ID numbers, and a scrape taken from reading the HTML to knowing when to stop. Then words become vectors, with GloVe loaded so you can ask it for neighbours, similarities and analogies, including the ones that show its bias. It ends on pixels: a convolution worked out number by number, and a small CLIP that lets you search the Met sample by typing."),
     ("notebooks/week04_data_cookbook.ipynb", 4, "The data cookbook", "The lab notebook: three routes to a corpus - load a file, call an API, scrape politely - and it saves your corpus to Drive."),
     ("notebooks/week05_embeddings.ipynb", 5, "Embeddings", "Embed your own corpus (text or images), look for unexpected clusters, and compare PCA against t-SNE."),
+    ("notebooks/week05_charts.ipynb", 5, "Charts", "Seven short lessons on one real Pudding dataset each, pulled live from their public data repo: a bar for a comparison, the spread a bar hides, a line over time, dividing by whatever grew anyway, colour that is the data, the category somebody chose, and a title that says the finding."),
     ("notebooks/week07_annotator.ipynb", 7, "The AI as annotator", "Gemini labels your corpus at scale; you audit it by confidence and a hand-labeled gold set."),
 ]
 NOTEBOOK_VARIANTS = {
@@ -537,7 +538,8 @@ WEEKS = [
    comps="2, 6"),
   dict(n=5, title="Embeddings: A Map of Meaning", tool="Embeddings, the heart of the course, the leap past counting",
    gslides="https://docs.google.com/presentation/d/1xP2Up6Z8SDcfuyrs3vX8BBeK0DsCnVJfM9hcO_N9t3w/edit?usp=sharing",
-   extra_nb=("notebooks/transformers_playground.ipynb", "Transformers playground"),
+   extra_nb=[("notebooks/week05_charts.ipynb", "Charts"),
+             ("notebooks/transformers_playground.ipynb", "Transformers playground")],
    promise="Watch your own corpus, text or images, sort itself by meaning, see the finding counting could not give you, and learn that the same technique drives \"For You\" recommendation feeds.",
    admire="A debate, two readings of one discovery: embedding space contains directions.",
    interrogate="Kozlowski, Taddy & Evans (2019) find a rich\u2013poor axis in embedding space and read it as the cultural structure of social class, measurable across a century. Bolukbasi et al. (2016) find the same kind of direction, a gender axis pairing men with \"programmer\" and women with \"homemaker,\" and read it as prejudice to remove. Identical technique, opposite verdicts. The room decides: when is a dimension found in a corpus a discovery about culture, and when is it the corpus's own bias read back?",
@@ -901,8 +903,7 @@ def build_weeks():
                     f"week-{w['n']:02d}-lecture-draft.pptx'>Lecture deck, with figures (.pptx)</a> ") + deck
         if w.get("gslides"):
             deck = f"<a class='button' href='{w['gslides']}'>Slides (Google Slides)</a> " + deck
-        if w.get("extra_nb"):
-            xp, xl = w["extra_nb"]
+        for xp, xl in w.get("extra_nb", []):
             deck += f" <a class='button ghost' href='{COLAB}{xp}'>{esc(xl)} (Colab)</a>"
         if nbs:
             path, _, name, _ = nbs[0]

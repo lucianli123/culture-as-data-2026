@@ -13,8 +13,12 @@ narrated**, not for being clever. Every code cell has a plain-language Markdown 
    pinned `%pip install` line you can use instead.)
 4. Run the **imports cell**. If it errors, open `../kits/common-errors-cheatsheet.md`.
 
-Every notebook runs on real, snapshotted data (`data/`): the 154 sonnets, two public-domain
-novels, and 18 CC0 Met paintings with a manifest. Nothing depends on the network to teach.
+Most notebooks run on real, snapshotted data (`data/`): the 154 sonnets, two public-domain
+novels, and 18 CC0 Met paintings with a manifest, so a dropped connection does not stop a class.
+Three of them fetch instead, because the fetching is the point: `week04_demo` and
+`week04_data_cookbook` call museum APIs, `week05_charts` pulls The Pudding's public CSVs, and
+`transformers_playground` takes its texts from Project Gutenberg and its paintings from the Met
+API so it opens in Colab with no repo attached.
 
 ## Which notebook is which
 
@@ -28,6 +32,7 @@ novels, and 18 CC0 Met paintings with a manifest. Nothing depends on the network
 | `week04_demo.ipynb` | 2 | demo, run top to bottom | notebooks and Python, then two museum APIs and a polite scrape, then GloVe loaded and played with, a convolution worked by hand, and CLIP searching the Met sample by typing |
 | `week04_data_cookbook.ipynb` | 2 | fully worked | file load + API pull + polite scrape |
 | `week05_embeddings.ipynb` | 2 | fully worked | text + CLIP image embeddings |
+| `week05_charts.ipynb` | 2 | fully worked | charts, on seven real Pudding datasets pulled live: bars, spread, lines, rates, colour-as-data, category choices, titles |
 | `week05_embeddings_GUIDED.ipynb` | 2 | completion (fuller guidance) | embeddings |
 | `week05_embeddings_SKELETON.ipynb` | 2 | completion (skeleton) | embeddings |
 | `week07_annotator.ipynb` | 2 | fully worked | Gemini LLM-as-annotator |
