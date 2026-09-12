@@ -98,7 +98,7 @@ SOCIAL_STARTERS = [
 ]
 
 COOL_METHODS = [
-    ("notebooks/transformers_playground.ipynb", "Transformers playground", "Seven parts to keep open beside your project: the GPU, Hugging Face, tokens, ModernBERT reading the same word differently in four sentences, the three ways to turn a passage into one vector (and why only the trained one is readable), CLIP searching paintings by typing, labelling them with no training, and showing its patches and its attention, and API keys with a first LLM annotation: ten letters to Dear Abby, labelled by hand and then by Gemini for topic, what the writer wants, and the decade."),
+    ("notebooks/transformers_playground.ipynb", "Transformers playground", "Seven parts to keep open beside your project: the GPU, Hugging Face, tokens, ModernBERT reading the same word differently in four sentences, the three ways to turn a passage into one vector (and why only the trained one is readable), CLIP searching paintings by typing, labelling them with no training, and showing its patches and its attention, and API keys with LLM annotation on all three kinds of thing: ten Dear Abby letters, the eighteen paintings again (where Gemini gets the Bronzino that CLIP missed), and five public-domain recordings from 1894 to 1927 that it has to date by ear."),
     ("notebooks/cool-methods/character_networks.ipynb", "Character networks", "Who shares a scene with whom: a network from any fiction corpus."),
     ("notebooks/cool-methods/sentiment_arcs.ipynb", "Sentiment arcs", "The Syuzhet move in Python, smoothing controversy included."),
     ("notebooks/cool-methods/stylometry_starter.ipynb", "Stylometry", "Authorship by function words, the Rowling-unmasking method."),
